@@ -1,0 +1,215 @@
+@charset "utf-8";
+/* CSS Document */
+
+//
+// Custom Styles 
+//
+
+// Media Query Starts
+// @media #{$Five00} {}
+// @media #{$Phone} {}
+// @media #{$iPadPortrait} {} 
+// @media #{$Desktop} {}
+
+// @media #{$Small} {}
+// @media #{$Medium} {}
+// @media #{$Large} {}
+// @media #{$xLarge} {}
+
+// Fonts and Sizes - OVERRIDE - ?????
+  //Fonts
+  $Roboto: 'Roboto', sans-serif; //
+  $Roboto400: 400;
+  $Roboto500: 500;
+  $Roboto700: 700;
+  $Roboto900: 900;
+  $RobotoI: italic;
+
+  $Lucida: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+
+  //Headings
+  $h1-font-size: rem-calc(44); // $h1-font-size: rem-calc(44);  // not used yet
+  $h2-font-size: rem-calc(20); // $h2-font-size: rem-calc(37);  // 22
+  $h3-font-size: rem-calc(18); // $h3-font-size: rem-calc(27);  // 18
+  $h4-font-size: rem-calc(14); // $h4-font-size: rem-calc(23);  // not used yet
+  $h5-font-size: rem-calc(15); // $h5-font-size: rem-calc(18);  // not used yet
+  $h6-font-size: rem-calc(16); // $h6-font-size: 1rem;          // not used yet
+
+  // Paragraphs
+  $paragraph-font-size: rem-calc(15); // 15 good
+  $article-font-size: rem-calc(15); // 15 good
+  $small-font-size: rem-calc(12); //12 good
+
+  //Homepage Text  
+  $h2-homepage-list: rem-calc(20); // $h2-font-size: rem-calc(37);  // 22
+
+  //Nav
+  $Nav: rem-calc(12);
+
+// Colors
+  //Main
+  $color-maroon: #882346; 	// Brand Guide = r136 g35 b70 //#7c2142 BCF // #781a42 EDU //$color-maroon2: #5d0e2e;
+  $color-black: #000; 		//titles
+  $color-white: #fff;
+
+  //Additional
+  $color-gray222: #222;		//text content
+  $color-gray707: #707070;  //lines and borders on images and multimedia
+  $color-grayE5E: #e5e5e5;	//update box
+  $color-grayD9D: #d9d9d9; 	//footer bg
+
+  
+  $color-gray333: #333;
+  $color-gray444: #444;
+  $color-gray555: #555;
+  $color-gray666: #666;
+  $color-gray777: #777;
+  $color-gray707: #707070;
+  $color-gray999: #999;
+  $color-grayccc: #ccc;
+  $color-gray404: #404040;
+  $color-graya2a: #a2a2a2;
+  $color-grayece: #ececec;
+  $color-gray7c7: #7c7c7c;
+  $color-graye6e: #e6e6e6;
+  $color-gray5a5: #5a5a5a;
+  $color-grayefe: #efefef;
+
+// Line Styles
+  $thin-maroon: 1px solid $color-maroon;
+  $thin-black: 1px solid $color-black;
+  $thin-gray222: 1px solid $color-gray222;
+  $thin-gray707: 1px solid $color-gray707;
+  $thin-grayE5E: 1px solid $color-grayE5E;
+  $thin-grayD9D: 1px solid $color-grayD9D;
+
+// width
+  $full: rem-calc(928);
+
+body {
+  background-color: $color-white;
+  //border: $thin-maroon;
+  padding: 0;
+  margin: 0;
+}
+
+.full-width {
+	//width: 100%;
+  	max-width: 100%;
+}
+
+header {
+  //border: $thin-maroon;
+  .full-width {
+  	position: fixed;
+  	background-color: $color-maroon;
+  	width: 100%;
+  	max-width: 100%;
+  	height: rem-calc(45);
+  	nav {
+  		margin: auto;
+  		max-width: $full;
+  		//border: $thin-maroon;
+		ul {
+			margin: 0;
+			padding: rem-calc(14) 0 0 rem-calc(24);
+			list-style-type: none;
+			li {
+				display: inline-block;
+				padding-right: rem-calc(45);
+				a {
+					font-family: $Lucida;
+					color: $color-white;
+					font-size: $Nav;
+					font-weight: bolder;
+					text-decoration: none;
+					text-transform: uppercase;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+  }
+  .brand {
+  	padding-top: rem-calc(45);
+  	max-width: $full;
+	margin: auto;
+	img {
+		display: block;
+		margin: auto;
+	}
+  }
+}
+
+section {
+  //border: $thin-maroon;
+}
+
+article {
+  border: $thin-maroon;
+  margin: auto;
+  max-width: 928px;
+  h1{
+  	font-size: $h1-font-size;
+  	line-height: 9px;
+  	font-family: $Roboto;
+  	font-weight: $Roboto900;
+  	//font-style: $RobotoI;
+  	text-align: center;
+  	padding: 0 rem-calc(54) 0 rem-calc(54);
+  }
+  h2 {
+  	font-size: $h2-font-size;
+  	font-family: $Roboto;
+  	font-weight: $Roboto700;
+  }
+  p {
+  	font-family: $Lucida;
+  }
+  .featureImage{
+  	display: block;
+  	max-width: 100%;
+  	margin: 0 rem-calc(20) 0 rem-calc(20);
+  }
+}
+
+footer {
+  border: $thin-maroon;
+  nav {
+  	border: $thin-maroon;
+  	background-color: $color-grayD9D;
+  	height: rem-calc(246);
+  	margin: auto;
+  	max-width: $full;
+  }
+}
+
+
+
+/* SkipNav */
+#skipnav a, a.skipTranscript {
+	position:absolute;
+	z-index:3000;
+	clip:rect(0 0 0 0);
+	height:1px;
+	width:1px;
+	padding-bottom:25px;
+}
+#skipnav a:hover, #skipnav a:focus, #skipnav a:active {
+	clip:auto;
+	left:0;top:0;
+	width:100%;
+	height:auto;
+	margin:0;
+	padding:10px 0;
+	background:#fdf6e7;
+	border:2px solid #990000;
+	border-left:none;
+	border-right:none;
+	text-align:center;
+	font-weight:bold;
+	color:#990000;
+}
+/* SkipNav */

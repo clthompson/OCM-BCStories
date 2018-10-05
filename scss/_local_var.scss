@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+//
+// Custom Styles 
+//
+
+// Grid
+  $row-width: rem-calc(960); //BCF was 1040
+  $total-columns: 12;
+  $column-gutter: rem-calc(0); 
+
+// Media Queries from Foundation - multiply by 16 for pixels
+  $small-range: (0em, 40em); // (0em, 40em); (0-640px)
+  $medium-range: (40.063em, 60em); // (40.063em, 64em); (641-960px)
+  $large-range: (60.063em, 90em); // (64.063em, 90em); (961-1440px)
+  $xlarge-range: (90.063em, 120em); // (90.063em, 120em); (1441-1920)
+  $xxlarge-range: (120.063em, 99999999em); // (120.063em, 99999999em); (1920-infinity)
+
+//$h1-font-size: rem-calc(200); 
+//.examplestyle{weight:$h1-font-size;}
