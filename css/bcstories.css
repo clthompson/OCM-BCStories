@@ -1,0 +1,139 @@
+/* CSS Document */
+/* CSS Document */
+/* CSS Document */
+/* line 89, ../scss/_local_css.scss */
+body {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 96, ../scss/_local_css.scss */
+.full-width {
+  max-width: 100%;
+}
+
+/* line 103, ../scss/_local_css.scss */
+header .full-width {
+  position: fixed;
+  background-color: #882346;
+  width: 100%;
+  max-width: 100%;
+  height: 2.8125rem;
+}
+/* line 109, ../scss/_local_css.scss */
+header .full-width nav {
+  margin: auto;
+  max-width: 58rem;
+}
+/* line 113, ../scss/_local_css.scss */
+header .full-width nav ul {
+  margin: 0;
+  padding: 0.875rem 0 0 1.5rem;
+  list-style-type: none;
+}
+/* line 117, ../scss/_local_css.scss */
+header .full-width nav ul li {
+  display: inline-block;
+  padding-right: 2.8125rem;
+}
+/* line 120, ../scss/_local_css.scss */
+header .full-width nav ul li a {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bolder;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 127, ../scss/_local_css.scss */
+header .full-width nav ul li a:hover {
+  text-decoration: underline;
+}
+/* line 135, ../scss/_local_css.scss */
+header .brand {
+  padding-top: 2.8125rem;
+  max-width: 58rem;
+  margin: auto;
+}
+/* line 139, ../scss/_local_css.scss */
+header .brand img {
+  display: block;
+  margin: auto;
+}
+
+/* line 150, ../scss/_local_css.scss */
+article {
+  border: 1px solid #882346;
+  margin: auto;
+  max-width: 928px;
+}
+/* line 154, ../scss/_local_css.scss */
+article h1 {
+  font-size: 2.75rem;
+  line-height: 9px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  padding: 0 3.375rem 0 3.375rem;
+}
+/* line 163, ../scss/_local_css.scss */
+article h2 {
+  font-size: 1.25rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+/* line 168, ../scss/_local_css.scss */
+article p {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+/* line 171, ../scss/_local_css.scss */
+article .featureImage {
+  display: block;
+  max-width: 100%;
+  margin: 0 1.25rem 0 1.25rem;
+}
+
+/* line 178, ../scss/_local_css.scss */
+footer {
+  border: 1px solid #882346;
+}
+/* line 180, ../scss/_local_css.scss */
+footer nav {
+  border: 1px solid #882346;
+  background-color: #d9d9d9;
+  height: 15.375rem;
+  margin: auto;
+  max-width: 58rem;
+}
+
+/* SkipNav */
+/* line 192, ../scss/_local_css.scss */
+#skipnav a, a.skipTranscript {
+  position: absolute;
+  z-index: 3000;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  padding-bottom: 25px;
+}
+
+/* line 200, ../scss/_local_css.scss */
+#skipnav a:hover, #skipnav a:focus, #skipnav a:active {
+  clip: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+  background: #fdf6e7;
+  border: 2px solid #990000;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  font-weight: bold;
+  color: #990000;
+}
+
+/* SkipNav */

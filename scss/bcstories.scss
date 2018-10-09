@@ -1,5 +1,12 @@
-@import "settings";
-@import "foundation";
+// master variable overrides
+@import "../../../master/scss/master_var";
+
+// master CSS styles
+//@import "../../../master/scss/master_css";
+//this is all the master stuff - gets front loaded unless we shut it off
+
+//@import "settings";
+//@import "foundation";
 
 // Or selectively include components
 // @import
@@ -38,3 +45,9 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+// local variable overrides
+@import "local_var";
+
+// local CSS styles - only change the global styles/attributes that we want to change, and all additional unique styles  
+@import "local_css";
