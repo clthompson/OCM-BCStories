@@ -1,114 +1,321 @@
 /* CSS Document */
 /* CSS Document */
 /* CSS Document */
-/* line 89, ../scss/_local_css.scss */
+/* line 91, ../scss/_local_css.scss */
 body {
   background-color: #fff;
   padding: 0;
   margin: 0;
 }
 
-/* line 96, ../scss/_local_css.scss */
+/* line 98, ../scss/_local_css.scss */
 .full-width {
   max-width: 100%;
 }
 
-/* line 103, ../scss/_local_css.scss */
+/* line 105, ../scss/_local_css.scss */
 header .full-width {
+  z-index: 1000;
   position: fixed;
   background-color: #882346;
   width: 100%;
   max-width: 100%;
   height: 2.8125rem;
 }
-/* line 109, ../scss/_local_css.scss */
+/* line 112, ../scss/_local_css.scss */
 header .full-width nav {
   margin: auto;
   max-width: 58rem;
 }
-/* line 113, ../scss/_local_css.scss */
+/* line 116, ../scss/_local_css.scss */
 header .full-width nav ul {
   margin: 0;
   padding: 0.875rem 0 0 1.5rem;
   list-style-type: none;
 }
-/* line 117, ../scss/_local_css.scss */
+/* line 120, ../scss/_local_css.scss */
 header .full-width nav ul li {
   display: inline-block;
   padding-right: 2.8125rem;
 }
-/* line 120, ../scss/_local_css.scss */
+/* line 123, ../scss/_local_css.scss */
 header .full-width nav ul li a {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   color: #fff;
-  font-size: 0.75rem;
+  font-size: 0.9375rem;
   font-weight: bolder;
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 127, ../scss/_local_css.scss */
+/* line 130, ../scss/_local_css.scss */
 header .full-width nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 135, ../scss/_local_css.scss */
+/* line 138, ../scss/_local_css.scss */
 header .brand {
   padding-top: 2.8125rem;
   max-width: 58rem;
   margin: auto;
+  border-bottom: 1px solid #707070;
 }
-/* line 139, ../scss/_local_css.scss */
+/* line 143, ../scss/_local_css.scss */
 header .brand img {
   display: block;
   margin: auto;
+  padding: 1.875rem 0 1rem 0;
 }
 
-/* line 150, ../scss/_local_css.scss */
+/* line 155, ../scss/_local_css.scss */
 article {
-  border: 1px solid #882346;
   margin: auto;
-  max-width: 928px;
+  max-width: 58rem;
+  padding-bottom: 2.8125rem;
 }
-/* line 154, ../scss/_local_css.scss */
+/* line 160, ../scss/_local_css.scss */
 article h1 {
   font-size: 2.75rem;
-  line-height: 9px;
+  line-height: 39px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   text-align: center;
   padding: 0 3.375rem 0 3.375rem;
 }
-/* line 163, ../scss/_local_css.scss */
-article h2 {
+/* line 169, ../scss/_local_css.scss */
+article .copy {
+  padding: 0 3.375rem 0 3.375rem;
+}
+/* line 171, ../scss/_local_css.scss */
+article .copy h2 {
   font-size: 1.25rem;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+  color: #222;
+  padding: 0 0 1.25rem 0;
+  margin: 0;
 }
-/* line 168, ../scss/_local_css.scss */
-article p {
+/* line 179, ../scss/_local_css.scss */
+article .copy h3 {
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+/* line 186, ../scss/_local_css.scss */
+article .copy p {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-size: 0.96875rem;
+  color: #222;
+  line-height: 30px;
+  margin: 0;
+  padding: 0 0 1.875rem 0;
 }
-/* line 171, ../scss/_local_css.scss */
-article .featureImage {
+/* line 195, ../scss/_local_css.scss */
+article .update {
+  background-color: #e5e5e5;
+  padding: 1.6875rem 2.125rem;
+  margin: 0 1.25rem 2.1875rem 1.25rem;
+}
+/* line 199, ../scss/_local_css.scss */
+article .update p {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-size: 0.96875rem;
+  line-height: 30px;
+  margin-top: 30px;
+}
+/* line 205, ../scss/_local_css.scss */
+article .update p:first-of-type {
+  display: inline;
+}
+/* line 212, ../scss/_local_css.scss */
+article .update .timestamp {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-size: 0.96875rem;
+  line-height: 30px;
+  display: inline;
+}
+/* line 219, ../scss/_local_css.scss */
+article .update .timestamp .bolded {
+  font-weight: bolder;
+}
+/* line 221, ../scss/_local_css.scss */
+article .update .timestamp .bolded .upper {
+  text-transform: uppercase;
+}
+/* line 228, ../scss/_local_css.scss */
+article .update .updateImage img {
+  margin-top: 1.5625rem;
   display: block;
-  max-width: 100%;
-  margin: 0 1.25rem 0 1.25rem;
+  width: 100%;
+  border: 2px solid #707070;
+}
+/* line 236, ../scss/_local_css.scss */
+article .featureImage {
+  margin: 0 1.25rem 1.5625rem 1.25rem;
+}
+/* line 238, ../scss/_local_css.scss */
+article .featureImage img {
+  display: block;
+  width: 100%;
+}
+/* line 243, ../scss/_local_css.scss */
+article .video {
+  margin: 0 3.375rem 2.5rem 3.375rem;
+  position: relative;
+  padding-bottom: 49.65%;
+  /* 16:9 */
+  height: 0;
+}
+/* line 249, ../scss/_local_css.scss */
+article .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 258, ../scss/_local_css.scss */
+article .byline p {
+  font-size: 0.90625rem;
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  margin: 0 0 1.875rem 1.4375rem;
+}
+/* line 263, ../scss/_local_css.scss */
+article .byline .name {
+  font-weight: bolder;
+}
+/* line 266, ../scss/_local_css.scss */
+article .byline a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #882346;
+  font-weight: bolder;
+}
+/* line 271, ../scss/_local_css.scss */
+article .byline a:hover {
+  text-decoration: underline;
+}
+/* line 276, ../scss/_local_css.scss */
+article .share {
+  float: right;
+  margin: 0 1.4375rem 0 0;
 }
 
-/* line 178, ../scss/_local_css.scss */
-footer {
-  border: 1px solid #882346;
-}
-/* line 180, ../scss/_local_css.scss */
-footer nav {
-  border: 1px solid #882346;
-  background-color: #d9d9d9;
-  height: 15.375rem;
+/* line 282, ../scss/_local_css.scss */
+.closing {
   margin: auto;
   max-width: 58rem;
 }
+/* line 285, ../scss/_local_css.scss */
+.closing .line {
+  border-top: 1px solid #707070;
+  margin: 0 1.25rem 6.875rem 1.25rem;
+}
+/* line 289, ../scss/_local_css.scss */
+.closing .tags {
+  margin: 3.75rem 0 0 0.1875rem;
+}
+/* line 291, ../scss/_local_css.scss */
+.closing .tags a {
+  border: 1px solid #707070;
+  padding: 0.625rem 1.5625rem;
+  margin-right: 0.75rem;
+  font-size: 0.8125rem;
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #707070;
+}
+/* line 301, ../scss/_local_css.scss */
+.closing .tags a:hover {
+  text-decoration: underline;
+}
+/* line 306, ../scss/_local_css.scss */
+.closing .share {
+  float: right;
+  margin: 3.75rem 0 0 0;
+}
+
+/* line 314, ../scss/_local_css.scss */
+footer .full-width {
+  width: 100%;
+  max-width: 100%;
+}
+/* line 318, ../scss/_local_css.scss */
+footer .navigation {
+  background-color: #d9d9d9;
+  height: 15.25rem;
+  margin: auto;
+  max-width: 100%;
+}
+/* line 324, ../scss/_local_css.scss */
+footer .navigation nav {
+  max-width: 58rem;
+  margin: auto;
+}
+/* line 327, ../scss/_local_css.scss */
+footer .navigation nav ul {
+  padding: 7.125rem 4.625rem 0 4.625rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+/* line 337, ../scss/_local_css.scss */
+footer .navigation nav ul li a {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  color: #707070;
+  font-size: 0.9375rem;
+  font-weight: bolder;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 344, ../scss/_local_css.scss */
+footer .navigation nav ul li a:hover {
+  text-decoration: underline;
+}
+/* line 352, ../scss/_local_css.scss */
+footer .bottom {
+  background-color: #882346;
+  height: 2.8125rem;
+}
+/* line 358, ../scss/_local_css.scss */
+footer .bottom .social {
+  float: right;
+}
+
+/* line 366, ../scss/_local_css.scss */
+.share .icon a {
+  border: 1px solid #882346;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+/* line 373, ../scss/_local_css.scss */
+.share .email {
+  display: inline-block;
+  background: url("../images/sprite.png") no-repeat 0px 0px;
+  width: 1.8125rem;
+  height: 1.25rem;
+  margin-right: 1.5rem;
+}
+/* line 380, ../scss/_local_css.scss */
+.share .twitter {
+  display: inline-block;
+  background: url("../images/sprite.png") no-repeat -32px 0px;
+  width: 1.5625rem;
+  height: 1.25rem;
+  margin-right: 1.5rem;
+}
+/* line 387, ../scss/_local_css.scss */
+.share .facebook {
+  display: inline-block;
+  background: url("../images/sprite.png") no-repeat -60px 0px;
+  width: 0.6875rem;
+  height: 1.25rem;
+}
 
 /* SkipNav */
-/* line 192, ../scss/_local_css.scss */
+/* line 398, ../scss/_local_css.scss */
 #skipnav a, a.skipTranscript {
   position: absolute;
   z-index: 3000;
@@ -118,7 +325,7 @@ footer nav {
   padding-bottom: 25px;
 }
 
-/* line 200, ../scss/_local_css.scss */
+/* line 406, ../scss/_local_css.scss */
 #skipnav a:hover, #skipnav a:focus, #skipnav a:active {
   clip: auto;
   left: 0;

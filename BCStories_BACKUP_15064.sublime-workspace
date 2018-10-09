@@ -1,0 +1,872 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+<<<<<<< HEAD
+=======
+				"font-",
+				"font-size"
+			],
+			[
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+				"border",
+				"border-top"
+			],
+			[
+				"i",
+				"important"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"fac",
+				"facultyName"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"data-s",
+				"data-disciplines"
+			],
+			[
+				"faculty",
+				"facultyList"
+			],
+			[
+<<<<<<< HEAD
+				"font-",
+				"font-weight"
+			],
+			[
+=======
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+				"last-",
+				"last-of-type"
+			],
+			[
+				"last",
+				"last-of-type"
+			],
+			[
+				"di",
+				"DIV	Tag"
+			],
+			[
+				"back",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Z/Public/$$Redesign/$Admin/Standards/PHP/graduate_oncampus.php",
+			"settings":
+			{
+				"buffer_size": 2528,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Z/Public/$$Redesign/$Admin/Standards/PHP/undergrad_admissions.php",
+			"settings":
+			{
+				"buffer_size": 2437,
+				"line_ending": "Windows"
+			}
+<<<<<<< HEAD
+=======
+		},
+		{
+			"file": "/D/Downloads/Ex_Files_Forms_Flexbox/Exercise Files/Chapter-02/02-06/finished_files/forms.htm",
+			"settings":
+			{
+				"buffer_size": 9708,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "BCStories.html",
+			"settings":
+			{
+				"buffer_size": 4630,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scss/_local_css.scss",
+			"settings":
+			{
+				"buffer_size": 4477,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/bcstories.css",
+			"settings":
+			{
+				"buffer_size": 2905,
+				"line_ending": "Windows"
+			}
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"git h",
+				"Git: Commit history"
+			],
+			[
+				"readme",
+				"ReadmePlease"
+			],
+			[
+				"pack i",
+				"Package Control: Install Package"
+			],
+			[
+				"pack I",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"synt js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"snip",
+				"Snippet: Function"
+			],
+			[
+				"synt j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"synt ht",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+<<<<<<< HEAD
+		"/Z/Public/$$$Feirstein/Development/005"
+	],
+	"file_history":
+	[
+=======
+		"/Z/Public/webDevelopment/projects/BCStories"
+	],
+	"file_history":
+	[
+		"/Z/Public/webDevelopment/projects/BCStories/scss/bcstories.scss",
+		"/Z/Public/webDevelopment/projects/BCStories/scss/_settings.scss",
+		"/Z/Public/webDevelopment/projects/BCStories/js/response-bcstories.js",
+		"/Z/Public/$$Redesign/$Admin/Standards/CSS/master.css",
+		"/Z/Public/webDevelopment/projects/BCStories/scss/_local_var.scss",
+		"/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/comm-hw.scss",
+		"/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/_local_var.scss",
+		"/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/_local_css.scss",
+		"/Z/Public/webDevelopment/projects/BCStories/index.html",
+		"/D/Downloads/co.html",
+		"/Z/Public/webDevelopment/projects/StrategicPlan/index.html",
+		"/Z/Public/webDevelopment/projects/WolfeEvents/index.html",
+		"/Z/Public/webDevelopment/projects/WolfeEvents/config.rb",
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+		"/Z/Public/$$$Feirstein/Development/005/feirstein/faculty-category-list.html",
+		"/Z/Public/$$$Feirstein/Development/005/feirstein/Videos.html",
+		"/Z/Public/webDevelopment/master/scss/_master_var.scss",
+		"/Z/Public/webDevelopment/master/scss/_master_css.scss",
+<<<<<<< HEAD
+		"/Z/Public/webDevelopment/projects/StrategicPlan/index.html",
+		"/Z/Public/webDevelopment/projects/FacultyExperts/index.html",
+		"/Z/Public/webDevelopment/projects/MiddleStates/index.html",
+		"/Z/Public/webDevelopment/projects/BCStories/index.html",
+		"/Z/Public/webDevelopment/projects/BCStories/scss/bcstories.scss",
+=======
+		"/Z/Public/webDevelopment/projects/FacultyExperts/index.html",
+		"/Z/Public/webDevelopment/projects/MiddleStates/index.html",
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+		"/Z/Public/webDevelopment/projects/BCStories/config.rb",
+		"/Z/Public/webDevelopment/projects/FacultyExperts/config.rb",
+		"/Z/Public/webDevelopment/projects/MiddleStates/config.rb",
+		"/Z/Public/webDevelopment/projects/StrategicPlan/config.rb",
+		"/Z/Public/$$Redesign/$Admin/Structure/Imagery/PG 3.0 (2014)/themes/classic - Copy (2)/BCF.html",
+		"/Z/Public/$$Redesign/$Admin/Structure/Imagery/PG 3.0 (2014)/themes/galleria-1.3.5.js",
+<<<<<<< HEAD
+		"/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/_local_css.scss",
+		"/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/comm-hw.scss",
+=======
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+		"/Z/Public/$$Redesign/About/Offices and Services/CAASS/Degree Maps/table.html",
+		"/Z/Public/$$Redesign/About/Offices and Services/CAASS/Degree Maps/ACCOUNTING BS.html",
+		"/D/Downloads/test.php",
+		"/D/Downloads/Ex_Files_Forms_Flexbox/Exercise Files/Chapter-01/01-04/search.htm",
+		"/D/Downloads/Ex_Files_Forms_Flexbox/Exercise Files/Chapter-01/01-03/search.htm",
+<<<<<<< HEAD
+		"/Z/Public/$$Redesign/$Admin/Standards/CSS/master.css",
+=======
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+		"/Z/Public/$$$Feirstein/Development/005/feirstein/array.php",
+		"/Z/Public/webDevelopment/projects/filmSite/scss/_local_css.scss",
+		"/Z/Public/$$$Feirstein/Development/005/feirstein/build/styles/app.css",
+		"/Z/Public/webDevelopment/projects/filmSite/index.html",
+		"/Z/Public/$$$Feirstein/Development/005/feirstein.php",
+		"/Z/Public/webDevelopment/projects/BCF-BestOfBrooklyn2015/scss/_local_css.scss",
+		"/Z/Public/webDevelopment/projects/BCF-BestOfBrooklyn2015/css/bob.css",
+		"/Z/Public/$$$Feirstein/Development/005/feirstein/Videos-OLD.html",
+		"/Z/Public/$$Redesign/$Admin/Standards/CSS/27758.htm",
+		"/Z/Public/$$Redesign/$Admin/Standards/CSS/27757.htm",
+		"/Z/Public/$$Redesign/$Admin/Standards/CSS/31059.htm",
+		"/Z/Public/$$Redesign/$Admin/Standards/CSS/21637.htm",
+		"/Z/Public/$$Redesign/$Admin/Standards/CSS/21636.htm",
+		"/Z/Public/$$Redesign/$Admin/Standards/CSS/inquiry_callout.html",
+		"/D/Downloads/part9.html",
+		"/D/Downloads/aca_naturalsciences_cis/algorithms.html",
+		"/D/Downloads/bll1.html",
+		"/Z/Public/$$Redesign/Academics/Schools/Natural Sciences/CIS/faq.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/47-2/AMR_47-2_Harper.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/47-2/AMR_47-2_Wilson.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/47-2/AMR_47-2_Taylor.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/47-2/AMR_47-2_Spiegel.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/47-2/AMR_47-2_News.html",
+		"/Z/Public/$$$Feirstein/Development/005/$Content Classes/videoContent.con",
+		"/Z/Public/$$Redesign/$Admin/Events/cal_include.php",
+		"/Z/Public/$$Redesign/Academics/Schools/Natural Sciences/Earth and Environmental Sciences/newscallout.html",
+		"/D/Downloads/456.html",
+		"/D/Downloads/123.html",
+		"/D/Downloads/website.html",
+		"/Z/Public/$$Best Of Brooklyn Website/BOB 2018/bob.css",
+		"/Z/Public/$$Redesign/$Admin/Standards/htaccess/SOB Finance/.htaccess",
+		"/Z/Public/$$Redesign/Academics/Schools/Visual Arts/DAMAS/.htaccess",
+		"/Z/Public/$$Redesign/Academics/Schools/Visual Arts/DAMAS/financial.php",
+		"/Z/Public/$$$Feirstein/Development/005/feirstein/faculty.php",
+		"/Z/Public/webDevelopment/projects/filmSite/index2.html",
+		"/D/Downloads/003-002-JFR-006-BL-CA Book Now Available.html",
+		"/Z/Public/webDevelopment/projects/filmSite/scss/_settings.scss",
+		"/Z/Public/webDevelopment/projects/filmSite/scss/_local_var.scss",
+		"/Z/Public/webDevelopment/projects/filmSite/css/filmSite.css",
+		"/Z/Public/webDevelopment/projects/filmSite/scss/filmSite.scss",
+		"/Z/Public/webDevelopment/projects/filmSite/config.rb",
+		"/Z/Public/webDevelopment/projects/filmSite/bower.json",
+		"/Z/Public/webDevelopment/projects/filmSite/.gitignore",
+		"/Z/Public/webDevelopment/projects/filmSite/.bowerrc",
+		"/Z/Public/$$$Feirstein/Development/005/feirstein/build/styles/app.min.css",
+		"/D/Downloads/2.1 Joohee's Favorite Rice V3.html",
+		"/D/Downloads/2 Joohee's Favorite Rice.html",
+		"/D/Downloads/123/2 Joohee's Favorite Rice.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/46-2/AMR_46-2_Katz.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/46-2/AMR_46-2_Tallaj.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/46-2/AMR_46-2_Dumbauld.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/46-2/AMR_46-2_Williamson.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/46-2/AMR_46-2_News.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/46-2/AMR_46-2_Williams.html",
+		"/Z/Public/$$Redesign/Academics/Centers/Hitchcock/AMR/46-1/AMR_46-1_Kasinitz.html",
+		"/Z/Public/$$Redesign/$Admin/Standards/JS/main.js",
+		"/Z/Public/$$Redesign/$Admin/Standards/JS/jquery-ui.carousel.js",
+		"/D/Downloads/materials.html",
+		"/Z/Public/$$Redesign/$Admin/Standards/JS/jquery-1.5.1.min.js",
+		"/Z/Public/$$Redesign/$Admin/Standards/JS/jquery-ui.min.js",
+		"/Z/Public/webDevelopment/projects/Storify_BC/index.html",
+		"/Z/Public/$$Redesign/About/Offices and Services/HR/2017/jobs_feed_file.php",
+		"/Z/Public/$$Redesign/Academics/Centers/TV/googlemap.html",
+		"/Z/Public/$$$Feirstein/Development/004/feirstein/admissions.php",
+		"/Z/Public/$$Redesign/$Admin/Structure/test_read_file.php",
+		"/Z/Public/$$Redesign/$Admin/Standards/CSS/print.css",
+		"/Z/Public/$$$Feirstein/Development/005/feirstein/build/js/app.js",
+		"/Z/Public/webDevelopment/projects/Storify/css/storify.css",
+		"/Z/Public/webDevelopment/projects/Storify/storify.html",
+		"/Z/Public/webDevelopment/projects/Storify/scss/storify.scss",
+		"/Z/Public/webDevelopment/projects/Storify/index.html",
+		"/C/Users/staff/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/Z/Public/webDevelopment/projects/Storify/scss/_local_var.scss",
+		"/C/Users/jdoe/Dropbox/L/JavaScript_and_jQuery_The_Missing_Manual_Second_Edition/chapter15/debugger_MOD.html",
+		"/Z/Public/$$Redesign/$Admin/Standards/forms/2015/pre-health.php",
+		"/Z/Public/$$Redesign/$Admin/Standards/forms/2015/pre-award.php",
+		"/C/Users/jdoe/Dropbox/L/JavaScript_and_jQuery_The_Missing_Manual_Second_Edition/chapter15/console_MOD.html",
+		"/C/Users/jdoe/Dropbox/L/JavaScript_and_jQuery_The_Missing_Manual_Second_Edition/chapter10/tabs_MOD.html",
+		"/Z/Public/webDevelopment/master/scss/_custom.scss",
+		"/Z/Public/webDevelopment/master/css/app.css",
+		"/Z/Public/webDevelopment/master/config.rb",
+		"/Z/Public/webDevelopment/master/bower_components/foundation/scss/foundation/_settings.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/ExampleSnippets.txt",
+		"/J/Training/CSS with LESS and Sass/Exercise Files",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/import_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/import_me.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/import_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/SASS_SampleDoc.html",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/format_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/format_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/funcs_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/funcs_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/mixargs_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/mixargs_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/ops_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/ops_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/SASS_SampleDoc.html",
+<<<<<<< HEAD
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/mixin_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/mixin_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/nested_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/var_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/nested_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch1/FirstSassExample.html",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch1/styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch1/styles.scss"
+=======
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/mixin_styles.scss"
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\jdoe\\Downloads\\Foundation-4.3.2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+<<<<<<< HEAD
+=======
+			"768",
+			"maroon2",
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+			"</span>",
+			"<span style=\"font-size: 12px;\">",
+			"<span style=\"letter-spacing: -0.1pt;\">",
+			"<span style=\"letter-spacing: -0.15pt;\">",
+			" style=\"margin: 0in 2.5pt 10pt 0in;\"",
+			"<span style=\"letter-spacing: 0.1pt;\">",
+			"<span style=\"letter-spacing: 0.05pt;\">",
+			"<span style=\"letter-spacing: -0.05pt;\">",
+			"<span style=\"line-height: 115%; font-size: 10pt;\">",
+			"<span style=\"color: rgb(31, 78, 121); font-size: 10pt;\">",
+			"<span style=\"font-size: 12px;\">",
+			" style=\"margin-right: 0px;\" dir=\"ltr\"",
+			"<strong>",
+			"<span style=\"text-decoration: underline;\">",
+			"</span>",
+			"<span style=\"font-size: 14px;\">",
+			"</h2>",
+			"</em>, d",
+			"<h2><em>",
+			"#galleria",
+			"galleria",
+			" – ",
+			" align=\"center\"",
+			"align=\"left\"",
+			"	</tr>\n		<tr>\n		<td>\n		<br /></td>\n		<td></td>\n		<td>\n		<br />\n		</td>\n		<td></td>\n	</tr>",
+			" </a>(pdf)",
+			"</a> (pdf)",
+			" target=\"_blank\"",
+			"</span>",
+			"<span style=\"color: rgb(82, 82, 82); font-size: 12pt;\"",
+			" style=\"margin: 0in 0in 11.25pt; line-height: 14.25pt; vertical-align: baseline;\">",
+			"<span style=\"color: rgb(84, 77, 69); font-size: 12pt; font-weight: normal;\">",
+			"</span>",
+			"<span style=\"font-size: 16px;\"><span style=\"font-size: 11pt;\">",
+			"</span>",
+			"<span>",
+			"mainContent",
+			"faculty-category-list",
+			"a.sort",
+			"sort",
+			"faculty-members-base",
+			"&amp;",
+			":00",
+			"<p>",
+			"</div>",
+			"<div>",
+			"  ",
+			" ",
+			"  ",
+			"<span style=\"white-space: pre;\">	</span>",
+			"&amp;",
+			"<div>",
+			"</div>",
+			"in-line",
+			"display: none",
+			"hidden",
+			"poem",
+			"content",
+			"9",
+			"3",
+			".1",
+			"2",
+			"\n            <p>",
+			" </p>\n            ",
+			"events\"",
+			"  ",
+			"	",
+			"  ",
+			"P.M.",
+			"A.M.",
+			"</strong>",
+			"</span>",
+			"<span style=\"white-space: pre;\">",
+			"<strong>",
+			"yellow",
+			"additional",
+			"Thank You",
+			"if",
+			"JFR-004",
+			"full",
+			"wide",
+			"video",
+			"<td> </td>",
+			"<em>",
+			"<em",
+			"IMAGE",
+			"\"left\"",
+			"\"right\"",
+			"IMAGE",
+			"/em",
+			"<em><em>fandango</em></em>",
+			"fandango",
+			"<em><em>son jarocho</em></em>",
+			"son jarocho",
+			"clear: both",
+			"clear",
+			"4",
+			"1",
+			"11",
+			"8",
+			"5",
+			"4",
+			"width=\"450\"",
+			"width=\"100\"",
+			"style=\"padding: 0in 5.4pt; width: 118pt; height: 12.75pt; white-space: nowrap;\"",
+			" valign=\"bottom\"",
+			" style=\"padding: 0in 5.4pt; width: 183pt; height: 15pt; white-space: nowrap;\"",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 48pt; height: 15pt; white-space: nowrap;\"",
+			"style=\"height: 15pt;\"",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 206pt; height: 12.75pt; white-space: nowrap;\"",
+			"valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 194pt; height: 12.75pt; white-space: nowrap;\"",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 2.25in; height: 12.75pt; white-space: nowrap;\"",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 230pt; height: 12.75pt; white-space: nowrap;\"",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 48pt; height: 28.5pt;\"",
+			" style=\"height: 28.5pt;\"",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 46.9pt; height: 12.75pt; white-space: nowrap;\"",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 189pt; height: 12.75pt; white-space: nowrap;\"",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 95.25pt; height: 12.75pt; white-space: nowrap;\" colspan=\"2\"",
+			"            ",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 48pt; height: 12.75pt; white-space: nowrap;\"",
+			"<p class=\"MsoNormal\" style=\"line-height: normal; margin-bottom: 0pt;\"><span style=\"font-family: &quot;times new roman&quot;,&quot;serif&quot;;\">",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 146pt; height: 12.75pt; white-space: nowrap;\"",
+			"</span></p>",
+			"<p class=\"MsoNormal\" style=\"text-align: right; line-height: normal; margin-bottom: 0pt;\"><span style=\"font-family: &quot;times new roman&quot;,&quot;serif&quot;;\">",
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 48pt; height: 12.75pt; white-space: nowrap;\" colspan=\"2\"",
+<<<<<<< HEAD
+			" style=\"height: 12.75pt;\"",
+			":focus",
+			"#nav"
+=======
+			" style=\"height: 12.75pt;\""
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+<<<<<<< HEAD
+=======
+			"maroon",
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+			"",
+			" D",
+			"",
+			"-",
+			"",
+			"	<tr>\n		<td>X\n		X<br /></td>\n		<td>X</td>\n		<td>X\n		X<br />\n		</td>\n		<td>X</td>\n	</tr>",
+			" (pdf)</a>",
+			"",
+			"and",
+			" ",
+			"",
+			"<br>",
+			"<p>",
+			" ",
+			": ",
+			"and",
+			"",
+			" ",
+			"p.m.",
+			"a.m.",
+			"",
+			"TY",
+			"JFR-006",
+			"<td></td>",
+			"\"leftside\"",
+			"\"rightside\"",
+			"<em>fandango</em>",
+			"<em>son jarocho</em>",
+			"width=\"375\"",
+			"width=\"175\"",
+			"",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+<<<<<<< HEAD
+			"selected": 0,
+=======
+			"selected": 4,
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Z/Public/$$Redesign/$Admin/Standards/PHP/graduate_oncampus.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2027,
+								1971
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+<<<<<<< HEAD
+					"stack_index": 0,
+=======
+					"stack_index": 5,
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Z/Public/$$Redesign/$Admin/Standards/PHP/undergrad_admissions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								222,
+								228
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+<<<<<<< HEAD
+					"stack_index": 1,
+					"type": "text"
+=======
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/Downloads/Ex_Files_Forms_Flexbox/Exercise Files/Chapter-02/02-06/finished_files/forms.htm",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2002,
+								1985
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "BCStories.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4630,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1742,
+								1742
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "scss/_local_css.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4477,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3816,
+								3816
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1987.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "css/bcstories.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2905,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1116,
+								1116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+>>>>>>> 04f772741fc99d58bf54356a55380a3991f331ed
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "bcstories.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"doc",
+				"css/foundation.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Z:\\Public\\$BCF_Website\\Development\\003-Production5\\BrooklynCollegeFoundation.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 193.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
