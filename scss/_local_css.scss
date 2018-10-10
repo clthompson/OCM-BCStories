@@ -19,33 +19,65 @@
 // Fonts and Sizes - OVERRIDE - ?????
   //Fonts
   $Roboto: 'Roboto', sans-serif; //
+  //Weights
   $Roboto400: 400;
   $Roboto500: 500;
   $Roboto700: 700;
   $Roboto900: 900;
-  $RobotoI: italic;
 
   $Lucida: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 
-  //Headings
-  $h1-font-size: rem-calc(44); // $h1-font-size: rem-calc(44);  // not used yet
-  $h2-font-size: rem-calc(20); // $h2-font-size: rem-calc(37);  // 22
-  $h3-font-size: rem-calc(18); // $h3-font-size: rem-calc(27);  // 18
-  $h4-font-size: rem-calc(14); // $h4-font-size: rem-calc(23);  // not used yet
-  $h5-font-size: rem-calc(15); // $h5-font-size: rem-calc(18);  // not used yet
-  $h6-font-size: rem-calc(16); // $h6-font-size: 1rem;          // not used yet
+  $PMNCaecilia: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 
-  // Paragraphs
-  $paragraph-font-size: rem-calc(13); // 15 good
-  $article-font-size: rem-calc(15.5); // 15 good
-  $byline-font-size: rem-calc(14.5); //12 good
-  $tag-font-size: rem-calc(13); //12 good
+  $Barlow: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+
+  //Italics for all
+  $italic: italic;
+
+  //Headings
+  $h1-font-size-D: rem-calc(55); // 
+  $h1-font-size-T: rem-calc(50); // 
+  $h1-font-size-P: rem-calc(22); // 
+  $h2-font-size-D: rem-calc(30); // 
+  $h2-font-size-T: rem-calc(28); // 
+  $h2-font-size-P: rem-calc(20); // 
+  $h3-font-size-D: rem-calc(18); // not used
+  $h3-font-size-T: rem-calc(18); // not used
+  $h3-font-size-P: rem-calc(18); // not used
+  $h4-font-size: rem-calc(14); // not used 
+  $h5-font-size: rem-calc(15); // not used 
+  $h6-font-size: rem-calc(16); // not used 
+
+  // Article Styles
+  //$paragraph-font-size: rem-calc(18); // not Used
+  $article-copy: rem-calc(18); // all
+  $byline: rem-calc(18); // D and T
+  $byline-P: rem-calc(12); // P
+  $subheader-D: rem-calc(30);
+  $subheader-T: rem-calc(22);
+  $subheader-P: rem-calc(20); // missing from the design files
+  $caption-D: rem-calc(13);
+  $caption-T: rem-calc(16);
+  $caption-T: rem-calc(12);
+  $photoCredit: rem-calc(15); // D and T
+  $photoCredit-P: rem-calc(12); // P
+  $quote-D: rem-calc(26);
+  $quote-T: rem-calc(36);
+  $quote-P: rem-calc(24);
+  $tag: rem-calc(14); //D and T
+  $tag-P: rem-calc(10); //P
+
 
   //Homepage Text  
-  $h2-homepage-list: rem-calc(20); // $h2-font-size: rem-calc(37);  // 22
+  //$h2-homepage-list: rem-calc(20); // 
 
   //Nav
-  $Nav: rem-calc(15);
+  $nav: rem-calc(16);
+  $nav-bottom: rem-calc(16);
+  $nav-bottom-P: rem-calc(14);
+
+  //Misc
+  $copyright: rem-calc(12); // all
 
 // Colors
   //Main
@@ -79,6 +111,7 @@
 // Line Styles
   $thin-maroon: 1px solid $color-maroon;
   $thin-black: 1px solid $color-black;
+  $thick-white: 2px solid $color-white;
   $thin-gray222: 1px solid $color-gray222;
   $thin-gray707: 1px solid $color-gray707;
   $thick-gray707: 2px solid $color-gray707;
@@ -109,7 +142,7 @@ header {
   	width: 100%;
   	max-width: 100%;
   	height: rem-calc(45);
-  	nav {
+  	nav.desktop {
   		margin: auto;
   		max-width: $full;
   		//border: $thin-maroon;
@@ -123,7 +156,7 @@ header {
 				a {
 					font-family: $Lucida;
 					color: $color-white;
-					font-size: $Nav;
+					font-size: $nav;
 					font-weight: bolder;
 					text-decoration: none;
 					text-transform: uppercase;
@@ -133,17 +166,32 @@ header {
 				}
 			}
 		}
+		@media #{$Phone} {
+			display: none;
+		}
 	}
+  }
+  nav.mobile {
+
   }
   .brand {
     padding-top: rem-calc(45);
     max-width: $full;
     margin: auto;
     border-bottom: $thin-gray707;
+    .logo {
+    	//border: $thin-maroon;
+    	display: block;
+    	margin: rem-calc(30) auto rem-calc(16) auto;
+    	background: url("../images/sprite.png") no-repeat 0px -67px;
+    	background-origin: content-box;
+    	width: rem-calc(228);
+    	height: rem-calc(66);
+    }
 	img {
 		display: block;
 		margin: auto;
-    padding: rem-calc(30) 0 rem-calc(16) 0;
+    	padding: rem-calc(30) 0 rem-calc(16) 0;
 	}
   }
 }
@@ -158,18 +206,29 @@ article {
   max-width: $full;
   padding-bottom: rem-calc(45);
   h1{
-  	font-size: $h1-font-size;
-  	line-height: 39px;
+  	font-size: $h1-font-size-D;
+  	line-height: 56px;
   	font-family: $Roboto;
   	font-weight: $Roboto900;
-  	//font-style: $RobotoI;
+  	//font-style: $italic;
   	text-align: center;
   	padding: 0 rem-calc(54) 0 rem-calc(54);
+  	margin: rem-calc(45) 0 rem-calc(35) 0;
+  }
+  .subheader {
+  	padding: 0 rem-calc(54) 0 rem-calc(54);
+  	p {
+  		font-family: $PMNCaecilia;
+  		font-size: $subheader-D;
+  		line-height: 32px;
+  		padding: 0 0 rem-calc(20) 0;
+  		margin: 0;
+  	}
   }
   .copy {
     padding: 0 rem-calc(54) 0 rem-calc(54);
     h2 {
-  	 font-size: $h2-font-size;
+  	 font-size: $h2-font-size-D;
   	 font-family: $Roboto;
   	 font-weight: $Roboto700;
      color: $color-gray222;
@@ -177,15 +236,15 @@ article {
      margin: 0;
     }
     h3 {
-    font-size: $h3-font-size;
+    font-size: $h3-font-size-D;
     font-family: $Roboto;
     font-weight: $Roboto700;
     color: $color-gray222;
     margin: 0;
     }
     p {
-    	font-family: $Lucida;
-      font-size: $article-font-size;
+      font-family: $Barlow;
+      font-size: $article-copy;
       color: $color-gray222;
       line-height: 30px;
       margin: 0;
@@ -197,8 +256,8 @@ article {
     padding: rem-calc(27) rem-calc(34);
     margin: 0 rem-calc(20) rem-calc(35) rem-calc(20);
     p {
-      font-family: $Lucida;
-      font-size: $article-font-size;
+      font-family: $Barlow;
+      font-size: $article-copy;
       line-height: 30px;
       margin-top: 30px;
       //padding: 0 0 rem-calc(30) 0;
@@ -210,8 +269,8 @@ article {
       }
     }
     .timestamp {
-      font-family: $Lucida;
-      font-size: $article-font-size;
+      font-family: $Barlow;
+      font-size: $article-copy;
       line-height: 30px;
       //margin: 0;
       //padding: 0 0 rem-calc(30) 0;
@@ -240,6 +299,49 @@ article {
   	 width: 100%;
     }
   }
+  .floatImage {
+  	float: right;
+  	margin: 0 rem-calc(54) rem-calc(10) rem-calc(10);
+  	width: rem-calc(275);
+  	img {
+  		width: rem-calc(275);
+  	}
+  	.caption{
+  		font-family: $Barlow;
+  		font-size: $caption-D;
+  		color: $color-gray222;
+  		margin: 0;
+
+  	}
+  	.photoCredit {
+  		font-family: $Barlow;
+  		font-size: $photoCredit;
+  		font-style: $italic;
+  		color: $color-graya2a;
+  		margin: 0;
+  	}
+  }
+  .quote {
+  	//border: $thin-maroon;
+  	float: left;
+  	width: rem-calc(275);
+  	//padding: 0 0 0 rem-calc(55);
+  	margin: 0 rem-calc(35) 0 rem-calc(54);
+  	.doubleQuotes{
+  		//display: inline-block;
+  		background: url("../images/sprite.png") no-repeat -240px -45px;
+		width: rem-calc(34);
+		height: rem-calc(30);
+  	}
+  	p {
+  		//display: inline;
+  		font-size: $quote-D;
+  		font-family: $PMNCaecilia;
+  		margin: 0 0 0 rem-calc(46);
+  		position: relative;
+  		top: -23px;
+  	}
+  }
   .video {
     margin: 0 rem-calc(54) rem-calc(40) rem-calc(54);
     position: relative;
@@ -254,9 +356,16 @@ article {
       height: 100%;
     }
   }
+  .articleImage{
+  	margin: 0 rem-calc(54) rem-calc(40) rem-calc(54);
+  	img {
+  	 display: block;
+  	 width: 100%;
+    }
+  }
   .byline {
     p {
-      font-size: $byline-font-size;
+      font-size: $byline;
       font-family: $Lucida;
       margin: 0 0 rem-calc(30) rem-calc(23);
     }
@@ -284,7 +393,7 @@ article {
   max-width: $full;
   .line {
     border-top: $thin-gray707;
-    margin: 0 rem-calc(20) rem-calc(110) rem-calc(20);
+    margin: 0 rem-calc(20) rem-calc(110) rem-calc(20); // *****why is this 110 needed?
   }
   .tags {
     margin: rem-calc(60) 0 0 rem-calc(3);
@@ -293,7 +402,7 @@ article {
       border: $thin-gray707;
       padding: rem-calc(10) rem-calc(25);
       margin-right: rem-calc(12);
-      font-size: $tag-font-size;
+      font-size: $tag;
       font-family: $Lucida;
       text-transform: uppercase;
       text-decoration: none;
@@ -337,7 +446,7 @@ footer {
           a {
             font-family: $Lucida;
             color: $color-gray707;
-            font-size: $Nav;
+            font-size: $nav-bottom;
             font-weight: bolder;
             text-decoration: none;
             text-transform: uppercase;
@@ -351,12 +460,76 @@ footer {
   }
   .bottom {
     background-color: $color-maroon;
-    height: rem-calc(45);
-    .cuny {
-
-    }
-    .social {
-      float: right;
+    height: rem-calc(70);
+    .elements {
+      margin: auto;
+  	  max-width: $full;
+  	  height: rem-calc(70);
+  	  .social {
+  	  	float: right;
+  	  	//display: inline-block;
+  	  	margin: rem-calc(25) rem-calc(28) 0 0;
+  	  	.icon {
+  	  	  a {
+  	  		//border: $thick-white;
+  	  		width: 100%;
+      		height: 100%;
+      		display: inline-block;
+      	  }
+      	}
+      	.instagram {
+			display: inline-block;
+			background: url("../images/sprite.png") no-repeat 0px -43px;
+			width: rem-calc(19);
+			height: rem-calc(20);
+			margin-right: rem-calc(24);
+		}
+      	.twitter {
+		    display: inline-block;
+		    background: url("../images/sprite.png") no-repeat -32px -45px;
+		    width: rem-calc(19);
+		    height: rem-calc(17);
+		    margin-right: rem-calc(24);
+		}
+		  .facebook {
+		    display: inline-block;
+		    background: url("../images/sprite.png") no-repeat -60px -43px;
+		    width: rem-calc(10);
+		    height: rem-calc(19);
+		}
+  	  }
+  	  .copyright {
+  	  	height: rem-calc(70);
+  	  	.cuny {
+		  display: inline-block;
+		  background: url("../images/sprite.png") no-repeat -240px 0px;
+		  width: rem-calc(45);
+		  height: rem-calc(44);
+		  margin: rem-calc(13) 0 0 rem-calc(28);
+		  a {
+		      //border: $thin-maroon;
+		      width: 100%;
+		      height: 100%;
+		      display: inline-block;
+		    }
+    	}
+    	.copy {
+    	  display: inline-block;
+    	  position: absolute;
+    	  //top: -17px;
+    	  border-left: $thick-white;
+    	  height: rem-calc(44);
+    	  margin: rem-calc(13) rem-calc(9) 0 rem-calc(14);
+    	  p {
+    	  	font-family: $Lucida;
+    	  	color: $color-white;
+    	  	font-size: $copyright;
+    	  	//line-height: 60px;
+    	  	margin: rem-calc(15) 0 0 rem-calc(14);
+    	  	padding: 0;
+    	  }
+    	}
+  	  }
     }
   }
 }
@@ -364,7 +537,7 @@ footer {
 .share {
   .icon {
     a {
-      border: $thin-maroon;
+      //border: $thin-maroon;
       width: 100%;
       height: 100%;
       display: inline-block;

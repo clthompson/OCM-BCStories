@@ -1,19 +1,19 @@
 /* CSS Document */
 /* CSS Document */
 /* CSS Document */
-/* line 91, ../scss/_local_css.scss */
+/* line 124, ../scss/_local_css.scss */
 body {
   background-color: #fff;
   padding: 0;
   margin: 0;
 }
 
-/* line 98, ../scss/_local_css.scss */
+/* line 131, ../scss/_local_css.scss */
 .full-width {
   max-width: 100%;
 }
 
-/* line 105, ../scss/_local_css.scss */
+/* line 138, ../scss/_local_css.scss */
 header .full-width {
   z-index: 1000;
   position: fixed;
@@ -22,78 +22,106 @@ header .full-width {
   max-width: 100%;
   height: 2.8125rem;
 }
-/* line 112, ../scss/_local_css.scss */
-header .full-width nav {
+/* line 145, ../scss/_local_css.scss */
+header .full-width nav.desktop {
   margin: auto;
   max-width: 58rem;
 }
-/* line 116, ../scss/_local_css.scss */
-header .full-width nav ul {
+/* line 149, ../scss/_local_css.scss */
+header .full-width nav.desktop ul {
   margin: 0;
   padding: 0.875rem 0 0 1.5rem;
   list-style-type: none;
 }
-/* line 120, ../scss/_local_css.scss */
-header .full-width nav ul li {
+/* line 153, ../scss/_local_css.scss */
+header .full-width nav.desktop ul li {
   display: inline-block;
   padding-right: 2.8125rem;
 }
-/* line 123, ../scss/_local_css.scss */
-header .full-width nav ul li a {
+/* line 156, ../scss/_local_css.scss */
+header .full-width nav.desktop ul li a {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   color: #fff;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: bolder;
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 130, ../scss/_local_css.scss */
-header .full-width nav ul li a:hover {
+/* line 163, ../scss/_local_css.scss */
+header .full-width nav.desktop ul li a:hover {
   text-decoration: underline;
 }
-/* line 138, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 145, ../scss/_local_css.scss */
+  header .full-width nav.desktop {
+    display: none;
+  }
+}
+/* line 177, ../scss/_local_css.scss */
 header .brand {
   padding-top: 2.8125rem;
   max-width: 58rem;
   margin: auto;
   border-bottom: 1px solid #707070;
 }
-/* line 143, ../scss/_local_css.scss */
+/* line 182, ../scss/_local_css.scss */
+header .brand .logo {
+  display: block;
+  margin: 1.875rem auto 1rem auto;
+  background: url("../images/sprite.png") no-repeat 0px -67px;
+  background-origin: content-box;
+  width: 14.25rem;
+  height: 4.125rem;
+}
+/* line 191, ../scss/_local_css.scss */
 header .brand img {
   display: block;
   margin: auto;
   padding: 1.875rem 0 1rem 0;
 }
 
-/* line 155, ../scss/_local_css.scss */
+/* line 203, ../scss/_local_css.scss */
 article {
   margin: auto;
   max-width: 58rem;
   padding-bottom: 2.8125rem;
 }
-/* line 160, ../scss/_local_css.scss */
+/* line 208, ../scss/_local_css.scss */
 article h1 {
-  font-size: 2.75rem;
-  line-height: 39px;
+  font-size: 3.4375rem;
+  line-height: 56px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   text-align: center;
   padding: 0 3.375rem 0 3.375rem;
+  margin: 2.8125rem 0 2.1875rem 0;
 }
-/* line 169, ../scss/_local_css.scss */
+/* line 218, ../scss/_local_css.scss */
+article .subheader {
+  padding: 0 3.375rem 0 3.375rem;
+}
+/* line 220, ../scss/_local_css.scss */
+article .subheader p {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-size: 1.875rem;
+  line-height: 32px;
+  padding: 0 0 1.25rem 0;
+  margin: 0;
+}
+/* line 228, ../scss/_local_css.scss */
 article .copy {
   padding: 0 3.375rem 0 3.375rem;
 }
-/* line 171, ../scss/_local_css.scss */
+/* line 230, ../scss/_local_css.scss */
 article .copy h2 {
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: #222;
   padding: 0 0 1.25rem 0;
   margin: 0;
 }
-/* line 179, ../scss/_local_css.scss */
+/* line 238, ../scss/_local_css.scss */
 article .copy h3 {
   font-size: 1.125rem;
   font-family: "Roboto", sans-serif;
@@ -101,64 +129,109 @@ article .copy h3 {
   color: #222;
   margin: 0;
 }
-/* line 186, ../scss/_local_css.scss */
+/* line 245, ../scss/_local_css.scss */
 article .copy p {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-  font-size: 0.96875rem;
+  font-size: 1.125rem;
   color: #222;
   line-height: 30px;
   margin: 0;
   padding: 0 0 1.875rem 0;
 }
-/* line 195, ../scss/_local_css.scss */
+/* line 254, ../scss/_local_css.scss */
 article .update {
   background-color: #e5e5e5;
   padding: 1.6875rem 2.125rem;
   margin: 0 1.25rem 2.1875rem 1.25rem;
 }
-/* line 199, ../scss/_local_css.scss */
+/* line 258, ../scss/_local_css.scss */
 article .update p {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-  font-size: 0.96875rem;
+  font-size: 1.125rem;
   line-height: 30px;
   margin-top: 30px;
 }
-/* line 205, ../scss/_local_css.scss */
+/* line 264, ../scss/_local_css.scss */
 article .update p:first-of-type {
   display: inline;
 }
-/* line 212, ../scss/_local_css.scss */
+/* line 271, ../scss/_local_css.scss */
 article .update .timestamp {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-  font-size: 0.96875rem;
+  font-size: 1.125rem;
   line-height: 30px;
   display: inline;
 }
-/* line 219, ../scss/_local_css.scss */
+/* line 278, ../scss/_local_css.scss */
 article .update .timestamp .bolded {
   font-weight: bolder;
 }
-/* line 221, ../scss/_local_css.scss */
+/* line 280, ../scss/_local_css.scss */
 article .update .timestamp .bolded .upper {
   text-transform: uppercase;
 }
-/* line 228, ../scss/_local_css.scss */
+/* line 287, ../scss/_local_css.scss */
 article .update .updateImage img {
   margin-top: 1.5625rem;
   display: block;
   width: 100%;
   border: 2px solid #707070;
 }
-/* line 236, ../scss/_local_css.scss */
+/* line 295, ../scss/_local_css.scss */
 article .featureImage {
   margin: 0 1.25rem 1.5625rem 1.25rem;
 }
-/* line 238, ../scss/_local_css.scss */
+/* line 297, ../scss/_local_css.scss */
 article .featureImage img {
   display: block;
   width: 100%;
 }
-/* line 243, ../scss/_local_css.scss */
+/* line 302, ../scss/_local_css.scss */
+article .floatImage {
+  float: right;
+  margin: 0 3.375rem 0.625rem 0.625rem;
+  width: 17.1875rem;
+}
+/* line 306, ../scss/_local_css.scss */
+article .floatImage img {
+  width: 17.1875rem;
+}
+/* line 309, ../scss/_local_css.scss */
+article .floatImage .caption {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-size: 0.8125rem;
+  color: #222;
+  margin: 0;
+}
+/* line 316, ../scss/_local_css.scss */
+article .floatImage .photoCredit {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: #a2a2a2;
+  margin: 0;
+}
+/* line 324, ../scss/_local_css.scss */
+article .quote {
+  float: left;
+  width: 17.1875rem;
+  margin: 0 2.1875rem 0 3.375rem;
+}
+/* line 330, ../scss/_local_css.scss */
+article .quote .doubleQuotes {
+  background: url("../images/sprite.png") no-repeat -240px -45px;
+  width: 2.125rem;
+  height: 1.875rem;
+}
+/* line 336, ../scss/_local_css.scss */
+article .quote p {
+  font-size: 1.625rem;
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  margin: 0 0 0 2.875rem;
+  position: relative;
+  top: -23px;
+}
+/* line 345, ../scss/_local_css.scss */
 article .video {
   margin: 0 3.375rem 2.5rem 3.375rem;
   position: relative;
@@ -166,7 +239,7 @@ article .video {
   /* 16:9 */
   height: 0;
 }
-/* line 249, ../scss/_local_css.scss */
+/* line 351, ../scss/_local_css.scss */
 article .video iframe {
   position: absolute;
   top: 0;
@@ -174,123 +247,201 @@ article .video iframe {
   width: 100%;
   height: 100%;
 }
-/* line 258, ../scss/_local_css.scss */
+/* line 359, ../scss/_local_css.scss */
+article .articleImage {
+  margin: 0 3.375rem 2.5rem 3.375rem;
+}
+/* line 361, ../scss/_local_css.scss */
+article .articleImage img {
+  display: block;
+  width: 100%;
+}
+/* line 367, ../scss/_local_css.scss */
 article .byline p {
-  font-size: 0.90625rem;
+  font-size: 1.125rem;
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   margin: 0 0 1.875rem 1.4375rem;
 }
-/* line 263, ../scss/_local_css.scss */
+/* line 372, ../scss/_local_css.scss */
 article .byline .name {
   font-weight: bolder;
 }
-/* line 266, ../scss/_local_css.scss */
+/* line 375, ../scss/_local_css.scss */
 article .byline a {
   text-decoration: none;
   text-transform: uppercase;
   color: #882346;
   font-weight: bolder;
 }
-/* line 271, ../scss/_local_css.scss */
+/* line 380, ../scss/_local_css.scss */
 article .byline a:hover {
   text-decoration: underline;
 }
-/* line 276, ../scss/_local_css.scss */
+/* line 385, ../scss/_local_css.scss */
 article .share {
   float: right;
   margin: 0 1.4375rem 0 0;
 }
 
-/* line 282, ../scss/_local_css.scss */
+/* line 391, ../scss/_local_css.scss */
 .closing {
   margin: auto;
   max-width: 58rem;
 }
-/* line 285, ../scss/_local_css.scss */
+/* line 394, ../scss/_local_css.scss */
 .closing .line {
   border-top: 1px solid #707070;
   margin: 0 1.25rem 6.875rem 1.25rem;
 }
-/* line 289, ../scss/_local_css.scss */
+/* line 398, ../scss/_local_css.scss */
 .closing .tags {
   margin: 3.75rem 0 0 0.1875rem;
 }
-/* line 291, ../scss/_local_css.scss */
+/* line 400, ../scss/_local_css.scss */
 .closing .tags a {
   border: 1px solid #707070;
   padding: 0.625rem 1.5625rem;
   margin-right: 0.75rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   color: #707070;
 }
-/* line 301, ../scss/_local_css.scss */
+/* line 410, ../scss/_local_css.scss */
 .closing .tags a:hover {
   text-decoration: underline;
 }
-/* line 306, ../scss/_local_css.scss */
+/* line 415, ../scss/_local_css.scss */
 .closing .share {
   float: right;
   margin: 3.75rem 0 0 0;
 }
 
-/* line 314, ../scss/_local_css.scss */
+/* line 423, ../scss/_local_css.scss */
 footer .full-width {
   width: 100%;
   max-width: 100%;
 }
-/* line 318, ../scss/_local_css.scss */
+/* line 427, ../scss/_local_css.scss */
 footer .navigation {
   background-color: #d9d9d9;
   height: 15.25rem;
   margin: auto;
   max-width: 100%;
 }
-/* line 324, ../scss/_local_css.scss */
+/* line 433, ../scss/_local_css.scss */
 footer .navigation nav {
   max-width: 58rem;
   margin: auto;
 }
-/* line 327, ../scss/_local_css.scss */
+/* line 436, ../scss/_local_css.scss */
 footer .navigation nav ul {
   padding: 7.125rem 4.625rem 0 4.625rem;
   list-style-type: none;
   display: flex;
   justify-content: space-around;
 }
-/* line 337, ../scss/_local_css.scss */
+/* line 446, ../scss/_local_css.scss */
 footer .navigation nav ul li a {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   color: #707070;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: bolder;
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 344, ../scss/_local_css.scss */
+/* line 453, ../scss/_local_css.scss */
 footer .navigation nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 352, ../scss/_local_css.scss */
+/* line 461, ../scss/_local_css.scss */
 footer .bottom {
   background-color: #882346;
-  height: 2.8125rem;
+  height: 4.375rem;
 }
-/* line 358, ../scss/_local_css.scss */
-footer .bottom .social {
+/* line 464, ../scss/_local_css.scss */
+footer .bottom .elements {
+  margin: auto;
+  max-width: 58rem;
+  height: 4.375rem;
+}
+/* line 468, ../scss/_local_css.scss */
+footer .bottom .elements .social {
   float: right;
+  margin: 1.5625rem 1.75rem 0 0;
 }
-
-/* line 366, ../scss/_local_css.scss */
-.share .icon a {
-  border: 1px solid #882346;
+/* line 473, ../scss/_local_css.scss */
+footer .bottom .elements .social .icon a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
-/* line 373, ../scss/_local_css.scss */
+/* line 480, ../scss/_local_css.scss */
+footer .bottom .elements .social .instagram {
+  display: inline-block;
+  background: url("../images/sprite.png") no-repeat 0px -43px;
+  width: 1.1875rem;
+  height: 1.25rem;
+  margin-right: 1.5rem;
+}
+/* line 487, ../scss/_local_css.scss */
+footer .bottom .elements .social .twitter {
+  display: inline-block;
+  background: url("../images/sprite.png") no-repeat -32px -45px;
+  width: 1.1875rem;
+  height: 1.0625rem;
+  margin-right: 1.5rem;
+}
+/* line 494, ../scss/_local_css.scss */
+footer .bottom .elements .social .facebook {
+  display: inline-block;
+  background: url("../images/sprite.png") no-repeat -60px -43px;
+  width: 0.625rem;
+  height: 1.1875rem;
+}
+/* line 501, ../scss/_local_css.scss */
+footer .bottom .elements .copyright {
+  height: 4.375rem;
+}
+/* line 503, ../scss/_local_css.scss */
+footer .bottom .elements .copyright .cuny {
+  display: inline-block;
+  background: url("../images/sprite.png") no-repeat -240px 0px;
+  width: 2.8125rem;
+  height: 2.75rem;
+  margin: 0.8125rem 0 0 1.75rem;
+}
+/* line 509, ../scss/_local_css.scss */
+footer .bottom .elements .copyright .cuny a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+/* line 516, ../scss/_local_css.scss */
+footer .bottom .elements .copyright .copy {
+  display: inline-block;
+  position: absolute;
+  border-left: 2px solid #fff;
+  height: 2.75rem;
+  margin: 0.8125rem 0.5625rem 0 0.875rem;
+}
+/* line 523, ../scss/_local_css.scss */
+footer .bottom .elements .copyright .copy p {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  color: #fff;
+  font-size: 0.75rem;
+  margin: 0.9375rem 0 0 0.875rem;
+  padding: 0;
+}
+
+/* line 539, ../scss/_local_css.scss */
+.share .icon a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+/* line 546, ../scss/_local_css.scss */
 .share .email {
   display: inline-block;
   background: url("../images/sprite.png") no-repeat 0px 0px;
@@ -298,7 +449,7 @@ footer .bottom .social {
   height: 1.25rem;
   margin-right: 1.5rem;
 }
-/* line 380, ../scss/_local_css.scss */
+/* line 553, ../scss/_local_css.scss */
 .share .twitter {
   display: inline-block;
   background: url("../images/sprite.png") no-repeat -32px 0px;
@@ -306,7 +457,7 @@ footer .bottom .social {
   height: 1.25rem;
   margin-right: 1.5rem;
 }
-/* line 387, ../scss/_local_css.scss */
+/* line 560, ../scss/_local_css.scss */
 .share .facebook {
   display: inline-block;
   background: url("../images/sprite.png") no-repeat -60px 0px;
@@ -315,7 +466,7 @@ footer .bottom .social {
 }
 
 /* SkipNav */
-/* line 398, ../scss/_local_css.scss */
+/* line 571, ../scss/_local_css.scss */
 #skipnav a, a.skipTranscript {
   position: absolute;
   z-index: 3000;
@@ -325,7 +476,7 @@ footer .bottom .social {
   padding-bottom: 25px;
 }
 
-/* line 406, ../scss/_local_css.scss */
+/* line 579, ../scss/_local_css.scss */
 #skipnav a:hover, #skipnav a:focus, #skipnav a:active {
   clip: auto;
   left: 0;
