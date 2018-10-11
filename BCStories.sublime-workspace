@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"font-",
+				"font-family"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
 				"border",
 				"border-top"
 			],
@@ -48,10 +60,6 @@
 				"facultyList"
 			],
 			[
-				"font-",
-				"font-weight"
-			],
-			[
 				"last-",
 				"last-of-type"
 			],
@@ -84,6 +92,46 @@
 			"settings":
 			{
 				"buffer_size": 2437,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Downloads/Ex_Files_Forms_Flexbox/Exercise Files/Chapter-02/02-06/finished_files/forms.htm",
+			"settings":
+			{
+				"buffer_size": 9708,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "BCStories.html",
+			"settings":
+			{
+				"buffer_size": 13697,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scss/_local_css.scss",
+			"settings":
+			{
+				"buffer_size": 13094,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/_local_css.scss",
+			"settings":
+			{
+				"buffer_size": 56054,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/bcstories.css",
+			"settings":
+			{
+				"buffer_size": 12027,
 				"line_ending": "Windows"
 			}
 		}
@@ -165,33 +213,45 @@
 	},
 	"expanded_folders":
 	[
-		"/Z/Public/$$$Feirstein/Development/005"
+		"/Z/Public/webDevelopment/projects/BCStories",
+		"/Z/Public/webDevelopment/projects/BCStories/css"
 	],
 	"file_history":
 	[
+		"/Z/Public/webDevelopment/projects/BCStories/BCStories.php",
+		"/Z/Public/webDevelopment/projects/BCStories/BCStories.html",
+		"/C/Users/staff/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Z/Public/webDevelopment/projects/BCStories/css/bcstories.css",
+		"/Z/Public/webDevelopment/projects/BCStories/scss/bcstories.scss",
+		"/Z/Public/webDevelopment/projects/BCStories/scss/_settings.scss",
+		"/Z/Public/webDevelopment/projects/BCStories/js/response-bcstories.js",
+		"/Z/Public/$$Redesign/$Admin/Standards/CSS/master.css",
+		"/Z/Public/webDevelopment/projects/BCStories/scss/_local_var.scss",
+		"/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/comm-hw.scss",
+		"/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/_local_var.scss",
+		"/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/_local_css.scss",
+		"/Z/Public/webDevelopment/projects/BCStories/index.html",
+		"/D/Downloads/co.html",
+		"/Z/Public/webDevelopment/projects/StrategicPlan/index.html",
+		"/Z/Public/webDevelopment/projects/WolfeEvents/index.html",
+		"/Z/Public/webDevelopment/projects/WolfeEvents/config.rb",
 		"/Z/Public/$$$Feirstein/Development/005/feirstein/faculty-category-list.html",
 		"/Z/Public/$$$Feirstein/Development/005/feirstein/Videos.html",
 		"/Z/Public/webDevelopment/master/scss/_master_var.scss",
 		"/Z/Public/webDevelopment/master/scss/_master_css.scss",
-		"/Z/Public/webDevelopment/projects/StrategicPlan/index.html",
 		"/Z/Public/webDevelopment/projects/FacultyExperts/index.html",
 		"/Z/Public/webDevelopment/projects/MiddleStates/index.html",
-		"/Z/Public/webDevelopment/projects/BCStories/index.html",
-		"/Z/Public/webDevelopment/projects/BCStories/scss/bcstories.scss",
 		"/Z/Public/webDevelopment/projects/BCStories/config.rb",
 		"/Z/Public/webDevelopment/projects/FacultyExperts/config.rb",
 		"/Z/Public/webDevelopment/projects/MiddleStates/config.rb",
 		"/Z/Public/webDevelopment/projects/StrategicPlan/config.rb",
 		"/Z/Public/$$Redesign/$Admin/Structure/Imagery/PG 3.0 (2014)/themes/classic - Copy (2)/BCF.html",
 		"/Z/Public/$$Redesign/$Admin/Structure/Imagery/PG 3.0 (2014)/themes/galleria-1.3.5.js",
-		"/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/_local_css.scss",
-		"/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/comm-hw.scss",
 		"/Z/Public/$$Redesign/About/Offices and Services/CAASS/Degree Maps/table.html",
 		"/Z/Public/$$Redesign/About/Offices and Services/CAASS/Degree Maps/ACCOUNTING BS.html",
 		"/D/Downloads/test.php",
 		"/D/Downloads/Ex_Files_Forms_Flexbox/Exercise Files/Chapter-01/01-04/search.htm",
 		"/D/Downloads/Ex_Files_Forms_Flexbox/Exercise Files/Chapter-01/01-03/search.htm",
-		"/Z/Public/$$Redesign/$Admin/Standards/CSS/master.css",
 		"/Z/Public/$$$Feirstein/Development/005/feirstein/array.php",
 		"/Z/Public/webDevelopment/projects/filmSite/scss/_local_css.scss",
 		"/Z/Public/$$$Feirstein/Development/005/feirstein/build/styles/app.css",
@@ -285,18 +345,7 @@
 		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/funcs_styles.css",
 		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/funcs_styles.scss",
 		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/mixargs_styles.css",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/mixargs_styles.scss",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/ops_styles.css",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/ops_styles.scss",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/SASS_SampleDoc.html",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/mixin_styles.scss",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/mixin_styles.css",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/nested_styles.scss",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/var_styles.scss",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/nested_styles.css",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch1/FirstSassExample.html",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch1/styles.css",
-		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch1/styles.scss"
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/mixargs_styles.scss"
 	],
 	"find":
 	{
@@ -315,6 +364,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"h1",
+			"italic",
+			"RobotoI",
+			";\n",
+			"copyright",
+			"$nav",
+			"$tag",
+			"$byline",
+			"$subheader",
+			"$article",
+			"$paragraph-font-size",
+			"$h2-font-size",
+			"$h1-font-size",
+			"-D",
+			"$h1-font-size",
+			"social",
+			"$nav",
+			".nav",
+			"768",
+			"maroon2",
 			"</span>",
 			"<span style=\"font-size: 12px;\">",
 			"<span style=\"letter-spacing: -0.1pt;\">",
@@ -422,27 +491,7 @@
 			"style=\"padding: 0in 5.4pt; width: 118pt; height: 12.75pt; white-space: nowrap;\"",
 			" valign=\"bottom\"",
 			" style=\"padding: 0in 5.4pt; width: 183pt; height: 15pt; white-space: nowrap;\"",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 48pt; height: 15pt; white-space: nowrap;\"",
-			"style=\"height: 15pt;\"",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 206pt; height: 12.75pt; white-space: nowrap;\"",
-			"valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 194pt; height: 12.75pt; white-space: nowrap;\"",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 2.25in; height: 12.75pt; white-space: nowrap;\"",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 230pt; height: 12.75pt; white-space: nowrap;\"",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 48pt; height: 28.5pt;\"",
-			" style=\"height: 28.5pt;\"",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 46.9pt; height: 12.75pt; white-space: nowrap;\"",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 189pt; height: 12.75pt; white-space: nowrap;\"",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 95.25pt; height: 12.75pt; white-space: nowrap;\" colspan=\"2\"",
-			"            ",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 48pt; height: 12.75pt; white-space: nowrap;\"",
-			"<p class=\"MsoNormal\" style=\"line-height: normal; margin-bottom: 0pt;\"><span style=\"font-family: &quot;times new roman&quot;,&quot;serif&quot;;\">",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 146pt; height: 12.75pt; white-space: nowrap;\"",
-			"</span></p>",
-			"<p class=\"MsoNormal\" style=\"text-align: right; line-height: normal; margin-bottom: 0pt;\"><span style=\"font-family: &quot;times new roman&quot;,&quot;serif&quot;;\">",
-			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 48pt; height: 12.75pt; white-space: nowrap;\" colspan=\"2\"",
-			" style=\"height: 12.75pt;\"",
-			":focus",
-			"#nav"
+			" valign=\"bottom\" style=\"padding: 0in 5.4pt; width: 48pt; height: 15pt; white-space: nowrap;\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -450,6 +499,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"maroon",
 			"",
 			" D",
 			"",
@@ -492,7 +542,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -521,7 +571,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -550,7 +600,153 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/Downloads/Ex_Files_Forms_Flexbox/Exercise Files/Chapter-02/02-06/finished_files/forms.htm",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2002,
+								1985
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 118.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "BCStories.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1092,
+								1092
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "scss/_local_css.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13094,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3611,
+								3611
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2025.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Z/Public/webDevelopment/projects/Comm-HealthAndWellness/scss/_local_css.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 56054,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10960,
+								10894
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6448.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "css/bcstories.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]

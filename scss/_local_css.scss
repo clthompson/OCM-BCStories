@@ -8,7 +8,7 @@
 // Media Query Starts
 // @media #{$Five00} {}
 // @media #{$Phone} {}
-// @media #{$iPadPortrait} {} 
+// @media #{$iPadPortrait} {}
 // @media #{$Desktop} {}
 
 // @media #{$Small} {}
@@ -36,14 +36,16 @@
 
   //Headings
   $h1-font-size-D: rem-calc(55); // 
+  $h1-content-font-size-D: rem-calc(36); // 
   $h1-font-size-T: rem-calc(50); // 
   $h1-font-size-P: rem-calc(22); // 
+
   $h2-font-size-D: rem-calc(30); // 
   $h2-font-size-T: rem-calc(28); // 
   $h2-font-size-P: rem-calc(20); // 
-  $h3-font-size-D: rem-calc(18); // not used
-  $h3-font-size-T: rem-calc(18); // not used
-  $h3-font-size-P: rem-calc(18); // not used
+
+  $h3-font-size: rem-calc(20); // D and T
+  $h3-font-size-P: rem-calc(18); // P
   $h4-font-size: rem-calc(14); // not used 
   $h5-font-size: rem-calc(15); // not used 
   $h6-font-size: rem-calc(16); // not used 
@@ -58,7 +60,7 @@
   $subheader-P: rem-calc(20); // missing from the design files
   $caption-D: rem-calc(13);
   $caption-T: rem-calc(16);
-  $caption-T: rem-calc(12);
+  $caption-P: rem-calc(12);
   $photoCredit: rem-calc(15); // D and T
   $photoCredit-P: rem-calc(12); // P
   $quote-D: rem-calc(26);
@@ -73,6 +75,7 @@
 
   //Nav
   $nav: rem-calc(16);
+  $nav-P: rem-calc(18);
   $nav-bottom: rem-calc(16);
   $nav-bottom-P: rem-calc(14);
 
@@ -82,6 +85,7 @@
 // Colors
   //Main
   $color-maroon: #882346; 	// Brand Guide = r136 g35 b70 //#7c2142 BCF // #781a42 EDU //$color-maroon2: #5d0e2e;
+  $color-maroon-dark: #4B091F;
   $color-black: #000; 		//titles
   $color-white: #fff;
 
@@ -90,8 +94,9 @@
   $color-gray707: #707070;  //lines and borders on images and multimedia
   $color-grayE5E: #e5e5e5;	//update box
   $color-grayD9D: #d9d9d9; 	//footer bg
+  $color-gray716: #716F6F;  //mobile nav elements
 
-  
+  // Others, not used
   $color-gray333: #333;
   $color-gray444: #444;
   $color-gray555: #555;
@@ -118,6 +123,7 @@
   $thin-grayE5E: 1px solid $color-grayE5E;
   $thin-grayD9D: 1px solid $color-grayD9D;
 
+// Major Elements
 // width
   $full: rem-calc(928);
 
@@ -133,6 +139,20 @@ body {
   	max-width: 100%;
 }
 
+// hidden
+.hidden{
+	display: none;
+}
+
+// focus
+*:focus { outline:3px solid #FAD129;}
+
+// FadeIn
+@-webkit-keyframes "FadeIn"{from{opacity:0;}to{opacity:1;}}
+@keyframes "FadeIn"{from{opacity:0;}to{opacity:1;}}
+
+
+//Site
 header {
   //border: $thin-maroon;
   .full-width {
@@ -169,30 +189,103 @@ header {
 		@media #{$Phone} {
 			display: none;
 		}
+		
+	}
+	.mobile-toggle {
+	  	display: none;
+	  	margin: auto;
+	  	max-width: $full;
+	  	margin: 0 0 0 rem-calc(24);
+	  	width: rem-calc(48);
+	  	height: rem-calc(45);
+	  	background-color: $color-maroon-dark;
+	  	@media #{$Phone} {
+			display: inline-block;
+			animation: FadeIn .75s;
+		}
+		.lines {
+			background: url("../images/sprite.png") no-repeat -290px -25px;
+	    	width: rem-calc(28);
+	    	height: rem-calc(25);
+	    	cursor: pointer;
+	    	animation: FadeIn .75s;
+	    	margin: rem-calc(10) 0 0 rem-calc(10);
+		}
+		.ex {
+			background: url("../images/sprite.png") no-repeat -290px 0px;
+	    	width: rem-calc(23);
+	    	height: rem-calc(23);
+	    	cursor: pointer;
+	    	animation: FadeIn .75s;
+	    	margin: rem-calc(12) 0 0 rem-calc(13);
+		}
 	}
   }
-  nav.mobile {
-
+  .mobile-white {
+  	padding-top: rem-calc(45);
+  	z-index: 900;
+  	position: fixed;
+  	width: 100%;
+  	height: 100%;
+  	background-color: $color-white;
+  	.logo {
+  		display: block;
+    	margin: rem-calc(20) 0 rem-calc(20) rem-calc(16);
+    	background: url("../images/sprite.png") no-repeat -231px -105px;
+    	background-origin: content-box;
+    	width: rem-calc(114);
+    	height: rem-calc(36);
+  	}
+  	nav.mobile {
+  		ul {
+	  		margin: 0;
+	  		padding: rem-calc(32) 0 rem-calc(32) rem-calc(20);
+	  		list-style-type: none;
+	  		li {
+	  			padding: 0 0 rem-calc(47) 0;
+	  			a {
+	  				font-family: $Lucida;
+		  			font-size: $nav-P;
+		  			color: $color-gray716;
+		  			text-transform: uppercase;
+		  			text-decoration: none;
+	  				&:hover {
+						text-decoration: underline;
+					}
+	  			}
+	  		}
+  		}
+  	}
   }
+
   .brand {
     padding-top: rem-calc(45);
     max-width: $full;
     margin: auto;
     border-bottom: $thin-gray707;
+    @media #{$iPadPortrait} {
+    	margin: 0 rem-calc(47) 0 rem-calc(47);
+    }
     .logo {
     	//border: $thin-maroon;
     	display: block;
     	margin: rem-calc(30) auto rem-calc(16) auto;
     	background: url("../images/sprite.png") no-repeat 0px -67px;
-    	background-origin: content-box;
+    	//background-origin: content-box;
     	width: rem-calc(228);
     	height: rem-calc(66);
+    	@media #{$iPadPortrait} {
+    		margin: rem-calc(30) auto rem-calc(8) auto;
+    		background: url("../images/sprite.png") no-repeat -77px 0px;
+    		width: rem-calc(162);
+    		height: rem-calc(47);
+    	}
+    	a {
+    		width: 100%;
+      		height: 100%;
+      		display: inline-block;
+    	}
     }
-	img {
-		display: block;
-		margin: auto;
-    	padding: rem-calc(30) 0 rem-calc(16) 0;
-	}
   }
 }
 
@@ -206,17 +299,34 @@ article {
   max-width: $full;
   padding-bottom: rem-calc(45);
   h1{
-  	font-size: $h1-font-size-D;
-  	line-height: 56px;
   	font-family: $Roboto;
-  	font-weight: $Roboto900;
-  	//font-style: $italic;
-  	text-align: center;
-  	padding: 0 rem-calc(54) 0 rem-calc(54);
-  	margin: rem-calc(45) 0 rem-calc(35) 0;
+	font-weight: $Roboto900;
+  	&.articleTitle {
+	  	font-size: $h1-font-size-D;
+	  	line-height: 56px;
+	  	//font-style: $italic;
+	  	text-align: center;
+	  	padding: 0 rem-calc(54) 0 rem-calc(54);
+	  	margin: rem-calc(45) 0 rem-calc(35) 0;
+	  	@media #{$iPadPortrait} {
+	  		padding: 0 rem-calc(83) 0 rem-calc(83);
+	  	}
+  	}
+  	&.contentTitle {
+  		font-size: $h1-content-font-size-D;
+  		line-height: 36px;
+  		padding: 0 rem-calc(54) 0 rem-calc(54);
+	  	margin: rem-calc(35) 0 rem-calc(20) 0;
+	  	@media #{$iPadPortrait} {
+	  		padding: 0 rem-calc(83) 0 rem-calc(83);
+	  	}
+  	}
   }
   .subheader {
   	padding: 0 rem-calc(54) 0 rem-calc(54);
+  	@media #{$iPadPortrait} {
+	  	padding: 0 rem-calc(67) 0 rem-calc(67);
+	 }
   	p {
   		font-family: $PMNCaecilia;
   		font-size: $subheader-D;
@@ -227,6 +337,9 @@ article {
   }
   .copy {
     padding: 0 rem-calc(54) 0 rem-calc(54);
+    @media #{$iPadPortrait} {
+    	padding: 0 rem-calc(64) 0 rem-calc(64);
+    }
     h2 {
   	 font-size: $h2-font-size-D;
   	 font-family: $Roboto;
@@ -234,14 +347,21 @@ article {
      color: $color-gray222;
      padding: 0 0 rem-calc(20) 0;
      margin: 0;
+     @media #{$iPadPortrait} {
+	  	font-size: $h2-font-size-T;
+	 }
     }
     h3 {
-    font-size: $h3-font-size-D;
-    font-family: $Roboto;
-    font-weight: $Roboto700;
-    color: $color-gray222;
-    margin: 0;
-    }
+	    font-size: $h3-font-size;
+	    font-family: $Roboto;
+	    font-weight: $Roboto700;
+	    color: $color-gray222;
+	    margin: 0;
+	    text-transform: uppercase;
+		@media #{$Phone} {
+	      font-size: $h3-font-size-P;
+	    }
+	}
     p {
       font-family: $Barlow;
       font-size: $article-copy;
@@ -255,6 +375,9 @@ article {
     background-color: $color-grayE5E;
     padding: rem-calc(27) rem-calc(34);
     margin: 0 rem-calc(20) rem-calc(35) rem-calc(20);
+    @media #{$iPadPortrait} {
+	  	margin: 0 rem-calc(47) rem-calc(35) rem-calc(47);
+	 }
     p {
       font-family: $Barlow;
       font-size: $article-copy;
@@ -294,6 +417,9 @@ article {
   }
   .featureImage {
     margin: 0 rem-calc(20) rem-calc(25) rem-calc(20);
+    @media #{$iPadPortrait} {
+		margin: 0 rem-calc(47) rem-calc(25) rem-calc(47);
+	}
     img {
   	 display: block;
   	 width: 100%;
@@ -303,15 +429,26 @@ article {
   	float: right;
   	margin: 0 rem-calc(54) rem-calc(10) rem-calc(10);
   	width: rem-calc(275);
+  	@media #{$iPadPortrait} {
+  		float: none;
+  		width: 71%;
+  		margin: 0 auto rem-calc(10) auto;
+  	}
   	img {
-  		width: rem-calc(275);
+  		width: 100%;
   	}
   	.caption{
   		font-family: $Barlow;
   		font-size: $caption-D;
   		color: $color-gray222;
   		margin: 0;
+  		@media #{$iPadPortrait} {
+			font-size: $caption-T;
 
+		}
+		@media #{$Phone} {
+			font-size: $caption-P;
+		}
   	}
   	.photoCredit {
   		font-family: $Barlow;
@@ -319,6 +456,9 @@ article {
   		font-style: $italic;
   		color: $color-graya2a;
   		margin: 0;
+  		@media #{$Phone} {
+			font-size: $photoCredit-P;
+		}
   	}
   }
   .quote {
@@ -327,6 +467,11 @@ article {
   	width: rem-calc(275);
   	//padding: 0 0 0 rem-calc(55);
   	margin: 0 rem-calc(35) 0 rem-calc(54);
+  	@media #{$iPadPortrait} {
+		float: none;
+		width: 82%;
+		margin: 0 rem-calc(64) 0 rem-calc(64);
+	}
   	.doubleQuotes{
   		//display: inline-block;
   		background: url("../images/sprite.png") no-repeat -240px -45px;
@@ -340,6 +485,12 @@ article {
   		margin: 0 0 0 rem-calc(46);
   		position: relative;
   		top: -23px;
+  		@media #{$iPadPortrait} {
+  			font-size: $quote-T;
+  		}
+  		@media #{$Phone} {
+  			font-size: $quote-P;
+  		}
   	}
   }
   .video {
@@ -358,6 +509,9 @@ article {
   }
   .articleImage{
   	margin: 0 rem-calc(54) rem-calc(40) rem-calc(54);
+  	@media #{$iPadPortrait} {
+	  	margin: 0 rem-calc(64) rem-calc(40) rem-calc(64);
+	  }
   	img {
   	 display: block;
   	 width: 100%;
@@ -368,6 +522,9 @@ article {
       font-size: $byline;
       font-family: $Lucida;
       margin: 0 0 rem-calc(30) rem-calc(23);
+      @media #{$iPadPortrait} {
+	  	margin: 0 0 rem-calc(23) rem-calc(47);
+	  }
     }
     .name {
       font-weight: bolder;
@@ -385,6 +542,9 @@ article {
   .share {
     float: right;
     margin: 0 rem-calc(23) 0 0;
+    @media #{$iPadPortrait} {
+		margin: 0 rem-calc(47) 0 0;
+	}
   }
 }
 
@@ -394,9 +554,21 @@ article {
   .line {
     border-top: $thin-gray707;
     margin: 0 rem-calc(20) rem-calc(110) rem-calc(20); // *****why is this 110 needed?
+    @media #{$iPadPortrait} {
+    	margin: 0 rem-calc(47) rem-calc(80) rem-calc(47);
+    }
+    @media #{$Phone} {
+    	margin: 0 rem-calc(11) rem-calc(80) rem-calc(11);
+    }
   }
   .tags {
     margin: rem-calc(60) 0 0 rem-calc(3);
+    @media #{$Phone} {
+    	//width: 100%;
+    	margin: rem-calc(40) auto 0 auto;
+    	display: flex;
+        justify-content: space-around;
+    }
     a {
       //height: rem-calc(30);
       border: $thin-gray707;
@@ -407,6 +579,11 @@ article {
       text-transform: uppercase;
       text-decoration: none;
       color: $color-gray707;
+      @media #{$Phone} {
+      	font-size: $tag-P;
+      	padding: rem-calc(10) rem-calc(25);
+      	margin-right: 0;
+      }
       &:hover {
         text-decoration: underline;
       }
@@ -415,6 +592,12 @@ article {
   .share {
     float: right;
     margin: rem-calc(60) 0 0 0;
+    @media #{$Phone} {
+    	margin: rem-calc(40) 0 0 0;
+    	float: none;
+    	display: flex;
+        justify-content: center;
+    }
   }
 }
 
@@ -567,7 +750,7 @@ footer {
 
 
 
-/* SkipNav */
+// SkipNav //
 #skipnav a, a.skipTranscript {
 	position:absolute;
 	z-index:3000;
@@ -591,4 +774,4 @@ footer {
 	font-weight:bold;
 	color:#990000;
 }
-/* SkipNav */
+// SkipNav //

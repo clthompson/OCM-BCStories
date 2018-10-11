@@ -16,18 +16,50 @@
     <!-- FB -->
   </head>
   <body data-responsejs='{"create" : {"mode" : "src", "prefix" : "src"}}'>
-  <div id="skipnav"><a href="#mainContent" ga-category="SkipNav" ga-action="Navigate" ga-label="SkipNav">Skip to Main Content</a></div>
+  <div id="skipnav"><a href="#mainContent" ga-category="SkipNav" ga-action="Navigate" ga-label="SkipNav" tabindex="0">Skip to Main Content</a></div>
 
   <header>
     <section class="full-width">
-      <nav class="desktop">
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">College Website</a></li>
-      </ul>
+      <nav class="desktop" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">College Website</a></li>
+        </ul>
       </nav>
+      <section class="mobile-toggle">
+      <script type="text/javascript">
+        $(document).ready(function() {
+          //turn on mobile menu
+          $(".lines").click(function(e){
+            $(".ex").removeClass("hidden");
+            $(this).addClass("hidden");
+            $(".mobile-white").removeClass("hidden");
+          });
+          //turn off mobile menu
+          $(".ex").click(function(e){
+            $(".lines").removeClass("hidden");
+            $(this).addClass("hidden");
+            $(".mobile-white").addClass("hidden");
+          });
+        });
+      </script>
+      <div class="lines" role="button" aria-pressed="false" tabindex="0"></div>
+      <div class="ex hidden" role="button" aria-pressed="true" tabindex="0"></div>
+      </section>
+    </section>
+    <section class="mobile-white hidden">
+      <div class="logo"><a href="#"></a></div>
+      <nav class="mobile" aria-label="Main Navigation">
+          <ul>
+            <li><a href="#">Story Archive</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">College Website</a></li>
+          </ul>
+        </nav>
     </section>
     <section class="brand">
     <div class="logo"><a href="#"></a></div>
@@ -40,13 +72,13 @@
   </header>
 
   <article>
-    <h1 id="mainContent" role="main" tabindex="-1">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Non, dolorum!</h1>
-    <div class="featureImage"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" 
+    <h1 class="articleTitle" id="mainContent" role="main" tabindex="0">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Non, dolorum!</h1>
+    <section class="featureImage"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" 
       alt="Content Image" title="Content Image"
       data-src0="images/content_500x282.png"
       data-src500="images/content_888x500.png"
       data-src928="images/content_888x500.png"/>
-    </div>
+    </section>
     <section class="share">
       <div class="icon email"><a href="#"></a></div><div class="icon twitter"><a href="#"></a></div><div class="icon facebook"><a href="#"></a></div>
     </section>
