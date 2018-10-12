@@ -38,7 +38,9 @@
   $h1-font-size-D: rem-calc(55); // 
   $h1-content-font-size-D: rem-calc(36); // 
   $h1-font-size-T: rem-calc(50); // 
+  $h1-content-font-size-T: rem-calc(28); //
   $h1-font-size-P: rem-calc(22); // 
+  $h1-content-font-size-P: rem-calc(25); //
 
   $h2-font-size-D: rem-calc(30); // 
   $h2-font-size-T: rem-calc(28); // 
@@ -93,6 +95,7 @@
   $color-gray222: #222;		//text content
   $color-gray707: #707070;  //lines and borders on images and multimedia
   $color-grayE5E: #e5e5e5;	//update box
+  $color-grayEDE: #ededed;
   $color-grayD9D: #d9d9d9; 	//footer bg
   $color-gray716: #716F6F;  //mobile nav elements
 
@@ -115,17 +118,20 @@
 
 // Line Styles
   $thin-maroon: 1px solid $color-maroon;
+  $thick-maroon: 3px solid $color-maroon; // anchor underlines
   $thin-black: 1px solid $color-black;
   $thick-white: 2px solid $color-white;
   $thin-gray222: 1px solid $color-gray222;
   $thin-gray707: 1px solid $color-gray707;
   $thick-gray707: 2px solid $color-gray707;
   $thin-grayE5E: 1px solid $color-grayE5E;
+  $thin-grayEDE: 1px solid $color-grayEDE;
   $thin-grayD9D: 1px solid $color-grayD9D;
 
 // Major Elements
 // width
-  $full: rem-calc(928);
+  $full: rem-calc(928);  // needs to be 960, so we would add 16 to each side
+  $sprite: url("../images/sprite.png") no-repeat;
 
 body {
   background-color: $color-white;
@@ -204,7 +210,7 @@ header {
 			animation: FadeIn .75s;
 		}
 		.lines {
-			background: url("../images/sprite.png") no-repeat -290px -25px;
+			background: $sprite -290px -25px;
 	    	width: rem-calc(28);
 	    	height: rem-calc(25);
 	    	cursor: pointer;
@@ -212,7 +218,7 @@ header {
 	    	margin: rem-calc(10) 0 0 rem-calc(10);
 		}
 		.ex {
-			background: url("../images/sprite.png") no-repeat -290px 0px;
+			background: $sprite -290px 0px;
 	    	width: rem-calc(23);
 	    	height: rem-calc(23);
 	    	cursor: pointer;
@@ -231,7 +237,7 @@ header {
   	.logo {
   		display: block;
     	margin: rem-calc(20) 0 rem-calc(20) rem-calc(16);
-    	background: url("../images/sprite.png") no-repeat -231px -105px;
+    	background: $sprite -231px -105px;
     	background-origin: content-box;
     	width: rem-calc(114);
     	height: rem-calc(36);
@@ -266,17 +272,20 @@ header {
     @media #{$iPadPortrait} {
     	margin: 0 rem-calc(47) 0 rem-calc(47);
     }
+    @media #{$iPadPortrait} {
+    	margin: 0 rem-calc(8) 0 rem-calc(8);
+    }
     .logo {
     	//border: $thin-maroon;
     	display: block;
     	margin: rem-calc(30) auto rem-calc(16) auto;
-    	background: url("../images/sprite.png") no-repeat 0px -67px;
+    	background: $sprite 0px -67px;
     	//background-origin: content-box;
     	width: rem-calc(228);
     	height: rem-calc(66);
     	@media #{$iPadPortrait} {
     		margin: rem-calc(30) auto rem-calc(8) auto;
-    		background: url("../images/sprite.png") no-repeat -77px 0px;
+    		background: $sprite -77px 0px;
     		width: rem-calc(162);
     		height: rem-calc(47);
     	}
@@ -293,6 +302,34 @@ section {
   //border: $thin-maroon;
 }
 
+.homepageList {
+	border: $thin-maroon;
+	margin: auto;
+	max-width: $full;
+	padding-bottom: rem-calc(45);
+	.articleItem {
+		border: $thin-maroon;
+		a {
+			img {
+
+			}
+		}
+		.copy {
+			border: $thin-maroon;
+			h2 {
+				a {
+
+				}
+			}
+			p {
+
+			}
+		}
+	}
+}
+
+
+
 article {
   //border: $thin-maroon;
   margin: auto;
@@ -307,9 +344,18 @@ article {
 	  	//font-style: $italic;
 	  	text-align: center;
 	  	padding: 0 rem-calc(54) 0 rem-calc(54);
-	  	margin: rem-calc(45) 0 rem-calc(35) 0;
+	  	margin: rem-calc(48) 0 rem-calc(47) 0;
 	  	@media #{$iPadPortrait} {
+	  		font-size: $h1-font-size-T;
 	  		padding: 0 rem-calc(83) 0 rem-calc(83);
+	  		line-height: 45px;
+	  		margin: rem-calc(46) 0 rem-calc(44) 0;
+	  	}
+	  	@media #{$Phone} {
+	  		font-size: $h1-font-size-P;
+	  		padding: 0 rem-calc(17) 0 rem-calc(17);
+	  		line-height: 21px;
+	  		margin: rem-calc(28) 0 rem-calc(26) 0;
 	  	}
   	}
   	&.contentTitle {
@@ -318,7 +364,14 @@ article {
   		padding: 0 rem-calc(54) 0 rem-calc(54);
 	  	margin: rem-calc(35) 0 rem-calc(20) 0;
 	  	@media #{$iPadPortrait} {
+	  		font-size: $h1-content-font-size-T;
 	  		padding: 0 rem-calc(83) 0 rem-calc(83);
+	  		line-height: 28px;
+	  	}
+	  	@media #{$Phone} {
+	  		font-size: $h1-content-font-size-P;
+	  		padding: 0 rem-calc(11) 0 rem-calc(11);
+	  		line-height: 28px;
 	  	}
   	}
   }
@@ -326,30 +379,50 @@ article {
   	padding: 0 rem-calc(54) 0 rem-calc(54);
   	@media #{$iPadPortrait} {
 	  	padding: 0 rem-calc(67) 0 rem-calc(67);
-	 }
+	}
+	@media #{$Phone} {
+	  	padding: 0 rem-calc(11) 0 rem-calc(11);
+	}
   	p {
   		font-family: $PMNCaecilia;
   		font-size: $subheader-D;
   		line-height: 32px;
   		padding: 0 0 rem-calc(20) 0;
   		margin: 0;
+  		@media #{$iPadPortrait} {
+  			font-size: $subheader-T;
+  			line-height: 32px;
+  		}
+  		@media #{$Phone} {
+  			font-size: $subheader-P;
+  			line-height: 22px;
+  		}
   	}
   }
   .copy {
     padding: 0 rem-calc(54) 0 rem-calc(54);
     @media #{$iPadPortrait} {
-    	padding: 0 rem-calc(64) 0 rem-calc(64);
+    	padding: 0 rem-calc(67) 0 rem-calc(67);
+    }
+    @media #{$Phone} {
+    	padding: 0 rem-calc(11) 0 rem-calc(11);
     }
     h2 {
-  	 font-size: $h2-font-size-D;
-  	 font-family: $Roboto;
-  	 font-weight: $Roboto700;
-     color: $color-gray222;
-     padding: 0 0 rem-calc(20) 0;
-     margin: 0;
-     @media #{$iPadPortrait} {
-	  	font-size: $h2-font-size-T;
-	 }
+  		font-size: $h2-font-size-D;
+  		font-family: $Roboto;
+  		font-weight: $Roboto700;
+    	color: $color-gray222;
+    	padding: 0 0 rem-calc(20) 0;
+    	margin: 0;
+    	line-height: 44px;
+    	@media #{$iPadPortrait} {
+	  		font-size: $h2-font-size-T;
+	  		line-height: 28px;
+		}
+		@media #{$iPadPortrait} {
+	  		font-size: $h2-font-size-P;
+	  		line-height: 22px;
+		}
     }
     h3 {
 	    font-size: $h3-font-size;
@@ -363,47 +436,74 @@ article {
 	    }
 	}
     p {
-      font-family: $Barlow;
-      font-size: $article-copy;
-      color: $color-gray222;
-      line-height: 30px;
-      margin: 0;
-      padding: 0 0 rem-calc(30) 0;
-    }
+    	font-family: $Barlow;
+    	font-size: $article-copy;
+    	color: $color-gray222;
+    	line-height: 30px;
+    	margin: 0;
+    	padding: 0 0 rem-calc(30) 0;
+    	@media #{$iPadPortrait} {
+	  		line-height: 28px;
+		}
+  	}
+  	a {
+  		color: $color-maroon;
+  		padding-bottom: 3px;
+  		font-weight: bolder;
+  		text-decoration: none;
+  		border-bottom: $thick-maroon;
+  	}
   }
   .update {
     background-color: $color-grayE5E;
     padding: rem-calc(27) rem-calc(34);
     margin: 0 rem-calc(20) rem-calc(35) rem-calc(20);
     @media #{$iPadPortrait} {
-	  	margin: 0 rem-calc(47) rem-calc(35) rem-calc(47);
-	 }
+		margin: 0 rem-calc(47) rem-calc(35) rem-calc(47);
+	}
+	@media #{$Phone} {
+		padding: rem-calc(7) rem-calc(9);
+		margin: 0 rem-calc(11) rem-calc(35) rem-calc(11);
+	}
     p {
-      font-family: $Barlow;
-      font-size: $article-copy;
-      line-height: 30px;
-      margin-top: 30px;
-      //padding: 0 0 rem-calc(30) 0;
-      &:first-of-type {
-        display: inline;
-      }
-      &:last-of-type {
-        //margin-top: 0;
-      }
+    	font-family: $Barlow;
+    	font-size: $article-copy;
+    	line-height: 30px;
+    	margin-top: 30px;
+    	//padding: 0 0 rem-calc(30) 0;
+    	&:first-of-type {
+    		display: inline;
+    	}
+    	&:last-of-type {
+    		//margin-top: 0;
+    	}
+    	@media #{$iPadPortrait} {
+	  		line-height: 28px;
+		}
     }
+    a {
+  		color: $color-maroon;
+  		padding-bottom: 3px;
+  		font-weight: bolder;
+  		text-decoration: none;
+  		border-bottom: $thick-maroon;
+  	}
     .timestamp {
-      font-family: $Barlow;
-      font-size: $article-copy;
-      line-height: 30px;
-      //margin: 0;
-      //padding: 0 0 rem-calc(30) 0;
-      display: inline;
-      .bolded {
-        font-weight: bolder;
-        .upper {
-          text-transform: uppercase;
-        }
-      }
+    	font-family: $Barlow;
+    	font-size: $article-copy;
+    	line-height: 30px;
+    	//margin: 0;
+    	//padding: 0 0 rem-calc(30) 0;
+    	display: inline;
+    	.bolded {
+        	font-weight: bolder;
+        	.upper {
+        		text-transform: uppercase;
+        	}
+    	}
+    	@media #{$iPadPortrait} {
+	  		line-height: 28px;
+		}
     }
     .updateImage {
       //margin: 0 rem-calc(20) rem-calc(25) rem-calc(20);
@@ -420,34 +520,42 @@ article {
     @media #{$iPadPortrait} {
 		margin: 0 rem-calc(47) rem-calc(25) rem-calc(47);
 	}
+	@media #{$Phone} {
+		margin: 0 rem-calc(11) rem-calc(25) rem-calc(11);
+	}
     img {
-  	 display: block;
-  	 width: 100%;
+  		display: block;
+  		width: 100%;
     }
   }
   .floatImage {
   	float: right;
   	margin: 0 rem-calc(54) rem-calc(10) rem-calc(10);
-  	width: rem-calc(275);
+  	max-width: rem-calc(275);
   	@media #{$iPadPortrait} {
   		float: none;
-  		width: 71%;
-  		margin: 0 auto rem-calc(10) auto;
+  		max-width: 100%;
+  		margin: 0 rem-calc(117) rem-calc(10) rem-calc(117);
+  	}
+  	@media #{$Phone} {
+  		float: none;
+  		margin: 0 rem-calc(11) rem-calc(10) rem-calc(11);
   	}
   	img {
+  		display: block;
   		width: 100%;
   	}
   	.caption{
   		font-family: $Barlow;
   		font-size: $caption-D;
   		color: $color-gray222;
-  		margin: 0;
+  		margin: rem-calc(8) 0 0 0;
   		@media #{$iPadPortrait} {
 			font-size: $caption-T;
-
 		}
 		@media #{$Phone} {
 			font-size: $caption-P;
+			margin: rem-calc(8) rem-calc(3) 0 rem-calc(3);
 		}
   	}
   	.photoCredit {
@@ -458,25 +566,36 @@ article {
   		margin: 0;
   		@media #{$Phone} {
 			font-size: $photoCredit-P;
+			margin: 0 rem-calc(3) 0 rem-calc(3);
 		}
   	}
   }
   .quote {
   	//border: $thin-maroon;
   	float: left;
-  	width: rem-calc(275);
+  	max-width: rem-calc(275);
   	//padding: 0 0 0 rem-calc(55);
   	margin: 0 rem-calc(35) 0 rem-calc(54);
   	@media #{$iPadPortrait} {
 		float: none;
-		width: 82%;
+		max-width: 100%;
 		margin: 0 rem-calc(64) 0 rem-calc(64);
+	}
+	@media #{$Phone} {
+		float: none;
+		max-width: 100%;
+		margin: 0 rem-calc(16) 0 rem-calc(16);
 	}
   	.doubleQuotes{
   		//display: inline-block;
-  		background: url("../images/sprite.png") no-repeat -240px -45px;
+  		background: $sprite -240px -45px;
 		width: rem-calc(34);
 		height: rem-calc(30);
+		@media #{$Phone} {
+			background: $sprite -240px -80px;
+			width: rem-calc(24);
+			height: rem-calc(22);
+		}
   	}
   	p {
   		//display: inline;
@@ -485,11 +604,18 @@ article {
   		margin: 0 0 0 rem-calc(46);
   		position: relative;
   		top: -23px;
+  		line-height: 30px;
   		@media #{$iPadPortrait} {
   			font-size: $quote-T;
+  			margin: 0 0 0 rem-calc(55);
+  			line-height: 45px;
+  			top: -15px;
   		}
   		@media #{$Phone} {
   			font-size: $quote-P;
+  			margin: 0 0 0 rem-calc(45);
+  			line-height: 28px;
+  			top: -21px;
   		}
   	}
   }
@@ -499,6 +625,12 @@ article {
     padding-bottom: 49.65%; /* 16:9 */
     //padding-top: 25px;
     height: 0;
+    @media #{$iPadPortrait} {
+  		margin: 0 rem-calc(67) rem-calc(40) rem-calc(67);
+  	}
+  	@media #{$Phone} {
+  		margin: 0 rem-calc(11) rem-calc(40) rem-calc(11);
+  	}
     iframe {
       position: absolute;
       top: 0;
@@ -511,7 +643,10 @@ article {
   	margin: 0 rem-calc(54) rem-calc(40) rem-calc(54);
   	@media #{$iPadPortrait} {
 	  	margin: 0 rem-calc(64) rem-calc(40) rem-calc(64);
-	  }
+	}
+	@media #{$Phone} {
+	  	margin: 0 rem-calc(11) rem-calc(40) rem-calc(11);
+	}
   	img {
   	 display: block;
   	 width: 100%;
@@ -524,6 +659,16 @@ article {
       margin: 0 0 rem-calc(30) rem-calc(23);
       @media #{$iPadPortrait} {
 	  	margin: 0 0 rem-calc(23) rem-calc(47);
+	  }
+	  @media #{$Phone} {
+	  	display: none;
+	  }
+	  &.phone {
+	  	display: none;
+	  	@media #{$Phone} {
+	  		display: block;
+	  		margin: 0 0 rem-calc(23) rem-calc(11);
+	  	}
 	  }
     }
     .name {
@@ -545,6 +690,9 @@ article {
     @media #{$iPadPortrait} {
 		margin: 0 rem-calc(47) 0 0;
 	}
+	@media #{$Phone} {
+		margin: 0 rem-calc(11) 0 0;
+	}
   }
 }
 
@@ -558,7 +706,7 @@ article {
     	margin: 0 rem-calc(47) rem-calc(80) rem-calc(47);
     }
     @media #{$Phone} {
-    	margin: 0 rem-calc(11) rem-calc(80) rem-calc(11);
+    	margin: 0 rem-calc(8) rem-calc(80) rem-calc(8);
     }
   }
   .tags {
@@ -620,12 +768,21 @@ footer {
         //margin: 0;
         padding: rem-calc(114) rem-calc(74) 0 rem-calc(74);
         list-style-type: none;
-        //justify-content: center;
         display: flex;
         justify-content: space-around;
+        @media #{$Phone} {
+        	padding: rem-calc(40) 0 rem-calc(0) 0;
+        	//padding: 0;
+        	flex-direction: column;
+        	justify-content: space-between;
+        	height: 167px;
+        }
         li {
           //display: inline-block;
           //padding-right: rem-calc(45);
+          @media #{$Phone} {
+          	text-align: center;
+          }
           a {
             font-family: $Lucida;
             color: $color-gray707;
@@ -644,14 +801,29 @@ footer {
   .bottom {
     background-color: $color-maroon;
     height: rem-calc(70);
+    @media #{$Phone} {
+    	height: rem-calc(150);
+    }
     .elements {
       margin: auto;
   	  max-width: $full;
   	  height: rem-calc(70);
+  	  @media #{$Phone} {
+  	  	height: rem-calc(150);
+  	  }
   	  .social {
   	  	float: right;
   	  	//display: inline-block;
   	  	margin: rem-calc(25) rem-calc(28) 0 0;
+  	  	@media #{$Phone} {
+  	  		width: 250px;
+  	  		margin: auto;
+  	  		float: none;
+  	  		display: flex;
+        	justify-content: space-around;
+        	//margin: 0;
+        	padding: rem-calc(32) 0 rem-calc(23) 0;
+  	  	}
   	  	.icon {
   	  	  a {
   	  		//border: $thick-white;
@@ -662,38 +834,48 @@ footer {
       	}
       	.instagram {
 			display: inline-block;
-			background: url("../images/sprite.png") no-repeat 0px -43px;
+			background: $sprite 0px -43px;
 			width: rem-calc(19);
 			height: rem-calc(20);
 			margin-right: rem-calc(24);
 		}
       	.twitter {
 		    display: inline-block;
-		    background: url("../images/sprite.png") no-repeat -32px -45px;
+		    background: $sprite -32px -45px;
 		    width: rem-calc(19);
 		    height: rem-calc(17);
 		    margin-right: rem-calc(24);
 		}
 		  .facebook {
 		    display: inline-block;
-		    background: url("../images/sprite.png") no-repeat -60px -43px;
+		    background: $sprite -60px -43px;
 		    width: rem-calc(10);
 		    height: rem-calc(19);
 		}
   	  }
   	  .copyright {
   	  	height: rem-calc(70);
+  	  	@media #{$Phone} {
+  	  		margin: 0 auto 0 auto;
+  	  		//display: flex;
+  	  		//justify-content: space-around;
+  	  		width: rem-calc(278);
+  	  		//border: $thick-white;
+  	  	}
   	  	.cuny {
 		  display: inline-block;
-		  background: url("../images/sprite.png") no-repeat -240px 0px;
+		  background: $sprite -240px 0px;
 		  width: rem-calc(45);
 		  height: rem-calc(44);
 		  margin: rem-calc(13) 0 0 rem-calc(28);
+		  @media #{$Phone} {
+		  	margin-left: rem-calc(0);
+		  }
 		  a {
 		      //border: $thin-maroon;
 		      width: 100%;
 		      height: 100%;
-		      display: inline-block;
+		      //display: inline-block;
 		    }
     	}
     	.copy {
@@ -703,6 +885,9 @@ footer {
     	  border-left: $thick-white;
     	  height: rem-calc(44);
     	  margin: rem-calc(13) rem-calc(9) 0 rem-calc(14);
+    	  @media #{$Phone} {
+    	  	margin-right: 0;
+    	  }
     	  p {
     	  	font-family: $Lucida;
     	  	color: $color-white;
@@ -728,23 +913,45 @@ footer {
   }
   .email {
     display: inline-block;
-    background: url("../images/sprite.png") no-repeat 0px 0px;
+    background: $sprite 0px 0px;
     width: rem-calc(29);
     height: rem-calc(20);
     margin-right: rem-calc(24);
   }
   .twitter {
     display: inline-block;
-    background: url("../images/sprite.png") no-repeat -32px 0px;
+    background: $sprite -32px 0px;
     width: rem-calc(25);
     height: rem-calc(20);
     margin-right: rem-calc(24);
   }
   .facebook {
     display: inline-block;
-    background: url("../images/sprite.png") no-repeat -60px 0px;
+    background: $sprite -60px 0px;
     width: rem-calc(11);
     height: rem-calc(20);
+  }
+  &.open {
+  	@media #{$Phone} {
+  		margin-top: rem-calc(3);
+    	.email {
+    		background: $sprite 0px -25px;
+		    width: rem-calc(20);
+		    height: rem-calc(14);
+		    margin-right: rem-calc(10);
+    	}
+    	.twitter {
+    		background: $sprite -32px -25px;
+		    width: rem-calc(17);
+		    height: rem-calc(14);
+		    margin-right: rem-calc(10);
+    	}
+    	.facebook {
+    		background: $sprite -60px -25px;
+		    width: rem-calc(8);
+		    height: rem-calc(14);
+    	}
+    }
   }
 }
 

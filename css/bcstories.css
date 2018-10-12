@@ -1,24 +1,24 @@
 /* CSS Document */
 /* CSS Document */
 /* CSS Document */
-/* line 130, ../scss/_local_css.scss */
+/* line 136, ../scss/_local_css.scss */
 body {
   background-color: #fff;
   padding: 0;
   margin: 0;
 }
 
-/* line 137, ../scss/_local_css.scss */
+/* line 143, ../scss/_local_css.scss */
 .full-width {
   max-width: 100%;
 }
 
-/* line 143, ../scss/_local_css.scss */
+/* line 149, ../scss/_local_css.scss */
 .hidden {
   display: none;
 }
 
-/* line 148, ../scss/_local_css.scss */
+/* line 154, ../scss/_local_css.scss */
 *:focus {
   outline: 3px solid #FAD129;
 }
@@ -39,7 +39,7 @@ body {
     opacity: 1;
   }
 }
-/* line 158, ../scss/_local_css.scss */
+/* line 164, ../scss/_local_css.scss */
 header .full-width {
   z-index: 1000;
   position: fixed;
@@ -48,23 +48,23 @@ header .full-width {
   max-width: 100%;
   height: 2.8125rem;
 }
-/* line 165, ../scss/_local_css.scss */
+/* line 171, ../scss/_local_css.scss */
 header .full-width nav.desktop {
   margin: auto;
   max-width: 58rem;
 }
-/* line 169, ../scss/_local_css.scss */
+/* line 175, ../scss/_local_css.scss */
 header .full-width nav.desktop ul {
   margin: 0;
   padding: 0.875rem 0 0 1.5rem;
   list-style-type: none;
 }
-/* line 173, ../scss/_local_css.scss */
+/* line 179, ../scss/_local_css.scss */
 header .full-width nav.desktop ul li {
   display: inline-block;
   padding-right: 2.8125rem;
 }
-/* line 176, ../scss/_local_css.scss */
+/* line 182, ../scss/_local_css.scss */
 header .full-width nav.desktop ul li a {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   color: #fff;
@@ -73,17 +73,17 @@ header .full-width nav.desktop ul li a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 183, ../scss/_local_css.scss */
+/* line 189, ../scss/_local_css.scss */
 header .full-width nav.desktop ul li a:hover {
   text-decoration: underline;
 }
 @media screen and (max-width: 767px) {
-  /* line 165, ../scss/_local_css.scss */
+  /* line 171, ../scss/_local_css.scss */
   header .full-width nav.desktop {
     display: none;
   }
 }
-/* line 194, ../scss/_local_css.scss */
+/* line 200, ../scss/_local_css.scss */
 header .full-width .mobile-toggle {
   display: none;
   margin: auto;
@@ -94,13 +94,13 @@ header .full-width .mobile-toggle {
   background-color: #4B091F;
 }
 @media screen and (max-width: 767px) {
-  /* line 194, ../scss/_local_css.scss */
+  /* line 200, ../scss/_local_css.scss */
   header .full-width .mobile-toggle {
     display: inline-block;
     animation: FadeIn .75s;
   }
 }
-/* line 206, ../scss/_local_css.scss */
+/* line 212, ../scss/_local_css.scss */
 header .full-width .mobile-toggle .lines {
   background: url("../images/sprite.png") no-repeat -290px -25px;
   width: 1.75rem;
@@ -109,7 +109,7 @@ header .full-width .mobile-toggle .lines {
   animation: FadeIn .75s;
   margin: 0.625rem 0 0 0.625rem;
 }
-/* line 214, ../scss/_local_css.scss */
+/* line 220, ../scss/_local_css.scss */
 header .full-width .mobile-toggle .ex {
   background: url("../images/sprite.png") no-repeat -290px 0px;
   width: 1.4375rem;
@@ -118,7 +118,7 @@ header .full-width .mobile-toggle .ex {
   animation: FadeIn .75s;
   margin: 0.75rem 0 0 0.8125rem;
 }
-/* line 224, ../scss/_local_css.scss */
+/* line 230, ../scss/_local_css.scss */
 header .mobile-white {
   padding-top: 2.8125rem;
   z-index: 900;
@@ -127,7 +127,7 @@ header .mobile-white {
   height: 100%;
   background-color: #fff;
 }
-/* line 231, ../scss/_local_css.scss */
+/* line 237, ../scss/_local_css.scss */
 header .mobile-white .logo {
   display: block;
   margin: 1.25rem 0 1.25rem 1rem;
@@ -136,17 +136,17 @@ header .mobile-white .logo {
   width: 7.125rem;
   height: 2.25rem;
 }
-/* line 240, ../scss/_local_css.scss */
+/* line 246, ../scss/_local_css.scss */
 header .mobile-white nav.mobile ul {
   margin: 0;
   padding: 2rem 0 2rem 1.25rem;
   list-style-type: none;
 }
-/* line 244, ../scss/_local_css.scss */
+/* line 250, ../scss/_local_css.scss */
 header .mobile-white nav.mobile ul li {
   padding: 0 0 2.9375rem 0;
 }
-/* line 246, ../scss/_local_css.scss */
+/* line 252, ../scss/_local_css.scss */
 header .mobile-white nav.mobile ul li a {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font-size: 1.125rem;
@@ -154,11 +154,11 @@ header .mobile-white nav.mobile ul li a {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 252, ../scss/_local_css.scss */
+/* line 258, ../scss/_local_css.scss */
 header .mobile-white nav.mobile ul li a:hover {
   text-decoration: underline;
 }
-/* line 261, ../scss/_local_css.scss */
+/* line 267, ../scss/_local_css.scss */
 header .brand {
   padding-top: 2.8125rem;
   max-width: 58rem;
@@ -166,12 +166,18 @@ header .brand {
   border-bottom: 1px solid #707070;
 }
 @media screen and (max-width: 849px) {
-  /* line 261, ../scss/_local_css.scss */
+  /* line 267, ../scss/_local_css.scss */
   header .brand {
     margin: 0 2.9375rem 0 2.9375rem;
   }
 }
-/* line 269, ../scss/_local_css.scss */
+@media screen and (max-width: 849px) {
+  /* line 267, ../scss/_local_css.scss */
+  header .brand {
+    margin: 0 0.5rem 0 0.5rem;
+  }
+}
+/* line 278, ../scss/_local_css.scss */
 header .brand .logo {
   display: block;
   margin: 1.875rem auto 1rem auto;
@@ -180,7 +186,7 @@ header .brand .logo {
   height: 4.125rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 269, ../scss/_local_css.scss */
+  /* line 278, ../scss/_local_css.scss */
   header .brand .logo {
     margin: 1.875rem auto 0.5rem auto;
     background: url("../images/sprite.png") no-repeat -77px 0px;
@@ -188,39 +194,67 @@ header .brand .logo {
     height: 2.9375rem;
   }
 }
-/* line 283, ../scss/_local_css.scss */
+/* line 292, ../scss/_local_css.scss */
 header .brand .logo a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-/* line 296, ../scss/_local_css.scss */
+/* line 305, ../scss/_local_css.scss */
+.homepageList {
+  border: 1px solid #882346;
+  margin: auto;
+  max-width: 58rem;
+  padding-bottom: 2.8125rem;
+}
+/* line 310, ../scss/_local_css.scss */
+.homepageList .articleItem {
+  border: 1px solid #882346;
+}
+/* line 317, ../scss/_local_css.scss */
+.homepageList .articleItem .copy {
+  border: 1px solid #882346;
+}
+
+/* line 333, ../scss/_local_css.scss */
 article {
   margin: auto;
   max-width: 58rem;
   padding-bottom: 2.8125rem;
 }
-/* line 301, ../scss/_local_css.scss */
+/* line 338, ../scss/_local_css.scss */
 article h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
 }
-/* line 304, ../scss/_local_css.scss */
+/* line 341, ../scss/_local_css.scss */
 article h1.articleTitle {
   font-size: 3.4375rem;
   line-height: 56px;
   text-align: center;
   padding: 0 3.375rem 0 3.375rem;
-  margin: 2.8125rem 0 2.1875rem 0;
+  margin: 3rem 0 2.9375rem 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 304, ../scss/_local_css.scss */
+  /* line 341, ../scss/_local_css.scss */
   article h1.articleTitle {
+    font-size: 3.125rem;
     padding: 0 5.1875rem 0 5.1875rem;
+    line-height: 45px;
+    margin: 2.875rem 0 2.75rem 0;
   }
 }
-/* line 315, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 341, ../scss/_local_css.scss */
+  article h1.articleTitle {
+    font-size: 1.375rem;
+    padding: 0 1.0625rem 0 1.0625rem;
+    line-height: 21px;
+    margin: 1.75rem 0 1.625rem 0;
+  }
+}
+/* line 361, ../scss/_local_css.scss */
 article h1.contentTitle {
   font-size: 2.25rem;
   line-height: 36px;
@@ -228,22 +262,38 @@ article h1.contentTitle {
   margin: 2.1875rem 0 1.25rem 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 315, ../scss/_local_css.scss */
+  /* line 361, ../scss/_local_css.scss */
   article h1.contentTitle {
+    font-size: 1.75rem;
     padding: 0 5.1875rem 0 5.1875rem;
+    line-height: 28px;
   }
 }
-/* line 325, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 361, ../scss/_local_css.scss */
+  article h1.contentTitle {
+    font-size: 1.5625rem;
+    padding: 0 0.6875rem 0 0.6875rem;
+    line-height: 28px;
+  }
+}
+/* line 378, ../scss/_local_css.scss */
 article .subheader {
   padding: 0 3.375rem 0 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 325, ../scss/_local_css.scss */
+  /* line 378, ../scss/_local_css.scss */
   article .subheader {
     padding: 0 4.1875rem 0 4.1875rem;
   }
 }
-/* line 330, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 378, ../scss/_local_css.scss */
+  article .subheader {
+    padding: 0 0.6875rem 0 0.6875rem;
+  }
+}
+/* line 386, ../scss/_local_css.scss */
 article .subheader p {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font-size: 1.875rem;
@@ -251,17 +301,37 @@ article .subheader p {
   padding: 0 0 1.25rem 0;
   margin: 0;
 }
-/* line 338, ../scss/_local_css.scss */
+@media screen and (max-width: 849px) {
+  /* line 386, ../scss/_local_css.scss */
+  article .subheader p {
+    font-size: 1.375rem;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 386, ../scss/_local_css.scss */
+  article .subheader p {
+    font-size: 1.25rem;
+    line-height: 22px;
+  }
+}
+/* line 402, ../scss/_local_css.scss */
 article .copy {
   padding: 0 3.375rem 0 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 338, ../scss/_local_css.scss */
+  /* line 402, ../scss/_local_css.scss */
   article .copy {
-    padding: 0 4rem 0 4rem;
+    padding: 0 4.1875rem 0 4.1875rem;
   }
 }
-/* line 343, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 402, ../scss/_local_css.scss */
+  article .copy {
+    padding: 0 0.6875rem 0 0.6875rem;
+  }
+}
+/* line 410, ../scss/_local_css.scss */
 article .copy h2 {
   font-size: 1.875rem;
   font-family: "Roboto", sans-serif;
@@ -269,14 +339,23 @@ article .copy h2 {
   color: #222;
   padding: 0 0 1.25rem 0;
   margin: 0;
+  line-height: 44px;
 }
 @media screen and (max-width: 849px) {
-  /* line 343, ../scss/_local_css.scss */
+  /* line 410, ../scss/_local_css.scss */
   article .copy h2 {
     font-size: 1.75rem;
+    line-height: 28px;
   }
 }
-/* line 354, ../scss/_local_css.scss */
+@media screen and (max-width: 849px) {
+  /* line 410, ../scss/_local_css.scss */
+  article .copy h2 {
+    font-size: 1.25rem;
+    line-height: 22px;
+  }
+}
+/* line 427, ../scss/_local_css.scss */
 article .copy h3 {
   font-size: 1.25rem;
   font-family: "Roboto", sans-serif;
@@ -286,12 +365,12 @@ article .copy h3 {
   text-transform: uppercase;
 }
 @media screen and (max-width: 767px) {
-  /* line 354, ../scss/_local_css.scss */
+  /* line 427, ../scss/_local_css.scss */
   article .copy h3 {
     font-size: 1.125rem;
   }
 }
-/* line 365, ../scss/_local_css.scss */
+/* line 438, ../scss/_local_css.scss */
 article .copy p {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font-size: 1.125rem;
@@ -300,104 +379,160 @@ article .copy p {
   margin: 0;
   padding: 0 0 1.875rem 0;
 }
-/* line 374, ../scss/_local_css.scss */
+@media screen and (max-width: 849px) {
+  /* line 438, ../scss/_local_css.scss */
+  article .copy p {
+    line-height: 28px;
+  }
+}
+/* line 449, ../scss/_local_css.scss */
+article .copy a {
+  color: #882346;
+  padding-bottom: 3px;
+  font-weight: bolder;
+  text-decoration: none;
+  border-bottom: 3px solid #882346;
+}
+/* line 457, ../scss/_local_css.scss */
 article .update {
   background-color: #e5e5e5;
   padding: 1.6875rem 2.125rem;
   margin: 0 1.25rem 2.1875rem 1.25rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 374, ../scss/_local_css.scss */
+  /* line 457, ../scss/_local_css.scss */
   article .update {
     margin: 0 2.9375rem 2.1875rem 2.9375rem;
   }
 }
-/* line 381, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 457, ../scss/_local_css.scss */
+  article .update {
+    padding: 0.4375rem 0.5625rem;
+    margin: 0 0.6875rem 2.1875rem 0.6875rem;
+  }
+}
+/* line 468, ../scss/_local_css.scss */
 article .update p {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font-size: 1.125rem;
   line-height: 30px;
   margin-top: 30px;
 }
-/* line 387, ../scss/_local_css.scss */
+/* line 474, ../scss/_local_css.scss */
 article .update p:first-of-type {
   display: inline;
 }
-/* line 394, ../scss/_local_css.scss */
+@media screen and (max-width: 849px) {
+  /* line 468, ../scss/_local_css.scss */
+  article .update p {
+    line-height: 28px;
+  }
+}
+/* line 484, ../scss/_local_css.scss */
+article .update a {
+  color: #882346;
+  padding-bottom: 3px;
+  font-weight: bolder;
+  text-decoration: none;
+  border-bottom: 3px solid #882346;
+}
+/* line 491, ../scss/_local_css.scss */
 article .update .timestamp {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font-size: 1.125rem;
   line-height: 30px;
   display: inline;
 }
-/* line 401, ../scss/_local_css.scss */
+/* line 498, ../scss/_local_css.scss */
 article .update .timestamp .bolded {
   font-weight: bolder;
 }
-/* line 403, ../scss/_local_css.scss */
+/* line 500, ../scss/_local_css.scss */
 article .update .timestamp .bolded .upper {
   text-transform: uppercase;
 }
-/* line 410, ../scss/_local_css.scss */
+@media screen and (max-width: 849px) {
+  /* line 491, ../scss/_local_css.scss */
+  article .update .timestamp {
+    line-height: 28px;
+  }
+}
+/* line 510, ../scss/_local_css.scss */
 article .update .updateImage img {
   margin-top: 1.5625rem;
   display: block;
   width: 100%;
   border: 2px solid #707070;
 }
-/* line 418, ../scss/_local_css.scss */
+/* line 518, ../scss/_local_css.scss */
 article .featureImage {
   margin: 0 1.25rem 1.5625rem 1.25rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 418, ../scss/_local_css.scss */
+  /* line 518, ../scss/_local_css.scss */
   article .featureImage {
     margin: 0 2.9375rem 1.5625rem 2.9375rem;
   }
 }
-/* line 423, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 518, ../scss/_local_css.scss */
+  article .featureImage {
+    margin: 0 0.6875rem 1.5625rem 0.6875rem;
+  }
+}
+/* line 526, ../scss/_local_css.scss */
 article .featureImage img {
   display: block;
   width: 100%;
 }
-/* line 428, ../scss/_local_css.scss */
+/* line 531, ../scss/_local_css.scss */
 article .floatImage {
   float: right;
   margin: 0 3.375rem 0.625rem 0.625rem;
-  width: 17.1875rem;
+  max-width: 17.1875rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 428, ../scss/_local_css.scss */
+  /* line 531, ../scss/_local_css.scss */
   article .floatImage {
     float: none;
-    width: 71%;
-    margin: 0 auto 0.625rem auto;
+    max-width: 100%;
+    margin: 0 7.3125rem 0.625rem 7.3125rem;
   }
 }
-/* line 437, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 531, ../scss/_local_css.scss */
+  article .floatImage {
+    float: none;
+    margin: 0 0.6875rem 0.625rem 0.6875rem;
+  }
+}
+/* line 544, ../scss/_local_css.scss */
 article .floatImage img {
+  display: block;
   width: 100%;
 }
-/* line 440, ../scss/_local_css.scss */
+/* line 548, ../scss/_local_css.scss */
 article .floatImage .caption {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font-size: 0.8125rem;
   color: #222;
-  margin: 0;
+  margin: 0.5rem 0 0 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 440, ../scss/_local_css.scss */
+  /* line 548, ../scss/_local_css.scss */
   article .floatImage .caption {
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 440, ../scss/_local_css.scss */
+  /* line 548, ../scss/_local_css.scss */
   article .floatImage .caption {
     font-size: 0.75rem;
+    margin: 0.5rem 0.1875rem 0 0.1875rem;
   }
 }
-/* line 453, ../scss/_local_css.scss */
+/* line 561, ../scss/_local_css.scss */
 article .floatImage .photoCredit {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font-size: 0.9375rem;
@@ -406,52 +541,76 @@ article .floatImage .photoCredit {
   margin: 0;
 }
 @media screen and (max-width: 767px) {
-  /* line 453, ../scss/_local_css.scss */
+  /* line 561, ../scss/_local_css.scss */
   article .floatImage .photoCredit {
     font-size: 0.75rem;
+    margin: 0 0.1875rem 0 0.1875rem;
   }
 }
-/* line 464, ../scss/_local_css.scss */
+/* line 573, ../scss/_local_css.scss */
 article .quote {
   float: left;
-  width: 17.1875rem;
+  max-width: 17.1875rem;
   margin: 0 2.1875rem 0 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 464, ../scss/_local_css.scss */
+  /* line 573, ../scss/_local_css.scss */
   article .quote {
     float: none;
-    width: 82%;
+    max-width: 100%;
     margin: 0 4rem 0 4rem;
   }
 }
-/* line 475, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 573, ../scss/_local_css.scss */
+  article .quote {
+    float: none;
+    max-width: 100%;
+    margin: 0 1rem 0 1rem;
+  }
+}
+/* line 589, ../scss/_local_css.scss */
 article .quote .doubleQuotes {
   background: url("../images/sprite.png") no-repeat -240px -45px;
   width: 2.125rem;
   height: 1.875rem;
 }
-/* line 481, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 589, ../scss/_local_css.scss */
+  article .quote .doubleQuotes {
+    background: url("../images/sprite.png") no-repeat -240px -80px;
+    width: 1.5rem;
+    height: 1.375rem;
+  }
+}
+/* line 600, ../scss/_local_css.scss */
 article .quote p {
   font-size: 1.625rem;
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   margin: 0 0 0 2.875rem;
   position: relative;
   top: -23px;
+  line-height: 30px;
 }
 @media screen and (max-width: 849px) {
-  /* line 481, ../scss/_local_css.scss */
+  /* line 600, ../scss/_local_css.scss */
   article .quote p {
     font-size: 2.25rem;
+    margin: 0 0 0 3.4375rem;
+    line-height: 45px;
+    top: -15px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 481, ../scss/_local_css.scss */
+  /* line 600, ../scss/_local_css.scss */
   article .quote p {
     font-size: 1.5rem;
+    margin: 0 0 0 2.8125rem;
+    line-height: 28px;
+    top: -21px;
   }
 }
-/* line 496, ../scss/_local_css.scss */
+/* line 622, ../scss/_local_css.scss */
 article .video {
   margin: 0 3.375rem 2.5rem 3.375rem;
   position: relative;
@@ -459,7 +618,19 @@ article .video {
   /* 16:9 */
   height: 0;
 }
-/* line 502, ../scss/_local_css.scss */
+@media screen and (max-width: 849px) {
+  /* line 622, ../scss/_local_css.scss */
+  article .video {
+    margin: 0 4.1875rem 2.5rem 4.1875rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 622, ../scss/_local_css.scss */
+  article .video {
+    margin: 0 0.6875rem 2.5rem 0.6875rem;
+  }
+}
+/* line 634, ../scss/_local_css.scss */
 article .video iframe {
   position: absolute;
   top: 0;
@@ -467,95 +638,124 @@ article .video iframe {
   width: 100%;
   height: 100%;
 }
-/* line 510, ../scss/_local_css.scss */
+/* line 642, ../scss/_local_css.scss */
 article .articleImage {
   margin: 0 3.375rem 2.5rem 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 510, ../scss/_local_css.scss */
+  /* line 642, ../scss/_local_css.scss */
   article .articleImage {
     margin: 0 4rem 2.5rem 4rem;
   }
 }
-/* line 515, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 642, ../scss/_local_css.scss */
+  article .articleImage {
+    margin: 0 0.6875rem 2.5rem 0.6875rem;
+  }
+}
+/* line 650, ../scss/_local_css.scss */
 article .articleImage img {
   display: block;
   width: 100%;
 }
-/* line 521, ../scss/_local_css.scss */
+/* line 656, ../scss/_local_css.scss */
 article .byline p {
   font-size: 1.125rem;
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   margin: 0 0 1.875rem 1.4375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 521, ../scss/_local_css.scss */
+  /* line 656, ../scss/_local_css.scss */
   article .byline p {
     margin: 0 0 1.4375rem 2.9375rem;
   }
 }
-/* line 529, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 656, ../scss/_local_css.scss */
+  article .byline p {
+    display: none;
+  }
+}
+/* line 666, ../scss/_local_css.scss */
+article .byline p.phone {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  /* line 666, ../scss/_local_css.scss */
+  article .byline p.phone {
+    display: block;
+    margin: 0 0 1.4375rem 0.6875rem;
+  }
+}
+/* line 674, ../scss/_local_css.scss */
 article .byline .name {
   font-weight: bolder;
 }
-/* line 532, ../scss/_local_css.scss */
+/* line 677, ../scss/_local_css.scss */
 article .byline a {
   text-decoration: none;
   text-transform: uppercase;
   color: #882346;
   font-weight: bolder;
 }
-/* line 537, ../scss/_local_css.scss */
+/* line 682, ../scss/_local_css.scss */
 article .byline a:hover {
   text-decoration: underline;
 }
-/* line 542, ../scss/_local_css.scss */
+/* line 687, ../scss/_local_css.scss */
 article .share {
   float: right;
   margin: 0 1.4375rem 0 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 542, ../scss/_local_css.scss */
+  /* line 687, ../scss/_local_css.scss */
   article .share {
     margin: 0 2.9375rem 0 0;
   }
 }
+@media screen and (max-width: 767px) {
+  /* line 687, ../scss/_local_css.scss */
+  article .share {
+    margin: 0 0.6875rem 0 0;
+  }
+}
 
-/* line 551, ../scss/_local_css.scss */
+/* line 699, ../scss/_local_css.scss */
 .closing {
   margin: auto;
   max-width: 58rem;
 }
-/* line 554, ../scss/_local_css.scss */
+/* line 702, ../scss/_local_css.scss */
 .closing .line {
   border-top: 1px solid #707070;
   margin: 0 1.25rem 6.875rem 1.25rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 554, ../scss/_local_css.scss */
+  /* line 702, ../scss/_local_css.scss */
   .closing .line {
     margin: 0 2.9375rem 5rem 2.9375rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 554, ../scss/_local_css.scss */
+  /* line 702, ../scss/_local_css.scss */
   .closing .line {
-    margin: 0 0.6875rem 5rem 0.6875rem;
+    margin: 0 0.5rem 5rem 0.5rem;
   }
 }
-/* line 564, ../scss/_local_css.scss */
+/* line 712, ../scss/_local_css.scss */
 .closing .tags {
   margin: 3.75rem 0 0 0.1875rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 564, ../scss/_local_css.scss */
+  /* line 712, ../scss/_local_css.scss */
   .closing .tags {
     margin: 2.5rem auto 0 auto;
     display: flex;
     justify-content: space-around;
   }
 }
-/* line 572, ../scss/_local_css.scss */
+/* line 720, ../scss/_local_css.scss */
 .closing .tags a {
   border: 1px solid #707070;
   padding: 0.625rem 1.5625rem;
@@ -567,24 +767,24 @@ article .share {
   color: #707070;
 }
 @media screen and (max-width: 767px) {
-  /* line 572, ../scss/_local_css.scss */
+  /* line 720, ../scss/_local_css.scss */
   .closing .tags a {
     font-size: 0.625rem;
     padding: 0.625rem 1.5625rem;
     margin-right: 0;
   }
 }
-/* line 587, ../scss/_local_css.scss */
+/* line 735, ../scss/_local_css.scss */
 .closing .tags a:hover {
   text-decoration: underline;
 }
-/* line 592, ../scss/_local_css.scss */
+/* line 740, ../scss/_local_css.scss */
 .closing .share {
   float: right;
   margin: 3.75rem 0 0 0;
 }
 @media screen and (max-width: 767px) {
-  /* line 592, ../scss/_local_css.scss */
+  /* line 740, ../scss/_local_css.scss */
   .closing .share {
     margin: 2.5rem 0 0 0;
     float: none;
@@ -593,31 +793,46 @@ article .share {
   }
 }
 
-/* line 606, ../scss/_local_css.scss */
+/* line 754, ../scss/_local_css.scss */
 footer .full-width {
   width: 100%;
   max-width: 100%;
 }
-/* line 610, ../scss/_local_css.scss */
+/* line 758, ../scss/_local_css.scss */
 footer .navigation {
   background-color: #d9d9d9;
   height: 15.25rem;
   margin: auto;
   max-width: 100%;
 }
-/* line 616, ../scss/_local_css.scss */
+/* line 764, ../scss/_local_css.scss */
 footer .navigation nav {
   max-width: 58rem;
   margin: auto;
 }
-/* line 619, ../scss/_local_css.scss */
+/* line 767, ../scss/_local_css.scss */
 footer .navigation nav ul {
   padding: 7.125rem 4.625rem 0 4.625rem;
   list-style-type: none;
   display: flex;
   justify-content: space-around;
 }
-/* line 629, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 767, ../scss/_local_css.scss */
+  footer .navigation nav ul {
+    padding: 2.5rem 0 0 0;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 167px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 780, ../scss/_local_css.scss */
+  footer .navigation nav ul li {
+    text-align: center;
+  }
+}
+/* line 786, ../scss/_local_css.scss */
 footer .navigation nav ul li a {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   color: #707070;
@@ -626,33 +841,56 @@ footer .navigation nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 636, ../scss/_local_css.scss */
+/* line 793, ../scss/_local_css.scss */
 footer .navigation nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 644, ../scss/_local_css.scss */
+/* line 801, ../scss/_local_css.scss */
 footer .bottom {
   background-color: #882346;
   height: 4.375rem;
 }
-/* line 647, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 801, ../scss/_local_css.scss */
+  footer .bottom {
+    height: 9.375rem;
+  }
+}
+/* line 807, ../scss/_local_css.scss */
 footer .bottom .elements {
   margin: auto;
   max-width: 58rem;
   height: 4.375rem;
 }
-/* line 651, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 807, ../scss/_local_css.scss */
+  footer .bottom .elements {
+    height: 9.375rem;
+  }
+}
+/* line 814, ../scss/_local_css.scss */
 footer .bottom .elements .social {
   float: right;
   margin: 1.5625rem 1.75rem 0 0;
 }
-/* line 656, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 814, ../scss/_local_css.scss */
+  footer .bottom .elements .social {
+    width: 250px;
+    margin: auto;
+    float: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0 1.4375rem 0;
+  }
+}
+/* line 828, ../scss/_local_css.scss */
 footer .bottom .elements .social .icon a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
-/* line 663, ../scss/_local_css.scss */
+/* line 835, ../scss/_local_css.scss */
 footer .bottom .elements .social .instagram {
   display: inline-block;
   background: url("../images/sprite.png") no-repeat 0px -43px;
@@ -660,7 +898,7 @@ footer .bottom .elements .social .instagram {
   height: 1.25rem;
   margin-right: 1.5rem;
 }
-/* line 670, ../scss/_local_css.scss */
+/* line 842, ../scss/_local_css.scss */
 footer .bottom .elements .social .twitter {
   display: inline-block;
   background: url("../images/sprite.png") no-repeat -32px -45px;
@@ -668,18 +906,25 @@ footer .bottom .elements .social .twitter {
   height: 1.0625rem;
   margin-right: 1.5rem;
 }
-/* line 677, ../scss/_local_css.scss */
+/* line 849, ../scss/_local_css.scss */
 footer .bottom .elements .social .facebook {
   display: inline-block;
   background: url("../images/sprite.png") no-repeat -60px -43px;
   width: 0.625rem;
   height: 1.1875rem;
 }
-/* line 684, ../scss/_local_css.scss */
+/* line 856, ../scss/_local_css.scss */
 footer .bottom .elements .copyright {
   height: 4.375rem;
 }
-/* line 686, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 856, ../scss/_local_css.scss */
+  footer .bottom .elements .copyright {
+    margin: 0 auto 0 auto;
+    width: 17.375rem;
+  }
+}
+/* line 865, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .cuny {
   display: inline-block;
   background: url("../images/sprite.png") no-repeat -240px 0px;
@@ -687,13 +932,18 @@ footer .bottom .elements .copyright .cuny {
   height: 2.75rem;
   margin: 0.8125rem 0 0 1.75rem;
 }
-/* line 692, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 865, ../scss/_local_css.scss */
+  footer .bottom .elements .copyright .cuny {
+    margin-left: 0;
+  }
+}
+/* line 874, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .cuny a {
   width: 100%;
   height: 100%;
-  display: inline-block;
 }
-/* line 699, ../scss/_local_css.scss */
+/* line 881, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .copy {
   display: inline-block;
   position: absolute;
@@ -701,7 +951,13 @@ footer .bottom .elements .copyright .copy {
   height: 2.75rem;
   margin: 0.8125rem 0.5625rem 0 0.875rem;
 }
-/* line 706, ../scss/_local_css.scss */
+@media screen and (max-width: 767px) {
+  /* line 881, ../scss/_local_css.scss */
+  footer .bottom .elements .copyright .copy {
+    margin-right: 0;
+  }
+}
+/* line 891, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .copy p {
   font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   color: #fff;
@@ -710,13 +966,13 @@ footer .bottom .elements .copyright .copy p {
   padding: 0;
 }
 
-/* line 722, ../scss/_local_css.scss */
+/* line 907, ../scss/_local_css.scss */
 .share .icon a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
-/* line 729, ../scss/_local_css.scss */
+/* line 914, ../scss/_local_css.scss */
 .share .email {
   display: inline-block;
   background: url("../images/sprite.png") no-repeat 0px 0px;
@@ -724,7 +980,7 @@ footer .bottom .elements .copyright .copy p {
   height: 1.25rem;
   margin-right: 1.5rem;
 }
-/* line 736, ../scss/_local_css.scss */
+/* line 921, ../scss/_local_css.scss */
 .share .twitter {
   display: inline-block;
   background: url("../images/sprite.png") no-repeat -32px 0px;
@@ -732,15 +988,41 @@ footer .bottom .elements .copyright .copy p {
   height: 1.25rem;
   margin-right: 1.5rem;
 }
-/* line 743, ../scss/_local_css.scss */
+/* line 928, ../scss/_local_css.scss */
 .share .facebook {
   display: inline-block;
   background: url("../images/sprite.png") no-repeat -60px 0px;
   width: 0.6875rem;
   height: 1.25rem;
 }
+@media screen and (max-width: 767px) {
+  /* line 934, ../scss/_local_css.scss */
+  .share.open {
+    margin-top: 0.1875rem;
+  }
+  /* line 937, ../scss/_local_css.scss */
+  .share.open .email {
+    background: url("../images/sprite.png") no-repeat 0px -25px;
+    width: 1.25rem;
+    height: 0.875rem;
+    margin-right: 0.625rem;
+  }
+  /* line 943, ../scss/_local_css.scss */
+  .share.open .twitter {
+    background: url("../images/sprite.png") no-repeat -32px -25px;
+    width: 1.0625rem;
+    height: 0.875rem;
+    margin-right: 0.625rem;
+  }
+  /* line 949, ../scss/_local_css.scss */
+  .share.open .facebook {
+    background: url("../images/sprite.png") no-repeat -60px -25px;
+    width: 0.5rem;
+    height: 0.875rem;
+  }
+}
 
-/* line 754, ../scss/_local_css.scss */
+/* line 961, ../scss/_local_css.scss */
 #skipnav a, a.skipTranscript {
   position: absolute;
   z-index: 3000;
@@ -750,7 +1032,7 @@ footer .bottom .elements .copyright .copy p {
   padding-bottom: 25px;
 }
 
-/* line 762, ../scss/_local_css.scss */
+/* line 969, ../scss/_local_css.scss */
 #skipnav a:hover, #skipnav a:focus, #skipnav a:active {
   clip: auto;
   left: 0;
