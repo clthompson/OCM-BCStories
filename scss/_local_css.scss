@@ -18,6 +18,31 @@
 
 // Fonts and Sizes - OVERRIDE - ?????
   //Fonts
+
+//Fonts
+  @font-face { 
+    font-family: 'ComeniaSansCondRegular';
+    src: url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.eot');
+    src: local('☺'), url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.woff') format('woff'), url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.ttf') format('truetype'), url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.svg#webfontWDfTSCpx') format('svg');
+    font-weight: normal;
+    font-style: normal; 
+  }
+
+  //not used in BCF
+  @font-face {
+    font-family: 'ComeniaSansCondBold';
+    src: url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.eot');
+    src: local('☺'), url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.woff') format('woff'), url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.ttf') format('truetype'), url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.svg#webfont7RYPTQcC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
+
+
+  
   $Roboto: 'Roboto', sans-serif; //
   //Weights
   $Roboto400: 400;
@@ -34,13 +59,11 @@
   //Italics for all
   $italic: italic;
 
-  //Headings
+  // Article Styles
+  //$paragraph-font-size: rem-calc(18); // not Used
   $h1-font-size-D: rem-calc(55); // 
-  $h1-content-font-size-D: rem-calc(36); // 
   $h1-font-size-T: rem-calc(50); // 
-  $h1-content-font-size-T: rem-calc(28); //
   $h1-font-size-P: rem-calc(22); // 
-  $h1-content-font-size-P: rem-calc(25); //
 
   $h2-font-size-D: rem-calc(30); // 
   $h2-font-size-T: rem-calc(28); // 
@@ -48,12 +71,11 @@
 
   $h3-font-size: rem-calc(20); // D and T
   $h3-font-size-P: rem-calc(18); // P
+
   $h4-font-size: rem-calc(14); // not used 
   $h5-font-size: rem-calc(15); // not used 
   $h6-font-size: rem-calc(16); // not used 
 
-  // Article Styles
-  //$paragraph-font-size: rem-calc(18); // not Used
   $article-copy: rem-calc(18); // all
   $byline: rem-calc(18); // D and T
   $byline-P: rem-calc(12); // P
@@ -71,9 +93,26 @@
   $tag: rem-calc(14); //D and T
   $tag-P: rem-calc(10); //P
 
+  // Content Pages
+  $h1-content-font-size-D: rem-calc(36); // 
+  $h1-content-font-size-T: rem-calc(28); //
+  $h1-content-font-size-P: rem-calc(25); //
 
   //Homepage Text  
-  //$h2-homepage-list: rem-calc(20); // 
+  $h2-homepage-D: rem-calc(42);
+  $h2-homepage-T: rem-calc(35);
+  $h2-homepage-P: rem-calc(24);
+  $p-homepage-D: rem-calc(20);
+  $p-homepage-T: rem-calc(16);
+  $p-homepage-P: rem-calc(15);
+
+  // Archive Text
+  $h2-archive-D: rem-calc(42);
+  $h2-archive-T: rem-calc(38);
+  $h2-archive-P: rem-calc(36);
+  $p-archive: rem-calc(18);
+  $p-filter: rem-calc(26);
+  $p-filter-P: rem-calc(22);
 
   //Nav
   $nav: rem-calc(16);
@@ -303,32 +342,324 @@ section {
 }
 
 .homepageList {
-	border: $thin-maroon;
-	margin: auto;
+	//border: $thin-maroon;
+	margin: 0 auto rem-calc(65) auto;
 	max-width: $full;
-	padding-bottom: rem-calc(45);
+	padding: rem-calc(30) 0 0 0;
+  @media #{$Phone} {
+    margin: 0 auto rem-calc(31) auto;
+    padding: rem-calc(20) 0 rem-calc(0) 0;
+  }
 	.articleItem {
-		border: $thin-maroon;
+		//border: $thin-maroon;
+    margin: 0 rem-calc(20) rem-calc(82) rem-calc(20);
+    position: relative;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    @media #{$iPadPortrait} {
+      margin: 0 rem-calc(47) rem-calc(75) rem-calc(47);
+    }
+    @media #{$Phone} {
+      margin: rem-calc(23) rem-calc(8) rem-calc(0) rem-calc(8);
+      border-bottom: $thin-grayEDE;
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
 		a {
 			img {
-
+        display: block;
+        max-width: 100%;
+        border: $thick-gray707;
+        box-sizing: border-box;
 			}
+      .updated {
+        //border: $thin-maroon;
+        background-color: $color-gray444;
+        padding: rem-calc(6) rem-calc(13) rem-calc(4);
+        //margin: rem-calc(15) rem-calc(15) 0 0;
+        position: absolute;
+        top: rem-calc(15);
+        right: rem-calc(15);
+        color: $color-white;
+        font-family: $Lucida;
+        font-weight: bolder;
+        text-transform: uppercase;
+        @media #{$Phone} {
+          top: rem-calc(8);
+          right: rem-calc(8);
+        }
+      }
+      .video {
+        //border: $thin-maroon;
+        background: $sprite 0px -135px;
+        background-color: $color-grayE5E;
+        position: absolute;
+        top: rem-calc(15);
+        right: rem-calc(15);
+        width: rem-calc(35);
+        height: rem-calc(35);
+        @media #{$Phone} {
+          background: $sprite -70px -135px;
+          width: rem-calc(22);
+          height: rem-calc(22);
+          top: rem-calc(12);
+          right: rem-calc(12);
+        }
+      }
+      .gallery {
+        //border: $thin-maroon;
+        background: $sprite -35px -135px;
+        background-color: $color-grayE5E;
+        position: absolute;
+        top: rem-calc(15);
+        right: rem-calc(15);
+        width: rem-calc(35);
+        height: rem-calc(35);
+        @media #{$Phone} {
+          background: $sprite -92px -135px;
+          width: rem-calc(22);
+          height: rem-calc(22);
+          top: rem-calc(12);
+          right: rem-calc(12);
+        }
+      }
 		}
 		.copy {
-			border: $thin-maroon;
+			//border: $thin-maroon;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, .16);
+      position: relative;
+      top: -162px;
+      max-width: 100%;
+      margin: 0 rem-calc(93) rem-calc(-162) rem-calc(93);
+      padding: rem-calc(20) rem-calc(25) rem-calc(25) rem-calc(25);
+      z-index: 2;
+      @media #{$iPadPortrait} {
+        top: -137px;
+        margin: 0 rem-calc(78) rem-calc(-137) rem-calc(78);
+        padding: rem-calc(20) rem-calc(28) rem-calc(20) rem-calc(28);
+      }
+      @media #{$Phone} {
+        top: 0;
+        box-shadow: none;
+        margin: 0;
+        padding: rem-calc(18) 0 rem-calc(34) 0;
+        background-color: $color-white;
+        box-shadow: none;
+      }
 			h2 {
+        font-family: $Roboto;
+        font-weight: $Roboto900;
+        color: $color-black;
+        font-size: $h2-homepage-D;
+        margin: 0 0 rem-calc(20) 0;
+        padding:0;
+        line-height: 44px;
+        @media #{$iPadPortrait} {
+          font-size: $h2-homepage-T;
+          line-height: 35px;
+        }
+        @media #{$Phone} {
+          font-size: $h2-homepage-P;
+          line-height: 24px;
+          margin: 0 0 rem-calc(13) 0;
+        }
 				a {
-
+          color: $color-black;
+          text-decoration: none;
 				}
 			}
 			p {
-
+        font-family: $PMNCaecilia;
+        font-size: $p-homepage-D;
+        line-height: 24px;
+        margin: 0;
+        padding: 0;
+        @media #{$iPadPortrait} {
+          font-size: $p-homepage-T;
+          line-height: 19px;
+        }
+        @media #{$Phone} {
+          font-size: $p-homepage-P;
+          line-height: 16px;
+        }
 			}
 		}
 	}
 }
 
-
+.archiveList {
+  //border: $thin-maroon;
+  margin: 0 auto rem-calc(65) auto;
+  max-width: $full;
+  padding: 0;
+  @media #{$Phone} {
+    margin: 0 auto rem-calc(70) auto;
+    padding: rem-calc(20) 0 rem-calc(0) 0;
+  }
+  .filter {
+    margin: rem-calc(30) rem-calc(20) rem-calc(40) rem-calc(20);
+    @media #{$iPadPortrait} {
+      margin: rem-calc(30) rem-calc(47) rem-calc(20) rem-calc(47);
+    }
+    @media #{$Phone} {
+      margin: rem-calc(20) rem-calc(11) rem-calc(20) rem-calc(11);
+    }
+    p {
+      font-family: $Roboto;
+      font-size: $p-filter;
+      color: $color-gray716;
+      padding: 0;
+      margin: 0;
+      @media #{$iPadPortrait} {
+      }
+      @media #{$Phone} {
+        font-size: $p-filter-P;
+        text-align: center;
+      }
+    }
+  }
+  .articleItem {
+    //border: $thin-maroon;
+    margin: rem-calc(40) rem-calc(20) rem-calc(40) rem-calc(20);
+    padding: 0 0 rem-calc(35) 0;
+    border-bottom: $thin-grayEDE;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    @media #{$iPadPortrait} {
+      margin: 0 rem-calc(47) rem-calc(40) rem-calc(47);
+    }
+    @media #{$Phone} {
+      margin: rem-calc(23) rem-calc(8) rem-calc(0) rem-calc(8);
+      border-bottom: $thin-grayEDE;
+      &:last-of-type {
+        border-bottom: none;
+        padding: 0;
+      }
+    }
+    h2 {
+        font-family: $Roboto;
+        font-weight: $Roboto900;
+        font-size: $h2-archive-D;
+        text-align: center;
+        line-height: 46px;
+        margin: 0 0 rem-calc(15) 0;
+      a {
+        color: $color-black;
+        text-decoration: none;
+      }
+      @media #{$iPadPortrait} {
+        font-size: $h2-archive-T;
+        line-height: 42px;
+      }
+      @media #{$Phone} {
+        font-size: $h2-archive-P;
+        line-height: 30px;
+      }
+    }
+    .image {
+      position: relative;
+      margin: 0 0 rem-calc(20) 0;
+      img {
+        display: block;
+        max-width: 100%;
+        border: $thick-gray707;
+        box-sizing: border-box;
+      }
+      .updated {
+        position: absolute;
+        //border: $thin-maroon;
+        background-color: $color-gray444;
+        padding: rem-calc(6) rem-calc(13) rem-calc(4);
+        //margin: rem-calc(15) rem-calc(15) 0 0;
+        top: rem-calc(15);
+        right: rem-calc(15);
+        color: $color-white;
+        font-family: $Lucida;
+        font-weight: bolder;
+        text-transform: uppercase;
+        @media #{$Phone} {
+          top: rem-calc(8);
+          right: rem-calc(8);
+        }
+      }
+      .video {
+        //border: $thin-maroon;
+        background: $sprite 0px -135px;
+        background-color: $color-grayE5E;
+        position: absolute;
+        top: rem-calc(15);
+        right: rem-calc(15);
+        width: rem-calc(35);
+        height: rem-calc(35);
+        @media #{$Phone} {
+          background: $sprite -70px -135px;
+          background-color: $color-grayE5E;
+          width: rem-calc(22);
+          height: rem-calc(22);
+          top: rem-calc(12);
+          right: rem-calc(12);
+        }
+      }
+      .gallery {
+        //border: $thin-maroon;
+        background: $sprite -35px -135px;
+        background-color: $color-grayE5E;
+        position: absolute;
+        top: rem-calc(15);
+        right: rem-calc(15);
+        width: rem-calc(35);
+        height: rem-calc(35);
+        @media #{$Phone} {
+          background: $sprite -92px -135px;
+          width: rem-calc(22);
+          height: rem-calc(22);
+          top: rem-calc(12);
+          right: rem-calc(12);
+        }
+      }
+    }
+    .timestamp {
+      font-family: $Barlow;
+      font-size: $article-copy;
+      line-height: 30px;
+      color: $color-gray222;
+      //margin: 0;
+      //padding: 0 0 rem-calc(30) 0;
+      display: inline;
+      .bolded {
+          font-weight: bolder;
+          .upper {
+            text-transform: uppercase;
+          }
+      }
+      @media #{$iPadPortrait} {
+        line-height: 28px;
+      }
+    }
+    p {
+      font-family: $Barlow;
+      font-size: $p-archive;
+      line-height: 28px;
+      display: inline;
+      color: $color-gray222;
+      //margin-top: 30px;
+      @media #{$iPadPortrait} {
+        line-height: 28px;
+      }
+    }
+  }
+}
 
 article {
   //border: $thin-maroon;
@@ -337,7 +668,8 @@ article {
   padding-bottom: rem-calc(45);
   h1{
   	font-family: $Roboto;
-	font-weight: $Roboto900;
+	  font-weight: $Roboto900;
+    color: $color-black;
   	&.articleTitle {
 	  	font-size: $h1-font-size-D;
 	  	line-height: 56px;
@@ -412,7 +744,7 @@ article {
   		font-family: $Roboto;
   		font-weight: $Roboto700;
     	color: $color-gray222;
-    	padding: 0 0 rem-calc(20) 0;
+    	padding: 0 0 rem-calc(15) 0;
     	margin: 0;
     	line-height: 44px;
     	@media #{$iPadPortrait} {
@@ -470,6 +802,7 @@ article {
     	font-size: $article-copy;
     	line-height: 30px;
     	margin-top: 30px;
+      color: $color-gray222;
     	//padding: 0 0 rem-calc(30) 0;
     	&:first-of-type {
     		display: inline;
@@ -479,7 +812,7 @@ article {
     	}
     	@media #{$iPadPortrait} {
 	  		line-height: 28px;
-		}
+		  }
     }
     a {
   		color: $color-maroon;
@@ -492,6 +825,7 @@ article {
     	font-family: $Barlow;
     	font-size: $article-copy;
     	line-height: 30px;
+      color: $color-gray222;
     	//margin: 0;
     	//padding: 0 0 rem-calc(30) 0;
     	display: inline;
@@ -503,7 +837,7 @@ article {
     	}
     	@media #{$iPadPortrait} {
 	  		line-height: 28px;
-		}
+		  }
     }
     .updateImage {
       //margin: 0 rem-calc(20) rem-calc(25) rem-calc(20);
@@ -512,17 +846,18 @@ article {
         display: block;
         width: 100%;
         border: $thick-gray707;
+        box-sizing: border-box;
       }
     }
   }
   .featureImage {
     margin: 0 rem-calc(20) rem-calc(25) rem-calc(20);
     @media #{$iPadPortrait} {
-		margin: 0 rem-calc(47) rem-calc(25) rem-calc(47);
-	}
-	@media #{$Phone} {
-		margin: 0 rem-calc(11) rem-calc(25) rem-calc(11);
-	}
+		  margin: 0 rem-calc(47) rem-calc(25) rem-calc(47);
+	  }
+	  @media #{$Phone} {
+		  margin: 0 rem-calc(11) rem-calc(25) rem-calc(11);
+	  }
     img {
   		display: block;
   		width: 100%;
@@ -765,7 +1100,7 @@ footer {
       max-width: $full;
       margin: auto;
         ul {
-        //margin: 0;
+        margin: 0;
         padding: rem-calc(114) rem-calc(74) 0 rem-calc(74);
         list-style-type: none;
         display: flex;
