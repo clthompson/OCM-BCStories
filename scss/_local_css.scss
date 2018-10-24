@@ -170,7 +170,7 @@
 // Major Elements
 // width
   $full: rem-calc(928);  // needs to be 960, so we would add 16 to each side
-  $sprite: url("../images/sprite.png") no-repeat;
+  $sprite: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat;
 
 body {
   background-color: $color-white;
@@ -1167,20 +1167,20 @@ footer {
       		display: inline-block;
       	  }
       	}
-      	.instagram {
-			display: inline-block;
-			background: $sprite 0px -43px;
-			width: rem-calc(19);
-			height: rem-calc(20);
-			margin-right: rem-calc(24);
-		}
-      	.twitter {
-		    display: inline-block;
-		    background: $sprite -32px -45px;
-		    width: rem-calc(19);
-		    height: rem-calc(17);
-		    margin-right: rem-calc(24);
-		}
+     	.instagram {
+    		display: inline-block;
+    		background: $sprite 0px -43px;
+    		width: rem-calc(19);
+    		height: rem-calc(20);
+    		margin-right: rem-calc(24);
+    	}
+      .twitter {
+    	    display: inline-block;
+    	    background: $sprite -32px -45px;
+    	    width: rem-calc(19);
+    	    height: rem-calc(17);
+    	    margin-right: rem-calc(24);
+    	}
 		  .facebook {
 		    display: inline-block;
 		    background: $sprite -60px -43px;
@@ -1198,41 +1198,41 @@ footer {
   	  		//border: $thick-white;
   	  	}
   	  	.cuny {
-		  display: inline-block;
-		  background: $sprite -240px 0px;
-		  width: rem-calc(45);
-		  height: rem-calc(44);
-		  margin: rem-calc(13) 0 0 rem-calc(28);
-		  @media #{$Phone} {
-		  	margin-left: rem-calc(0);
-		  }
-		  a {
-		      //border: $thin-maroon;
-		      width: 100%;
-		      height: 100%;
-		      //display: inline-block;
-		    }
+    		  display: inline-block;
+    		  background: $sprite -240px 0px;
+    		  width: rem-calc(45);
+    		  height: rem-calc(44);
+    		  margin: rem-calc(13) 0 0 rem-calc(28);
+    		  @media #{$Phone} {
+    		  	margin-left: rem-calc(0);
+    		  }
+    		  a {
+    		      //border: $thin-maroon;
+    		      width: 100%;
+    		      height: 100%;
+    		      display: inline-block;
+    		    }
+        	}
+      	.copy {
+      	  display: inline-block;
+      	  position: absolute;
+      	  //top: -17px;
+      	  border-left: $thick-white;
+      	  height: rem-calc(44);
+      	  margin: rem-calc(13) rem-calc(9) 0 rem-calc(14);
+      	  @media #{$Phone} {
+      	  	margin-right: 0;
+      	  }
+      	  p {
+      	  	font-family: $Lucida;
+      	  	color: $color-white;
+      	  	font-size: $copyright;
+      	  	//line-height: 60px;
+      	  	margin: rem-calc(15) 0 0 rem-calc(14);
+      	  	padding: 0;
+      	  }
+      	}
     	}
-    	.copy {
-    	  display: inline-block;
-    	  position: absolute;
-    	  //top: -17px;
-    	  border-left: $thick-white;
-    	  height: rem-calc(44);
-    	  margin: rem-calc(13) rem-calc(9) 0 rem-calc(14);
-    	  @media #{$Phone} {
-    	  	margin-right: 0;
-    	  }
-    	  p {
-    	  	font-family: $Lucida;
-    	  	color: $color-white;
-    	  	font-size: $copyright;
-    	  	//line-height: 60px;
-    	  	margin: rem-calc(15) 0 0 rem-calc(14);
-    	  	padding: 0;
-    	  }
-    	}
-  	  }
     }
   }
 }
