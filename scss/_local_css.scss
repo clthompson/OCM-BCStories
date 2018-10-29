@@ -715,7 +715,7 @@ article {
 	@media #{$Phone} {
 	  	padding: 0 rem-calc(11) 0 rem-calc(11);
 	}
-  	p {
+  	h2 {
   		font-family: $PMNCaecilia;
   		font-size: $subheader-D;
   		line-height: 32px;
@@ -865,7 +865,7 @@ article {
   }
   .floatImage {
   	float: right;
-  	margin: 0 rem-calc(54) rem-calc(10) rem-calc(10);
+  	margin: rem-calc(8) rem-calc(54) rem-calc(10) rem-calc(10);
   	max-width: rem-calc(275);
   	@media #{$iPadPortrait} {
   		float: none;
