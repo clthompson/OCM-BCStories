@@ -85,17 +85,63 @@
     <h1 class="hidden">Brooklyn College *.*</h1>
     <section class="archiveList" id="mainContent" role="main" tabindex="0">
       <script type="text/javascript">
-        $(document).ready(function() {
-          //look at the URL for a filter term and then filter it out
+          $(document).ready(function() {
+            // part 1a get all the possible keywords from all articles into an single array
+            // establish array 
+            var keywordsArray = [];
+            // get articles
+            var articles = $(".articleItem");
+            // for each, get the keywords
+            $(articles).each(function(){
+              $(this).addClass("hidden");
+              var articleKeywords = $(this).attr("data-keywords");
+              //console.log(articleKeywords);
+              // turn the keywords into array items
+              var keywordList = $(articleKeywords.trim().split(/\s*,\s*/));
+              // push them into the main keywords array
+              $.merge(keywordsArray, keywordList);
+              //keywordsArray.push(keywordList);
+            });
+            //console.log(keywordsArray);
 
-        });
+            // part 1b make a 2nd array with the same contents lowercase, no spaces
+            var filterArray = keywordsArray;
+            $.each(filterArray,function(index,item){
+              filterArray[index] = item.toLowerCase().replace(/\s/g, '');
+            });
+            //console.log(filterArray);
+
+            // part 2 rewrite the data-keywords content to be lowercase, no spaces, no commas
+            $(articles).each(function(){
+              // make a variable that gets the keywords and changes the strings
+              var articleKeywords = $(this).attr("data-keywords").toLowerCase().replace(/\s/g, '').replace(/,/g , " ");
+              //console.log(articleKeywords);
+              // update the value
+              $(this).attr("data-keywords", articleKeywords);
+            });
+
+            // part 3 look at the URL, if there is a filter get it, and hide all articles, then show all that fit the criteria
+            var filterTerm = $(location).attr("href").split('=').pop(); //http://www.brooklyn.cuny.edu/web/news/longreads/archive.php?=climatechange
+
+            if(window.location.href.indexOf("?=") > -1) {
+              $(".articleItem[data-keywords*='"+filterTerm+"']").removeClass("hidden");
+            } else {
+              $(".articleItem").removeClass("hidden");
+            };
+            // console.log(filterTerm);
+            //$(".articleItem[data-keywords*='"+filterTerm+"']").removeClass("hidden");
+
+            // part 4 find the filterTerm in filterArray, get its position in the array, (append?) the same term from keywordsArray to the 'All stories in' line of code
+
+          });
       </script>
+
 
       <section class="filter">
         <p>All stories in ALUMNI NEWS</p>
       </section> 
       
-      <section class="articleItem" data-news="alumni">
+      <section class="articleItem" data-news="alumni" data-keywords="Climate Change, Diversity, World Politics Too, Alumni News, article">
         <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</a></h2>
         <section class="image">
           <a href="#">
@@ -107,11 +153,12 @@
             <div class="updated">updated</div>
           </a>
         </section>
-        <span class="timestamp"><span class="bolded"><span class="upper">Updated</span>: April 12 1 p.m.</span> - </span>
-        <p>Eesse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
+        <section class="copy">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ad architecto iure. Ullam dolore non consectetur amet enim, itaque aperiam porro dicta sint praesentium beatae iusto nam dolor tempora tempore.</h2>
+        </section>
       </section>
 
-      <section class="articleItem" data-news="student gallery">
+      <section class="articleItem" data-news="student gallery" data-keywords="Boston, Diversity, Basketball, Student News, gallery">
         <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</a></h2>
         <section class="image">
             <a href="#">
@@ -123,11 +170,12 @@
             <div class="video"></div>
           </a>
         </section>
-        <span class="timestamp"><span class="bolded"><span class="upper">Updated</span>: April 12 1 p.m.</span> - </span>
-        <p>Eesse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
+        <section class="copy">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ad architecto iure. Ullam dolore non consectetur amet enim, itaque aperiam porro dicta sint praesentium beatae iusto nam dolor tempora tempore.</h2>
+        </section>
       </section>
 
-      <section class="articleItem" data-news="student gallery">
+      <section class="articleItem" data-news="student video" data-keywords="Smithing, Biofuel, World Politics Too, Student News, video">
         <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</a></h2>
         <section class="image">
             <a href="#">
@@ -139,12 +187,12 @@
             <div class="gallery"></div>
           </a>
         </section>
-        <span class="timestamp"><span class="bolded"><span class="upper">Updated</span>: April 12 1 p.m.</span> - </span>
-        <p>Eesse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
+        <section class="copy">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ad architecto iure. Ullam dolore non consectetur amet enim, itaque aperiam porro dicta sint praesentium beatae iusto nam dolor tempora tempore.</h2>
+        </section>
       </section>
-    </section>
 
-
+  </section>
 
   <footer>
     <section class="navigation full-width">

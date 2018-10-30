@@ -190,14 +190,16 @@
           // get tags
           var baseTags = "Climate Change, Diversity, Sociology, 50 thingsd, another"; // placeholder for keywords
           // turn it into two variables with the right setups
+          // array separated by commas removing front and back spaces
           var filterItem = $(baseTags.trim().split(/\s*,\s*/));
+          // make array items lowercase and remove any additional spaces
           $.each(filterItem,function(index,item){
             filterItem[index] = item.toLowerCase().replace(/\s/g, '');
           });
-          //console.log(filterItem);
-
+          console.log(filterItem);
+          // array separated by commas removing front and back spaces
           var linkText = $(baseTags.trim().split(/\s*,\s*/));
-          //console.log(linkText);
+          console.log(linkText);
 
           // take each array item and turn it into <a href="anc_archive">Climate Change</a> within <section class="tags">
           var archiveURL = "http://www.brooklyn.cuny.edu/web/news/longreads/archive.php"; // anc_placeholder for archive page
