@@ -88,14 +88,14 @@
           $(document).ready(function() {
             // part 1a get all the possible keywords from all articles into an single array
             // establish array 
-            var keywordsArray = [];
+            var keywordsArray = []; // this will be the full array with the keywords written out
             // get articles
             var articles = $(".articleItem");
             // for each, get the keywords
             $(articles).each(function(){
               $(this).addClass("hidden");
               var articleKeywords = $(this).attr("data-keywords");
-              //console.log(articleKeywords);
+              // console.log(articleKeywords);
               // turn the keywords into array items
               var keywordList = $(articleKeywords.trim().split(/\s*,\s*/));
               // push them into the main keywords array
@@ -105,7 +105,13 @@
             //console.log(keywordsArray);
 
             // part 1b make a 2nd array with the same contents lowercase, no spaces
-            var filterArray = keywordsArray;
+            var filterArray = keywordsArray.slice(0);
+            //$(articles).each(function(){
+            //  var articleKeywords = $(this).attr("data-keywords");
+            //  var keywordList = $(articleKeywords.trim().split(/\s*,\s*/));
+            //  $.merge(filterArray, keywordList);
+            //});
+
             $.each(filterArray,function(index,item){
               filterArray[index] = item.toLowerCase().replace(/\s/g, '');
             });
@@ -125,20 +131,24 @@
 
             if(window.location.href.indexOf("?=") > -1) {
               $(".articleItem[data-keywords*='"+filterTerm+"']").removeClass("hidden");
+              //append Keyword to the All Stories element
+              var filterLocation = filterArray.indexOf(filterTerm);
+              $(".filter p span").append(keywordsArray[filterLocation]);
             } else {
+              // show all stories
               $(".articleItem").removeClass("hidden");
+              // hide filter
+              $(".filter").addClass("hidden");
             };
-            // console.log(filterTerm);
-            //$(".articleItem[data-keywords*='"+filterTerm+"']").removeClass("hidden");
+            //console.log(filterTerm);
 
             // part 4 find the filterTerm in filterArray, get its position in the array, (append?) the same term from keywordsArray to the 'All stories in' line of code
-
           });
       </script>
 
 
       <section class="filter">
-        <p>All stories in ALUMNI NEWS</p>
+        <p>All stories: <span class="term"></span></p>
       </section> 
       
       <section class="articleItem" data-news="alumni" data-keywords="Climate Change, Diversity, World Politics Too, Alumni News, article">

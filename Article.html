@@ -10,7 +10,7 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
         <script src="http://www.brooklyn.cuny.edu/web/js/vendor/jquery.js"></script> <!-- jQuery -->
     <script src="http://www.brooklyn.cuny.edu/web/js/foundation/foundation.js"></script> <!-- Foundation -->
-    <script src="http://www.brooklyn.cuny.edu/web/js/response-bcstories.js"></script> <!--// responsive content images//-->
+    <script src="http://www.brooklyn.cuny.edu/web/js/response-bclongreads.js"></script> <!--// responsive content images//-->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
@@ -111,9 +111,27 @@
         <div class="icon facebook"><a href="http://www.facebook.com/sharer/sharer.php?u=<%info_pageURL%>&title=<%stf_titleSimple%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="facebook"></a></div>
     </section>
     <section class="byline">
-      <p class="">By <span class="name">Robert Jones</span> &#8226; April 9, 2018 &#8226; In <a href="#">Alumni News</a></p>
-      <p class="phone">By <span class="name">Robert Jones</span> &#8226; April 9, 2018<br />
-      In <a href="#">Alumni News</a></p>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          // build the archive filter for the author <a>   
+          //get author name as variable, and crunch it
+          var authorName = $(".byline .desktop .name a").text().toLowerCase().replace(/\s/g, '').replace(/\./g, '');
+          // apply the string to the url
+          var authorLink = $(".byline .desktop .name a");
+          authorLink.attr('href', authorLink.attr('href')+"=?"+authorName);
+          console.log(authorName);
+          // build the archive filter for the article type <a> 
+          //get article type as filter
+          var articleType = $(".byline .desktop .type a").text().toLowerCase().replace(/\s/g, '');
+          // apply the string to the url
+          var articleLink = $(".byline .desktop .type a");
+          articleLink.attr('href', articleLink.attr('href')+"=?"+articleType);
+          console.log(articleType);
+        });
+      </script>
+      <p class="desktop">By <span class="name"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Robert Jones Jr.</a></span> &#8226; April 9, 2018 &#8226; In <span class="type"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Alumni News</a></span></p>
+      <p class="phone">By <span class="name"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Robert Jones Jr.</a></span> &#8226; April 9, 2018<br />
+      In <span class="type"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Alumni News</a></span></p>
     </section>
     <section class="subheader">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
@@ -196,10 +214,10 @@
           $.each(filterItem,function(index,item){
             filterItem[index] = item.toLowerCase().replace(/\s/g, '');
           });
-          console.log(filterItem);
+          //console.log(filterItem);
           // array separated by commas removing front and back spaces
           var linkText = $(baseTags.trim().split(/\s*,\s*/));
-          console.log(linkText);
+          //console.log(linkText);
 
           // take each array item and turn it into <a href="anc_archive">Climate Change</a> within <section class="tags">
           var archiveURL = "http://www.brooklyn.cuny.edu/web/news/longreads/archive.php"; // anc_placeholder for archive page
