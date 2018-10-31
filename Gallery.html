@@ -3,16 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BC Stories - Gallery</title>
+    <title>BC Stories</title>
 
-    <link rel="stylesheet" href="css/bcstories.css?ts=<?=time()?>" />
+    <link rel="stylesheet" href="css/bclongreads.css?ts=<?=time()?>" />
 
     <script src="bower_components/modernizr/modernizr.js"></script>
         <script src="http://www.brooklyn.cuny.edu/web/js/vendor/jquery.js"></script> <!-- jQuery -->
     <script src="http://www.brooklyn.cuny.edu/web/js/foundation/foundation.js"></script> <!-- Foundation -->
-    <script src="http://www.brooklyn.cuny.edu/web/js/response-bcstories.js"></script> <!--// responsive content images//-->
+    <script src="http://www.brooklyn.cuny.edu/web/js/response-bclongreads.js"></script> <!--// responsive content images//-->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Page ID: 13951 -->
 
     <meta property="og:title" content="">
     <meta property="og:type" content="website">
@@ -32,14 +34,26 @@
 
   <header>
     <section class="full-width">
-      <nav class="desktop" aria-label="Main Navigation">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">College Website</a></li>
-        </ul>
-      </nav>
+          <nav class="desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="http://www.brooklyn.cuny.edu/web/news/longreads/about.php" onClick="ga('send', 'event', 'LR -CurrentPage HM', 'navigate', 'LR -CurrentPage HM About', 1, {'NonInteraction': 1});">About</a></li>
+                <li><a href="http://www.brooklyn.cuny.edu/web/news/longreads/privacy.php" onClick="ga('send', 'event', 'LR -CurrentPage HM', 'navigate', 'LR -CurrentPage HM Privacy', 1, {'NonInteraction': 1});">Privacy</a></li>
+                <li><a href="http://www.brooklyn.cuny.edu/web/news/longreads/contact.php" onClick="ga('send', 'event', 'LR -CurrentPage HM', 'navigate', 'LR -CurrentPage HM Contact', 1, {'NonInteraction': 1});">Contact</a></li>
+                <li><a href="http://www.brooklyn.cuny.edu/web/home.php" onClick="ga('send', 'event', 'LR -CurrentPage HM', 'navigate', 'LR -CurrentPage HM EDU', 1, {'NonInteraction': 1});">College Website</a></li>
+            </ul>
+          </nav>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          var title = "pagetitle";
+          var changeName = $(".desktop ul").html().replace(/CurrentPage/g, title);
+          $(".desktop ul").html(changeName);
+          var changeName = $('.mobile ul').html().replace(/CurrentPage/g, title);
+          $('.mobile ul').html(changeName);
+          var changeName = $('footer nav ul').html().replace(/CurrentPage/g, title);
+          $('footer nav ul').html(changeName);
+        });
+      </script>
+
       <section class="mobile-toggle">
       <script type="text/javascript">
         $(document).ready(function() {
@@ -65,30 +79,94 @@
       <div class="logo"><a href="#"></a></div>
       <nav class="mobile" aria-label="Main Navigation">
           <ul>
-            <li><a href="#">Story Archive</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">College Website</a></li>
-          </ul>
+            <li><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php" onClick="ga('send', 'event', 'LR -CurrentPage MM', 'navigate', 'LR -CurrentPage MM Story Archive', 1, {'NonInteraction': 1});">Story Archive</a></li>
+            <li><a href="http://www.brooklyn.cuny.edu/web/news/longreads/about.php" onClick="ga('send', 'event', 'LR -CurrentPage MM', 'navigate', 'LR -CurrentPage MM About', 1, {'NonInteraction': 1});">About</a></li>
+            <li><a href="http://www.brooklyn.cuny.edu/web/news/longreads/privacy.php" onClick="ga('send', 'event', 'LR -CurrentPage MM', 'navigate', 'LR -CurrentPage MM Privacy', 1, {'NonInteraction': 1});">Privacy</a></li>
+            <li><a href="http://www.brooklyn.cuny.edu/web/news/longreads/contact.php" onClick="ga('send', 'event', 'LR -CurrentPage MM', 'navigate', 'LR -CurrentPage MM Contact', 1, {'NonInteraction': 1});">Contact</a></li>
+            <li><a href="http://www.brooklyn.cuny.edu/web/home.php" onClick="ga('send', 'event', 'LR -CurrentPage MM', 'navigate', 'LR -CurrentPage MM EDU', 1, {'NonInteraction': 1});">College Website</a></li>
+            </ul>
         </nav>
     </section>
     <section class="brand">
-    <div class="logo"><a href="#"></a></div>
+      <div class="logo"><a href="#"></a></div>
+      <!--<img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" 
+      alt="Brooklyn College Stories" title="Brooklyn College Stories"
+      data-src0="images/logo_162x47.png"
+      data-src834="images/logo_162x47.png"
+      data-src928="images/logo_228x66.png"/>-->
     </section>
   </header>
 
-  <article>
-    <h1 id="mainContent" role="main" tabindex="0">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Non, dolorum!</h1>
-    <section class="share">
-      <div class="icon email"><a href="#"></a></div><div class="icon twitter"><a href="#"></a></div><div class="icon facebook"><a href="#"></a></div>
+ <article>
+    <h1 class="articleTitle" id="mainContent" role="main" tabindex="0">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Non, dolorum!</h1>
+    <section class="featureImage"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" 
+      alt="Content Image" title="Content Image"
+      data-src0="images/content_500x282.jpg"
+      data-src500="images/content_888x500.jpg"
+      data-src928="images/content_888x500.jpg"/>
+    </section>
+      <section class="share open">
+        <div class="icon email"><a href="mailto:?subject=I wanted to share this article from Brooklyn College with you&amp;body=<%stf_titleSimple%> - <%info_pageURL%>" title="Share by Email"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="email"></a></div>
+        <div class="icon twitter"><a href="https://twitter.com/share?url=<%info_pageURL%>&amp;text=<%stf_titleSimple%>&amp;hashtags=<%stf_keywords%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="twitter"></a></div>
+        <div class="icon facebook"><a href="http://www.facebook.com/sharer/sharer.php?u=<%info_pageURL%>&title=<%stf_titleSimple%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="facebook"></a></div>
     </section>
     <section class="byline">
-      <p>By <span class="name">Robert Jones</span> &#8226; April 9, 2018 &#8226; In <a href="#">Alumni News</a></p>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          // build the archive filter for the author <a>   
+          //get author name as variable, and crunch it
+          var authorName = $(".byline .desktop .name a").text().toLowerCase().replace(/\s/g, '').replace(/\./g, '');
+          // apply the string to the url
+          var authorLink = $(".byline .desktop .name a");
+          authorLink.attr('href', authorLink.attr('href')+"=?"+authorName);
+          console.log(authorName);
+          // build the archive filter for the article type <a> 
+          //get article type as filter
+          var articleType = $(".byline .desktop .type a").text().toLowerCase().replace(/\s/g, '');
+          // apply the string to the url
+          var articleLink = $(".byline .desktop .type a");
+          articleLink.attr('href', articleLink.attr('href')+"=?"+articleType);
+          console.log(articleType);
+        });
+      </script>
+      <p class="desktop">By <span class="name"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Robert Jones Jr.</a></span> &#8226; April 9, 2018 &#8226; In <span class="type"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Alumni News</a></span></p>
+      <p class="phone">By <span class="name"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Robert Jones Jr.</a></span> &#8226; April 9, 2018<br />
+      In <span class="type"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Alumni News</a></span></p>
+    </section>
+    <section class="subheader">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
     </section>
 
       <!-- gallery -->
-    
+      <script type="text/javascript">
+        $(document).ready(function() {
+          
+
+
+
+
+        });
+      </script>
+
+    <section class="gallery hidden">
+      <div class="galleryElement">
+        <div class="images">
+          <img class="thumb" src="">
+          <img class="small" src="">
+          <img class="large" src="">
+        <div class="caption">
+          <p></p>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+    </section>  
       <!--end gallery -->
     
     </section>
@@ -96,11 +174,40 @@
 
   <section class="closing">
     <section class="line">
-      <section class="share">
-          <div class="icon email"><a href="#"></a></div><div class="icon twitter"><a href="#"></a></div><div class="icon facebook"><a href="#"></a></div>
+      <section class="share close">
+         <div class="icon email"><a href="mailto:?subject=I wanted to share this article from Brooklyn College with you&amp;body=<%stf_titleSimple%> - <%info_pageURL%>" title="Share by Email"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="email"></a></div>
+        <div class="icon twitter"><a href="https://twitter.com/share?url=<%info_pageURL%>&amp;text=<%stf_titleSimple%>&amp;hashtags=<%stf_keywords%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="twitter"></a></div>
+        <div class="icon facebook"><a href="http://www.facebook.com/sharer/sharer.php?u=<%info_pageURL%>&title=<%stf_titleSimple%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="facebook"></a></div>
       </section>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          // get tags
+          var baseTags = "Climate Change, Diversity, Sociology, 50 thingsd, another"; // placeholder for keywords
+          // turn it into two variables with the right setups
+          // array separated by commas removing front and back spaces
+          var filterItem = $(baseTags.trim().split(/\s*,\s*/));
+          // make array items lowercase and remove any additional spaces
+          $.each(filterItem,function(index,item){
+            filterItem[index] = item.toLowerCase().replace(/\s/g, '');
+          });
+          //console.log(filterItem);
+          // array separated by commas removing front and back spaces
+          var linkText = $(baseTags.trim().split(/\s*,\s*/));
+          //console.log(linkText);
+
+          // take each array item and turn it into <a href="anc_archive">Climate Change</a> within <section class="tags">
+          var archiveURL = "http://www.brooklyn.cuny.edu/web/news/longreads/archive.php"; // anc_placeholder for archive page
+
+          // build the html
+          $(filterItem).each(function(i, e) {
+            $("section.tags").append('<a href="'+archiveURL+'?='+filterItem[i]+'" onClick="ga(\'send\', \'event\', \'LR -CurrentPage TA\', \'navigate\', \'LR -CurrentPage TA '+linkText[i]+'\', 1, {\'NonInteraction\': 1});">'+linkText[i]+'</a>');
+
+            // onClick="ga('send', 'event', 'LR -CurrentPage FM', 'navigate', 'LR -CurrentPage FM EDU', 1, {'NonInteraction': 1});"
+          });
+        });
+        </script>
       <section class="tags">
-        <a href="#">Climate Change</a><a href="#">Diversity</a><a href="#">Sociology</a>
+        <!-- <a href="#">Climate Change</a><a href="#">Diversity</a><a href="#">Sociology</a>--> <!-- this can go away -->
       </section>
     </section>
   </section>
