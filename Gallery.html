@@ -23,6 +23,7 @@
     <meta property="fb:admins" content="618382230">
     <meta property="og:image" content="">
     <meta name="twitter:title" content="">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content=""> 
     <meta name="twitter:image:src" content="">
 
@@ -99,12 +100,12 @@
 
  <article>
     <h1 class="articleTitle" id="mainContent" role="main" tabindex="0">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Non, dolorum!</h1>
-    <section class="featureImage"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" 
+    <!--<section class="featureImage"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" 
       alt="Content Image" title="Content Image"
       data-src0="images/content_500x282.png"
       data-src500="images/content_888x500.png"
       data-src928="images/content_888x500.png"/>
-    </section>
+    </section> -->
       <section class="share open">
         <div class="icon email"><a href="mailto:?subject=I wanted to share this article from Brooklyn College with you&amp;body=<%stf_titleSimple%> - <%info_pageURL%>" title="Share by Email"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="email"></a></div>
         <div class="icon twitter"><a href="https://twitter.com/share?url=<%info_pageURL%>&amp;text=<%stf_titleSimple%>&amp;hashtags=<%stf_keywords%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="twitter"></a></div>
@@ -140,54 +141,139 @@
       <!-- gallery -->
       <script type="text/javascript">
         $(document).ready(function() {
-          var galleryName = "Christopher";
+          var galleryName = "Christopher"; // you really don't need this part, you can just drop the placeholder into data-name in both places
+          var baseURL = "images/";
           //console.log(galleryName);
           // make the array
           var galleryList = $(".gallery[data-name='"+galleryName+"'] .galleryElement");
           //console.log(startUp);
-          // some experiments to target exactly what i want from each array element
-          var nextIdea1 = $(galleryList[1]).find(".thumbImage").attr("src");
-          var nextIdea2 = $(galleryList[1]).find(".largeImage").attr("src");
-          var nextIdea3 = $(galleryList[1]).find(".caption").prop('outerHTML');
-          var nextIdea4 = $(galleryList[1]).find(".altTag").html();
-          console.log(nextIdea1);
-          console.log(nextIdea2);
-          console.log(nextIdea3);
-          console.log(nextIdea4);
 
+          // build the thumbs
+          $(galleryList).each(function(i, e) {
+            thumbURL = $(galleryList[i]).find(".thumbImage").attr("src");
+            altTag = $(galleryList[i]).find(".altTag").html();
+            $(".thumbnailImages").append('<button class="thumb active" data-name="'+galleryName+''+[i]+'"><img src="'+baseURL+thumbURL+'" alt="'+altTag+'"></button>');
+          });
+
+          // build the first image
+          var imageURL = $(galleryList[0]).find(".largeImage").attr("src");
+          //console.log(imageURL);
+          var altTag = $(galleryList[0]).find(".altTag").html();
+          var caption = $(galleryList[0]).find(".caption").prop("outerHTML");
+          $(".mainImage").append('<button class="main"><img src="'+baseURL+imageURL+'" alt="'+altTag+'">'+caption+'</button>');
+          //build the lightbox image - should we wait for that?
+          $(".lightboxImages").append('<section class="image"><img src="'+baseURL+imageURL+'" alt="'+altTag+'">'+caption+'</section>');
+
+          // what happens when a thumbnailImage is clicked
+            // get number of the button - this is the active number
+            // change class to active for visual styling
+            // rewrite mainImage src, alt, and caption
+            // rewrite lightboxImage src, alt, caption (so things stay synced)
+
+          // what happens when a mainImage is clicked 
+
+
+
+          // what happens when 
+
+
+          //$(galleryList).each(function(i, e) {
+          //  $("section.tags").append('<a href="'+archiveURL+'?='+filterItem[i]+'" onClick="ga(\'send\', \'event\', \'LR -CurrentPage TA\', \'navigate\', \'LR -CurrentPage TA '+linkText[i]+'\', 1, {\'NonInteraction\': 1});">'+linkText[i]+'</a>');
+
+          // onClick="ga('send', 'event', 'LR -CurrentPage FM', 'navigate', 'LR -CurrentPage FM EDU', 1, {'NonInteraction': 1});"
 
         });
       </script>
 
-    <section class="gallery hidden" data-name="Christopher">
+    <section class="gallery" data-name="Christopher">
 
-      <section class="mainImage">
-        <img src="">
+      <section class="mainImage"> <!-- [0] gets written, others get written into this when thumbs are clicked -->
+
+        <!--<button class="main">
+          <img src="images/g1-01-888x500.jpg" alt="G1-01">
+          <div class="caption"><p>Caption for <em>G1-01</em></p></div>
+        </button>-->
 
       </section>
 
       <section class="thumbnailImages">
 
+        <!--<button class="thumb active" data-name="Christopher0">
+          <img src="images/g1-01-110x110.jpg" alt="G1-02">
+        </button>
+
+        <button class="thumb" data-name="Christopher1">
+          <img src="images/g1-02-110x110.jpg" alt="G1-02">
+        </button>-->
+
       </section>
 
-      <section class="lightboxImages">
+      <section class="lightboxImages hidden">
+
+
+
+
+
+
 
       </section>
 
-      <section class="">
+      <section class="base hidden">
 
         <div class="galleryElement">
-          <img class="thumbImage" src="images/content_888x500.png">
-          <img class="largeImage" src="images/content_888x500.png">
-          <p class="caption">C</p>
-          <p class="altTag">D</p>
+          <img class="thumbImage" src="images/g1-01-110x110.jpg">
+          <img class="largeImage" src="images/g1-01-888x500.jpg">
+          <div class="caption"><p>Caption for <em>G1-01</em></p></div>
+          <p class="altTag">G1-01</p>
         </div>
 
         <div class="galleryElement">
-          <img class="thumbImage" src="images/content_888x500.png">
-          <img class="largeImage" src="images/content_888x500.png">
-          <div class="caption"><p>jjj</p></div>
-          <p class="altTag">ffff</p>
+          <img class="thumbImage" src="images/g1-02-110x110.jpg">
+          <img class="largeImage" src="images/g1-02-888x500.jpg">
+          <div class="caption"><p>Caption for <em>G1-02</em></p></div>
+          <p class="altTag">G1-02</p>
+        </div>
+
+        <div class="galleryElement">
+          <img class="thumbImage" src="images/g1-03-110x110.jpg">
+          <img class="largeImage" src="images/g1-03-888x500.jpg">
+          <div class="caption"><p>Caption for <em>G1-03</em></p></div>
+          <p class="altTag">G1-03</p>
+        </div>
+
+        <div class="galleryElement">
+          <img class="thumbImage" src="images/g1-04-110x110.jpg">
+          <img class="largeImage" src="images/g1-04-888x500.jpg">
+          <div class="caption"><p>Caption for <em>G1-04</em></p></div>
+          <p class="altTag">G1-04</p>
+        </div>
+
+        <div class="galleryElement">
+          <img class="thumbImage" src="images/g1-05-110x110.jpg">
+          <img class="largeImage" src="images/g1-05-888x500.jpg">
+          <div class="caption"><p>Caption for <em>G1-05</em></p></div>
+          <p class="altTag">G1-05</p>
+        </div>
+
+        <div class="galleryElement">
+          <img class="thumbImage" src="images/g1-06-110x110.jpg">
+          <img class="largeImage" src="images/g1-06-888x500.jpg">
+          <div class="caption"><p>Caption for <em>G1-06</em></p></div>
+          <p class="altTag">G1-06</p>
+        </div>
+
+        <div class="galleryElement">
+          <img class="thumbImage" src="images/g1-07-110x110.jpg">
+          <img class="largeImage" src="images/g1-07-888x500.jpg">
+          <div class="caption"><p>Caption for <em>G1-07</em></p></div>
+          <p class="altTag">G1-07</p>
+        </div>
+
+        <div class="galleryElement">
+          <img class="thumbImage" src="images/g1-08-110x110.jpg">
+          <img class="largeImage" src="images/g1-08-888x500.jpg">
+          <div class="caption"><p>Caption for <em>G1-08</em></p></div>
+          <p class="altTag">G1-08</p>
         </div>
 
       </section>

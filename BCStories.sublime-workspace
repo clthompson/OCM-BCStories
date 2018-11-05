@@ -96,50 +96,34 @@
 	"buffers":
 	[
 		{
-			"file": "/Z/Public/$$Redesign/$Admin/Standards/PHP/graduate_oncampus.php",
+			"file": "/Z/Public/webDevelopment/projects/FacultyExperts/Bio.html",
 			"settings":
 			{
-				"buffer_size": 2528,
+				"buffer_size": 11609,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/Z/Public/$$Redesign/$Admin/Standards/PHP/undergrad_admissions.php",
+			"file": "/Z/Public/webDevelopment/projects/FacultyExperts/scss/_local_css.scss",
 			"settings":
 			{
-				"buffer_size": 2437,
+				"buffer_size": 4109,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Content.html",
+			"file": "/Z/Public/webDevelopment/projects/BCF-BestOfBrooklyn2015/scss/_local_css.scss",
 			"settings":
 			{
-				"buffer_size": 7324,
+				"buffer_size": 19415,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "HomePage.html",
+			"file": "Gallery.html",
 			"settings":
 			{
-				"buffer_size": 6997,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Archive.html",
-			"settings":
-			{
-				"buffer_size": 9278,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Article.html",
-			"settings":
-			{
-				"buffer_size": 15663,
+				"buffer_size": 18482,
 				"line_ending": "Windows"
 			}
 		},
@@ -147,7 +131,15 @@
 			"file": "scss/_local_css.scss",
 			"settings":
 			{
-				"buffer_size": 31484,
+				"buffer_size": 31495,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Z/Public/$$Redesign/$Admin/Standards/CSS/master.css",
+			"settings":
+			{
+				"buffer_size": 114196,
 				"line_ending": "Windows"
 			}
 		}
@@ -234,6 +226,17 @@
 	],
 	"file_history":
 	[
+		"/Z/Public/webDevelopment/projects/FacultyExperts/css/facultyexperts.css",
+		"/Z/Public/$$Redesign/$Admin/Standards/PHP/undergrad_admissions.php",
+		"/Z/Public/$$Redesign/$Admin/Standards/PHP/graduate_oncampus.php",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/_custom.scss",
+		"/Z/Public/$BCF_Website/Development/005-Foundation5-140122/sass/app.scss",
+		"/Z/Public/$BCF_Website/Development/005-Foundation5-140122/sass/_custom.scss",
+		"/Z/Public/webDevelopment/projects/BCStories/scss/_local_css.scss",
+		"/Z/Public/webDevelopment/projects/BCStories/Article.html",
+		"/Z/Public/webDevelopment/projects/BCStories/Archive.html",
+		"/Z/Public/webDevelopment/projects/BCStories/HomePage.html",
+		"/Z/Public/webDevelopment/projects/BCStories/Content.html",
 		"/Z/Public/webDevelopment/projects/FacultyExperts/Bio.html",
 		"/Z/Public/webDevelopment/projects/BCStories/css/bclongreads.css",
 		"/Z/Public/$$Redesign/$Admin/Standards/CSS/master.css",
@@ -241,11 +244,9 @@
 		"/Z/Public/webDevelopment/projects/FacultyExperts/scss/facultyexperts.scss",
 		"/Z/Public/webDevelopment/projects/BCStories/scss/bclongreads.scss",
 		"/Z/Public/webDevelopment/projects/BCStories/css/bcstories.css",
-		"/Z/Public/webDevelopment/projects/BCStories/scss/_local_css.scss",
 		"/Z/Public/webDevelopment/projects/BCStories/BCStories.html",
 		"/D/Downloads/Ex_Files_Forms_Flexbox/Exercise Files/Chapter-02/02-06/finished_files/forms.htm",
 		"/Z/Public/webDevelopment/projects/BCStories/scss/bcstories.scss",
-		"/Z/Public/webDevelopment/projects/BCStories/Content.html",
 		"/Z/Public/webDevelopment/projects/BCStories/Gallery.html",
 		"/Z/Public/webDevelopment/master/scss/_master_var.scss",
 		"/Z/Public/webDevelopment/master/scss/_master_css.scss",
@@ -352,16 +353,7 @@
 		"/Z/Public/webDevelopment/projects/Storify/scss/storify.scss",
 		"/Z/Public/webDevelopment/projects/Storify/index.html",
 		"/C/Users/staff/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/Z/Public/webDevelopment/projects/Storify/scss/_local_var.scss",
-		"/C/Users/jdoe/Dropbox/L/JavaScript_and_jQuery_The_Missing_Manual_Second_Edition/chapter15/debugger_MOD.html",
-		"/Z/Public/$$Redesign/$Admin/Standards/forms/2015/pre-health.php",
-		"/Z/Public/$$Redesign/$Admin/Standards/forms/2015/pre-award.php",
-		"/C/Users/jdoe/Dropbox/L/JavaScript_and_jQuery_The_Missing_Manual_Second_Edition/chapter15/console_MOD.html",
-		"/C/Users/jdoe/Dropbox/L/JavaScript_and_jQuery_The_Missing_Manual_Second_Edition/chapter10/tabs_MOD.html",
-		"/Z/Public/webDevelopment/master/scss/_custom.scss",
-		"/Z/Public/webDevelopment/master/css/app.css",
-		"/Z/Public/webDevelopment/master/config.rb",
-		"/Z/Public/webDevelopment/master/bower_components/foundation/scss/foundation/_settings.scss"
+		"/Z/Public/webDevelopment/projects/Storify/scss/_local_var.scss"
 	],
 	"find":
 	{
@@ -380,6 +372,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"flex",
+			"sprite",
 			"button",
 			"</strong>",
 			"<strong>",
@@ -505,9 +499,7 @@
 			"clear",
 			"4",
 			"1",
-			"11",
-			"8",
-			"5"
+			"11"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -565,77 +557,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Z/Public/$$Redesign/$Admin/Standards/PHP/graduate_oncampus.php",
+					"file": "/Z/Public/webDevelopment/projects/FacultyExperts/Bio.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2528,
+						"buffer_size": 11609,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2027,
-								1971
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Z/Public/$$Redesign/$Admin/Standards/PHP/undergrad_admissions.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2437,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								222,
-								228
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Content.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7324,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								264,
-								264
+								0,
+								0
 							]
 						],
 						"settings":
@@ -645,117 +579,55 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 717.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "HomePage.html",
+					"buffer": 1,
+					"file": "/Z/Public/webDevelopment/projects/FacultyExperts/scss/_local_css.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6997,
+						"buffer_size": 4109,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3784,
-								4220
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 140.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Archive.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9278,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5141,
-								5148
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1218.0,
+						"translation.y": 1170.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Article.html",
+					"buffer": 2,
+					"file": "/Z/Public/webDevelopment/projects/BCF-BestOfBrooklyn2015/scss/_local_css.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15663,
+						"buffer_size": 19415,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6708,
-								6708
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2142.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "scss/_local_css.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 31484,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								28572,
-								28572
+								61,
+								61
 							]
 						],
 						"settings":
@@ -765,10 +637,99 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 16309.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Gallery.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14420,
+								14420
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "scss/_local_css.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 31495,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26729,
+								26733
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 16101.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Z/Public/$$Redesign/$Admin/Standards/CSS/master.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 114196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113265,
+								113243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 22197.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
