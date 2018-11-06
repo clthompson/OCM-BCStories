@@ -9,6 +9,7 @@
 
     <script src="bower_components/modernizr/modernizr.js"></script>
         <script src="http://www.brooklyn.cuny.edu/web/js/vendor/jquery.js"></script> <!-- jQuery -->
+        <script src="js/jquery.touchSwipe.js"></script> <!-- jQuery Touchswipe -->
     <script src="http://www.brooklyn.cuny.edu/web/js/foundation/foundation.js"></script> <!-- Foundation -->
     <script src="http://www.brooklyn.cuny.edu/web/js/response-bclongreads.js"></script> <!--// responsive content images//-->
 
@@ -141,40 +142,100 @@
       <!-- gallery -->
       <script type="text/javascript">
         $(document).ready(function() {
+          // NAME THE GALLERY
           var galleryName = "Christopher"; // you really don't need this part, you can just drop the placeholder into data-name in both places
-          var baseURL = "images/";
-          //console.log(galleryName);
-          // make the array
-          var galleryList = $(".gallery[data-name='"+galleryName+"'] .galleryElement");
-          //console.log(startUp);
 
-          // build the thumbs
+          // MAKE THE ARRAY
+          var galleryList = $(".gallery[data-name='"+galleryName+"'] .galleryElement");
+          //console.log(galleryName);
+
+          // BUILD THE THUMBS
           $(galleryList).each(function(i, e) {
-            thumbURL = $(galleryList[i]).find(".thumbImage").attr("src");
-            altTag = $(galleryList[i]).find(".altTag").html();
-            $(".thumbnailImages").append('<button class="thumb active" data-name="'+galleryName+''+[i]+'"><img src="'+baseURL+thumbURL+'" alt="'+altTag+'"></button>');
+            var thumbURL = $(galleryList[i]).data("thumb");
+            //console.log(thumbURL);
+            var altTag = $(galleryList[i]).find(".altTag").html();
+            //console.log(altTag);
+            $(".thumbnailImages").append('<button class="thumb active" data-name="'+[i]+'"><img src="'+thumbURL+'" alt="'+altTag+'"></button>');
           });
 
-          // build the first image
-          var imageURL = $(galleryList[0]).find(".largeImage").attr("src");
-          //console.log(imageURL);
+          // BUILD THE FIRST IMAGE
+          var largeURL = $(galleryList[0]).data("large");
+          var lightboxURL = $(galleryList[0]).data("lightbox");
+          // console.log(largeURL);
           var altTag = $(galleryList[0]).find(".altTag").html();
           var caption = $(galleryList[0]).find(".caption").prop("outerHTML");
-          $(".mainImage").append('<button class="main"><img src="'+baseURL+imageURL+'" alt="'+altTag+'">'+caption+'</button>');
-          //build the lightbox image - should we wait for that?
-          $(".lightboxImages").append('<section class="image"><img src="'+baseURL+imageURL+'" alt="'+altTag+'">'+caption+'</section>');
+          $(".mainImage").append('<button class="main" data-name="0"><img src="'+largeURL+'" alt="'+altTag+'"/>'+caption+'</button>');
+          
+          // BUILD THE FIRST LIGHTBOX IMAGE ?
+          $(".lightboxImages").append('<section class="lightboxElement" data-name="0"><div class="image"><img src="'+lightboxURL+'" alt="'+altTag+'"></div>'+caption+'</section>');
 
+          // CLICK A THUMBNAIL
           // what happens when a thumbnailImage is clicked
+          $("button.thumb").click(function(e){
+            // deactivate all thumbs
+            $("button.thumb").removeClass("active");
             // get number of the button - this is the active number
+            var newActive = $(this).data("name");
+            //console.log(newActive);
             // change class to active for visual styling
-            // rewrite mainImage src, alt, and caption
-            // rewrite lightboxImage src, alt, caption (so things stay synced)
+            $(this).addClass("active");
+            // rewrite mainImage src, alt, caption, and name
+            $("button.main img").prop("src", $(galleryList[newActive]).data("large"));
+            $("button.main img").prop("alt", $(galleryList[newActive]).find(".altTag").html());
+            $("button.main .caption").replaceWith($(galleryList[newActive]).find(".caption").prop("outerHTML"));
+            $("button.main").data("name", newActive);
+           });
 
-          // what happens when a mainImage is clicked 
+          // CLICK A MAIN IMAGE
+          // what happens when a mainImage is clicked or swiped
+          // check the screen size - is click ok (large screen)? Yes, click is the action. If not (phones), slide is now the action.
+          if ($(window).width() > 800) {
+            // on a larger screen, click does something, slide doesn't exist
+            $("button.main").click(function(e){
+              // get the active number
+              var newActiveMain = $(this).data("name");
+              console.log("NAM="+newActiveMain);
+              
+              // write the modal slide for the active 
+              $(".lightboxElement img").prop("src", $(galleryList[newActiveMain]).data("lightbox"));
+              $(".lightboxElement img").prop("alt", $(galleryList[newActiveMain]).find(".altTag").html());
+              $(".lightboxElement .caption").replaceWith($(galleryList[newActiveMain]).find(".caption").prop("outerHTML"));
+              $(".lightboxElement").data("name", newActiveMain);
+
+              // turn on the modal (remove the hidden class)
+              $(".lightboxImages").removeClass("hidden");
+             
+
+
+            });
+            //alert('Less than 600');
+          } else {
+            // on a smaller screen, swipedoes something. click does nothing, aka you never open the modal, you just somehow move from image to image
+            // might need to build up a few images?
+            // http://labs.rampinteractive.co.uk/touchSwipe/demos/Image_gallery_example.html
+            $(function() {      
+            //Enable swiping...
+              $("button.main").swipe( {
+                //Generic swipe handler for all directions
+                swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+                  // all the swipe action goes here. If left, if right... 
+                  //$(this).text("You swiped " + direction ); 
+                  alert('you swiped' + direction + distance); 
+                  //console.log(direction);
+                },
+                //Default is 75px, set to 0 for demo so any distance triggers swipe
+                threshold: 0
+              });
+            });
 
 
 
-          // what happens when 
+            
+            //alert('More than 600');
+          };
+          
+
+          // what happens when you click a left or right button in lightbox
 
 
           //$(galleryList).each(function(i, e) {
@@ -187,91 +248,96 @@
 
     <section class="gallery" data-name="Christopher">
 
-      <section class="mainImage"> <!-- [0] gets written, others get written into this when thumbs are clicked -->
+      <section class="mainImage"> <!-- [0] written when the document is ready, gets re-written when other thumbs are clicked -->
 
         <!--<button class="main">
-          <img src="images/g1-01-888x500.jpg" alt="G1-01">
+          <img src="images/g1-01-888x500.jpg" >
           <div class="caption"><p>Caption for <em>G1-01</em></p></div>
         </button>-->
 
       </section>
 
-      <section class="thumbnailImages">
+      <section class="thumbnailImages"> <!-- written when the document is ready -->
 
-        <!--<button class="thumb active" data-name="Christopher0">
+        <!--<button class="thumb active" data-name="0">
           <img src="images/g1-01-110x110.jpg" alt="G1-02">
-        </button>
-
-        <button class="thumb" data-name="Christopher1">
-          <img src="images/g1-02-110x110.jpg" alt="G1-02">
         </button>-->
 
       </section>
 
-      <section class="lightboxImages hidden">
+      <section class="lightboxImages hidden"> <!-- written when main image is clicked, gets re-written when  left (-1) / right (+1) buttons are clicked -->
 
-
-
-
-
-
+        <!-- <section class="lightboxElement data-name="0">
+          <div class="image">
+            <img src="">
+          </div>
+          <div class="caption"><p>Caption for <em>G1-01</em></p></div>
+        </section> -->
 
       </section>
 
       <section class="base hidden">
 
-        <div class="galleryElement">
-          <img class="thumbImage" src="images/g1-01-110x110.jpg">
-          <img class="largeImage" src="images/g1-01-888x500.jpg">
+        <div class="galleryElement" 
+          data-thumb="images/g1-01-110x110.jpg"
+          data-large="images/g1-01-888x500.jpg" 
+          data-lightbox="images/g1-01-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-01</em></p></div>
           <p class="altTag">G1-01</p>
         </div>
 
-        <div class="galleryElement">
-          <img class="thumbImage" src="images/g1-02-110x110.jpg">
-          <img class="largeImage" src="images/g1-02-888x500.jpg">
+        <div class="galleryElement" 
+          data-thumb="images/g1-02-110x110.jpg"
+          data-large="images/g1-02-888x500.jpg" 
+          data-lightbox="images/g1-02-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-02</em></p></div>
           <p class="altTag">G1-02</p>
         </div>
 
-        <div class="galleryElement">
-          <img class="thumbImage" src="images/g1-03-110x110.jpg">
-          <img class="largeImage" src="images/g1-03-888x500.jpg">
+        <div class="galleryElement" 
+          data-thumb="images/g1-03-110x110.jpg"
+          data-large="images/g1-03-888x500.jpg" 
+          data-lightbox="images/g1-03-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-03</em></p></div>
           <p class="altTag">G1-03</p>
         </div>
 
-        <div class="galleryElement">
-          <img class="thumbImage" src="images/g1-04-110x110.jpg">
-          <img class="largeImage" src="images/g1-04-888x500.jpg">
+        <div class="galleryElement" 
+          data-thumb="images/g1-04-110x110.jpg"
+          data-large="images/g1-04-888x500.jpg" 
+          data-lightbox="images/g1-04-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-04</em></p></div>
           <p class="altTag">G1-04</p>
         </div>
 
-        <div class="galleryElement">
-          <img class="thumbImage" src="images/g1-05-110x110.jpg">
-          <img class="largeImage" src="images/g1-05-888x500.jpg">
+        <div class="galleryElement" 
+          data-thumb="images/g1-05-110x110.jpg"
+          data-large="images/g1-05-888x500.jpg" 
+          data-lightbox="images/g1-05-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-05</em></p></div>
           <p class="altTag">G1-05</p>
         </div>
 
-        <div class="galleryElement">
-          <img class="thumbImage" src="images/g1-06-110x110.jpg">
-          <img class="largeImage" src="images/g1-06-888x500.jpg">
+        <div class="galleryElement" 
+          data-thumb="images/g1-06-110x110.jpg"
+          data-large="images/g1-06-888x500.jpg" 
+          data-lightbox="images/g1-06-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-06</em></p></div>
           <p class="altTag">G1-06</p>
         </div>
 
-        <div class="galleryElement">
-          <img class="thumbImage" src="images/g1-07-110x110.jpg">
-          <img class="largeImage" src="images/g1-07-888x500.jpg">
+        <div class="galleryElement" 
+          data-thumb="images/g1-07-110x110.jpg"
+          data-large="images/g1-07-888x500.jpg" 
+          data-lightbox="images/g1-07-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-07</em></p></div>
           <p class="altTag">G1-07</p>
         </div>
 
-        <div class="galleryElement">
-          <img class="thumbImage" src="images/g1-08-110x110.jpg">
-          <img class="largeImage" src="images/g1-08-888x500.jpg">
+        <div class="galleryElement" 
+          data-thumb="images/g1-08-110x110.jpg"
+          data-large="images/g1-08-888x500.jpg" 
+          data-lightbox="images/g1-08-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-08</em></p></div>
           <p class="altTag">G1-08</p>
         </div>
