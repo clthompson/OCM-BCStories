@@ -177,6 +177,9 @@ body {
   //border: $thin-maroon;
   padding: 0;
   margin: 0;
+  &.modal {
+    overflow: hidden;
+  }
 }
 
 .full-width {
@@ -231,40 +234,39 @@ header {
 				}
 			}
 		}
-		@media #{$Phone} {
-			display: none;
-		}
-		
-	}
-	.mobile-toggle {
-	  	display: none;
-	  	margin: auto;
-	  	max-width: $full;
-	  	margin: 0 0 0 rem-calc(24);
-	  	width: rem-calc(48);
-	  	height: rem-calc(45);
-	  	background-color: $color-maroon-dark;
-	  	@media #{$Phone} {
-			display: inline-block;
-			animation: FadeIn .75s;
-		}
-		.lines {
-			background: $sprite -290px -25px;
-	    	width: rem-calc(28);
-	    	height: rem-calc(25);
-	    	cursor: pointer;
-	    	animation: FadeIn .75s;
-	    	margin: rem-calc(10) 0 0 rem-calc(10);
-		}
-		.ex {
-			background: $sprite -290px 0px;
-	    	width: rem-calc(23);
-	    	height: rem-calc(23);
-	    	cursor: pointer;
-	    	animation: FadeIn .75s;
-	    	margin: rem-calc(12) 0 0 rem-calc(13);
-		}
-	}
+		  @media #{$Phone} {
+			 display: none;
+		  }
+    }
+  	.mobile-toggle {
+  	  display: none;
+  	  margin: auto;
+  	  max-width: $full;
+  	  margin: 0 0 0 rem-calc(24);
+  	  width: rem-calc(48);
+  	  height: rem-calc(45);
+  	  background-color: $color-maroon-dark;
+  	  @media #{$Phone} {
+  		  display: inline-block;
+  		  animation: FadeIn .75s;
+      }
+    	.lines {
+    		background: $sprite -290px -25px;
+    	  width: rem-calc(28);
+    	  height: rem-calc(25);
+    	  cursor: pointer;
+    	  animation: FadeIn .75s;
+    	  margin: rem-calc(10) 0 0 rem-calc(10);
+    	}
+    	.ex {
+    		background: $sprite -290px 0px;
+    	  width: rem-calc(23);
+    	  height: rem-calc(23);
+    	  cursor: pointer;
+    	  animation: FadeIn .75s;
+    	  margin: rem-calc(12) 0 0 rem-calc(13);
+    	}
+    }
   }
   .mobile-white {
   	padding-top: rem-calc(45);
@@ -295,8 +297,8 @@ header {
 		  			text-transform: uppercase;
 		  			text-decoration: none;
 	  				&:hover {
-						text-decoration: underline;
-					}
+						  text-decoration: underline;
+				    }
 	  			}
 	  		}
   		}
@@ -309,10 +311,10 @@ header {
     margin: auto;
     border-bottom: $thin-gray707;
     @media #{$iPadPortrait} {
-    	margin: 0 rem-calc(47) 0 rem-calc(47);
+      margin: 0 rem-calc(47) 0 rem-calc(47);
     }
     @media #{$iPadPortrait} {
-    	margin: 0 rem-calc(8) 0 rem-calc(8);
+      margin: 0 rem-calc(8) 0 rem-calc(8);
     }
     .logo {
     	//border: $thin-maroon;
@@ -330,8 +332,8 @@ header {
     	}
     	a {
     		width: 100%;
-      		height: 100%;
-      		display: inline-block;
+      	height: 100%;
+      	display: inline-block;
     	}
     }
   }
@@ -711,10 +713,10 @@ article {
   	padding: 0 rem-calc(54) 0 rem-calc(54);
   	@media #{$iPadPortrait} {
 	  	padding: 0 rem-calc(67) 0 rem-calc(67);
-	}
-	@media #{$Phone} {
-	  	padding: 0 rem-calc(11) 0 rem-calc(11);
-	}
+    }
+    @media #{$Phone} {
+      padding: 0 rem-calc(11) 0 rem-calc(11);
+    }
   	h2 {
   		font-family: $PMNCaecilia;
   		font-size: $subheader-D;
@@ -750,11 +752,11 @@ article {
     	@media #{$iPadPortrait} {
 	  		font-size: $h2-font-size-T;
 	  		line-height: 28px;
-		}
-		@media #{$iPadPortrait} {
+		  }
+		  @media #{$iPadPortrait} {
 	  		font-size: $h2-font-size-P;
 	  		line-height: 22px;
-		}
+		  }
     }
     h3 {
 	    font-size: $h3-font-size;
@@ -763,20 +765,20 @@ article {
 	    color: $color-gray222;
 	    margin: 0;
 	    text-transform: uppercase;
-		@media #{$Phone} {
+		  @media #{$Phone} {
 	      font-size: $h3-font-size-P;
 	    }
-	}
+    }
     p {
     	font-family: $Barlow;
     	font-size: $article-copy;
     	color: $color-gray222;
-    	line-height: 30px;
+      line-height: 30px;
     	margin: 0;
     	padding: 0 0 rem-calc(30) 0;
     	@media #{$iPadPortrait} {
 	  		line-height: 28px;
-		}
+		  }
   	}
   	a {
   		color: $color-maroon;
@@ -791,12 +793,12 @@ article {
     padding: rem-calc(27) rem-calc(34);
     margin: 0 rem-calc(20) rem-calc(35) rem-calc(20);
     @media #{$iPadPortrait} {
-		margin: 0 rem-calc(47) rem-calc(35) rem-calc(47);
-	}
-	@media #{$Phone} {
-		padding: rem-calc(7) rem-calc(9);
-		margin: 0 rem-calc(11) rem-calc(35) rem-calc(11);
-	}
+		  margin: 0 rem-calc(47) rem-calc(35) rem-calc(47);
+    }
+    @media #{$Phone} {
+      padding: rem-calc(7) rem-calc(9);
+		  margin: 0 rem-calc(11) rem-calc(35) rem-calc(11);
+    }
     p {
     	font-family: $Barlow;
     	font-size: $article-copy;
@@ -880,18 +882,18 @@ article {
   		display: block;
   		width: 100%;
   	}
-  	.caption{
+  	.caption {
   		font-family: $Barlow;
   		font-size: $caption-D;
   		color: $color-gray222;
   		margin: rem-calc(8) 0 0 0;
   		@media #{$iPadPortrait} {
-			font-size: $caption-T;
-		}
-		@media #{$Phone} {
-			font-size: $caption-P;
-			margin: rem-calc(8) rem-calc(3) 0 rem-calc(3);
-		}
+		    font-size: $caption-T;
+		  }
+		  @media #{$Phone} {
+		    font-size: $caption-P;
+		    margin: rem-calc(8) rem-calc(3) 0 rem-calc(3);
+		  }
   	}
   	.photoCredit {
   		font-family: $Barlow;
@@ -900,9 +902,9 @@ article {
   		color: $color-graya2a;
   		margin: 0;
   		@media #{$Phone} {
-			font-size: $photoCredit-P;
-			margin: 0 rem-calc(3) 0 rem-calc(3);
-		}
+		    font-size: $photoCredit-P;
+	     margin: 0 rem-calc(3) 0 rem-calc(3);
+		  }
   	}
   }
   .quote {
@@ -912,25 +914,25 @@ article {
   	//padding: 0 0 0 rem-calc(55);
   	margin: 0 rem-calc(35) 0 rem-calc(54);
   	@media #{$iPadPortrait} {
-		float: none;
-		max-width: 100%;
-		margin: 0 rem-calc(64) 0 rem-calc(64);
-	}
-	@media #{$Phone} {
-		float: none;
-		max-width: 100%;
-		margin: 0 rem-calc(16) 0 rem-calc(16);
-	}
-  	.doubleQuotes{
+		  float: none;
+		  max-width: 100%;
+		  margin: 0 rem-calc(64) 0 rem-calc(64);
+    }
+    @media #{$Phone} {
+      float: none;
+      max-width: 100%;
+      margin: 0 rem-calc(16) 0 rem-calc(16);
+    }
+  	.doubleQuotes {
   		//display: inline-block;
   		background: $sprite -240px -45px;
-		width: rem-calc(34);
-		height: rem-calc(30);
-		@media #{$Phone} {
-			background: $sprite -240px -80px;
-			width: rem-calc(24);
-			height: rem-calc(22);
-		}
+		  width: rem-calc(34);
+		  height: rem-calc(30);
+  		@media #{$Phone} {
+  			background: $sprite -240px -80px;
+  			width: rem-calc(24);
+  			height: rem-calc(22);
+  		}
   	}
   	p {
   		//display: inline;
@@ -978,13 +980,13 @@ article {
   	margin: 0 rem-calc(54) rem-calc(40) rem-calc(54);
   	@media #{$iPadPortrait} {
 	  	margin: 0 rem-calc(64) rem-calc(40) rem-calc(64);
-	}
-	@media #{$Phone} {
-	  	margin: 0 rem-calc(11) rem-calc(40) rem-calc(11);
-	}
+    }
+    @media #{$Phone} {
+      margin: 0 rem-calc(11) rem-calc(40) rem-calc(11);
+    }
   	img {
-  	 display: block;
-  	 width: 100%;
+      display: block;
+      width: 100%;
     }
   }
   .byline {
@@ -993,18 +995,18 @@ article {
       font-family: $Lucida;
       margin: 0 0 rem-calc(30) rem-calc(23);
       @media #{$iPadPortrait} {
-	  	margin: 0 0 rem-calc(23) rem-calc(47);
-	  }
-	  @media #{$Phone} {
-	  	display: none;
-	  }
-	  &.phone {
-	  	display: none;
-	  	@media #{$Phone} {
-	  		display: block;
-	  		margin: 0 0 rem-calc(23) rem-calc(11);
-	  	}
-	  }
+	  	  margin: 0 0 rem-calc(23) rem-calc(47);
+      }
+      @media #{$Phone} {
+	  	  display: none;
+      }
+      &.phone {
+	  	  display: none;
+	  	  @media #{$Phone} {
+	  	    display: block;
+	  	    margin: 0 0 rem-calc(23) rem-calc(11);
+	  	  }
+      }
     }
     .name {
       font-weight: bolder;
@@ -1023,13 +1025,113 @@ article {
     float: right;
     margin: 0 rem-calc(23) 0 0;
     @media #{$iPadPortrait} {
-		margin: 0 rem-calc(47) 0 0;
-	}
-	@media #{$Phone} {
-		margin: 0 rem-calc(11) 0 0;
-	}
+		  margin: 0 rem-calc(47) 0 0;
+    }
+    @media #{$Phone} {
+		  margin: 0 rem-calc(11) 0 0;
+    }
+  }
+  .gallery { //XXXX
+    //general
+    border: $thin-maroon;
+    margin: 0 rem-calc(20) rem-calc(25) rem-calc(20);
+    @media #{$iPadPortrait} {
+      margin: 0 rem-calc(47) rem-calc(25) rem-calc(47);
+    }
+    @media #{$Phone} {
+      margin: 0 rem-calc(11) rem-calc(25) rem-calc(11);
+    }
+
+    //thumbnails
+    .thumbnailImages {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto auto;
+      justify-content: space-between;
+      @media #{$iPadPortrait} {
+        grid-template-columns: auto auto auto auto auto auto;
+      }
+      @media #{$Phone} {
+        grid-template-columns: auto auto auto auto auto;
+      }
+      button.thumb {
+        cursor: pointer; 
+        border-width: 0;
+        background-color: $color-white;
+        padding: 0;
+        width: rem-calc(110);
+        height: rem-calc(110);
+        margin: 0 0 rem-calc(20) 0;
+        @media #{$Phone} {
+          width: rem-calc(50);
+          height: rem-calc(50);
+          margin: 0 0 rem-calc(10) 0;
+        }
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+
+    //main image
+    .mainImage {
+      button.main{
+        cursor: pointer; 
+        border-width: 0;
+        text-align: initial;
+        background-color: $color-white;
+        padding: 0 !important;
+        //padding-left: 26px;
+        //width: 100%;
+        img {
+
+        }
+        .caption {
+
+        }
+      }
+    }
+
+    //lightbox
+    .lightboxImages {
+      //modal surround stuff
+      //display: none;
+      position: fixed;
+      z-index: 2500;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      .lightboxElement {
+        //specific stuff
+        .image {
+
+          img {
+            display: block;
+            width: 100%;
+          }
+          .arrowLeft {
+
+          }
+          .arrowright {
+
+          }
+          .close {
+
+          }
+        }
+        .caption {
+
+        }
+      }
+    }
   }
 }
+
+
 
 .closing {
   margin: auto;
@@ -1050,7 +1152,7 @@ article {
     	//width: 100%;
     	margin: rem-calc(40) auto 0 auto;
     	display: flex;
-        justify-content: space-around;
+      justify-content: space-around;
     }
     a {
       //height: rem-calc(30);
@@ -1167,26 +1269,26 @@ footer {
       		display: inline-block;
       	  }
       	}
-     	.instagram {
-    		display: inline-block;
-    		background: $sprite 0px -43px;
-    		width: rem-calc(19);
-    		height: rem-calc(20);
-    		margin-right: rem-calc(24);
-    	}
-      .twitter {
-    	    display: inline-block;
-    	    background: $sprite -32px -45px;
-    	    width: rem-calc(19);
-    	    height: rem-calc(17);
-    	    margin-right: rem-calc(24);
-    	}
-		  .facebook {
-		    display: inline-block;
-		    background: $sprite -60px -43px;
-		    width: rem-calc(10);
-		    height: rem-calc(19);
-		}
+       	.instagram {
+      		display: inline-block;
+      		background: $sprite 0px -43px;
+      		width: rem-calc(19);
+      		height: rem-calc(20);
+      		margin-right: rem-calc(24);
+      	}
+        .twitter {
+      	    display: inline-block;
+      	    background: $sprite -32px -45px;
+      	    width: rem-calc(19);
+      	    height: rem-calc(17);
+      	    margin-right: rem-calc(24);
+      	}
+  		  .facebook {
+  		    display: inline-block;
+  		    background: $sprite -60px -43px;
+  		    width: rem-calc(10);
+  		    height: rem-calc(19);
+  		  }
   	  }
   	  .copyright {
   	  	height: rem-calc(70);
@@ -1207,12 +1309,12 @@ footer {
     		  	margin-left: rem-calc(0);
     		  }
     		  a {
-    		      //border: $thin-maroon;
-    		      width: 100%;
-    		      height: 100%;
-    		      display: inline-block;
-    		    }
-        	}
+    		    //border: $thin-maroon;
+    		    width: 100%;
+    		    height: 100%;
+    		    display: inline-block;
+    		  }
+        }
       	.copy {
       	  display: inline-block;
       	  position: absolute;

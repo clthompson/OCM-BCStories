@@ -139,11 +139,27 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
     </section>
 
-      <!-- gallery -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- gallery -->
+    <section class="gallery" data-name="Christopher">
+
       <script type="text/javascript">
         $(document).ready(function() {
           // NAME THE GALLERY
-          var galleryName = "Christopher"; // you really don't need this part, you can just drop the placeholder into data-name in both places
+          var galleryName = "Christopher";
 
           // MAKE THE ARRAY
           var galleryList = $(".gallery[data-name='"+galleryName+"'] .galleryElement");
@@ -155,7 +171,7 @@
             //console.log(thumbURL);
             var altTag = $(galleryList[i]).find(".altTag").html();
             //console.log(altTag);
-            $(".thumbnailImages").append('<button class="thumb active" data-name="'+[i]+'"><img src="'+thumbURL+'" alt="'+altTag+'"></button>');
+            $(".gallery[data-name='"+galleryName+"'] .thumbnailImages").append('<button class="thumb active" data-name="'+[i]+'"><img src="'+thumbURL+'" alt="'+altTag+'"></button>');
           });
 
           // BUILD THE FIRST IMAGE
@@ -164,26 +180,26 @@
           // console.log(largeURL);
           var altTag = $(galleryList[0]).find(".altTag").html();
           var caption = $(galleryList[0]).find(".caption").prop("outerHTML");
-          $(".mainImage").append('<button class="main" data-name="0"><img src="'+largeURL+'" alt="'+altTag+'"/>'+caption+'</button>');
+          $(".gallery[data-name='"+galleryName+"'] .mainImage").append('<button class="main" data-name="0"><img src="'+largeURL+'" alt="'+altTag+'"/>'+caption+'</button>');
           
           // BUILD THE FIRST LIGHTBOX IMAGE ?
-          $(".lightboxImages").append('<section class="lightboxElement" data-name="0"><div class="image"><img src="'+lightboxURL+'" alt="'+altTag+'"></div>'+caption+'</section>');
+          $(".gallery[data-name='"+galleryName+"'] .lightboxImages").append('<section class="lightboxElement" data-name="0"><div class="image"><img src="'+lightboxURL+'" alt="'+altTag+'"><button class="arrowLeft"></button><button class="arrowright"></button><button class="close"></button></div>'+caption+'</section>');
 
           // CLICK A THUMBNAIL
           // what happens when a thumbnailImage is clicked
-          $("button.thumb").click(function(e){
+          $(".gallery[data-name='"+galleryName+"'] .thumbnailImages button.thumb").click(function(e){
             // deactivate all thumbs
-            $("button.thumb").removeClass("active");
+            $(".gallery[data-name='"+galleryName+"'] .thumbnailImages button.thumb").removeClass("active");
             // get number of the button - this is the active number
             var newActive = $(this).data("name");
             //console.log(newActive);
             // change class to active for visual styling
             $(this).addClass("active");
             // rewrite mainImage src, alt, caption, and name
-            $("button.main img").prop("src", $(galleryList[newActive]).data("large"));
-            $("button.main img").prop("alt", $(galleryList[newActive]).find(".altTag").html());
-            $("button.main .caption").replaceWith($(galleryList[newActive]).find(".caption").prop("outerHTML"));
-            $("button.main").data("name", newActive);
+            $(".gallery[data-name='"+galleryName+"'] button.main img").prop("src", $(galleryList[newActive]).data("large"));
+            $(".gallery[data-name='"+galleryName+"'] button.main img").prop("alt", $(galleryList[newActive]).find(".altTag").html());
+            $(".gallery[data-name='"+galleryName+"'] button.main .caption").replaceWith($(galleryList[newActive]).find(".caption").prop("outerHTML"));
+            $(".gallery[data-name='"+galleryName+"'] button.main").data("name", newActive);
            });
 
           // CLICK A MAIN IMAGE
@@ -191,22 +207,20 @@
           // check the screen size - is click ok (large screen)? Yes, click is the action. If not (phones), slide is now the action.
           if ($(window).width() > 800) {
             // on a larger screen, click does something, slide doesn't exist
-            $("button.main").click(function(e){
+            $(".gallery[data-name='"+galleryName+"'] button.main").click(function(e){
               // get the active number
               var newActiveMain = $(this).data("name");
               console.log("NAM="+newActiveMain);
               
               // write the modal slide for the active 
-              $(".lightboxElement img").prop("src", $(galleryList[newActiveMain]).data("lightbox"));
-              $(".lightboxElement img").prop("alt", $(galleryList[newActiveMain]).find(".altTag").html());
-              $(".lightboxElement .caption").replaceWith($(galleryList[newActiveMain]).find(".caption").prop("outerHTML"));
-              $(".lightboxElement").data("name", newActiveMain);
+              $(".gallery[data-name='"+galleryName+"'] .lightboxImages .lightboxElement img").prop("src", $(galleryList[newActiveMain]).data("lightbox"));
+              $(".gallery[data-name='"+galleryName+"'] .lightboxImages .lightboxElement img").prop("alt", $(galleryList[newActiveMain]).find(".altTag").html());
+              $(".gallery[data-name='"+galleryName+"'] .lightboxImages .lightboxElement .caption").replaceWith($(galleryList[newActiveMain]).find(".caption").prop("outerHTML"));
+              $(".gallery[data-name='"+galleryName+"'] .lightboxImages .lightboxElement").data("name", newActiveMain);
 
-              // turn on the modal (remove the hidden class)
-              $(".lightboxImages").removeClass("hidden");
-             
-
-
+              // turn on the modal (aka remove the hidden class)
+              $(".gallery[data-name='"+galleryName+"'] .lightboxImages").removeClass("hidden");
+              $("body").addClass("modal");
             });
             //alert('Less than 600');
           } else {
@@ -227,10 +241,6 @@
                 threshold: 0
               });
             });
-
-
-
-            
             //alert('More than 600');
           };
           
@@ -245,8 +255,6 @@
 
         });
       </script>
-
-    <section class="gallery" data-name="Christopher">
 
       <section class="mainImage"> <!-- [0] written when the document is ready, gets re-written when other thumbs are clicked -->
 
@@ -267,11 +275,16 @@
 
       <section class="lightboxImages hidden"> <!-- written when main image is clicked, gets re-written when  left (-1) / right (+1) buttons are clicked -->
 
+
+
         <!-- <section class="lightboxElement data-name="0">
           <div class="image">
-            <img src="">
+            <img src="" alt-"">
+            <button class="arrowLeft"></button>
+            <button class="arrowright"></button>
+            <button class="close"></button>
           </div>
-          <div class="caption"><p>Caption for <em>G1-01</em></p></div>
+          <div class="caption"><p>STORY TITLE + Caption for <em>G1-01</em> + SLIDE: X or Y</p></div>
         </section> -->
 
       </section>
@@ -279,73 +292,88 @@
       <section class="base hidden">
 
         <div class="galleryElement" 
-          data-thumb="images/g1-01-110x110.jpg"
-          data-large="images/g1-01-888x500.jpg" 
-          data-lightbox="images/g1-01-1920x1080.jpg">
+          data-thumb="images/G1-01-110x110.jpg"
+          data-large="images/G1-01-888x500.jpg" 
+          data-lightbox="images/G1-01-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-01</em></p></div>
           <p class="altTag">G1-01</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/g1-02-110x110.jpg"
-          data-large="images/g1-02-888x500.jpg" 
-          data-lightbox="images/g1-02-1920x1080.jpg">
+          data-thumb="images/G1-02-110x110.jpg"
+          data-large="images/G1-02-888x500.jpg" 
+          data-lightbox="images/G1-02-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-02</em></p></div>
           <p class="altTag">G1-02</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/g1-03-110x110.jpg"
-          data-large="images/g1-03-888x500.jpg" 
-          data-lightbox="images/g1-03-1920x1080.jpg">
+          data-thumb="images/G1-03-110x110.jpg"
+          data-large="images/G1-03-888x500.jpg" 
+          data-lightbox="images/G1-03-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-03</em></p></div>
           <p class="altTag">G1-03</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/g1-04-110x110.jpg"
-          data-large="images/g1-04-888x500.jpg" 
-          data-lightbox="images/g1-04-1920x1080.jpg">
+          data-thumb="images/G1-04-110x110.jpg"
+          data-large="images/G1-04-888x500.jpg" 
+          data-lightbox="images/G1-04-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-04</em></p></div>
           <p class="altTag">G1-04</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/g1-05-110x110.jpg"
-          data-large="images/g1-05-888x500.jpg" 
-          data-lightbox="images/g1-05-1920x1080.jpg">
+          data-thumb="images/G1-05-110x110.jpg"
+          data-large="images/G1-05-888x500.jpg" 
+          data-lightbox="images/G1-05-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-05</em></p></div>
           <p class="altTag">G1-05</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/g1-06-110x110.jpg"
-          data-large="images/g1-06-888x500.jpg" 
-          data-lightbox="images/g1-06-1920x1080.jpg">
+          data-thumb="images/G1-06-110x110.jpg"
+          data-large="images/G1-06-888x500.jpg" 
+          data-lightbox="images/G1-06-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-06</em></p></div>
           <p class="altTag">G1-06</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/g1-07-110x110.jpg"
-          data-large="images/g1-07-888x500.jpg" 
-          data-lightbox="images/g1-07-1920x1080.jpg">
+          data-thumb="images/G1-07-110x110.jpg"
+          data-large="images/G1-07-888x500.jpg" 
+          data-lightbox="images/G1-07-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-07</em></p></div>
           <p class="altTag">G1-07</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/g1-08-110x110.jpg"
-          data-large="images/g1-08-888x500.jpg" 
-          data-lightbox="images/g1-08-1920x1080.jpg">
+          data-thumb="images/G1-08-110x110.jpg"
+          data-large="images/G1-08-888x500.jpg" 
+          data-lightbox="images/G1-08-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-08</em></p></div>
           <p class="altTag">G1-08</p>
         </div>
+
+        <div class="galleryElement" 
+          data-thumb="images/G1-08-110x110.jpg"
+          data-large="images/G1-08-888x500.jpg" 
+          data-lightbox="images/G1-08-1920x1080.jpg">
+          <div class="caption"><p>Caption for <em>G1-08</em></p></div>
+          <p class="altTag">G1-08</p>
+        </div>G1
 
       </section>
     
     </section>  
     <!--end gallery -->
+
+
+
+
+
+
+
     
     </section>
   </article>
