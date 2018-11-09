@@ -111,7 +111,7 @@
         <div class="icon email"><a href="mailto:?subject=I wanted to share this article from Brooklyn College with you&amp;body=<%stf_titleSimple%> - <%info_pageURL%>" title="Share by Email"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="email"></a></div>
         <div class="icon twitter"><a href="https://twitter.com/share?url=<%info_pageURL%>&amp;text=<%stf_titleSimple%>&amp;hashtags=<%stf_keywords%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="twitter"></a></div>
         <div class="icon facebook"><a href="http://www.facebook.com/sharer/sharer.php?u=<%info_pageURL%>&title=<%stf_titleSimple%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="facebook"></a></div>
-    </section>
+      </section>
     <section class="byline">
     <script type="text/javascript">
         $(document).ready(function() {
@@ -135,9 +135,7 @@
       <p class="phone">By <span class="name"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Robert Jones Jr.</a></span> &#8226; April 9, 2018<br />
       In <span class="type"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Alumni News</a></span></p>
     </section>
-    <section class="subheader">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    </section>
+
 
 
 
@@ -180,7 +178,7 @@
           // console.log(largeURL);
           var altTag = $(galleryList[0]).find(".altTag").html();
           var caption = $(galleryList[0]).find(".caption").prop("outerHTML");
-          $(".gallery[data-name='"+galleryName+"'] .mainImage").append('<button class="main" data-name="0"><img src="'+largeURL+'" alt="'+altTag+'"/>'+caption+'</button>');
+          $(".gallery[data-name='"+galleryName+"'] .mainImage").append('<button class="main" data-name="0"><div class="image"><img src="'+largeURL+'" alt="'+altTag+'"/></div>'+caption+'</button>');
           
           // BUILD THE FIRST LIGHTBOX IMAGE ?
           $(".gallery[data-name='"+galleryName+"'] .lightboxImages").append('<section class="lightboxElement" data-name="0"><div class="image"><img src="'+lightboxURL+'" alt="'+altTag+'"><button class="arrowLeft"></button><button class="arrowright"></button><button class="close"></button></div>'+caption+'</section>');
@@ -259,7 +257,9 @@
       <section class="mainImage"> <!-- [0] written when the document is ready, gets re-written when other thumbs are clicked -->
 
         <!--<button class="main">
-          <img src="images/g1-01-888x500.jpg" >
+          <div class="image">
+            <img src="images/g1-01-888x500.jpg" >
+          </div>
           <div class="caption"><p>Caption for <em>G1-01</em></p></div>
         </button>-->
 
@@ -292,76 +292,84 @@
       <section class="base hidden">
 
         <div class="galleryElement" 
-          data-thumb="images/G1-01-110x110.jpg"
-          data-large="images/G1-01-888x500.jpg" 
-          data-lightbox="images/G1-01-1920x1080.jpg">
+          data-thumb="images/G2/G2-01-110x110.jpg"
+          data-large="images/G2/G2-01-694x500.jpg" 
+          data-lightbox="images/G2/G2-01-1500x1080.jpg">
+          <div class="caption"><p>Caption for <em>G2-01</em></p><p>Caption for <em>G2-01</em></p><p>Caption for <em>G2-01</em></p></div>
+          <p class="altTag">G2-01</p>
+        </div>
+
+        <div class="galleryElement" 
+          data-thumb="images/G1/G1-01-110x110.jpg"
+          data-large="images/G1/G1-01-888x500.jpg" 
+          data-lightbox="images/G1/G1-01-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-01</em></p></div>
           <p class="altTag">G1-01</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/G1-02-110x110.jpg"
-          data-large="images/G1-02-888x500.jpg" 
-          data-lightbox="images/G1-02-1920x1080.jpg">
+          data-thumb="images/G1/G1-02-110x110.jpg"
+          data-large="images/G1/G1-02-888x500.jpg" 
+          data-lightbox="images/G1/G1-02-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-02</em></p></div>
           <p class="altTag">G1-02</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/G1-03-110x110.jpg"
-          data-large="images/G1-03-888x500.jpg" 
-          data-lightbox="images/G1-03-1920x1080.jpg">
+          data-thumb="images/G1/G1-03-110x110.jpg"
+          data-large="images/G1/G1-03-888x500.jpg" 
+          data-lightbox="images/G1/G1-03-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-03</em></p></div>
           <p class="altTag">G1-03</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/G1-04-110x110.jpg"
-          data-large="images/G1-04-888x500.jpg" 
-          data-lightbox="images/G1-04-1920x1080.jpg">
+          data-thumb="images/G1/G1-04-110x110.jpg"
+          data-large="images/G1/G1-04-888x500.jpg" 
+          data-lightbox="images/G1/G1-04-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-04</em></p></div>
           <p class="altTag">G1-04</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/G1-05-110x110.jpg"
-          data-large="images/G1-05-888x500.jpg" 
-          data-lightbox="images/G1-05-1920x1080.jpg">
+          data-thumb="images/G1/G1-05-110x110.jpg"
+          data-large="images/G1/G1-05-888x500.jpg" 
+          data-lightbox="images/G1/G1-05-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-05</em></p></div>
           <p class="altTag">G1-05</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/G1-06-110x110.jpg"
-          data-large="images/G1-06-888x500.jpg" 
-          data-lightbox="images/G1-06-1920x1080.jpg">
+          data-thumb="images/G1/G1-06-110x110.jpg"
+          data-large="images/G1/G1-06-888x500.jpg" 
+          data-lightbox="images/G1/G1-06-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-06</em></p></div>
           <p class="altTag">G1-06</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/G1-07-110x110.jpg"
-          data-large="images/G1-07-888x500.jpg" 
-          data-lightbox="images/G1-07-1920x1080.jpg">
+          data-thumb="images/G1/G1-07-110x110.jpg"
+          data-large="images/G1/G1-07-888x500.jpg" 
+          data-lightbox="images/G1/G1-07-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-07</em></p></div>
           <p class="altTag">G1-07</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/G1-08-110x110.jpg"
-          data-large="images/G1-08-888x500.jpg" 
-          data-lightbox="images/G1-08-1920x1080.jpg">
+          data-thumb="images/G1/G1-08-110x110.jpg"
+          data-large="images/G1/G1-08-888x500.jpg" 
+          data-lightbox="images/G1/G1-08-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-08</em></p></div>
           <p class="altTag">G1-08</p>
         </div>
 
         <div class="galleryElement" 
-          data-thumb="images/G1-08-110x110.jpg"
-          data-large="images/G1-08-888x500.jpg" 
-          data-lightbox="images/G1-08-1920x1080.jpg">
+          data-thumb="images/G1/G1-08-110x110.jpg"
+          data-large="images/G1/G1-08-888x500.jpg" 
+          data-lightbox="images/G1/G1-08-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-08</em></p></div>
           <p class="altTag">G1-08</p>
-        </div>G1
+        </div>
 
       </section>
     
@@ -369,12 +377,13 @@
     <!--end gallery -->
 
 
-
-
-
-
-
-    
+    <section class="subheader">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+    </section>
+    <section class="copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </section>
   </article>
 
