@@ -20,7 +20,7 @@
   //Fonts
 
 //Fonts
-  @font-face { 
+  /*@font-face { 
     font-family: 'ComeniaSansCondRegular';
     src: url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.eot');
     src: local('☺'), 
@@ -40,7 +40,7 @@
       url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.svg#webfont7RYPTQcC') format('svg');
     font-weight: normal;
     font-style: normal;
-  }
+  }*/
 
   // ARIAL
   @font-face { font-family: 'Arial'; font-weight: normal; font-style: normal; }
@@ -103,6 +103,10 @@
   $photoCredit: rem-calc(15); // D and T
   $photoCredit-P: rem-calc(12); // P
   $caption-gallery: rem-calc(16);
+  $modal-close: rem-calc(20);
+  $modal-title: rem-calc(26);
+  $modal-caption: rem-calc(16);
+  $modal-slides: rem-calc(14);
   $quote-D: rem-calc(26);
   $quote-T: rem-calc(36);
   $quote-P: rem-calc(24);
@@ -154,8 +158,10 @@
   $color-gray707: #707070;  //lines and borders on images and multimedia
   $color-grayE5E: #e5e5e5;	//update box
   $color-grayEDE: #ededed;
-  $color-grayD9D: #d9d9d9; 	//footer bg
+  $color-grayD9D: #d9d9d9; 	//footer bg and gallery thumbnail borders
   $color-gray716: #716F6F;  //mobile nav elements
+  $color-gray262: #262626;
+  $color-gray4F4: #4F4F50;
 
   $color-linkH: #a59b9b; //copy link hovers
 
@@ -187,6 +193,7 @@
   $thin-grayE5E: 1px solid $color-grayE5E;
   $thin-grayEDE: 1px solid $color-grayEDE;
   $thin-grayD9D: 1px solid $color-grayD9D;
+  $thin-gray716: 1px solid $color-gray716;
 
   $thick-linkH: 3px solid $color-linkH;
 
@@ -203,6 +210,10 @@ body {
   &.modal {
     overflow: hidden;
   }
+}
+
+button {
+  background-color: transparent;
 }
 
 .full-width {
@@ -275,7 +286,7 @@ header {
   		  animation: FadeIn .75s;
       }
     	.lines {
-    		background: $sprite -290px -25px;
+    		background: $sprite -190px -25px;
     	  width: rem-calc(28);
     	  height: rem-calc(25);
     	  cursor: pointer;
@@ -283,7 +294,7 @@ header {
     	  margin: rem-calc(10) 0 0 rem-calc(10);
     	}
     	.ex {
-    		background: $sprite -290px 0px;
+    		background: $sprite -190px 0px;
     	  width: rem-calc(23);
     	  height: rem-calc(23);
     	  cursor: pointer;
@@ -303,10 +314,10 @@ header {
   	.logo {
   		display: block;
     	margin: rem-calc(20) 0 rem-calc(20) rem-calc(16);
-    	background: $sprite -231px -105px;
+    	background: $sprite -148px -57px;
     	background-origin: content-box;
-    	width: rem-calc(114);
-    	height: rem-calc(36);
+    	width: rem-calc(115); //will change with the final logo
+    	height: rem-calc(48);
   	}
   	nav.mobile {
   		ul {
@@ -345,14 +356,14 @@ header {
     	//border: $thin-maroon;
     	display: block;
     	margin: rem-calc(30) auto rem-calc(16) auto;
-    	background: $sprite 0px -67px;
+    	background: $sprite -115px -107px;
     	//background-origin: content-box;
-    	width: rem-calc(228);
+    	width: rem-calc(228); //will change with the final logo
     	height: rem-calc(66);
     	@media #{$iPadPortrait} {
     		margin: rem-calc(30) auto rem-calc(8) auto;
-    		background: $sprite -77px 0px;
-    		width: rem-calc(162);
+    		background: $sprite -148px -57px;
+    		width: rem-calc(115); //will change with the final logo
     		height: rem-calc(47);
     	}
     	a {
@@ -423,7 +434,7 @@ section {
       }
       .video {
         //border: $thin-maroon;
-        background: $sprite 0px -135px;
+        background: $sprite 0px -138px;
         background-color: $color-grayE5E;
         position: absolute;
         top: rem-calc(15);
@@ -431,7 +442,8 @@ section {
         width: rem-calc(35);
         height: rem-calc(35);
         @media #{$Phone} {
-          background: $sprite -70px -135px;
+          background: $sprite -70px -150px;
+          background-color: $color-grayE5E;
           width: rem-calc(22);
           height: rem-calc(22);
           top: rem-calc(12);
@@ -440,7 +452,7 @@ section {
       }
       .gallery {
         //border: $thin-maroon;
-        background: $sprite -35px -135px;
+        background: $sprite -35px -138px;
         background-color: $color-grayE5E;
         position: absolute;
         top: rem-calc(15);
@@ -448,7 +460,8 @@ section {
         width: rem-calc(35);
         height: rem-calc(35);
         @media #{$Phone} {
-          background: $sprite -92px -135px;
+          background: $sprite -92px -150px;
+          background-color: $color-grayE5E;
           width: rem-calc(22);
           height: rem-calc(22);
           top: rem-calc(12);
@@ -622,7 +635,7 @@ section {
       }
       .video {
         //border: $thin-maroon;
-        background: $sprite 0px -135px;
+        background: $sprite 0px -138px;
         background-color: $color-grayE5E;
         position: absolute;
         top: rem-calc(15);
@@ -630,7 +643,7 @@ section {
         width: rem-calc(35);
         height: rem-calc(35);
         @media #{$Phone} {
-          background: $sprite -70px -135px;
+          background: $sprite -70px -150px;
           background-color: $color-grayE5E;
           width: rem-calc(22);
           height: rem-calc(22);
@@ -640,7 +653,7 @@ section {
       }
       .gallery {
         //border: $thin-maroon;
-        background: $sprite -35px -135px;
+        background: $sprite -35px -138px;
         background-color: $color-grayE5E;
         position: absolute;
         top: rem-calc(15);
@@ -648,7 +661,7 @@ section {
         width: rem-calc(35);
         height: rem-calc(35);
         @media #{$Phone} {
-          background: $sprite -92px -135px;
+          background: $sprite -92px -150px;
           width: rem-calc(22);
           height: rem-calc(22);
           top: rem-calc(12);
@@ -927,7 +940,7 @@ article {
   		width: 100%;
   	}
   }
-  .caption {
+  .videoCaption, .caption {
     p {
       font-family: $Roboto-Italic;
       font-size: $caption-D;
@@ -998,13 +1011,13 @@ article {
     }
   	.doubleQuotes {
   		//display: inline-block;
-  		background: $sprite -240px -45px;
-		  width: rem-calc(34);
-		  height: rem-calc(30);
+  		background: $sprite -75px -59px;
+		  width: rem-calc(35);
+		  height: rem-calc(35);
   		@media #{$Phone} {
-  			background: $sprite -240px -80px;
-  			width: rem-calc(24);
-  			height: rem-calc(22);
+  			background: $sprite -115px -59px;
+  			width: rem-calc(25);
+  			height: rem-calc(23);
   		}
   	}
   	p {
@@ -1067,6 +1080,7 @@ article {
       margin: 0 rem-calc(11) rem-calc(40) rem-calc(11);
     }
   	img {
+      border: $thin-gray716;
       display: block;
       width: 100%;
     }
@@ -1124,8 +1138,6 @@ article {
   }
   .accordion {
     display: block;
-    border: $thin-gray707;
-    background-color: $color-grayE5E;
     padding: rem-calc(27) rem-calc(34) rem-calc(27) rem-calc(34);
     margin: 0 rem-calc(54) rem-calc(35) rem-calc(54);
     @media #{$iPadPortrait} {
@@ -1134,6 +1146,15 @@ article {
     @media #{$Phone} {
       margin: 0 rem-calc(11) rem-calc(25) rem-calc(11);
       padding: rem-calc(7) rem-calc(9);
+    }
+    &.gray {
+      border: $thin-gray707;
+      background-color: $color-grayE5E;
+      
+    }
+    &.white {
+      border-top: $thin-gray707;
+      border-bottom: $thin-gray707;
     }
     &.float {
       float: right;
@@ -1169,7 +1190,7 @@ article {
       border-width: 0;
       text-align: initial;
       //background-color: $color-white;
-      background-color: $color-grayE5E;
+      //background-color: $color-grayE5E;
       //padding: 0 !important;
       //position: relative;
       //width: 100%;
@@ -1179,15 +1200,17 @@ article {
         //border: $thin-gray707;
         //flex-basis: 18px;
         //display: inline-block;
-        width: 18px;
-        height: 18px;
+        width: rem-calc(18);
+        height: rem-calc(18);
         margin: 6px 0 0 0;
         //margin: 2px 2px 0 0;
-        background: url("http://www.brooklyn.cuny.edu/web/com_misc/expand.png") no-repeat 0px 0px;
+        background: $sprite no-repeat -223px -36px;
+        //background: url("http://www.brooklyn.cuny.edu/web/com_misc/expand.png") no-repeat 0px 0px;
         //background-position: 0px 2px;
         //border: 1px solid #000;
         &.minus{
-          background: url("http://www.brooklyn.cuny.edu/web/com_misc/expand.png") no-repeat -19px 0px;
+          //background: url("http://www.brooklyn.cuny.edu/web/com_misc/expand.png") no-repeat -19px 0px;
+          background: $sprite no-repeat -242px -36px;
         }
       }
       .content {
@@ -1315,7 +1338,7 @@ article {
   }
   .gallery {
     //general
-    border: $thin-maroon;
+    //border: $thin-maroon;
     margin: 0 rem-calc(20) rem-calc(25) rem-calc(20);
     @media #{$iPadPortrait} {
       margin: 0 rem-calc(47) rem-calc(25) rem-calc(47);
@@ -1337,7 +1360,7 @@ article {
     .thumbnailImages {
       display: grid;
       grid-template-columns: auto auto auto auto auto auto auto;
-      grid-column-gap: rem-calc(10);
+      grid-column-gap: rem-calc(20);
       grid-row-gap: rem-calc(20);
       justify-content: space-between;
       @media #{$iPadPortrait} {
@@ -1354,6 +1377,7 @@ article {
         cursor: pointer; 
         border-width: 0;
         background-color: $color-white;
+        border: $thin-gray716;
         padding: 0;
         //width: rem-calc(110);
         //height: rem-calc(110);
@@ -1369,13 +1393,16 @@ article {
           display: block;
           width: 100%;
         }
+        &.active {
+          border: $thick-maroon;
+        }
       }
     }
 
     //main image
     .mainImage {
       button.main{
-        cursor: pointer; 
+        cursor: pointer;
         border-width: 0;
         text-align: initial;
         background-color: $color-white;
@@ -1391,7 +1418,9 @@ article {
           //width: 100%;
           //display: flex;
           //justify-content: center;
-          background-color: $color-gray707;
+          //background-color: $color-gray707;
+          background-image: radial-gradient(circle, $color-grayE5E, $color-gray707);
+          border: $thin-gray716;
           height: 0;
           overflow: hidden;
           position: relative;
@@ -1418,55 +1447,204 @@ article {
           }
         }
         .caption {
-          font-family: $Roboto;
-          font-size: $caption-gallery;
+          p{
+            font-family: $Roboto;
+            font-size: $caption-gallery;
+            padding: rem-calc(10) 0 rem-calc(20) 0;
+            margin: 0;
+          }
           a {
             font-family: $Roboto-Bold;
+            text-decoration: underline;
           }
         }
       }
     }
 
     //lightbox
-    .lightboxImages {
+    .lightboxImages { //xxxxx
       //modal surround stuff
       //display: none;
       position: fixed;
       z-index: 2500;
-      padding-top: 100px;
+      //padding-top: 100px;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      overflow: auto;
-      background-color: black;
+      //overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
       .lightboxElement {
         //specific stuff
+        border: 3px solid red;
+        position: relative;
+        margin: 130px auto 0 auto;
+        //margin: auto;
+        width: 95%;
+        //height: 90%;
+        //display: flex;
+        display: grid;
+        grid-template-columns: auto 400px;
+        @media #{$iPadPortrait} {
+          grid-template-columns: auto 200px;
+        }
         .image {
-
+          background-image: radial-gradient(circle, $color-grayE5E, $color-gray707);
+          height: 0;
+          padding-top: 56.25%;
+          //flex-basis: 65%;
+          //padding-top: 591.44px / 1127.34px * 100%;
+          //overflow: hidden;
+          position: relative;
+          //margin-right: 400px;
           img {
-            display: block;
-            width: 100%;
+            //display: none;
+            //margin: auto;
+            object-fit: scale-down;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            //width: 100%;
+            height:100%;
+            transform: translate(-50%, 0);
           }
           .arrowLeft {
-
+            cursor: pointer;
+            border-width: 0;
+            background-color: $color-gray262;
+            padding: 0;
+            width: 78px;
+            height: 78px;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%); 
+            left: 0;
+            &:hover {
+              background-color: $color-gray4F4;
+            }
+            @media #{$iPadPortrait} {
+              width: 45px;
+              height: 45px;
+            }
+            .arrow {
+              //position: absolute;
+              margin: auto;
+              background: $sprite -67px -93px;
+              width: 29px;
+              height: 51px;
+              //left: 10px;
+            }
           }
-          .arrowright {
-
-          }
-          .close {
-
+          .arrowRight {
+            cursor: pointer;
+            border-width: 0;
+            background-color: $color-gray262;
+            padding: 0;
+            width: 78px;
+            height: 78px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: rotate(180deg) translate(0, 50%);
+            &:hover {
+              background-color: $color-gray4F4;
+            }
+            @media #{$iPadPortrait} {
+              width: 45px;
+              height: 45px;
+            }
+            .arrow {
+              //position: absolute;
+              margin: auto;
+              background: $sprite -67px -93px;
+              width: 29px;
+              height: 51px;
+              //left: 10px;
+            }
           }
         }
         .caption {
-
+          //width: 400px;
+          //height: 100%;
+          //position: relative;
+          //flex-basis: 400px;
+          //float: right;
+          background-color: $color-white;
+          padding: 0 rem-calc(25) 0 rem-calc(25);
+          @media #{$iPadPortrait} {
+            //max-width: 200px;
+          }
+          .close {
+            cursor: pointer;
+            //border-width: 0;
+            position: absolute;
+            //border: $thin-maroon;
+            //background-color: $color-gray444;
+            //background: $sprite -262px -38px;
+            padding: rem-calc(6) rem-calc(6) rem-calc(4) rem-calc(6);
+            //margin: rem-calc(15) rem-calc(15) 0 0;
+            top: rem-calc(15);
+            right: rem-calc(15);
+            color: $color-gray716;
+            font-family: $Arial-Bold;
+            font-size: $modal-close;
+            height: rem-calc(16);
+            font-weight: bolder;
+            text-transform: uppercase;
+            background: $sprite -262px -38px;
+            //transform: rotate(180deg);
+            &:hover {
+              background: $sprite -280px -38px;
+            }
+          }
+          .pageTitle {
+            font-family: $Roboto-Black;
+            font-size: $modal-title;
+            color: $color-black;
+            line-height: 30px;
+            padding-bottom: rem-calc(20);
+          }
+          .modalCaption {
+            p{
+              font-family: $Roboto;
+              font-size: $modal-caption;
+              color: $color-black;
+              line-height: 20px;
+              padding-bottom: rem-calc(30);
+            }
+          }
+          .slideNumber {
+            font-family: $Roboto;
+            color: $color-black;
+            font-size: $modal-slides;
+          }
         }
       }
     }
   }
 }
 
+.articleArrow {
+  display: none;
+  .arrow {
+    position: fixed; 
+    left: 200px;
+    display: block;
+    cursor: pointer;
+    border-width: 0;
+    top: 750px;
+    //left: 200px;
+    background: $sprite -75px 0px;
+    width: rem-calc(57);
+    height:rem-calc(57);
+    &:hover {
+      background: $sprite -133px 0px;
+    }
+    @media #{$Phone} {
 
+    }
+  } 
+}
 
 .closing {
   margin: auto;
@@ -1608,21 +1786,21 @@ footer {
       	}
        	.instagram {
       		display: inline-block;
-      		background: $sprite 0px -43px;
+      		background: $sprite 0px -72px;
       		width: rem-calc(19);
-      		height: rem-calc(20);
+      		height: rem-calc(19);
       		margin-right: rem-calc(24);
       	}
         .twitter {
       	    display: inline-block;
-      	    background: $sprite -32px -45px;
+      	    background: $sprite -32px -72px;
       	    width: rem-calc(19);
-      	    height: rem-calc(17);
+      	    height: rem-calc(19);
       	    margin-right: rem-calc(24);
       	}
   		  .facebook {
   		    display: inline-block;
-  		    background: $sprite -60px -43px;
+  		    background: $sprite -60px -72px;
   		    width: rem-calc(10);
   		    height: rem-calc(19);
   		  }
@@ -1638,7 +1816,7 @@ footer {
   	  	}
   	  	.cuny {
     		  display: inline-block;
-    		  background: $sprite -240px 0px;
+    		  background: $sprite 0px -92px;
     		  width: rem-calc(45);
     		  height: rem-calc(44);
     		  margin: rem-calc(13) 0 0 rem-calc(28);
@@ -1691,6 +1869,9 @@ footer {
     width: rem-calc(29);
     height: rem-calc(20);
     margin-right: rem-calc(24);
+    &:hover {
+      background: $sprite 0px -21px;
+    }
   }
   .twitter {
     display: inline-block;
@@ -1698,32 +1879,47 @@ footer {
     width: rem-calc(25);
     height: rem-calc(20);
     margin-right: rem-calc(24);
+    &:hover {
+      background: $sprite -32px -21px;
+    }
   }
   .facebook {
     display: inline-block;
     background: $sprite -60px 0px;
     width: rem-calc(11);
     height: rem-calc(20);
+    &:hover {
+      background: $sprite -60px -21px;
+    }
   }
   &.open {
   	@media #{$Phone} {
   		margin-top: rem-calc(3);
     	.email {
-    		background: $sprite 0px -25px;
+    		background: $sprite 0px -42px;
 		    width: rem-calc(20);
 		    height: rem-calc(14);
 		    margin-right: rem-calc(10);
+        &:hover{
+          background: $sprite 0px -57px;
+        }
     	}
     	.twitter {
-    		background: $sprite -32px -25px;
+    		background: $sprite -32px -42px;
 		    width: rem-calc(17);
 		    height: rem-calc(14);
 		    margin-right: rem-calc(10);
+        &:hover {
+          background: $sprite -32px -57px;
+        }
     	}
     	.facebook {
-    		background: $sprite -60px -25px;
+    		background: $sprite -60px -42px;
 		    width: rem-calc(8);
 		    height: rem-calc(14);
+        &:hover {
+          background: $sprite -60px -57px;
+        }
     	}
     }
   }

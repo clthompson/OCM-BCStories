@@ -43,7 +43,7 @@
             </ul>
           </nav>
       <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function() { //
           var title = "pagetitle";
           var changeName = $(".desktop ul").html().replace(/CurrentPage/g, title);
           $(".desktop ul").html(changeName);
@@ -56,7 +56,7 @@
 
       <section class="mobile-toggle">
       <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function() { //mobile menu
           //turn on mobile menu
           $(".lines").click(function(e){
             $(".ex").removeClass("hidden");
@@ -97,7 +97,25 @@
     </section>
   </header>
 
-  <article>
+  <section class="articleArrow">
+    <script type="text/javascript">
+        $(document).ready(function() { // article arrow
+          // if this page is an article, then continue
+          // need to monitor the width and scroll position of the page
+          // width
+          // the position of the arrow is always 1/2 width + B (so it never leaves its side position) - write some inline styles for position
+          // scroll
+          // once the scroll exceeds J-? it appears - remove hidden style
+          // the arrow always sticks at J
+
+          // on click, arrow brings the page back up to 0
+          
+        });
+    </script>
+    <button class="arrow"></button>
+  </section>
+
+  <article class="article" data-keywords="Comic Books, Design">
     <h1 class="articleTitle" id="mainContent" role="main" tabindex="0">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Non, dolorum!</h1>
     <section class="featureImage"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" 
       alt="Content Image" title="Content Image"
@@ -112,7 +130,7 @@
     </section>
     <section class="byline">
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function() { // byline
           // build the archive filter for the author <a>   
           //get author name as variable, and crunch it
           var authorName = $(".byline .desktop .name a").text().toLowerCase().replace(/\s/g, '').replace(/\./g, '');
@@ -182,7 +200,7 @@
       <p class="caption"></p>
     </section>-->
     <script type="text/javascript">
-      $(document).ready(function($) {
+      $(document).ready(function($) { //accordion
         $('.accordion-toggle').click(function(){
         //Expand or collapse this panel
         $(this).next().slideToggle('fast');
@@ -235,7 +253,7 @@
         <div class="icon facebook"><a href="http://www.facebook.com/sharer/sharer.php?u=<%info_pageURL%>&title=<%stf_titleSimple%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="facebook"></a></div>
       </section>
       <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function() { // keywords
           // get tags
           var baseTags = "Climate Change, Diversity, Sociology, 50 thingsd, another"; // placeholder for keywords
           // turn it into two variables with the right setups

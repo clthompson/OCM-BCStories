@@ -2,20 +2,27 @@
 /* CSS Document */
 /* CSS Document */
 /* CSS Document */
-@font-face {
-  font-family: 'ComeniaSansCondRegular';
-  src: url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.eot");
-  src: local("☺"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.woff") format("woff"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.ttf") format("truetype"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.svg#webfontWDfTSCpx") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ComeniaSansCondBold';
-  src: url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.eot");
-  src: local("☺"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.woff") format("woff"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.ttf") format("truetype"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.svg#webfont7RYPTQcC") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+  /*@font-face { 
+    font-family: 'ComeniaSansCondRegular';
+    src: url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.eot');
+    src: local('☺'), 
+      url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.woff') format('woff'), 
+      url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.ttf') format('truetype'), 
+      url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.svg#webfontWDfTSCpx') format('svg');
+    font-weight: normal;
+    font-style: normal; 
+  }
+
+  //not used in BCF
+  @font-face {
+    font-family: 'ComeniaSansCondBold';
+    src: url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.eot');
+    src: local('☺'), url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.woff') format('woff'), 
+      url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.ttf') format('truetype'), 
+      url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.svg#webfont7RYPTQcC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }*/
 @font-face {
   font-family: 'Arial';
   font-weight: normal;
@@ -52,28 +59,33 @@
   font-family: 'Barlow-Bold';
   src: url("http://www.brooklyn.cuny.edu/web/fonts/BarlowSemiCondensed-Bold.ttf") format("truetype");
 }
-/* line 198, ../scss/_local_css.scss */
+/* line 205, ../scss/_local_css.scss */
 body {
   background-color: #fff;
   padding: 0;
   margin: 0;
 }
-/* line 203, ../scss/_local_css.scss */
+/* line 210, ../scss/_local_css.scss */
 body.modal {
   overflow: hidden;
 }
 
-/* line 208, ../scss/_local_css.scss */
+/* line 215, ../scss/_local_css.scss */
+button {
+  background-color: transparent;
+}
+
+/* line 219, ../scss/_local_css.scss */
 .full-width {
   max-width: 100%;
 }
 
-/* line 214, ../scss/_local_css.scss */
+/* line 225, ../scss/_local_css.scss */
 .hidden {
   display: none;
 }
 
-/* line 219, ../scss/_local_css.scss */
+/* line 230, ../scss/_local_css.scss */
 *:focus {
   outline: 3px solid #FAD129;
 }
@@ -94,7 +106,7 @@ body.modal {
     opacity: 1;
   }
 }
-/* line 229, ../scss/_local_css.scss */
+/* line 240, ../scss/_local_css.scss */
 header .full-width {
   z-index: 1000;
   position: fixed;
@@ -103,23 +115,23 @@ header .full-width {
   max-width: 100%;
   height: 2.8125rem;
 }
-/* line 236, ../scss/_local_css.scss */
+/* line 247, ../scss/_local_css.scss */
 header .full-width nav.desktop {
   margin: auto;
   max-width: 58rem;
 }
-/* line 240, ../scss/_local_css.scss */
+/* line 251, ../scss/_local_css.scss */
 header .full-width nav.desktop ul {
   margin: 0;
   padding: 0.875rem 0 0 1.5rem;
   list-style-type: none;
 }
-/* line 244, ../scss/_local_css.scss */
+/* line 255, ../scss/_local_css.scss */
 header .full-width nav.desktop ul li {
   display: inline-block;
   padding-right: 2.8125rem;
 }
-/* line 247, ../scss/_local_css.scss */
+/* line 258, ../scss/_local_css.scss */
 header .full-width nav.desktop ul li a {
   font-family: "Arial-Bold", sans-serif;
   color: #fff;
@@ -128,17 +140,17 @@ header .full-width nav.desktop ul li a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 254, ../scss/_local_css.scss */
+/* line 265, ../scss/_local_css.scss */
 header .full-width nav.desktop ul li a:hover {
   color: #d9d9d9;
 }
 @media screen and (max-width: 767px) {
-  /* line 236, ../scss/_local_css.scss */
+  /* line 247, ../scss/_local_css.scss */
   header .full-width nav.desktop {
     display: none;
   }
 }
-/* line 265, ../scss/_local_css.scss */
+/* line 276, ../scss/_local_css.scss */
 header .full-width .mobile-toggle {
   display: none;
   margin: auto;
@@ -149,31 +161,31 @@ header .full-width .mobile-toggle {
   background-color: #4B091F;
 }
 @media screen and (max-width: 767px) {
-  /* line 265, ../scss/_local_css.scss */
+  /* line 276, ../scss/_local_css.scss */
   header .full-width .mobile-toggle {
     display: inline-block;
     animation: FadeIn .75s;
   }
 }
-/* line 277, ../scss/_local_css.scss */
+/* line 288, ../scss/_local_css.scss */
 header .full-width .mobile-toggle .lines {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -290px -25px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -190px -25px;
   width: 1.75rem;
   height: 1.5625rem;
   cursor: pointer;
   animation: FadeIn .75s;
   margin: 0.625rem 0 0 0.625rem;
 }
-/* line 285, ../scss/_local_css.scss */
+/* line 296, ../scss/_local_css.scss */
 header .full-width .mobile-toggle .ex {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -290px 0px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -190px 0px;
   width: 1.4375rem;
   height: 1.4375rem;
   cursor: pointer;
   animation: FadeIn .75s;
   margin: 0.75rem 0 0 0.8125rem;
 }
-/* line 295, ../scss/_local_css.scss */
+/* line 306, ../scss/_local_css.scss */
 header .mobile-white {
   padding-top: 2.8125rem;
   z-index: 900;
@@ -183,26 +195,26 @@ header .mobile-white {
   overflow: auto;
   background-color: #fff;
 }
-/* line 303, ../scss/_local_css.scss */
+/* line 314, ../scss/_local_css.scss */
 header .mobile-white .logo {
   display: block;
   margin: 1.25rem 0 1.25rem 1rem;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -231px -105px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -148px -57px;
   background-origin: content-box;
-  width: 7.125rem;
-  height: 2.25rem;
+  width: 7.1875rem;
+  height: 3rem;
 }
-/* line 312, ../scss/_local_css.scss */
+/* line 323, ../scss/_local_css.scss */
 header .mobile-white nav.mobile ul {
   margin: 0;
   padding: 2rem 0 2rem 1.25rem;
   list-style-type: none;
 }
-/* line 316, ../scss/_local_css.scss */
+/* line 327, ../scss/_local_css.scss */
 header .mobile-white nav.mobile ul li {
   padding: 0 0 2.9375rem 0;
 }
-/* line 318, ../scss/_local_css.scss */
+/* line 329, ../scss/_local_css.scss */
 header .mobile-white nav.mobile ul li a {
   font-family: "Arial", sans-serif;
   font-size: 1.125rem;
@@ -210,11 +222,11 @@ header .mobile-white nav.mobile ul li a {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 324, ../scss/_local_css.scss */
+/* line 335, ../scss/_local_css.scss */
 header .mobile-white nav.mobile ul li a:hover {
   text-decoration: underline;
 }
-/* line 333, ../scss/_local_css.scss */
+/* line 344, ../scss/_local_css.scss */
 header .brand {
   padding-top: 2.8125rem;
   max-width: 58rem;
@@ -222,92 +234,92 @@ header .brand {
   border-bottom: 1px solid #707070;
 }
 @media screen and (max-width: 849px) {
-  /* line 333, ../scss/_local_css.scss */
+  /* line 344, ../scss/_local_css.scss */
   header .brand {
     margin: 0 2.9375rem 0 2.9375rem;
   }
 }
 @media screen and (max-width: 849px) {
-  /* line 333, ../scss/_local_css.scss */
+  /* line 344, ../scss/_local_css.scss */
   header .brand {
     margin: 0 0.5rem 0 0.5rem;
   }
 }
-/* line 344, ../scss/_local_css.scss */
+/* line 355, ../scss/_local_css.scss */
 header .brand .logo {
   display: block;
   margin: 1.875rem auto 1rem auto;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -67px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -115px -107px;
   width: 14.25rem;
   height: 4.125rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 344, ../scss/_local_css.scss */
+  /* line 355, ../scss/_local_css.scss */
   header .brand .logo {
     margin: 1.875rem auto 0.5rem auto;
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -77px 0px;
-    width: 10.125rem;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -148px -57px;
+    width: 7.1875rem;
     height: 2.9375rem;
   }
 }
-/* line 358, ../scss/_local_css.scss */
+/* line 369, ../scss/_local_css.scss */
 header .brand .logo a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-/* line 371, ../scss/_local_css.scss */
+/* line 382, ../scss/_local_css.scss */
 .homepageList {
   margin: 0 auto 4.0625rem auto;
   max-width: 58rem;
   padding: 1.875rem 0 0 0;
 }
 @media screen and (max-width: 767px) {
-  /* line 371, ../scss/_local_css.scss */
+  /* line 382, ../scss/_local_css.scss */
   .homepageList {
     margin: 0 auto 1.9375rem auto;
     padding: 1.25rem 0 0 0;
   }
 }
-/* line 380, ../scss/_local_css.scss */
+/* line 391, ../scss/_local_css.scss */
 .homepageList .articleItem {
   margin: 0 1.25rem 5.125rem 1.25rem;
   position: relative;
 }
-/* line 384, ../scss/_local_css.scss */
+/* line 395, ../scss/_local_css.scss */
 .homepageList .articleItem:first-of-type {
   margin-top: 0;
 }
-/* line 387, ../scss/_local_css.scss */
+/* line 398, ../scss/_local_css.scss */
 .homepageList .articleItem:last-of-type {
   margin-bottom: 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 380, ../scss/_local_css.scss */
+  /* line 391, ../scss/_local_css.scss */
   .homepageList .articleItem {
     margin: 0 2.9375rem 4.6875rem 2.9375rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 380, ../scss/_local_css.scss */
+  /* line 391, ../scss/_local_css.scss */
   .homepageList .articleItem {
     margin: 1.4375rem 0.5rem 0 0.5rem;
     border-bottom: 1px solid #ededed;
   }
-  /* line 396, ../scss/_local_css.scss */
+  /* line 407, ../scss/_local_css.scss */
   .homepageList .articleItem:last-of-type {
     border-bottom: none;
   }
 }
-/* line 401, ../scss/_local_css.scss */
+/* line 412, ../scss/_local_css.scss */
 .homepageList .articleItem a img {
   display: block;
   max-width: 100%;
   border: 2px solid #707070;
   box-sizing: border-box;
 }
-/* line 407, ../scss/_local_css.scss */
+/* line 418, ../scss/_local_css.scss */
 .homepageList .articleItem a .updated {
   background-color: #444;
   padding: 0.375rem 0.8125rem 0.25rem;
@@ -320,15 +332,15 @@ header .brand .logo a {
   text-transform: uppercase;
 }
 @media screen and (max-width: 767px) {
-  /* line 407, ../scss/_local_css.scss */
+  /* line 418, ../scss/_local_css.scss */
   .homepageList .articleItem a .updated {
     top: 0.5rem;
     right: 0.5rem;
   }
 }
-/* line 424, ../scss/_local_css.scss */
+/* line 435, ../scss/_local_css.scss */
 .homepageList .articleItem a .video {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -135px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -138px;
   background-color: #e5e5e5;
   position: absolute;
   top: 0.9375rem;
@@ -337,18 +349,19 @@ header .brand .logo a {
   height: 2.1875rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 424, ../scss/_local_css.scss */
+  /* line 435, ../scss/_local_css.scss */
   .homepageList .articleItem a .video {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -70px -135px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -70px -150px;
+    background-color: #e5e5e5;
     width: 1.375rem;
     height: 1.375rem;
     top: 0.75rem;
     right: 0.75rem;
   }
 }
-/* line 441, ../scss/_local_css.scss */
+/* line 453, ../scss/_local_css.scss */
 .homepageList .articleItem a .gallery {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -35px -135px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -35px -138px;
   background-color: #e5e5e5;
   position: absolute;
   top: 0.9375rem;
@@ -357,16 +370,17 @@ header .brand .logo a {
   height: 2.1875rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 441, ../scss/_local_css.scss */
+  /* line 453, ../scss/_local_css.scss */
   .homepageList .articleItem a .gallery {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -92px -135px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -92px -150px;
+    background-color: #e5e5e5;
     width: 1.375rem;
     height: 1.375rem;
     top: 0.75rem;
     right: 0.75rem;
   }
 }
-/* line 459, ../scss/_local_css.scss */
+/* line 472, ../scss/_local_css.scss */
 .homepageList .articleItem .copy {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16);
@@ -378,7 +392,7 @@ header .brand .logo a {
   z-index: 2;
 }
 @media screen and (max-width: 849px) {
-  /* line 459, ../scss/_local_css.scss */
+  /* line 472, ../scss/_local_css.scss */
   .homepageList .articleItem .copy {
     top: -137px;
     margin: 0 4.875rem -8.5625rem 4.875rem;
@@ -386,7 +400,7 @@ header .brand .logo a {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 459, ../scss/_local_css.scss */
+  /* line 472, ../scss/_local_css.scss */
   .homepageList .articleItem .copy {
     top: 0;
     box-shadow: none;
@@ -396,7 +410,7 @@ header .brand .logo a {
     box-shadow: none;
   }
 }
-/* line 482, ../scss/_local_css.scss */
+/* line 495, ../scss/_local_css.scss */
 .homepageList .articleItem .copy h2 {
   font-family: "Roboto-Black", serif;
   color: #000;
@@ -406,26 +420,26 @@ header .brand .logo a {
   line-height: 44px;
 }
 @media screen and (max-width: 849px) {
-  /* line 482, ../scss/_local_css.scss */
+  /* line 495, ../scss/_local_css.scss */
   .homepageList .articleItem .copy h2 {
     font-size: 2.1875rem;
     line-height: 35px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 482, ../scss/_local_css.scss */
+  /* line 495, ../scss/_local_css.scss */
   .homepageList .articleItem .copy h2 {
     font-size: 1.5rem;
     line-height: 24px;
     margin: 0 0 0.8125rem 0;
   }
 }
-/* line 499, ../scss/_local_css.scss */
+/* line 512, ../scss/_local_css.scss */
 .homepageList .articleItem .copy h2 a {
   color: #000;
   text-decoration: none;
 }
-/* line 504, ../scss/_local_css.scss */
+/* line 517, ../scss/_local_css.scss */
 .homepageList .articleItem .copy p {
   font-family: "PMN-Caecilia-56-Italic", serif;
   font-size: 1.25rem;
@@ -434,50 +448,50 @@ header .brand .logo a {
   padding: 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 504, ../scss/_local_css.scss */
+  /* line 517, ../scss/_local_css.scss */
   .homepageList .articleItem .copy p {
     font-size: 1rem;
     line-height: 19px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 504, ../scss/_local_css.scss */
+  /* line 517, ../scss/_local_css.scss */
   .homepageList .articleItem .copy p {
     font-size: 0.9375rem;
     line-height: 16px;
   }
 }
 
-/* line 523, ../scss/_local_css.scss */
+/* line 536, ../scss/_local_css.scss */
 .archiveList {
   margin: 0 auto 4.0625rem auto;
   max-width: 58rem;
   padding: 0;
 }
 @media screen and (max-width: 767px) {
-  /* line 523, ../scss/_local_css.scss */
+  /* line 536, ../scss/_local_css.scss */
   .archiveList {
     margin: 0 auto 4.375rem auto;
     padding: 1.25rem 0 0 0;
   }
 }
-/* line 532, ../scss/_local_css.scss */
+/* line 545, ../scss/_local_css.scss */
 .archiveList .filter {
   margin: 1.875rem 1.25rem 2.5rem 1.25rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 532, ../scss/_local_css.scss */
+  /* line 545, ../scss/_local_css.scss */
   .archiveList .filter {
     margin: 1.875rem 2.9375rem 1.25rem 2.9375rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 532, ../scss/_local_css.scss */
+  /* line 545, ../scss/_local_css.scss */
   .archiveList .filter {
     margin: 1.25rem 0.6875rem 1.25rem 0.6875rem;
   }
 }
-/* line 540, ../scss/_local_css.scss */
+/* line 553, ../scss/_local_css.scss */
 .archiveList .filter p {
   font-family: "Roboto-Black", serif;
   font-size: 1.625rem;
@@ -486,46 +500,46 @@ header .brand .logo a {
   margin: 0;
 }
 @media screen and (max-width: 767px) {
-  /* line 540, ../scss/_local_css.scss */
+  /* line 553, ../scss/_local_css.scss */
   .archiveList .filter p {
     font-size: 1.375rem;
     text-align: center;
   }
 }
-/* line 554, ../scss/_local_css.scss */
+/* line 567, ../scss/_local_css.scss */
 .archiveList .articleItem {
   margin: 2.5rem 1.25rem 2.5rem 1.25rem;
   padding: 0 0 2.1875rem 0;
   border-bottom: 1px solid #ededed;
 }
-/* line 559, ../scss/_local_css.scss */
+/* line 572, ../scss/_local_css.scss */
 .archiveList .articleItem:first-of-type {
   margin-top: 0;
 }
-/* line 562, ../scss/_local_css.scss */
+/* line 575, ../scss/_local_css.scss */
 .archiveList .articleItem:last-of-type {
   margin-bottom: 0;
   border-bottom: none;
 }
 @media screen and (max-width: 849px) {
-  /* line 554, ../scss/_local_css.scss */
+  /* line 567, ../scss/_local_css.scss */
   .archiveList .articleItem {
     margin: 0 2.9375rem 2.5rem 2.9375rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 554, ../scss/_local_css.scss */
+  /* line 567, ../scss/_local_css.scss */
   .archiveList .articleItem {
     margin: 1.4375rem 0.5rem 0 0.5rem;
     border-bottom: 1px solid #ededed;
   }
-  /* line 572, ../scss/_local_css.scss */
+  /* line 585, ../scss/_local_css.scss */
   .archiveList .articleItem:last-of-type {
     border-bottom: none;
     padding: 0;
   }
 }
-/* line 577, ../scss/_local_css.scss */
+/* line 590, ../scss/_local_css.scss */
 .archiveList .articleItem h2 {
   font-family: "Roboto-Black", serif;
   font-size: 2.625rem;
@@ -533,38 +547,38 @@ header .brand .logo a {
   line-height: 46px;
   margin: 0 0 0.9375rem 0;
 }
-/* line 584, ../scss/_local_css.scss */
+/* line 597, ../scss/_local_css.scss */
 .archiveList .articleItem h2 a {
   color: #000;
   text-decoration: none;
 }
 @media screen and (max-width: 849px) {
-  /* line 577, ../scss/_local_css.scss */
+  /* line 590, ../scss/_local_css.scss */
   .archiveList .articleItem h2 {
     font-size: 2.375rem;
     line-height: 42px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 577, ../scss/_local_css.scss */
+  /* line 590, ../scss/_local_css.scss */
   .archiveList .articleItem h2 {
     font-size: 2.25rem;
     line-height: 30px;
   }
 }
-/* line 597, ../scss/_local_css.scss */
+/* line 610, ../scss/_local_css.scss */
 .archiveList .articleItem .image {
   position: relative;
   margin: 0 0 1.25rem 0;
 }
-/* line 600, ../scss/_local_css.scss */
+/* line 613, ../scss/_local_css.scss */
 .archiveList .articleItem .image img {
   display: block;
   max-width: 100%;
   border: 2px solid #707070;
   box-sizing: border-box;
 }
-/* line 606, ../scss/_local_css.scss */
+/* line 619, ../scss/_local_css.scss */
 .archiveList .articleItem .image .updated {
   position: absolute;
   background-color: #444;
@@ -577,15 +591,15 @@ header .brand .logo a {
   text-transform: uppercase;
 }
 @media screen and (max-width: 767px) {
-  /* line 606, ../scss/_local_css.scss */
+  /* line 619, ../scss/_local_css.scss */
   .archiveList .articleItem .image .updated {
     top: 0.5rem;
     right: 0.5rem;
   }
 }
-/* line 623, ../scss/_local_css.scss */
+/* line 636, ../scss/_local_css.scss */
 .archiveList .articleItem .image .video {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -135px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -138px;
   background-color: #e5e5e5;
   position: absolute;
   top: 0.9375rem;
@@ -594,9 +608,9 @@ header .brand .logo a {
   height: 2.1875rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 623, ../scss/_local_css.scss */
+  /* line 636, ../scss/_local_css.scss */
   .archiveList .articleItem .image .video {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -70px -135px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -70px -150px;
     background-color: #e5e5e5;
     width: 1.375rem;
     height: 1.375rem;
@@ -604,9 +618,9 @@ header .brand .logo a {
     right: 0.75rem;
   }
 }
-/* line 641, ../scss/_local_css.scss */
+/* line 654, ../scss/_local_css.scss */
 .archiveList .articleItem .image .gallery {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -35px -135px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -35px -138px;
   background-color: #e5e5e5;
   position: absolute;
   top: 0.9375rem;
@@ -615,16 +629,16 @@ header .brand .logo a {
   height: 2.1875rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 641, ../scss/_local_css.scss */
+  /* line 654, ../scss/_local_css.scss */
   .archiveList .articleItem .image .gallery {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -92px -135px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -92px -150px;
     width: 1.375rem;
     height: 1.375rem;
     top: 0.75rem;
     right: 0.75rem;
   }
 }
-/* line 660, ../scss/_local_css.scss */
+/* line 673, ../scss/_local_css.scss */
 .archiveList .articleItem .copy h3 {
   font-family: "PMN-Caecilia-56-Italic", serif;
   font-size: 1.25rem;
@@ -632,19 +646,19 @@ header .brand .logo a {
   text-align: center;
 }
 @media screen and (max-width: 849px) {
-  /* line 660, ../scss/_local_css.scss */
+  /* line 673, ../scss/_local_css.scss */
   .archiveList .articleItem .copy h3 {
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 660, ../scss/_local_css.scss */
+  /* line 673, ../scss/_local_css.scss */
   .archiveList .articleItem .copy h3 {
     font-size: 0.9375rem;
     line-height: 18px;
   }
 }
-/* line 674, ../scss/_local_css.scss */
+/* line 687, ../scss/_local_css.scss */
 .archiveList .articleItem .timestamp {
   font-family: "Barlow", Arial, sans-serif;
   font-size: 1.125rem;
@@ -652,21 +666,21 @@ header .brand .logo a {
   color: #222;
   display: inline;
 }
-/* line 682, ../scss/_local_css.scss */
+/* line 695, ../scss/_local_css.scss */
 .archiveList .articleItem .timestamp .bolded {
   font-weight: bolder;
 }
-/* line 684, ../scss/_local_css.scss */
+/* line 697, ../scss/_local_css.scss */
 .archiveList .articleItem .timestamp .bolded .upper {
   text-transform: uppercase;
 }
 @media screen and (max-width: 849px) {
-  /* line 674, ../scss/_local_css.scss */
+  /* line 687, ../scss/_local_css.scss */
   .archiveList .articleItem .timestamp {
     line-height: 28px;
   }
 }
-/* line 692, ../scss/_local_css.scss */
+/* line 705, ../scss/_local_css.scss */
 .archiveList .articleItem p {
   font-family: "Barlow", Arial, sans-serif;
   font-size: 1.125rem;
@@ -675,24 +689,24 @@ header .brand .logo a {
   color: #222;
 }
 @media screen and (max-width: 849px) {
-  /* line 692, ../scss/_local_css.scss */
+  /* line 705, ../scss/_local_css.scss */
   .archiveList .articleItem p {
     line-height: 28px;
   }
 }
 
-/* line 706, ../scss/_local_css.scss */
+/* line 719, ../scss/_local_css.scss */
 article {
   margin: auto;
   max-width: 58rem;
   padding-bottom: 2.8125rem;
 }
-/* line 711, ../scss/_local_css.scss */
+/* line 724, ../scss/_local_css.scss */
 article h1 {
   font-family: "Roboto-Black", serif;
   color: #000;
 }
-/* line 715, ../scss/_local_css.scss */
+/* line 728, ../scss/_local_css.scss */
 article h1.articleTitle {
   font-size: 3.4375rem;
   line-height: 56px;
@@ -701,7 +715,7 @@ article h1.articleTitle {
   margin: 3rem 0 2.9375rem 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 715, ../scss/_local_css.scss */
+  /* line 728, ../scss/_local_css.scss */
   article h1.articleTitle {
     font-size: 3.125rem;
     padding: 0 5.1875rem 0 5.1875rem;
@@ -710,7 +724,7 @@ article h1.articleTitle {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 715, ../scss/_local_css.scss */
+  /* line 728, ../scss/_local_css.scss */
   article h1.articleTitle {
     font-size: 1.375rem;
     padding: 0 1.0625rem 0 1.0625rem;
@@ -718,7 +732,7 @@ article h1.articleTitle {
     margin: 1.75rem 0 1.625rem 0;
   }
 }
-/* line 735, ../scss/_local_css.scss */
+/* line 748, ../scss/_local_css.scss */
 article h1.contentTitle {
   font-size: 2.25rem;
   line-height: 36px;
@@ -726,7 +740,7 @@ article h1.contentTitle {
   margin: 2.1875rem 0 1.25rem 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 735, ../scss/_local_css.scss */
+  /* line 748, ../scss/_local_css.scss */
   article h1.contentTitle {
     font-size: 1.75rem;
     padding: 0 5.1875rem 0 5.1875rem;
@@ -734,30 +748,30 @@ article h1.contentTitle {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 735, ../scss/_local_css.scss */
+  /* line 748, ../scss/_local_css.scss */
   article h1.contentTitle {
     font-size: 1.5625rem;
     padding: 0 0.6875rem 0 0.6875rem;
     line-height: 28px;
   }
 }
-/* line 752, ../scss/_local_css.scss */
+/* line 765, ../scss/_local_css.scss */
 article .subheader {
   padding: 0 3.375rem 0 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 752, ../scss/_local_css.scss */
+  /* line 765, ../scss/_local_css.scss */
   article .subheader {
     padding: 0 4.1875rem 0 4.1875rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 752, ../scss/_local_css.scss */
+  /* line 765, ../scss/_local_css.scss */
   article .subheader {
     padding: 0 0.6875rem 0 0.6875rem;
   }
 }
-/* line 760, ../scss/_local_css.scss */
+/* line 773, ../scss/_local_css.scss */
 article .subheader h2 {
   font-family: "PMN-Caecilia-56-Italic", serif;
   font-size: 1.875rem;
@@ -766,36 +780,36 @@ article .subheader h2 {
   margin: 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 760, ../scss/_local_css.scss */
+  /* line 773, ../scss/_local_css.scss */
   article .subheader h2 {
     font-size: 1.375rem;
     line-height: 32px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 760, ../scss/_local_css.scss */
+  /* line 773, ../scss/_local_css.scss */
   article .subheader h2 {
     font-size: 1.25rem;
     line-height: 22px;
   }
 }
-/* line 776, ../scss/_local_css.scss */
+/* line 789, ../scss/_local_css.scss */
 article .copy {
   padding: 0 3.375rem 0 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 776, ../scss/_local_css.scss */
+  /* line 789, ../scss/_local_css.scss */
   article .copy {
     padding: 0 4.1875rem 0 4.1875rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 776, ../scss/_local_css.scss */
+  /* line 789, ../scss/_local_css.scss */
   article .copy {
     padding: 0 0.6875rem 0 0.6875rem;
   }
 }
-/* line 784, ../scss/_local_css.scss */
+/* line 797, ../scss/_local_css.scss */
 article .copy h2 {
   font-size: 1.875rem;
   font-family: "Roboto-Black", serif;
@@ -805,20 +819,20 @@ article .copy h2 {
   line-height: 44px;
 }
 @media screen and (max-width: 849px) {
-  /* line 784, ../scss/_local_css.scss */
+  /* line 797, ../scss/_local_css.scss */
   article .copy h2 {
     font-size: 1.75rem;
     line-height: 28px;
   }
 }
 @media screen and (max-width: 849px) {
-  /* line 784, ../scss/_local_css.scss */
+  /* line 797, ../scss/_local_css.scss */
   article .copy h2 {
     font-size: 1.25rem;
     line-height: 22px;
   }
 }
-/* line 801, ../scss/_local_css.scss */
+/* line 814, ../scss/_local_css.scss */
 article .copy h3 {
   font-size: 1.25rem;
   font-family: "Roboto-Black", serif;
@@ -827,12 +841,12 @@ article .copy h3 {
   text-transform: uppercase;
 }
 @media screen and (max-width: 767px) {
-  /* line 801, ../scss/_local_css.scss */
+  /* line 814, ../scss/_local_css.scss */
   article .copy h3 {
     font-size: 1.125rem;
   }
 }
-/* line 812, ../scss/_local_css.scss */
+/* line 825, ../scss/_local_css.scss */
 article .copy p {
   font-family: "Barlow", Arial, sans-serif;
   font-size: 1.125rem;
@@ -842,12 +856,12 @@ article .copy p {
   padding: 0 0 1.875rem 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 812, ../scss/_local_css.scss */
+  /* line 825, ../scss/_local_css.scss */
   article .copy p {
     line-height: 28px;
   }
 }
-/* line 823, ../scss/_local_css.scss */
+/* line 836, ../scss/_local_css.scss */
 article .copy a {
   color: #882346;
   padding-bottom: 3px;
@@ -855,31 +869,31 @@ article .copy a {
   text-decoration: none;
   border-bottom: 3px solid #882346;
 }
-/* line 829, ../scss/_local_css.scss */
+/* line 842, ../scss/_local_css.scss */
 article .copy a:hover {
   border-bottom: 3px solid #a59b9b;
   color: #a59b9b;
 }
-/* line 835, ../scss/_local_css.scss */
+/* line 848, ../scss/_local_css.scss */
 article .update {
   background-color: #e5e5e5;
   padding: 1.6875rem 2.125rem;
   margin: 0 1.25rem 2.1875rem 1.25rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 835, ../scss/_local_css.scss */
+  /* line 848, ../scss/_local_css.scss */
   article .update {
     margin: 0 2.9375rem 2.1875rem 2.9375rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 835, ../scss/_local_css.scss */
+  /* line 848, ../scss/_local_css.scss */
   article .update {
     padding: 0.4375rem 0.5625rem;
     margin: 0 0.6875rem 2.1875rem 0.6875rem;
   }
 }
-/* line 846, ../scss/_local_css.scss */
+/* line 859, ../scss/_local_css.scss */
 article .update p {
   font-family: "Barlow", Arial, sans-serif;
   font-size: 1.125rem;
@@ -887,17 +901,17 @@ article .update p {
   margin-top: 30px;
   color: #222;
 }
-/* line 853, ../scss/_local_css.scss */
+/* line 866, ../scss/_local_css.scss */
 article .update p:first-of-type {
   display: inline;
 }
 @media screen and (max-width: 849px) {
-  /* line 846, ../scss/_local_css.scss */
+  /* line 859, ../scss/_local_css.scss */
   article .update p {
     line-height: 28px;
   }
 }
-/* line 863, ../scss/_local_css.scss */
+/* line 876, ../scss/_local_css.scss */
 article .update a {
   color: #882346;
   padding-bottom: 3px;
@@ -905,7 +919,7 @@ article .update a {
   text-decoration: none;
   border-bottom: 3px solid #882346;
 }
-/* line 870, ../scss/_local_css.scss */
+/* line 883, ../scss/_local_css.scss */
 article .update .timestamp {
   font-family: "Barlow", Arial, sans-serif;
   font-size: 1.125rem;
@@ -913,21 +927,21 @@ article .update .timestamp {
   color: #222;
   display: inline;
 }
-/* line 878, ../scss/_local_css.scss */
+/* line 891, ../scss/_local_css.scss */
 article .update .timestamp .bolded {
   font-weight: bolder;
 }
-/* line 880, ../scss/_local_css.scss */
+/* line 893, ../scss/_local_css.scss */
 article .update .timestamp .bolded .upper {
   text-transform: uppercase;
 }
 @media screen and (max-width: 849px) {
-  /* line 870, ../scss/_local_css.scss */
+  /* line 883, ../scss/_local_css.scss */
   article .update .timestamp {
     line-height: 28px;
   }
 }
-/* line 890, ../scss/_local_css.scss */
+/* line 903, ../scss/_local_css.scss */
 article .update .updateImage img {
   margin-top: 1.5625rem;
   display: block;
@@ -935,35 +949,35 @@ article .update .updateImage img {
   border: 2px solid #707070;
   box-sizing: border-box;
 }
-/* line 899, ../scss/_local_css.scss */
+/* line 912, ../scss/_local_css.scss */
 article .featureImage {
   margin: 0 1.25rem 1.5625rem 1.25rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 899, ../scss/_local_css.scss */
+  /* line 912, ../scss/_local_css.scss */
   article .featureImage {
     margin: 0 2.9375rem 1.5625rem 2.9375rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 899, ../scss/_local_css.scss */
+  /* line 912, ../scss/_local_css.scss */
   article .featureImage {
     margin: 0 0.6875rem 1.5625rem 0.6875rem;
   }
 }
-/* line 907, ../scss/_local_css.scss */
+/* line 920, ../scss/_local_css.scss */
 article .featureImage img {
   display: block;
   width: 100%;
 }
-/* line 912, ../scss/_local_css.scss */
+/* line 925, ../scss/_local_css.scss */
 article .floatImage {
   float: right;
   margin: 0.5rem 3.375rem 0.625rem 0.625rem;
   max-width: 17.1875rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 912, ../scss/_local_css.scss */
+  /* line 925, ../scss/_local_css.scss */
   article .floatImage {
     float: none;
     max-width: 100%;
@@ -971,48 +985,48 @@ article .floatImage {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 912, ../scss/_local_css.scss */
+  /* line 925, ../scss/_local_css.scss */
   article .floatImage {
     float: none;
     margin: 0 0.6875rem 0.625rem 0.6875rem;
   }
 }
-/* line 925, ../scss/_local_css.scss */
+/* line 938, ../scss/_local_css.scss */
 article .floatImage img {
   display: block;
   width: 100%;
 }
-/* line 931, ../scss/_local_css.scss */
-article .caption p {
+/* line 944, ../scss/_local_css.scss */
+article .videoCaption p, article .caption p {
   font-family: "Roboto-Italic", serif;
   font-size: 0.8125rem;
   color: #222;
   margin: 0.5rem 0 0 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 931, ../scss/_local_css.scss */
-  article .caption p {
+  /* line 944, ../scss/_local_css.scss */
+  article .videoCaption p, article .caption p {
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 931, ../scss/_local_css.scss */
-  article .caption p {
+  /* line 944, ../scss/_local_css.scss */
+  article .videoCaption p, article .caption p {
     font-size: 0.75rem;
     margin: 0.5rem 0.1875rem 0 0.1875rem;
   }
 }
-/* line 943, ../scss/_local_css.scss */
-article .caption p a {
+/* line 956, ../scss/_local_css.scss */
+article .videoCaption p a, article .caption p a {
   text-decoration: underline;
   color: #882346;
 }
-/* line 946, ../scss/_local_css.scss */
-article .caption p a:hover {
+/* line 959, ../scss/_local_css.scss */
+article .videoCaption p a:hover, article .caption p a:hover {
   color: #a59b9b;
 }
-/* line 951, ../scss/_local_css.scss */
-article .caption ul {
+/* line 964, ../scss/_local_css.scss */
+article .videoCaption ul, article .caption ul {
   font-family: "Roboto-Italic", serif;
   font-size: 0.8125rem;
   color: #222;
@@ -1020,12 +1034,12 @@ article .caption ul {
   padding: 0 0 0 14px;
 }
 @media screen and (max-width: 767px) {
-  /* line 951, ../scss/_local_css.scss */
-  article .caption ul {
+  /* line 964, ../scss/_local_css.scss */
+  article .videoCaption ul, article .caption ul {
     padding: 0 0 0 18px;
   }
 }
-/* line 965, ../scss/_local_css.scss */
+/* line 978, ../scss/_local_css.scss */
 article .photoCredit {
   font-family: "Roboto-Italic", serif;
   font-size: 0.9375rem;
@@ -1033,29 +1047,29 @@ article .photoCredit {
   margin: 0;
 }
 @media screen and (max-width: 767px) {
-  /* line 965, ../scss/_local_css.scss */
+  /* line 978, ../scss/_local_css.scss */
   article .photoCredit {
     font-size: 0.75rem;
     margin: 0 0.1875rem 0 0.1875rem;
   }
 }
-/* line 975, ../scss/_local_css.scss */
+/* line 988, ../scss/_local_css.scss */
 article .photoCredit a {
   text-decoration: underline;
   color: #882346;
 }
-/* line 978, ../scss/_local_css.scss */
+/* line 991, ../scss/_local_css.scss */
 article .photoCredit a:hover {
   color: #a59b9b;
 }
-/* line 983, ../scss/_local_css.scss */
+/* line 996, ../scss/_local_css.scss */
 article .quote {
   float: left;
   max-width: 17.1875rem;
   margin: 0 2.1875rem 0 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 983, ../scss/_local_css.scss */
+  /* line 996, ../scss/_local_css.scss */
   article .quote {
     float: none;
     max-width: 100%;
@@ -1063,28 +1077,28 @@ article .quote {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 983, ../scss/_local_css.scss */
+  /* line 996, ../scss/_local_css.scss */
   article .quote {
     float: none;
     max-width: 100%;
     margin: 0 1rem 0 1rem;
   }
 }
-/* line 999, ../scss/_local_css.scss */
+/* line 1012, ../scss/_local_css.scss */
 article .quote .doubleQuotes {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -240px -45px;
-  width: 2.125rem;
-  height: 1.875rem;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -75px -59px;
+  width: 2.1875rem;
+  height: 2.1875rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 999, ../scss/_local_css.scss */
+  /* line 1012, ../scss/_local_css.scss */
   article .quote .doubleQuotes {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -240px -80px;
-    width: 1.5rem;
-    height: 1.375rem;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -115px -59px;
+    width: 1.5625rem;
+    height: 1.4375rem;
   }
 }
-/* line 1010, ../scss/_local_css.scss */
+/* line 1023, ../scss/_local_css.scss */
 article .quote p {
   font-size: 1.625rem;
   font-family: "PMN-Caecilia-56-Italic", serif;
@@ -1094,7 +1108,7 @@ article .quote p {
   line-height: 30px;
 }
 @media screen and (max-width: 849px) {
-  /* line 1010, ../scss/_local_css.scss */
+  /* line 1023, ../scss/_local_css.scss */
   article .quote p {
     font-size: 2.25rem;
     margin: 0 0 0 3.4375rem;
@@ -1103,7 +1117,7 @@ article .quote p {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1010, ../scss/_local_css.scss */
+  /* line 1023, ../scss/_local_css.scss */
   article .quote p {
     font-size: 1.5rem;
     margin: 0 0 0 2.8125rem;
@@ -1111,7 +1125,7 @@ article .quote p {
     top: -21px;
   }
 }
-/* line 1032, ../scss/_local_css.scss */
+/* line 1045, ../scss/_local_css.scss */
 article .video {
   margin: 0 3.375rem 0 3.375rem;
   position: relative;
@@ -1120,18 +1134,18 @@ article .video {
   height: 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 1032, ../scss/_local_css.scss */
+  /* line 1045, ../scss/_local_css.scss */
   article .video {
     margin: 0 4.1875rem 0 4.1875rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1032, ../scss/_local_css.scss */
+  /* line 1045, ../scss/_local_css.scss */
   article .video {
     margin: 0 0.6875rem 0 0.6875rem;
   }
 }
-/* line 1044, ../scss/_local_css.scss */
+/* line 1057, ../scss/_local_css.scss */
 article .video iframe {
   position: absolute;
   top: 0;
@@ -1139,138 +1153,147 @@ article .video iframe {
   width: 100%;
   height: 100%;
 }
-/* line 1052, ../scss/_local_css.scss */
+/* line 1065, ../scss/_local_css.scss */
 article .videoCaption {
   margin: 0.5rem 3.375rem 2.5rem 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 1052, ../scss/_local_css.scss */
+  /* line 1065, ../scss/_local_css.scss */
   article .videoCaption {
     margin: 0.5rem 4.1875rem 2.5rem 4.1875rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1052, ../scss/_local_css.scss */
+  /* line 1065, ../scss/_local_css.scss */
   article .videoCaption {
     margin: 0.5rem 0.6875rem 1.25rem 0.6875rem;
   }
 }
-/* line 1061, ../scss/_local_css.scss */
+/* line 1074, ../scss/_local_css.scss */
 article .articleImage {
   margin: 0 3.375rem 2.5rem 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 1061, ../scss/_local_css.scss */
+  /* line 1074, ../scss/_local_css.scss */
   article .articleImage {
     margin: 0 4rem 2.5rem 4rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1061, ../scss/_local_css.scss */
+  /* line 1074, ../scss/_local_css.scss */
   article .articleImage {
     margin: 0 0.6875rem 2.5rem 0.6875rem;
   }
 }
-/* line 1069, ../scss/_local_css.scss */
+/* line 1082, ../scss/_local_css.scss */
 article .articleImage img {
+  border: 1px solid #716F6F;
   display: block;
   width: 100%;
 }
-/* line 1075, ../scss/_local_css.scss */
+/* line 1089, ../scss/_local_css.scss */
 article .byline p {
   font-size: 1.125rem;
   font-family: "Roboto", serif;
   margin: 0 0 1.875rem 1.4375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 1075, ../scss/_local_css.scss */
+  /* line 1089, ../scss/_local_css.scss */
   article .byline p {
     margin: 0 0 1.4375rem 2.9375rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1075, ../scss/_local_css.scss */
+  /* line 1089, ../scss/_local_css.scss */
   article .byline p {
     display: none;
   }
 }
-/* line 1085, ../scss/_local_css.scss */
+/* line 1099, ../scss/_local_css.scss */
 article .byline p.phone {
   display: none;
 }
 @media screen and (max-width: 767px) {
-  /* line 1085, ../scss/_local_css.scss */
+  /* line 1099, ../scss/_local_css.scss */
   article .byline p.phone {
     display: block;
     margin: 0 0 1.4375rem 0.6875rem;
   }
 }
-/* line 1093, ../scss/_local_css.scss */
+/* line 1107, ../scss/_local_css.scss */
 article .byline a {
   text-decoration: none;
   color: #882346;
   font-weight: bolder;
 }
-/* line 1097, ../scss/_local_css.scss */
+/* line 1111, ../scss/_local_css.scss */
 article .byline a:hover {
   color: #a59b9b;
 }
-/* line 1101, ../scss/_local_css.scss */
+/* line 1115, ../scss/_local_css.scss */
 article .byline .name {
   font-family: "Roboto-Bold", serif;
   font-weight: bolder;
 }
-/* line 1104, ../scss/_local_css.scss */
+/* line 1118, ../scss/_local_css.scss */
 article .byline .name a {
   text-transform: capitalize;
 }
-/* line 1108, ../scss/_local_css.scss */
+/* line 1122, ../scss/_local_css.scss */
 article .byline .type {
   font-family: "Roboto-Bold", serif;
 }
-/* line 1110, ../scss/_local_css.scss */
+/* line 1124, ../scss/_local_css.scss */
 article .byline .type a {
   text-transform: uppercase;
 }
-/* line 1115, ../scss/_local_css.scss */
+/* line 1129, ../scss/_local_css.scss */
 article .share {
   float: right;
   margin: 0 1.4375rem 0 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 1115, ../scss/_local_css.scss */
+  /* line 1129, ../scss/_local_css.scss */
   article .share {
     margin: 0 2.9375rem 0 0;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1115, ../scss/_local_css.scss */
+  /* line 1129, ../scss/_local_css.scss */
   article .share {
     margin: 0 0.6875rem 0 0;
   }
 }
-/* line 1125, ../scss/_local_css.scss */
+/* line 1139, ../scss/_local_css.scss */
 article .accordion {
   display: block;
-  border: 1px solid #707070;
-  background-color: #e5e5e5;
   padding: 1.6875rem 2.125rem 1.6875rem 2.125rem;
   margin: 0 3.375rem 2.1875rem 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 1125, ../scss/_local_css.scss */
+  /* line 1139, ../scss/_local_css.scss */
   article .accordion {
     margin: 0 4.1875rem 1.5625rem 4.1875rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1125, ../scss/_local_css.scss */
+  /* line 1139, ../scss/_local_css.scss */
   article .accordion {
     margin: 0 0.6875rem 1.5625rem 0.6875rem;
     padding: 0.4375rem 0.5625rem;
   }
 }
-/* line 1138, ../scss/_local_css.scss */
+/* line 1150, ../scss/_local_css.scss */
+article .accordion.gray {
+  border: 1px solid #707070;
+  background-color: #e5e5e5;
+}
+/* line 1155, ../scss/_local_css.scss */
+article .accordion.white {
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+}
+/* line 1159, ../scss/_local_css.scss */
 article .accordion.float {
   float: right;
   width: 14.6875rem;
@@ -1278,53 +1301,52 @@ article .accordion.float {
   margin: 0 3.375rem 2.1875rem 0.625rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 1138, ../scss/_local_css.scss */
+  /* line 1159, ../scss/_local_css.scss */
   article .accordion.float {
     float: none;
     width: 92%;
     padding: 0.4375rem 0.5625rem;
   }
 }
-/* line 1148, ../scss/_local_css.scss */
+/* line 1169, ../scss/_local_css.scss */
 article .accordion.float button.accordion-toggle .content h2 {
   margin-top: -2px;
   font-size: 17px;
 }
 @media screen and (max-width: 767px) {
-  /* line 1148, ../scss/_local_css.scss */
+  /* line 1169, ../scss/_local_css.scss */
   article .accordion.float button.accordion-toggle .content h2 {
     margin-top: 4px;
   }
 }
-/* line 1155, ../scss/_local_css.scss */
+/* line 1176, ../scss/_local_css.scss */
 article .accordion.float button.accordion-toggle .content p, article .accordion.float .accordion-content p {
   font-size: 15px;
   line-height: 20px;
 }
-/* line 1160, ../scss/_local_css.scss */
+/* line 1181, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle {
   cursor: pointer;
   border-width: 0;
   text-align: initial;
-  background-color: #e5e5e5;
 }
-/* line 1177, ../scss/_local_css.scss */
+/* line 1198, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle .visual {
   float: left;
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   margin: 6px 0 0 0;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/expand.png") no-repeat 0px 0px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat no-repeat -223px -36px;
 }
-/* line 1189, ../scss/_local_css.scss */
+/* line 1211, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle .visual.minus {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/expand.png") no-repeat -19px 0px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat no-repeat -242px -36px;
 }
-/* line 1193, ../scss/_local_css.scss */
+/* line 1216, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle .content {
   margin-left: 30px;
 }
-/* line 1205, ../scss/_local_css.scss */
+/* line 1228, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle .content h2 {
   margin: 0;
   font-size: 1.875rem;
@@ -1333,20 +1355,20 @@ article .accordion button.accordion-toggle .content h2 {
   line-height: 34px;
 }
 @media screen and (max-width: 849px) {
-  /* line 1205, ../scss/_local_css.scss */
+  /* line 1228, ../scss/_local_css.scss */
   article .accordion button.accordion-toggle .content h2 {
     font-size: 1.75rem;
     line-height: 28px;
   }
 }
 @media screen and (max-width: 849px) {
-  /* line 1205, ../scss/_local_css.scss */
+  /* line 1228, ../scss/_local_css.scss */
   article .accordion button.accordion-toggle .content h2 {
     font-size: 1.25rem;
     line-height: 22px;
   }
 }
-/* line 1224, ../scss/_local_css.scss */
+/* line 1247, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle .content h3 {
   font-size: 1.25rem;
   font-family: "Roboto-Black", serif;
@@ -1355,13 +1377,13 @@ article .accordion button.accordion-toggle .content h3 {
   text-transform: uppercase;
 }
 @media screen and (max-width: 767px) {
-  /* line 1224, ../scss/_local_css.scss */
+  /* line 1247, ../scss/_local_css.scss */
   article .accordion button.accordion-toggle .content h3 {
     font-size: 1.125rem;
     margin-top: 1.5px;
   }
 }
-/* line 1238, ../scss/_local_css.scss */
+/* line 1261, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle .content p {
   font-family: "Barlow", Arial, sans-serif;
   font-size: 1.125rem;
@@ -1370,25 +1392,25 @@ article .accordion button.accordion-toggle .content p {
   margin: 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 1238, ../scss/_local_css.scss */
+  /* line 1261, ../scss/_local_css.scss */
   article .accordion button.accordion-toggle .content p {
     line-height: 28px;
   }
 }
-/* line 1251, ../scss/_local_css.scss */
+/* line 1274, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle .content a {
   color: #882346;
   font-weight: bolder;
   text-decoration: none;
   border-bottom: 3px solid #882346;
 }
-/* line 1260, ../scss/_local_css.scss */
+/* line 1283, ../scss/_local_css.scss */
 article .accordion .accordion-content {
   display: none;
   border-top: 1px solid #707070;
   margin-top: 20px;
 }
-/* line 1265, ../scss/_local_css.scss */
+/* line 1288, ../scss/_local_css.scss */
 article .accordion .accordion-content h2 {
   font-size: 1.875rem;
   font-family: "Roboto-Black", serif;
@@ -1396,20 +1418,20 @@ article .accordion .accordion-content h2 {
   line-height: 44px;
 }
 @media screen and (max-width: 849px) {
-  /* line 1265, ../scss/_local_css.scss */
+  /* line 1288, ../scss/_local_css.scss */
   article .accordion .accordion-content h2 {
     font-size: 1.75rem;
     line-height: 28px;
   }
 }
 @media screen and (max-width: 849px) {
-  /* line 1265, ../scss/_local_css.scss */
+  /* line 1288, ../scss/_local_css.scss */
   article .accordion .accordion-content h2 {
     font-size: 1.25rem;
     line-height: 22px;
   }
 }
-/* line 1282, ../scss/_local_css.scss */
+/* line 1305, ../scss/_local_css.scss */
 article .accordion .accordion-content h3 {
   font-size: 1.25rem;
   font-family: "Roboto-Black", serif;
@@ -1417,12 +1439,12 @@ article .accordion .accordion-content h3 {
   text-transform: uppercase;
 }
 @media screen and (max-width: 767px) {
-  /* line 1282, ../scss/_local_css.scss */
+  /* line 1305, ../scss/_local_css.scss */
   article .accordion .accordion-content h3 {
     font-size: 1.125rem;
   }
 }
-/* line 1293, ../scss/_local_css.scss */
+/* line 1316, ../scss/_local_css.scss */
 article .accordion .accordion-content p {
   font-family: "Barlow", Arial, sans-serif;
   font-size: 1.125rem;
@@ -1432,12 +1454,12 @@ article .accordion .accordion-content p {
   padding: 0 0 0.9375rem 0;
 }
 @media screen and (max-width: 849px) {
-  /* line 1293, ../scss/_local_css.scss */
+  /* line 1316, ../scss/_local_css.scss */
   article .accordion .accordion-content p {
     line-height: 28px;
   }
 }
-/* line 1304, ../scss/_local_css.scss */
+/* line 1327, ../scss/_local_css.scss */
 article .accordion .accordion-content a {
   color: #882346;
   padding-bottom: 3px;
@@ -1445,53 +1467,52 @@ article .accordion .accordion-content a {
   text-decoration: none;
   border-bottom: 3px solid #882346;
 }
-/* line 1311, ../scss/_local_css.scss */
+/* line 1334, ../scss/_local_css.scss */
 article .accordion .accordion-content.default {
   display: block;
 }
-/* line 1316, ../scss/_local_css.scss */
+/* line 1339, ../scss/_local_css.scss */
 article .gallery {
-  border: 1px solid #882346;
   margin: 0 1.25rem 1.5625rem 1.25rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 1316, ../scss/_local_css.scss */
+  /* line 1339, ../scss/_local_css.scss */
   article .gallery {
     margin: 0 2.9375rem 1.5625rem 2.9375rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1316, ../scss/_local_css.scss */
+  /* line 1339, ../scss/_local_css.scss */
   article .gallery {
     margin: 0 0.6875rem 1.5625rem 0.6875rem;
   }
 }
-/* line 1326, ../scss/_local_css.scss */
+/* line 1349, ../scss/_local_css.scss */
 article .gallery.content {
   margin: 0 3.375rem 2.5rem 3.375rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 1326, ../scss/_local_css.scss */
+  /* line 1349, ../scss/_local_css.scss */
   article .gallery.content {
     margin: 0 4rem 2.5rem 4rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1326, ../scss/_local_css.scss */
+  /* line 1349, ../scss/_local_css.scss */
   article .gallery.content {
     margin: 0 0.6875rem 2.5rem 0.6875rem;
   }
 }
-/* line 1337, ../scss/_local_css.scss */
+/* line 1360, ../scss/_local_css.scss */
 article .gallery .thumbnailImages {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
-  grid-column-gap: 0.625rem;
+  grid-column-gap: 1.25rem;
   grid-row-gap: 1.25rem;
   justify-content: space-between;
 }
 @media screen and (max-width: 849px) {
-  /* line 1337, ../scss/_local_css.scss */
+  /* line 1360, ../scss/_local_css.scss */
   article .gallery .thumbnailImages {
     grid-template-columns: auto auto auto auto auto auto;
     grid-column-gap: 0.3125rem;
@@ -1499,33 +1520,38 @@ article .gallery .thumbnailImages {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1337, ../scss/_local_css.scss */
+  /* line 1360, ../scss/_local_css.scss */
   article .gallery .thumbnailImages {
     grid-template-columns: auto auto auto auto auto;
     grid-column-gap: 0.625rem;
     grid-row-gap: 0.625rem;
   }
 }
-/* line 1353, ../scss/_local_css.scss */
+/* line 1376, ../scss/_local_css.scss */
 article .gallery .thumbnailImages button.thumb {
   cursor: pointer;
   border-width: 0;
   background-color: #fff;
+  border: 1px solid #716F6F;
   padding: 0;
 }
 @media screen and (max-width: 767px) {
-  /* line 1353, ../scss/_local_css.scss */
+  /* line 1376, ../scss/_local_css.scss */
   article .gallery .thumbnailImages button.thumb {
     width: 100%;
     height: 100%;
   }
 }
-/* line 1368, ../scss/_local_css.scss */
+/* line 1392, ../scss/_local_css.scss */
 article .gallery .thumbnailImages button.thumb img {
   display: block;
   width: 100%;
 }
-/* line 1377, ../scss/_local_css.scss */
+/* line 1396, ../scss/_local_css.scss */
+article .gallery .thumbnailImages button.thumb.active {
+  border: 3px solid #882346;
+}
+/* line 1404, ../scss/_local_css.scss */
 article .gallery .mainImage button.main {
   cursor: pointer;
   border-width: 0;
@@ -1534,15 +1560,16 @@ article .gallery .mainImage button.main {
   padding: 0 !important;
   width: 100%;
 }
-/* line 1386, ../scss/_local_css.scss */
+/* line 1413, ../scss/_local_css.scss */
 article .gallery .mainImage button.main .image {
-  background-color: #707070;
+  background-image: radial-gradient(circle, #e5e5e5, #707070);
+  border: 1px solid #716F6F;
   height: 0;
   overflow: hidden;
   position: relative;
   padding-top: 56.25%;
 }
-/* line 1403, ../scss/_local_css.scss */
+/* line 1432, ../scss/_local_css.scss */
 article .gallery .mainImage button.main .image img {
   margin: auto;
   object-fit: scale-down;
@@ -1553,73 +1580,229 @@ article .gallery .mainImage button.main .image img {
   height: 100%;
 }
 @media screen and (max-width: 767px) {
-  /* line 1403, ../scss/_local_css.scss */
+  /* line 1432, ../scss/_local_css.scss */
   article .gallery .mainImage button.main .image img {
     object-fit: contain;
   }
 }
-/* line 1420, ../scss/_local_css.scss */
-article .gallery .mainImage button.main .caption {
+/* line 1450, ../scss/_local_css.scss */
+article .gallery .mainImage button.main .caption p {
   font-family: "Roboto", serif;
   font-size: 1rem;
+  padding: 0.625rem 0 1.25rem 0;
+  margin: 0;
 }
-/* line 1423, ../scss/_local_css.scss */
+/* line 1456, ../scss/_local_css.scss */
 article .gallery .mainImage button.main .caption a {
   font-family: "Roboto-Bold", serif;
+  text-decoration: underline;
 }
-/* line 1431, ../scss/_local_css.scss */
+/* line 1465, ../scss/_local_css.scss */
 article .gallery .lightboxImages {
   position: fixed;
   z-index: 2500;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 1447, ../scss/_local_css.scss */
+/* line 1477, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement {
+  border: 3px solid red;
+  position: relative;
+  margin: 130px auto 0 auto;
+  width: 95%;
+  display: grid;
+  grid-template-columns: auto 400px;
+}
+@media screen and (max-width: 849px) {
+  /* line 1477, ../scss/_local_css.scss */
+  article .gallery .lightboxImages .lightboxElement {
+    grid-template-columns: auto 200px;
+  }
+}
+/* line 1491, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .image {
+  background-image: radial-gradient(circle, #e5e5e5, #707070);
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+}
+/* line 1500, ../scss/_local_css.scss */
 article .gallery .lightboxImages .lightboxElement .image img {
-  display: block;
-  width: 100%;
+  object-fit: scale-down;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, 0);
+}
+/* line 1511, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .image .arrowLeft {
+  cursor: pointer;
+  border-width: 0;
+  background-color: #262626;
+  padding: 0;
+  width: 78px;
+  height: 78px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+}
+/* line 1522, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .image .arrowLeft:hover {
+  background-color: #4F4F50;
+}
+@media screen and (max-width: 849px) {
+  /* line 1511, ../scss/_local_css.scss */
+  article .gallery .lightboxImages .lightboxElement .image .arrowLeft {
+    width: 45px;
+    height: 45px;
+  }
+}
+/* line 1529, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .image .arrowLeft .arrow {
+  margin: auto;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -67px -93px;
+  width: 29px;
+  height: 51px;
+}
+/* line 1538, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .image .arrowRight {
+  cursor: pointer;
+  border-width: 0;
+  background-color: #262626;
+  padding: 0;
+  width: 78px;
+  height: 78px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: rotate(180deg) translate(0, 50%);
+}
+/* line 1549, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .image .arrowRight:hover {
+  background-color: #4F4F50;
+}
+@media screen and (max-width: 849px) {
+  /* line 1538, ../scss/_local_css.scss */
+  article .gallery .lightboxImages .lightboxElement .image .arrowRight {
+    width: 45px;
+    height: 45px;
+  }
+}
+/* line 1556, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .image .arrowRight .arrow {
+  margin: auto;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -67px -93px;
+  width: 29px;
+  height: 51px;
+}
+/* line 1566, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .caption {
+  background-color: #fff;
+  padding: 0 1.5625rem 0 1.5625rem;
+}
+/* line 1577, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .caption .close {
+  cursor: pointer;
+  position: absolute;
+  padding: 0.375rem 0.375rem 0.25rem 0.375rem;
+  top: 0.9375rem;
+  right: 0.9375rem;
+  color: #716F6F;
+  font-family: "Arial-Bold", sans-serif;
+  font-size: 1.25rem;
+  height: 1rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -262px -38px;
+}
+/* line 1596, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .caption .close:hover {
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -280px -38px;
+}
+/* line 1600, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .caption .pageTitle {
+  font-family: "Roboto-Black", serif;
+  font-size: 1.625rem;
+  color: #000;
+  line-height: 30px;
+  padding-bottom: 1.25rem;
+}
+/* line 1608, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .caption .modalCaption p {
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  color: #000;
+  line-height: 20px;
+  padding-bottom: 1.875rem;
+}
+/* line 1616, ../scss/_local_css.scss */
+article .gallery .lightboxImages .lightboxElement .caption .slideNumber {
+  font-family: "Roboto", serif;
+  color: #000;
+  font-size: 0.875rem;
 }
 
-/* line 1471, ../scss/_local_css.scss */
+/* line 1627, ../scss/_local_css.scss */
+.articleArrow {
+  display: none;
+}
+/* line 1629, ../scss/_local_css.scss */
+.articleArrow .arrow {
+  position: fixed;
+  left: 200px;
+  display: block;
+  cursor: pointer;
+  border-width: 0;
+  top: 750px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -75px 0px;
+  width: 3.5625rem;
+  height: 3.5625rem;
+}
+/* line 1640, ../scss/_local_css.scss */
+.articleArrow .arrow:hover {
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -133px 0px;
+}
+
+/* line 1649, ../scss/_local_css.scss */
 .closing {
   margin: auto;
   max-width: 58rem;
 }
-/* line 1474, ../scss/_local_css.scss */
+/* line 1652, ../scss/_local_css.scss */
 .closing .line {
   border-top: 1px solid #707070;
   margin: 0 1.25rem 6.875rem 1.25rem;
 }
 @media screen and (max-width: 849px) {
-  /* line 1474, ../scss/_local_css.scss */
+  /* line 1652, ../scss/_local_css.scss */
   .closing .line {
     margin: 0 2.9375rem 5rem 2.9375rem;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1474, ../scss/_local_css.scss */
+  /* line 1652, ../scss/_local_css.scss */
   .closing .line {
     margin: 0 0.5rem 5rem 0.5rem;
   }
 }
-/* line 1484, ../scss/_local_css.scss */
+/* line 1662, ../scss/_local_css.scss */
 .closing .tags {
   margin: 3.75rem 0 0 0.1875rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 1484, ../scss/_local_css.scss */
+  /* line 1662, ../scss/_local_css.scss */
   .closing .tags {
     margin: 2.5rem auto 0 auto;
     display: flex;
     justify-content: space-around;
   }
 }
-/* line 1492, ../scss/_local_css.scss */
+/* line 1670, ../scss/_local_css.scss */
 .closing .tags a {
   border: 1px solid #707070;
   padding: 0.625rem 1.5625rem;
@@ -1631,25 +1814,25 @@ article .gallery .lightboxImages .lightboxElement .image img {
   color: #707070;
 }
 @media screen and (max-width: 767px) {
-  /* line 1492, ../scss/_local_css.scss */
+  /* line 1670, ../scss/_local_css.scss */
   .closing .tags a {
     font-size: 0.625rem;
     padding: 0.625rem 1.25rem;
     margin-right: 0;
   }
 }
-/* line 1507, ../scss/_local_css.scss */
+/* line 1685, ../scss/_local_css.scss */
 .closing .tags a:hover {
   background-color: #000;
   color: #fff;
 }
-/* line 1514, ../scss/_local_css.scss */
+/* line 1692, ../scss/_local_css.scss */
 .closing .share {
   float: right;
   margin: 3.75rem 0 0 0;
 }
 @media screen and (max-width: 767px) {
-  /* line 1514, ../scss/_local_css.scss */
+  /* line 1692, ../scss/_local_css.scss */
   .closing .share {
     margin: 2.5rem 0 0 0;
     float: none;
@@ -1658,24 +1841,24 @@ article .gallery .lightboxImages .lightboxElement .image img {
   }
 }
 
-/* line 1528, ../scss/_local_css.scss */
+/* line 1706, ../scss/_local_css.scss */
 footer .full-width {
   width: 100%;
   max-width: 100%;
 }
-/* line 1532, ../scss/_local_css.scss */
+/* line 1710, ../scss/_local_css.scss */
 footer .navigation {
   background-color: #d9d9d9;
   height: 15.25rem;
   margin: auto;
   max-width: 100%;
 }
-/* line 1538, ../scss/_local_css.scss */
+/* line 1716, ../scss/_local_css.scss */
 footer .navigation nav {
   max-width: 58rem;
   margin: auto;
 }
-/* line 1541, ../scss/_local_css.scss */
+/* line 1719, ../scss/_local_css.scss */
 footer .navigation nav ul {
   margin: 0;
   padding: 7.125rem 4.625rem 0 4.625rem;
@@ -1684,7 +1867,7 @@ footer .navigation nav ul {
   justify-content: space-around;
 }
 @media screen and (max-width: 767px) {
-  /* line 1541, ../scss/_local_css.scss */
+  /* line 1719, ../scss/_local_css.scss */
   footer .navigation nav ul {
     padding: 2.5rem 0 0 0;
     flex-direction: column;
@@ -1693,12 +1876,12 @@ footer .navigation nav ul {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 1554, ../scss/_local_css.scss */
+  /* line 1732, ../scss/_local_css.scss */
   footer .navigation nav ul li {
     text-align: center;
   }
 }
-/* line 1560, ../scss/_local_css.scss */
+/* line 1738, ../scss/_local_css.scss */
 footer .navigation nav ul li a {
   font-family: "Arial-Bold", sans-serif;
   color: #707070;
@@ -1707,40 +1890,40 @@ footer .navigation nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 1567, ../scss/_local_css.scss */
+/* line 1745, ../scss/_local_css.scss */
 footer .navigation nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 1575, ../scss/_local_css.scss */
+/* line 1753, ../scss/_local_css.scss */
 footer .bottom {
   background-color: #882346;
   height: 4.375rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 1575, ../scss/_local_css.scss */
+  /* line 1753, ../scss/_local_css.scss */
   footer .bottom {
     height: 9.375rem;
   }
 }
-/* line 1581, ../scss/_local_css.scss */
+/* line 1759, ../scss/_local_css.scss */
 footer .bottom .elements {
   margin: auto;
   max-width: 58rem;
   height: 4.375rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 1581, ../scss/_local_css.scss */
+  /* line 1759, ../scss/_local_css.scss */
   footer .bottom .elements {
     height: 9.375rem;
   }
 }
-/* line 1588, ../scss/_local_css.scss */
+/* line 1766, ../scss/_local_css.scss */
 footer .bottom .elements .social {
   float: right;
   margin: 1.5625rem 1.75rem 0 0;
 }
 @media screen and (max-width: 767px) {
-  /* line 1588, ../scss/_local_css.scss */
+  /* line 1766, ../scss/_local_css.scss */
   footer .bottom .elements .social {
     width: 250px;
     margin: auto;
@@ -1750,67 +1933,67 @@ footer .bottom .elements .social {
     padding: 2rem 0 1.4375rem 0;
   }
 }
-/* line 1602, ../scss/_local_css.scss */
+/* line 1780, ../scss/_local_css.scss */
 footer .bottom .elements .social .icon a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
-/* line 1609, ../scss/_local_css.scss */
+/* line 1787, ../scss/_local_css.scss */
 footer .bottom .elements .social .instagram {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -43px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -72px;
   width: 1.1875rem;
-  height: 1.25rem;
+  height: 1.1875rem;
   margin-right: 1.5rem;
 }
-/* line 1616, ../scss/_local_css.scss */
+/* line 1794, ../scss/_local_css.scss */
 footer .bottom .elements .social .twitter {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px -45px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px -72px;
   width: 1.1875rem;
-  height: 1.0625rem;
+  height: 1.1875rem;
   margin-right: 1.5rem;
 }
-/* line 1623, ../scss/_local_css.scss */
+/* line 1801, ../scss/_local_css.scss */
 footer .bottom .elements .social .facebook {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px -43px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px -72px;
   width: 0.625rem;
   height: 1.1875rem;
 }
-/* line 1630, ../scss/_local_css.scss */
+/* line 1808, ../scss/_local_css.scss */
 footer .bottom .elements .copyright {
   height: 4.375rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 1630, ../scss/_local_css.scss */
+  /* line 1808, ../scss/_local_css.scss */
   footer .bottom .elements .copyright {
     margin: 0 auto 0 auto;
     width: 17.375rem;
   }
 }
-/* line 1639, ../scss/_local_css.scss */
+/* line 1817, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .cuny {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -240px 0px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -92px;
   width: 2.8125rem;
   height: 2.75rem;
   margin: 0.8125rem 0 0 1.75rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 1639, ../scss/_local_css.scss */
+  /* line 1817, ../scss/_local_css.scss */
   footer .bottom .elements .copyright .cuny {
     margin-left: 0;
   }
 }
-/* line 1648, ../scss/_local_css.scss */
+/* line 1826, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .cuny a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
-/* line 1655, ../scss/_local_css.scss */
+/* line 1833, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .copy {
   display: inline-block;
   position: absolute;
@@ -1819,12 +2002,12 @@ footer .bottom .elements .copyright .copy {
   margin: 0.8125rem 0.5625rem 0 0.875rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 1655, ../scss/_local_css.scss */
+  /* line 1833, ../scss/_local_css.scss */
   footer .bottom .elements .copyright .copy {
     margin-right: 0;
   }
 }
-/* line 1665, ../scss/_local_css.scss */
+/* line 1843, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .copy p {
   font-family: "Arial", sans-serif;
   color: #fff;
@@ -1833,13 +2016,13 @@ footer .bottom .elements .copyright .copy p {
   padding: 0;
 }
 
-/* line 1681, ../scss/_local_css.scss */
+/* line 1859, ../scss/_local_css.scss */
 .share .icon a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
-/* line 1688, ../scss/_local_css.scss */
+/* line 1866, ../scss/_local_css.scss */
 .share .email {
   display: inline-block;
   background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px 0px;
@@ -1847,7 +2030,11 @@ footer .bottom .elements .copyright .copy p {
   height: 1.25rem;
   margin-right: 1.5rem;
 }
-/* line 1695, ../scss/_local_css.scss */
+/* line 1872, ../scss/_local_css.scss */
+.share .email:hover {
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -21px;
+}
+/* line 1876, ../scss/_local_css.scss */
 .share .twitter {
   display: inline-block;
   background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px 0px;
@@ -1855,41 +2042,61 @@ footer .bottom .elements .copyright .copy p {
   height: 1.25rem;
   margin-right: 1.5rem;
 }
-/* line 1702, ../scss/_local_css.scss */
+/* line 1882, ../scss/_local_css.scss */
+.share .twitter:hover {
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px -21px;
+}
+/* line 1886, ../scss/_local_css.scss */
 .share .facebook {
   display: inline-block;
   background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px 0px;
   width: 0.6875rem;
   height: 1.25rem;
 }
+/* line 1891, ../scss/_local_css.scss */
+.share .facebook:hover {
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px -21px;
+}
 @media screen and (max-width: 767px) {
-  /* line 1708, ../scss/_local_css.scss */
+  /* line 1895, ../scss/_local_css.scss */
   .share.open {
     margin-top: 0.1875rem;
   }
-  /* line 1711, ../scss/_local_css.scss */
+  /* line 1898, ../scss/_local_css.scss */
   .share.open .email {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -25px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -42px;
     width: 1.25rem;
     height: 0.875rem;
     margin-right: 0.625rem;
   }
-  /* line 1717, ../scss/_local_css.scss */
+  /* line 1903, ../scss/_local_css.scss */
+  .share.open .email:hover {
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -57px;
+  }
+  /* line 1907, ../scss/_local_css.scss */
   .share.open .twitter {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px -25px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px -42px;
     width: 1.0625rem;
     height: 0.875rem;
     margin-right: 0.625rem;
   }
-  /* line 1723, ../scss/_local_css.scss */
+  /* line 1912, ../scss/_local_css.scss */
+  .share.open .twitter:hover {
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px -57px;
+  }
+  /* line 1916, ../scss/_local_css.scss */
   .share.open .facebook {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px -25px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px -42px;
     width: 0.5rem;
     height: 0.875rem;
   }
+  /* line 1920, ../scss/_local_css.scss */
+  .share.open .facebook:hover {
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px -57px;
+  }
 }
 
-/* line 1735, ../scss/_local_css.scss */
+/* line 1931, ../scss/_local_css.scss */
 #skipnav a, a.skipTranscript {
   position: absolute;
   z-index: 3000;
@@ -1899,7 +2106,7 @@ footer .bottom .elements .copyright .copy p {
   padding-bottom: 25px;
 }
 
-/* line 1743, ../scss/_local_css.scss */
+/* line 1939, ../scss/_local_css.scss */
 #skipnav a:hover, #skipnav a:focus, #skipnav a:active {
   clip: auto;
   left: 0;
