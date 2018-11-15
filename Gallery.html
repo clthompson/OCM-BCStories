@@ -161,6 +161,7 @@
           // MAKE THE ARRAY
           var galleryList = $(".gallery[data-name='"+galleryName+"'] .galleryElement");
           //console.log(galleryName);
+
           // BUILD THE THUMBS
           $(galleryList).each(function(i, e) {
             var thumbURL = $(galleryList[i]).data("thumb");
@@ -169,6 +170,7 @@
             //console.log(altTag);
             $(".gallery[data-name='"+galleryName+"'] .thumbnailImages").append('<button class="thumb" data-name="'+[i]+'"><img src="'+thumbURL+'" alt="'+altTag+'"></button>');
           });
+
           // BUILD THE FIRST IMAGE
           var largeURL = $(galleryList[0]).data("large");
           var lightboxURL = $(galleryList[0]).data("lightbox");
@@ -205,6 +207,7 @@
             $(".gallery[data-name='"+galleryName+"'] button.main .caption").replaceWith($(galleryList[newActive]).find(".caption").prop("outerHTML"));
             $(".gallery[data-name='"+galleryName+"'] button.main").data("name", newActive);
            });
+
           // CLICK A MAIN IMAGE
           // what happens when a mainImage is clicked or swiped
           // check the screen size - is click ok (large screen)? Yes, click is the action. If not (phones), slide is now the action.
@@ -249,18 +252,49 @@
             //alert('More than 600');
           };
           
-          // what happens when you click a LEFT button in lightbox
-          $(".lightboxImages .lightboxElement .image .arrowLeft").click(function(e){
+          
+          // the number needs to decrease, unless it is at 0, then it needs to go to the total slides 
+          $(".lightboxImages .lightboxElement .image button").click(function(e){
             // get the current number
             var currentSlide = $(".lightboxImages .lightboxElement").data("name");
             //console.log(currentSlide);
-            // drop it one number down for the array
-            var newActiveSlide = currentSlide - 1; // this is the array number we need
-            //console.log(newActiveSlide);
+
+            // which button was pressed?
+            var whichButton = $(this).attr('class');
+            console.log(whichButton);
+            //if LEFT
+            if (whichButton === 'arrowLeft') {
+              // if the currentSlide is 0, make the newActiveSlide = totalSlides 
+              if (currentSlide === 0) {
+                var newActiveSlide = totalSlides - 1;
+                var newSlideNumber = newActiveSlide + 1;
+                //console.log(currentSlide);
+              } else {
+                // else make it one less
+                var newActiveSlide = currentSlide - 1;
+                console.log(newActiveSlide);
+                // raise it back up for the slide number
+                var newSlideNumber = newActiveSlide + 1;
+              };
+            // if RIGHT 
+            } else if (whichButton === "arrowRight") {
+              if (currentSlide === totalSlides - 1) {
+                var newActiveSlide = 0;
+                var newSlideNumber = newActiveSlide + 1;
+                //console.log(currentSlide);
+              } else {
+                // else make it one less
+                var newActiveSlide = currentSlide + 1;
+                //console.log(newActiveSlide);
+                // raise it back up for the slide number
+                var newSlideNumber = newActiveSlide + 1;
+              };
+            }
+
+            // get the caption
             var modalCaption = $(galleryList[newActiveSlide]).find(".caption").html();
-            console.log(modalCaption);
-            // raise it back up for the slide number
-            var newSlideNumber = newActiveSlide + 1;
+            //console.log(modalCaption);
+            
             //change the modal elements
             $(".gallery[data-name='"+galleryName+"'] .lightboxImages .lightboxElement img").prop("src", $(galleryList[newActiveSlide]).data("lightbox"));
             $(".gallery[data-name='"+galleryName+"'] .lightboxImages .lightboxElement img").prop("alt", $(galleryList[newActiveSlide]).find(".altTag").html());
@@ -279,8 +313,6 @@
             $(".gallery[data-name='"+galleryName+"'] .thumbnailImages button.thumb[data-name='"+newActiveSlide+"']").addClass("active");
 
           });
-
-          // what happens when you click a RIGHT button in lightbox
 
           // what happens when you click the close button
           $(".caption .close").click(function(e){
@@ -339,13 +371,13 @@
 
       <section class="base hidden">
 
-        <div class="galleryElement" 
+        <!--<div class="galleryElement" 
           data-thumb="images/G2/G2-01-110x110.jpg"
           data-large="images/G2/G2-01-694x500.jpg" 
           data-lightbox="images/G2/G2-01-1500x1080.jpg">
           <div class="caption"><p>Caption for <em>G2-01</em></p></div>
           <p class="altTag">G2-01</p>
-        </div>
+        </div>-->
 
         <div class="galleryElement" 
           data-thumb="images/G1/G1-01-110x110.jpg"
@@ -411,13 +443,13 @@
           <p class="altTag">G1-08</p>
         </div>
 
-        <div class="galleryElement" 
+        <!--<div class="galleryElement" 
           data-thumb="images/G1/G1-08-110x110.jpg"
           data-large="images/G1/G1-08-888x500.jpg" 
           data-lightbox="images/G1/G1-08-1920x1080.jpg">
           <div class="caption"><p>Caption for <em>G1-08</em></p></div>
           <p class="altTag">G1-08</p>
-        </div>
+        </div>-->
 
       </section>
     
