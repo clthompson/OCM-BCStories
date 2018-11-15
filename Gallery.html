@@ -208,7 +208,7 @@
           // CLICK A MAIN IMAGE
           // what happens when a mainImage is clicked or swiped
           // check the screen size - is click ok (large screen)? Yes, click is the action. If not (phones), slide is now the action.
-          if ($(window).width() > 900) {
+          if ($(window).width() > 500) {
             // on a larger screen, click does something, slide doesn't exist
             $(".gallery[data-name='"+galleryName+"'] button.main").click(function(e){
               // get the active number

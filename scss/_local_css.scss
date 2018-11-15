@@ -221,9 +221,26 @@ button {
   	max-width: 100%;
 }
 
+.clear {
+  clear: both;
+}
+
 // hidden
 .hidden{
 	display: none;
+}
+
+.offOnMobile {
+  @media #{$iPadPortrait} {
+    display: none;
+  }
+}
+
+.offOnDesktop {
+  display: none;
+  @media #{$iPadPortrait} {
+    display: block;
+  }
 }
 
 // focus
@@ -937,6 +954,7 @@ article {
   	}
   	img {
   		display: block;
+      border: $thin-gray716;
   		width: 100%;
   	}
   }
@@ -1313,7 +1331,7 @@ article {
           font-size: $h3-font-size-P;
         }
       }
-      p {
+      .copy p, p {
         font-family: $Barlow;
         font-size: $article-copy;
         color: $color-gray222;
@@ -1333,7 +1351,25 @@ article {
       }
       &.default {
         display: block;
-      } 
+      }
+      .articleImage, .video {
+        margin: 15px 0 0 0;
+      }
+      .copy {
+        padding: 10px 0 0 0;
+      }
+      .videoCaption {
+        margin: 8px 0 0 0;
+      }
+      .floatImage{
+        margin: 17px 0 10px 10px;
+        @media #{$iPadPortrait} {
+          margin: 17px 0 10px 0;
+        }
+        .caption p {
+          padding: 0;
+        }
+      }
     }
   }
   .gallery {
