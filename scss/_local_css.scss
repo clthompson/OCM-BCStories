@@ -493,6 +493,7 @@ section {
       position: relative;
       top: -162px;
       max-width: 100%;
+      min-height: 175px;
       margin: 0 rem-calc(93) rem-calc(-162) rem-calc(93);
       padding: rem-calc(20) rem-calc(25) rem-calc(25) rem-calc(25);
       z-index: 2;
@@ -965,8 +966,18 @@ article {
 		  margin: 0 rem-calc(11) rem-calc(25) rem-calc(11);
 	  }
     img {
+      border: $thin-gray716;
   		display: block;
   		width: 100%;
+    }
+  }
+  .mainCaption {
+    margin: -7px rem-calc(20) rem-calc(25) rem-calc(20);
+    @media #{$iPadPortrait} {
+      margin: -7px rem-calc(47) rem-calc(25) rem-calc(47);
+    }
+    @media #{$Phone} {
+      margin: -7px rem-calc(11) rem-calc(25) rem-calc(11);
     }
   }
   .floatImage {
@@ -988,7 +999,7 @@ article {
   		width: 100%;
   	}
   }
-  .videoCaption, .caption {
+  .videoCaption, .caption, .mainCaption .caption{
     p {
       font-family: $Roboto-Italic;
       font-size: $caption-D;
@@ -1023,7 +1034,7 @@ article {
       }
     }
   }
-  .photoCredit {
+  .photoCredit, .mainCaption .photoCredit {
     font-family: $Roboto-Italic;
     font-size: $photoCredit;
     //font-style: $italic;
@@ -1578,7 +1589,7 @@ article {
           .arrowLeft {
             cursor: pointer;
             border-width: 0;
-            background-color: $color-gray262;
+            background-color: $color-gray4F4;
             padding: 0;
             width: 78px;
             height: 78px;
@@ -1587,7 +1598,7 @@ article {
             transform: translate(0, -50%); 
             left: 0;
             &:hover {
-              background-color: $color-gray4F4;
+              background-color: $color-gray262;
             }
             @media #{$iPadPortrait} {
               width: 45px;
@@ -1605,7 +1616,7 @@ article {
           .arrowRight {
             cursor: pointer;
             border-width: 0;
-            background-color: $color-gray262;
+            background-color: $color-gray4F4; 
             padding: 0;
             width: 78px;
             height: 78px;
@@ -1614,7 +1625,7 @@ article {
             right: 0;
             transform: rotate(180deg) translate(0, 50%);
             &:hover {
-              background-color: $color-gray4F4;
+              background-color: $color-gray262;
             }
             @media #{$iPadPortrait} {
               width: 45px;
@@ -1705,7 +1716,8 @@ article {
 
 audio {
   display: inline-block;
-  padding: 0 0 15px 0;
+  background-color: #f1f2f4;
+  margin: 0 0 15px 0;
 }
 
 .articleArrow {
@@ -1739,10 +1751,6 @@ audio {
     }
   } 
 }
-
-
-
-
 
 .closing {
   margin: auto;

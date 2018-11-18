@@ -148,11 +148,27 @@
       data-src500="images/old/content_888x500.jpg"
       data-src928="images/old/content_888x500.jpg"/>
     </section>
+
+
+
       <section class="share open">
         <div class="icon email"><a href="mailto:?subject=I wanted to share this article from Brooklyn College with you&amp;body=<%stf_titleSimple%> - <%info_pageURL%>" title="Share by Email"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="email"></a></div>
-        <div class="icon twitter"><a href="https://twitter.com/share?url=<%info_pageURL%>&amp;text=<%stf_titleSimple%>&amp;hashtags=<%stf_keywords%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="twitter"></a></div>
+        <div class="icon twitter"><a href="https://twitter.com/share?url=http://www.brooklyn.cuny.edu&amp;text=Story Title&amp;hashtags=" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="twitter"></a></div>
         <div class="icon facebook"><a href="http://www.facebook.com/sharer/sharer.php?u=<%info_pageURL%>&title=<%stf_titleSimple%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" style="width:0; height:0;" alt="facebook"></a></div>
-    </section>
+      
+
+        <script type="text/javascript">
+         $(document).ready(function() { // byline
+           var keywords = ("Comic Books, Design").replace(/\s/g, '');
+           console.log(keywords);
+           var twitterURL = $(".icon.twitter a").attr("href");
+           $(".icon.twitter a").attr("href", twitterURL+keywords);
+         });
+        </script>
+
+      </section>
+
+
     <section class="byline">
     <script type="text/javascript">
         $(document).ready(function() { // byline
@@ -162,14 +178,14 @@
           // apply the string to the url
           var authorLink = $(".byline .name a");
           authorLink.attr('href', authorLink.attr('href')+"=?"+authorName);
-          console.log(authorName);
+          //console.log(authorName);
           // build the archive filter for the article type <a> 
           //get article type as filter
           var articleType = $(".byline .desktop .type a").text().toLowerCase().replace(/\s/g, '');
           // apply the string to the url
           var articleLink = $(".byline .type a");
           articleLink.attr('href', articleLink.attr('href')+"=?"+articleType);
-          console.log(articleType);
+          //console.log(articleType);
         });
       </script>
       <p class="desktop">By <span class="name"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Robert Jones Jr.</a></span> &#8226; April 9, 2018 &#8226; In <span class="type"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Alumni News</a></span></p>
