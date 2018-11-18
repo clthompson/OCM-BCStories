@@ -178,7 +178,7 @@
           var altTag = $(galleryList[0]).find(".altTag").html();
           var caption = $(galleryList[0]).find(".caption").prop("outerHTML");
           //console.log("caption is "+caption);
-          $(".gallery[data-name='"+galleryName+"'] .mainImage").append('<button class="main" data-name="0"><div class="image"><img src="'+largeURL+'" alt="'+altTag+'"/></div>'+caption+'</button>');
+          $(".gallery[data-name='"+galleryName+"'] .mainImage").append('<button class="main" data-name="0"><div class="image"><img src="'+largeURL+'" alt="'+altTag+'"/></div></button>'+caption);
 
           //Make active the first Thumbnail
           $(".gallery[data-name='"+galleryName+"'] .thumbnailImages button[data-name=0]").addClass("active");
@@ -189,7 +189,7 @@
           var slideNumber = 1;
           var totalSlides = $(galleryList).length;
           var pageTitle = $('meta[property="og:title"]').attr('content');
-          $(".gallery[data-name='"+galleryName+"'] .lightboxImages").append('<section class="lightboxElement" data-name="0"><div class="image"><img src="'+lightboxURL+'" alt="'+altTag+'"><button class="arrowLeft"><div class="arrow"></div></button><button class="arrowRight"><div class="arrow"></div></button></div><div class="caption"><button class="close"></button><p class="pageTitle">'+pageTitle+'</p><div class="modalCaption">'+modalCaption+'</div><p class="slideNumber">Slide: '+slideNumber+'/'+totalSlides+'</p></div></section>');
+          $(".gallery[data-name='"+galleryName+"'] .lightboxImages").append('<section class="lightboxElement" data-name="0"><div class="image"><img src="'+lightboxURL+'" alt="'+altTag+'"><button class="arrowLeft"><div class="arrow"></div></button><button class="arrowRight"><div class="arrow"></div></button></div><div class="caption"><button class="close">Close<div class="ex"></div></button><p class="pageTitle">'+pageTitle+'</p><div class="modalCaption">'+modalCaption+'</div><p class="slideNumber">Slide: '+slideNumber+'/'+totalSlides+'</p></div></section>');
           
           // CLICK A THUMBNAIL
           // what happens when a thumbnailImage is clicked
@@ -204,7 +204,7 @@
             // rewrite mainImage src, alt, caption, and name
             $(".gallery[data-name='"+galleryName+"'] button.main img").prop("src", $(galleryList[newActive]).data("large"));
             $(".gallery[data-name='"+galleryName+"'] button.main img").prop("alt", $(galleryList[newActive]).find(".altTag").html());
-            $(".gallery[data-name='"+galleryName+"'] button.main .caption").replaceWith($(galleryList[newActive]).find(".caption").prop("outerHTML"));
+            $(".gallery[data-name='"+galleryName+"'] button.main").next().replaceWith($(galleryList[newActive]).find(".caption").prop("outerHTML"));
             $(".gallery[data-name='"+galleryName+"'] button.main").data("name", newActive);
            });
 
@@ -217,7 +217,7 @@
               // get the active number
               var newActiveMain = $(this).data("name");
               var newSlideNumber = newActiveMain + 1;
-              var modalCaption = $(this).find(".caption").html();
+              var modalCaption = $(this).next().html();
               //console.log("NAM="+newActiveMain);
               
               // write the modal slide for the active 
@@ -229,6 +229,7 @@
               // turn on the modal (aka remove the hidden class)
               $(".gallery[data-name='"+galleryName+"'] .lightboxImages").removeClass("hidden");
               $("body").addClass("modal");
+              stopAudio();
             });
             //alert('Less than 600');
           } else {
@@ -305,7 +306,7 @@
             // change the main element
             $(".gallery[data-name='"+galleryName+"'] button.main img").prop("src", $(galleryList[newActiveSlide]).data("large"));
             $(".gallery[data-name='"+galleryName+"'] button.main img").prop("alt", $(galleryList[newActiveSlide]).find(".altTag").html());
-            $(".gallery[data-name='"+galleryName+"'] button.main .caption").replaceWith($(galleryList[newActiveSlide]).find(".caption").prop("outerHTML"));
+            $(".gallery[data-name='"+galleryName+"'] button.main").next().replaceWith($(galleryList[newActiveSlide]).find(".caption").prop("outerHTML"));
             $(".gallery[data-name='"+galleryName+"'] button.main").data("name", newActiveSlide);
 
             //change the active thumbnail
@@ -315,31 +316,48 @@
           });
 
           // what happens when you click the close button
+          $(".caption .close").hover(function() {
+            $(".caption .close .ex").toggleClass("hovered");
+          });
+
           $(".caption .close").click(function(e){
-            $(".gallery[data-name='"+galleryName+"'] .lightboxImages").addClass("hidden");
-            $("body").removeClass("modal");
+            closeModal();
           });
 
           // what happens when you click the ESC button
           document.onkeydown = function(evt) {
             evt = evt || window.event;
             if (evt.keyCode == 27) {
-              $(".gallery[data-name='"+galleryName+"'] .lightboxImages").addClass("hidden");
-              $("body").removeClass("modal");
+              closeModal();
             }
           };
+
+          //FUNCTIONS
+          function stopAudio() { 
+            $('audio').each(function() {
+              this.pause();
+            }); 
+          }
+
+          function closeModal() { 
+            $(".gallery[data-name='"+galleryName+"'] .lightboxImages").addClass("hidden");
+            stopAudio();
+            $("body").removeClass("modal"); 
+          }
 
         });
       </script>
 
       <section class="mainImage"> <!-- [0] written when the document is ready, gets re-written when other thumbs are clicked -->
 
-        <!--<button class="main">
+        <!--<button class="main" data-name="0">
           <div class="image">
             <img src="images/g1-01-888x500.jpg" >
-          </div>
-          <div class="caption"><p>Caption for <em>G1-01</em></p></div>
-        </button>-->
+          </div> 
+          
+        </button>
+        <div class="caption"><p>Caption for <em>G1-01</em></p></div>
+        -->
 
       </section>
 
@@ -360,7 +378,7 @@
             <button class="arrowRight"><div class="arrow"></div></button>
           </div>
           <div class="caption">
-            <button class="close"></button>
+            <button class="close">Close<div class="ex"></div></button>
             <p class="pageTitle">STORY TITLE</p>
             <div class="modalCaption"><p> Caption for something</p></div>
             <p class="slideNumber">Slide: 3/10</p>
@@ -383,7 +401,13 @@
           data-thumb="images/G1/G1-01-110x110.jpg"
           data-large="images/G1/G1-01-888x500.jpg" 
           data-lightbox="images/G1/G1-01-1920x1080.jpg">
-          <div class="caption"><p>Caption for <em>G1-01</em></p></div>
+          <div class="caption">
+            <p>Caption for <em>G1-01</em></p>
+            <audio class="audioElement" controls>
+              <source src="audio/BCS-Art-Arruda.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
           <p class="altTag">G1-01</p>
         </div>
 
@@ -477,7 +501,7 @@
       <script type="text/javascript">
         $(document).ready(function() {
           // get tags
-          var baseTags = "Climate Change, Diversity, Sociology, 50 thingsd, another"; // placeholder for keywords
+          var baseTags = "Climate Change, Diversity, Sociology, 50 thingsd, friendship, another and another and another"; // placeholder for keywords
           // turn it into two variables with the right setups
           // array separated by commas removing front and back spaces
           var filterItem = $(baseTags.trim().split(/\s*,\s*/));
@@ -495,7 +519,7 @@
 
           // build the html
           $(filterItem).each(function(i, e) {
-            $("section.tags").append('<a href="'+archiveURL+'?='+filterItem[i]+'" onClick="ga(\'send\', \'event\', \'LR -CurrentPage TA\', \'navigate\', \'LR -CurrentPage TA '+linkText[i]+'\', 1, {\'NonInteraction\': 1});">'+linkText[i]+'</a>');
+            $("section.tags").append('<a href="'+archiveURL+'?='+filterItem[i]+'" onClick="ga(\'send\', \'event\', \'LR -CurrentPage TA\', \'navigate\', \'LR -CurrentPage TA '+linkText[i]+'\', 1, {\'NonInteraction\': 1});"><p>'+linkText[i]+'</p></a>');
 
             // onClick="ga('send', 'event', 'LR -CurrentPage FM', 'navigate', 'LR -CurrentPage FM EDU', 1, {'NonInteraction': 1});"
           });

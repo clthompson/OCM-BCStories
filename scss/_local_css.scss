@@ -158,7 +158,7 @@
   $color-gray707: #707070;  //lines and borders on images and multimedia
   $color-grayE5E: #e5e5e5;	//update box
   $color-grayEDE: #ededed;
-  $color-grayD9D: #d9d9d9; 	//footer bg and gallery thumbnail borders
+  $color-grayD9D: #d9d9d9; 	//footer bg and gallery thumbnail borders, gallery close 
   $color-gray716: #716F6F;  //mobile nav elements
   $color-gray262: #262626;
   $color-gray4F4: #4F4F50;
@@ -860,6 +860,9 @@ article {
         border-bottom: $thick-linkH; 
         color: $color-linkH;
       }
+      @media #{$Phone} {
+        padding-bottom: 2px;
+      }
   	}
   }
   .update {
@@ -915,15 +918,42 @@ article {
 	  		line-height: 28px;
 		  }
     }
-    .updateImage {
+    .articleImage {
       //margin: 0 rem-calc(20) rem-calc(25) rem-calc(20);
+      margin: 15px 0 0 0;
       img {
-        margin-top: rem-calc(25);
         display: block;
         width: 100%;
         border: $thick-gray707;
         box-sizing: border-box;
       }
+    }
+    .floatImage {
+      margin: 10px 0 10px 10px;
+      @media #{$iPadPortrait} {
+        margin: 17px 0 10px 0;
+      }
+      .caption p {
+        padding: 0;
+      }
+    }
+    .copy {
+      font-family: $Barlow;
+      font-size: $article-copy;
+      color: $color-gray222;
+      line-height: 30px;
+      margin: 0;
+      padding: 0 0 rem-calc(15) 0;
+      @media #{$iPadPortrait} {
+        line-height: 28px;
+      }
+    }
+    a {
+      color: $color-maroon;
+      padding-bottom: 3px;
+      font-weight: bolder;
+      text-decoration: none;
+      border-bottom: $thick-maroon;
     }
   }
   .featureImage {
@@ -1437,7 +1467,7 @@ article {
 
     //main image
     .mainImage {
-      button.main{
+      button.main {
         cursor: pointer;
         border-width: 0;
         text-align: initial;
@@ -1482,17 +1512,18 @@ article {
             }
           }
         }
-        .caption {
-          p{
-            font-family: $Roboto;
-            font-size: $caption-gallery;
-            padding: rem-calc(10) 0 rem-calc(20) 0;
-            margin: 0;
-          }
-          a {
-            font-family: $Roboto-Bold;
-            text-decoration: underline;
-          }
+      }
+      .caption {
+        z-index: 150;
+        p {
+          font-family: $Roboto;
+          font-size: $caption-gallery;
+          padding: rem-calc(10) 0 rem-calc(20) 0;
+          margin: 0;
+        }
+        a {
+          font-family: $Roboto-Bold;
+          text-decoration: underline;
         }
       }
     }
@@ -1612,25 +1643,36 @@ article {
           }
           .close {
             cursor: pointer;
-            //border-width: 0;
+            border-width: 0;
             position: absolute;
             //border: $thin-maroon;
             //background-color: $color-gray444;
             //background: $sprite -262px -38px;
-            padding: rem-calc(6) rem-calc(6) rem-calc(4) rem-calc(6);
+            padding: 0px;
+            top: 15px;
+            right: 15px;
+            //float: right;
+            //margin-left: 250px;
             //margin: rem-calc(15) rem-calc(15) 0 0;
-            top: rem-calc(15);
-            right: rem-calc(15);
             color: $color-gray716;
             font-family: $Arial-Bold;
             font-size: $modal-close;
-            height: rem-calc(16);
+            //height: rem-calc(16);
             font-weight: bolder;
             text-transform: uppercase;
-            background: $sprite -262px -38px;
-            //transform: rotate(180deg);
+            //background: $sprite -262px -38px;
             &:hover {
+              color: $color-grayD9D;
+            }
+            .ex {
+              display: inline-block;
+              background: $sprite -262px -38px;
+              width: 16px;
+              height: 16px;
+              margin: 1px 0 0 5px;
+              &.hovered{
               background: $sprite -280px -38px;
+              }
             }
           }
           .pageTitle {
@@ -1638,15 +1680,16 @@ article {
             font-size: $modal-title;
             color: $color-black;
             line-height: 30px;
-            padding-bottom: rem-calc(20);
+            padding: 116px 0 20px 0;
           }
           .modalCaption {
-            p{
+            padding-bottom: rem-calc(30);
+            p {
               font-family: $Roboto;
               font-size: $modal-caption;
               color: $color-black;
               line-height: 20px;
-              padding-bottom: rem-calc(30);
+              padding-bottom: rem-calc(10);
             }
           }
           .slideNumber {
@@ -1660,15 +1703,23 @@ article {
   }
 }
 
+audio {
+  display: inline-block;
+  padding: 0 0 15px 0;
+}
+
 .articleArrow {
-  display: none;
+  display: block;
   .arrow {
+    //animation: FadeIn .75s;
+
     position: fixed; 
-    left: 200px;
-    display: block;
+    //left: 200px;
+    right: 1px;
+    //display: block;
     cursor: pointer;
     border-width: 0;
-    top: 750px;
+    top: 50%;
     //left: 200px;
     background: $sprite -75px 0px;
     width: rem-calc(57);
@@ -1676,11 +1727,22 @@ article {
     &:hover {
       background: $sprite -133px 0px;
     }
-    @media #{$Phone} {
-
+    &.hiddenArrow{
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s .75s, opacity .75s linear;
+    }
+    &.visibleArrow {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .75s linear;
     }
   } 
 }
+
+
+
+
 
 .closing {
   margin: auto;
@@ -1696,32 +1758,42 @@ article {
     }
   }
   .tags {
+    //border: 1px solid $color-maroon;
+    width: 84%;
     margin: rem-calc(60) 0 0 rem-calc(3);
     @media #{$Phone} {
-    	//width: 100%;
+    	width: 95%;
     	margin: rem-calc(40) auto 0 auto;
-    	display: flex;
-      justify-content: space-around;
+      text-align: center;
+    	//display: flex;
+      //justify-content: space-around;
     }
     a {
       //height: rem-calc(30);
+      display: inline-block;
       border: $thin-gray707;
-      padding: rem-calc(10) rem-calc(25);
-      margin-right: rem-calc(12);
-      font-size: $tag;
-      font-family: $Arial;
-      text-transform: uppercase;
+      //height: 36px;
+      //line-height: 36px;
+      padding: 0 25px 0 25px;
+      margin: 0 rem-calc(12) rem-calc(12) 0;
       text-decoration: none;
-      color: $color-gray707;
       @media #{$Phone} {
       	font-size: $tag-P;
-      	padding: rem-calc(10) rem-calc(20);
-      	margin-right: 0;
+      	//padding: rem-calc(10) rem-calc(20);
+      	//margin-right: 0;
       }
       &:hover {
         //text-decoration: underline;
         background-color: $color-black;
         color: $color-white;
+      }
+      p {
+        text-align: center;
+        font-size: $tag;
+        font-family: $Arial;
+        text-transform: uppercase;
+        color: $color-gray707;
+        vertical-align: middle;
       }
     }
   }
@@ -1847,7 +1919,7 @@ footer {
   	  		margin: 0 auto 0 auto;
   	  		//display: flex;
   	  		//justify-content: space-around;
-  	  		width: rem-calc(278);
+  	  		width: 315px;
   	  		//border: $thick-white;
   	  	}
   	  	.cuny {
@@ -1877,6 +1949,7 @@ footer {
       	  	margin-right: 0;
       	  }
       	  p {
+            display: inline-block;
       	  	font-family: $Arial;
       	  	color: $color-white;
       	  	font-size: $copyright;

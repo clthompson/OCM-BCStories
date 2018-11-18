@@ -97,25 +97,50 @@
     </section>
   </header>
 
-  <section class="articleArrow">
+  <section class="articleArrow"> <!--xxx -->
     <script type="text/javascript">
-        $(document).ready(function() { // article arrow
-          // if this page is an article, then continue
-          // need to monitor the width and scroll position of the page
-          // width
-          // the position of the arrow is always 1/2 width + B (so it never leaves its side position) - write some inline styles for position
-          // scroll
-          // once the scroll exceeds J-? it appears - remove hidden style
-          // the arrow always sticks at J
+       $(document).ready(function() { // article arrow
+        // if this page is an article, then continue
+        var articleYes = $("article").attr('class');
+        $(".arrow").addClass("hiddenArrow");
+        $(".arrow").removeClass("hidden");
+        //console.log(articleYes);
+        if (articleYes === 'article' || articleYes === 'gallery' || articleYes === 'video') {
+          
+          function checkWidthHeight() {
+            var $window = $(window);
+            var windowsize = $window.width()
+            var height = $window.scrollTop();
+            //console.log(windowsize);
+            //console.log(windowsize);
+            if (windowsize > 1225 && height > 700) {
+              $(".arrow").removeClass("hiddenArrow");
+              $(".arrow").addClass("visibleArrow");
+              $(".arrow").css( {"right": (windowsize / 4) - 225});
+            } else {
+              $(".arrow").removeClass("visibleArrow");
+              $(".arrow").addClass("hiddenArrow");
+            }
+          }
+          // Execute on load
+          checkWidthHeight();
+          // Bind event listener
+          $(window).resize(checkWidthHeight);
+          $(window).scroll(checkWidthHeight);
 
-          // on click, arrow brings the page back up to 0
+          $(".arrow").click(function(e){
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+          });
+        }
           
         });
     </script>
-    <button class="arrow"></button>
+
+    <button class="arrow hidden"></button>
   </section>
 
-  <article class="article" data-keywords="Comic Books, Design">
+  <article class="gallery" data-keywords="Comic Books, Design">
     <h1 class="articleTitle" id="mainContent" role="main" tabindex="0">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Non, dolorum!</h1>
     <section class="featureImage"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" 
       alt="Content Image" title="Content Image"
@@ -135,26 +160,27 @@
           //get author name as variable, and crunch it
           var authorName = $(".byline .desktop .name a").text().toLowerCase().replace(/\s/g, '').replace(/\./g, '');
           // apply the string to the url
-          var authorLink = $(".byline .desktop .name a");
+          var authorLink = $(".byline .name a");
           authorLink.attr('href', authorLink.attr('href')+"=?"+authorName);
           console.log(authorName);
           // build the archive filter for the article type <a> 
           //get article type as filter
           var articleType = $(".byline .desktop .type a").text().toLowerCase().replace(/\s/g, '');
           // apply the string to the url
-          var articleLink = $(".byline .desktop .type a");
+          var articleLink = $(".byline .type a");
           articleLink.attr('href', articleLink.attr('href')+"=?"+articleType);
           console.log(articleType);
         });
       </script>
       <p class="desktop">By <span class="name"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Robert Jones Jr.</a></span> &#8226; April 9, 2018 &#8226; In <span class="type"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Alumni News</a></span></p>
-      <p class="phone">By <span class="name"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Robert Jones Jr.</a></span> &#8226; April 9, 2018<br />
+      <p class="phone">By <span class="name"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Robert Jones Jr.</a></span><br />
+      April 9, 2018<br />
       In <span class="type"><a href="http://www.brooklyn.cuny.edu/web/news/longreads/archive.php">Alumni News</a></span></p>
     </section>
     <section class="subheader">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
     </section>
-    <!--<section class="update">
+    <section class="update">
       <span class="timestamp"><span class="bolded"><span class="upper">Updated</span>: April 12 1 p.m.</span> - </span>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat <a href="#">non proident</a>, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -165,7 +191,7 @@
         data-src928="images/old/content_888x500.jpg"/>
       </div>
     </section>
-    <section class="update">
+    <!--<section class="update">
       <span class="timestamp"><span class="bolded"><span class="upper">Updated</span>: April 11 1 p.m.</span> - </span>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </section>-->
