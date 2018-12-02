@@ -15,6 +15,7 @@
 // @media #{$Medium} {}
 // @media #{$Large} {}
 // @media #{$xLarge} {}
+$lightbox-width: 1357px;
 
 // Fonts and Sizes - OVERRIDE - ?????
   //Fonts
@@ -103,9 +104,11 @@
   $photoCredit: rem-calc(15); // D and T
   $photoCredit-P: rem-calc(12); // P
   $caption-gallery: rem-calc(16);
+  $caption-audioTranscription: rem-calc(14);
   $modal-close: rem-calc(20);
   $modal-title: rem-calc(26);
   $modal-caption: rem-calc(16);
+  $modal-audioTranscription: rem-calc(13);
   $modal-slides: rem-calc(14);
   $quote-D: rem-calc(26);
   $quote-T: rem-calc(36);
@@ -1487,6 +1490,9 @@ article {
         //padding-left: 26px;
         width: 100%;
         //position: relative;
+        @media only screen and (max-width: $lightbox-width) {
+          cursor: auto;
+        }
         .image {
           //position: absolute;
           //top: 0; bottom: 0; left: 0; right: 0;
@@ -1535,6 +1541,9 @@ article {
         a {
           font-family: $Roboto-Bold;
           text-decoration: underline;
+        }
+        .audioTranscript {
+          font-size: $caption-audioTranscription;
         }
       }
     }
@@ -1702,6 +1711,9 @@ article {
               line-height: 20px;
               padding-bottom: rem-calc(10);
             }
+            .audioTranscript {
+              font-size: $modal-audioTranscription;
+            }
           }
           .slideNumber {
             font-family: $Roboto;
@@ -1717,7 +1729,7 @@ article {
 audio {
   display: inline-block;
   background-color: #f1f2f4;
-  margin: 0 0 15px 0;
+  margin: 0;
 }
 
 .articleArrow {
