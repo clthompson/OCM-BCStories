@@ -1674,7 +1674,7 @@ article .gallery .mainImage button.main {
   padding: 0 !important;
   width: 100%;
 }
-@media only screen and (max-width: 1357px) {
+@media only screen and (max-width: 1900px) {
   /* line 1484, ../scss/_local_css.scss */
   article .gallery .mainImage button.main {
     cursor: auto;
