@@ -117,7 +117,7 @@ $lightbox-width: 1900px;
   $tag-P: rem-calc(10); //P
 
   // Content Pages
-  $h1-content-font-size-D: rem-calc(36); // 
+  $h1-content-font-size-D: rem-calc(42); // 
   $h1-content-font-size-T: rem-calc(28); //
   $h1-content-font-size-P: rem-calc(25); //
 
@@ -868,6 +868,19 @@ article {
         padding-bottom: 2px;
       }
   	}
+    ul {
+      font-family: $Barlow;
+      font-size: $article-copy;
+      color: $color-gray222;
+      //line-height: 30px;
+      margin: -20px 0 0 0;
+      li {
+        padding-bottom: 3px;
+        a {
+          padding-bottom: 0px;
+        }
+      }
+    }
   }
   .update {
     background-color: $color-grayE5E;
@@ -1474,7 +1487,7 @@ article {
           width: 100%;
         }
         &.active {
-          border: $thick-maroon;
+          //border: $thick-maroon;
         }
       }
     }
@@ -1563,7 +1576,7 @@ article {
       background-color: rgba(0, 0, 0, 0.8);
       .lightboxElement {
         //specific stuff
-        border: 3px solid red;
+        //border: 3px solid red;
         position: relative;
         margin: 130px auto 0 auto;
         //margin: auto;
