@@ -192,7 +192,7 @@ header .full-width .mobile-toggle {
 }
 /* line 308, ../scss/_local_css.scss */
 header .full-width .mobile-toggle .lines {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -190px -25px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -190px -25px;
   width: 1.75rem;
   height: 1.5625rem;
   cursor: pointer;
@@ -201,7 +201,7 @@ header .full-width .mobile-toggle .lines {
 }
 /* line 316, ../scss/_local_css.scss */
 header .full-width .mobile-toggle .ex {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -190px 0px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -190px 0px;
   width: 1.4375rem;
   height: 1.4375rem;
   cursor: pointer;
@@ -222,7 +222,7 @@ header .mobile-white {
 header .mobile-white .logo {
   display: block;
   margin: 1.25rem 0 1.25rem 1rem;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -148px -57px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -148px -57px;
   background-origin: content-box;
   width: 7.1875rem;
   height: 3rem;
@@ -272,7 +272,7 @@ header .brand {
 header .brand .logo {
   display: block;
   margin: 1.875rem auto 1rem auto;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -115px -107px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -115px -107px;
   width: 14.25rem;
   height: 4.125rem;
 }
@@ -280,7 +280,7 @@ header .brand .logo {
   /* line 375, ../scss/_local_css.scss */
   header .brand .logo {
     margin: 1.875rem auto 0.5rem auto;
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -148px -57px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -148px -57px;
     width: 7.1875rem;
     height: 2.9375rem;
   }
@@ -363,7 +363,7 @@ header .brand .logo a {
 }
 /* line 455, ../scss/_local_css.scss */
 .homepageList .articleItem a .video {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -138px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat 0px -138px;
   background-color: #e5e5e5;
   position: absolute;
   top: 0.9375rem;
@@ -374,7 +374,7 @@ header .brand .logo a {
 @media screen and (max-width: 767px) {
   /* line 455, ../scss/_local_css.scss */
   .homepageList .articleItem a .video {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -70px -150px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -70px -150px;
     background-color: #e5e5e5;
     width: 1.375rem;
     height: 1.375rem;
@@ -384,7 +384,7 @@ header .brand .logo a {
 }
 /* line 473, ../scss/_local_css.scss */
 .homepageList .articleItem a .gallery {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -35px -138px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -35px -138px;
   background-color: #e5e5e5;
   position: absolute;
   top: 0.9375rem;
@@ -395,7 +395,7 @@ header .brand .logo a {
 @media screen and (max-width: 767px) {
   /* line 473, ../scss/_local_css.scss */
   .homepageList .articleItem a .gallery {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -92px -150px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -92px -150px;
     background-color: #e5e5e5;
     width: 1.375rem;
     height: 1.375rem;
@@ -623,7 +623,7 @@ header .brand .logo a {
 }
 /* line 657, ../scss/_local_css.scss */
 .archiveList .articleItem .image .video {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -138px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat 0px -138px;
   background-color: #e5e5e5;
   position: absolute;
   top: 0.9375rem;
@@ -634,7 +634,7 @@ header .brand .logo a {
 @media screen and (max-width: 767px) {
   /* line 657, ../scss/_local_css.scss */
   .archiveList .articleItem .image .video {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -70px -150px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -70px -150px;
     background-color: #e5e5e5;
     width: 1.375rem;
     height: 1.375rem;
@@ -644,7 +644,7 @@ header .brand .logo a {
 }
 /* line 675, ../scss/_local_css.scss */
 .archiveList .articleItem .image .gallery {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -35px -138px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -35px -138px;
   background-color: #e5e5e5;
   position: absolute;
   top: 0.9375rem;
@@ -655,7 +655,7 @@ header .brand .logo a {
 @media screen and (max-width: 767px) {
   /* line 675, ../scss/_local_css.scss */
   .archiveList .articleItem .image .gallery {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -92px -150px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -92px -150px;
     width: 1.375rem;
     height: 1.375rem;
     top: 0.75rem;
@@ -1189,14 +1189,14 @@ article .quote {
 }
 /* line 1087, ../scss/_local_css.scss */
 article .quote .doubleQuotes {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -75px -59px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -75px -59px;
   width: 2.1875rem;
   height: 2.1875rem;
 }
 @media screen and (max-width: 767px) {
   /* line 1087, ../scss/_local_css.scss */
   article .quote .doubleQuotes {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -115px -59px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -115px -59px;
     width: 1.5625rem;
     height: 1.4375rem;
   }
@@ -1439,11 +1439,11 @@ article .accordion button.accordion-toggle .visual {
   width: 1.125rem;
   height: 1.125rem;
   margin: 6px 0 0 0;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat no-repeat -223px -36px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat no-repeat -223px -36px;
 }
 /* line 1286, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle .visual.minus {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat no-repeat -242px -36px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat no-repeat -242px -36px;
 }
 /* line 1291, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle .content {
@@ -1803,7 +1803,7 @@ article .gallery .lightboxImages .lightboxElement .image .arrowLeft:hover {
 /* line 1629, ../scss/_local_css.scss */
 article .gallery .lightboxImages .lightboxElement .image .arrowLeft .arrow {
   margin: auto;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -67px -93px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -67px -93px;
   width: 29px;
   height: 51px;
 }
@@ -1834,7 +1834,7 @@ article .gallery .lightboxImages .lightboxElement .image .arrowRight:hover {
 /* line 1656, ../scss/_local_css.scss */
 article .gallery .lightboxImages .lightboxElement .image .arrowRight .arrow {
   margin: auto;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -67px -93px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -67px -93px;
   width: 29px;
   height: 51px;
 }
@@ -1864,14 +1864,14 @@ article .gallery .lightboxImages .lightboxElement .caption .close:hover {
 /* line 1700, ../scss/_local_css.scss */
 article .gallery .lightboxImages .lightboxElement .caption .close .ex {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -262px -38px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -262px -38px;
   width: 16px;
   height: 16px;
   margin: 1px 0 0 5px;
 }
 /* line 1706, ../scss/_local_css.scss */
 article .gallery .lightboxImages .lightboxElement .caption .close .ex.hovered {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -280px -38px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -280px -38px;
 }
 /* line 1711, ../scss/_local_css.scss */
 article .gallery .lightboxImages .lightboxElement .caption .pageTitle {
@@ -1922,13 +1922,13 @@ audio {
   cursor: pointer;
   border-width: 0;
   top: 50%;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -75px 0px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -75px 0px;
   width: 3.5625rem;
   height: 3.5625rem;
 }
 /* line 1764, ../scss/_local_css.scss */
 .articleArrow .arrow:hover {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -133px 0px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -133px 0px;
 }
 /* line 1767, ../scss/_local_css.scss */
 .articleArrow .arrow.hiddenArrow {
@@ -2082,7 +2082,7 @@ footer .bottom {
 @media screen and (max-width: 767px) {
   /* line 1894, ../scss/_local_css.scss */
   footer .bottom {
-    height: 9.375rem;
+    height: 188px;
   }
 }
 /* line 1900, ../scss/_local_css.scss */
@@ -2122,7 +2122,7 @@ footer .bottom .elements .social .icon a {
 /* line 1928, ../scss/_local_css.scss */
 footer .bottom .elements .social .instagram {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -72px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat 0px -72px;
   width: 1.1875rem;
   height: 1.1875rem;
   margin-right: 1.5rem;
@@ -2130,7 +2130,7 @@ footer .bottom .elements .social .instagram {
 /* line 1935, ../scss/_local_css.scss */
 footer .bottom .elements .social .twitter {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px -72px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -32px -72px;
   width: 1.1875rem;
   height: 1.1875rem;
   margin-right: 1.5rem;
@@ -2138,7 +2138,7 @@ footer .bottom .elements .social .twitter {
 /* line 1942, ../scss/_local_css.scss */
 footer .bottom .elements .social .facebook {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px -72px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -60px -72px;
   width: 0.625rem;
   height: 1.1875rem;
 }
@@ -2150,21 +2150,21 @@ footer .bottom .elements .copyright {
   /* line 1949, ../scss/_local_css.scss */
   footer .bottom .elements .copyright {
     margin: 0 auto 0 auto;
-    width: 315px;
+    width: 256px;
   }
 }
 /* line 1958, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .cuny {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -92px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat 0px -92px;
   width: 2.8125rem;
   height: 2.75rem;
-  margin: 0.8125rem 0 0 1.75rem;
+  margin: 13px 0 0 28px;
 }
 @media screen and (max-width: 767px) {
   /* line 1958, ../scss/_local_css.scss */
   footer .bottom .elements .copyright .cuny {
-    margin-left: 0;
+    margin: 13px 0 0 34px;
   }
 }
 /* line 1967, ../scss/_local_css.scss */
@@ -2174,6 +2174,22 @@ footer .bottom .elements .copyright .cuny a {
   display: inline-block;
 }
 /* line 1974, ../scss/_local_css.scss */
+footer .bottom .elements .copyright .bc {
+  display: inline-block;
+  border-left: 2px solid #fff;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -122px -128px;
+  width: 7.4375rem;
+  height: 2.75rem;
+  margin: 0.8125rem 0 0 0.875rem;
+  padding: 0 0 0 0.875rem;
+}
+/* line 1982, ../scss/_local_css.scss */
+footer .bottom .elements .copyright .bc a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+/* line 1989, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .copy {
   display: inline-block;
   position: absolute;
@@ -2182,12 +2198,16 @@ footer .bottom .elements .copyright .copy {
   margin: 0.8125rem 0.5625rem 0 0.875rem;
 }
 @media screen and (max-width: 767px) {
-  /* line 1974, ../scss/_local_css.scss */
+  /* line 1989, ../scss/_local_css.scss */
   footer .bottom .elements .copyright .copy {
+    display: block;
     margin-right: 0;
+    border-left: none;
+    position: relative;
+    margin: 0.8125rem 0 0 0.3125rem;
   }
 }
-/* line 1984, ../scss/_local_css.scss */
+/* line 2003, ../scss/_local_css.scss */
 footer .bottom .elements .copyright .copy p {
   display: inline-block;
   font-family: "Arial", sans-serif;
@@ -2196,88 +2216,94 @@ footer .bottom .elements .copyright .copy p {
   margin: 0.9375rem 0 0 0.875rem;
   padding: 0;
 }
+@media screen and (max-width: 767px) {
+  /* line 2003, ../scss/_local_css.scss */
+  footer .bottom .elements .copyright .copy p {
+    margin: 15px 0 0 0;
+  }
+}
 
-/* line 2001, ../scss/_local_css.scss */
+/* line 2023, ../scss/_local_css.scss */
 .share .icon a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
-/* line 2008, ../scss/_local_css.scss */
+/* line 2030, ../scss/_local_css.scss */
 .share .email {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px 0px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat 0px 0px;
   width: 1.8125rem;
   height: 1.25rem;
   margin-right: 1.5rem;
 }
-/* line 2014, ../scss/_local_css.scss */
+/* line 2036, ../scss/_local_css.scss */
 .share .email:hover {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -21px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat 0px -21px;
 }
-/* line 2018, ../scss/_local_css.scss */
+/* line 2040, ../scss/_local_css.scss */
 .share .twitter {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px 0px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -32px 0px;
   width: 1.5625rem;
   height: 1.25rem;
   margin-right: 1.5rem;
 }
-/* line 2024, ../scss/_local_css.scss */
+/* line 2046, ../scss/_local_css.scss */
 .share .twitter:hover {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px -21px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -32px -21px;
 }
-/* line 2028, ../scss/_local_css.scss */
+/* line 2050, ../scss/_local_css.scss */
 .share .facebook {
   display: inline-block;
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px 0px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -60px 0px;
   width: 0.6875rem;
   height: 1.25rem;
 }
-/* line 2033, ../scss/_local_css.scss */
+/* line 2055, ../scss/_local_css.scss */
 .share .facebook:hover {
-  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px -21px;
+  background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -60px -21px;
 }
 @media screen and (max-width: 767px) {
-  /* line 2037, ../scss/_local_css.scss */
+  /* line 2059, ../scss/_local_css.scss */
   .share.open {
     margin-top: 0.1875rem;
   }
-  /* line 2040, ../scss/_local_css.scss */
+  /* line 2062, ../scss/_local_css.scss */
   .share.open .email {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -42px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat 0px -42px;
     width: 1.25rem;
     height: 0.875rem;
     margin-right: 0.625rem;
   }
-  /* line 2045, ../scss/_local_css.scss */
+  /* line 2067, ../scss/_local_css.scss */
   .share.open .email:hover {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat 0px -57px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat 0px -57px;
   }
-  /* line 2049, ../scss/_local_css.scss */
+  /* line 2071, ../scss/_local_css.scss */
   .share.open .twitter {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px -42px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -32px -42px;
     width: 1.0625rem;
     height: 0.875rem;
     margin-right: 0.625rem;
   }
-  /* line 2054, ../scss/_local_css.scss */
+  /* line 2076, ../scss/_local_css.scss */
   .share.open .twitter:hover {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -32px -57px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -32px -57px;
   }
-  /* line 2058, ../scss/_local_css.scss */
+  /* line 2080, ../scss/_local_css.scss */
   .share.open .facebook {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px -42px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -60px -42px;
     width: 0.5rem;
     height: 0.875rem;
   }
-  /* line 2062, ../scss/_local_css.scss */
+  /* line 2084, ../scss/_local_css.scss */
   .share.open .facebook:hover {
-    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat -60px -57px;
+    background: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat -60px -57px;
   }
 }
 
-/* line 2073, ../scss/_local_css.scss */
+/* line 2095, ../scss/_local_css.scss */
 #skipnav a, a.skipTranscript {
   position: absolute;
   z-index: 3000;
@@ -2287,7 +2313,7 @@ footer .bottom .elements .copyright .copy p {
   padding-bottom: 25px;
 }
 
-/* line 2081, ../scss/_local_css.scss */
+/* line 2103, ../scss/_local_css.scss */
 #skipnav a:hover, #skipnav a:focus, #skipnav a:active {
   clip: auto;
   left: 0;

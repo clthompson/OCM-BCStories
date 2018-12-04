@@ -203,10 +203,10 @@ $lightbox-width: 1900px;
 // Major Elements
 // width
   $full: rem-calc(928);  // needs to be 960, so we would add 16 to each side
-  $sprite: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bclongreads.png") no-repeat;
+  $sprite: url("http://www.brooklyn.cuny.edu/web/com_misc/sprite-bcstories.png") no-repeat;
 
 body {
-  background-color: $color-white;
+  background-color: $color-white; 
   //border: $thin-maroon;
   padding: 0;
   margin: 0;
@@ -1895,7 +1895,7 @@ footer {
     background-color: $color-maroon;
     height: rem-calc(70);
     @media #{$Phone} {
-    	height: rem-calc(150);
+    	height: 188px;
     }
     .elements {
       margin: auto;
@@ -1952,7 +1952,7 @@ footer {
   	  		margin: 0 auto 0 auto;
   	  		//display: flex;
   	  		//justify-content: space-around;
-  	  		width: 315px;
+  	  		width: 256px;
   	  		//border: $thick-white;
   	  	}
   	  	.cuny {
@@ -1960,9 +1960,9 @@ footer {
     		  background: $sprite 0px -92px;
     		  width: rem-calc(45);
     		  height: rem-calc(44);
-    		  margin: rem-calc(13) 0 0 rem-calc(28);
+    		  margin: 13px 0 0 28px;
     		  @media #{$Phone} {
-    		  	margin-left: rem-calc(0);
+            margin: 13px 0 0 34px;
     		  }
     		  a {
     		    //border: $thin-maroon;
@@ -1970,6 +1970,21 @@ footer {
     		    height: 100%;
     		    display: inline-block;
     		  }
+        }
+        .bc {
+          display: inline-block;
+          border-left: $thick-white;
+          background: $sprite -122px -128px;
+          width: rem-calc(119);
+          height: rem-calc(44);
+          margin: rem-calc(13) 0 0 rem-calc(14);
+          padding: 0 0 0 rem-calc(14);
+          a {
+            //border: $thin-maroon;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+          }
         }
       	.copy {
       	  display: inline-block;
@@ -1979,7 +1994,11 @@ footer {
       	  height: rem-calc(44);
       	  margin: rem-calc(13) rem-calc(9) 0 rem-calc(14);
       	  @media #{$Phone} {
+            display: block;
       	  	margin-right: 0;
+            border-left: none;
+            position: relative;
+            margin: rem-calc(13) 0 0 rem-calc(5);
       	  }
       	  p {
             display: inline-block;
@@ -1989,6 +2008,9 @@ footer {
       	  	//line-height: 60px;
       	  	margin: rem-calc(15) 0 0 rem-calc(14);
       	  	padding: 0;
+            @media #{$Phone} {
+              margin: 15px 0 0 0;
+            }
       	  }
       	}
     	}
