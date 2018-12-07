@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BC Stories</title>
 
-    <link rel="stylesheet" href="css/bclongreads.css?ts=<?=time()?>" />
+    <link rel="stylesheet" href="css/bcstories.css?ts=<?=time()?>" />
 
     <script src="bower_components/modernizr/modernizr.js"></script>
         <script src="http://www.brooklyn.cuny.edu/web/js/vendor/jquery.js"></script> <!-- jQuery -->
     <script src="http://www.brooklyn.cuny.edu/web/js/foundation/foundation.js"></script> <!-- Foundation -->
-    <script src="http://www.brooklyn.cuny.edu/web/js/response-bclongreads.js"></script> <!--// responsive content images/old//-->
+    <script src="http://www.brooklyn.cuny.edu/web/js/response-bcstories.js"></script> <!--// responsive content images/old//-->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
@@ -251,24 +251,37 @@
             $(this).attr('aria-expanded', 'true');
             $(this).next().attr('aria-hidden', 'false');
             $(this).find(".visual").addClass("minus");
+            $(this).prev().html("Click to Close");
           } else if ($(this).attr('aria-expanded') === 'true') {
             $(this).attr('aria-expanded', 'false');
             $(this).next().attr('aria-hidden', 'true');
             $(this).find(".visual").removeClass("minus");
+            $(this).prev().html("Click to Expand");
           };
+        });
+        $('.accordion-toggle').hover(
+          function(){
+            $(this).prev().fadeIn(125);
+          }, function(){
+            $(this).prev().delay(1250).fadeOut(250);
+          });
+        $('.accordion-toggle').focus(function(){
+          $(this).prev().fadeIn(125).delay(3000).fadeOut(250);
         });
       });
     </script> 
 
-    <section class="accordion">
+    <section class="accordion gray">
+      <div class="hint">Click to Expand</div>
       <button class="accordion-toggle plus" aria-expanded="false" ga-category="LR Something" ga-action="Navigate" ga-label="LR Something">
+        
         <div class="visual"></div>
         <div class="content">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod adipisci vitae, in eaque omnis eveniet, officia esse animi alias iusto consequatur ipsa doloribus consectetur quibusdam beatae possimus! Praesentium, suscipit, odio.</h2>
+          <h2>Button text</h2>
         </div>
       </button>
       <div class="accordion-content" aria-hidden="true">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi nobis, nemo velit maiores tempora. Numquam corrupti, cupiditate, debitis, corporis quisquam modi rem, doloremque at nostrum provident soluta unde quae tenetur.</p>
+        <p>revealed text</p>
       </div>
     </section>
     <section class="copy">
