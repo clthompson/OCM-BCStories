@@ -139,7 +139,23 @@
 			"file": "scss/_local_css.scss",
 			"settings":
 			{
-				"buffer_size": 55815,
+				"buffer_size": 58271,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/bcstories.css",
+			"settings":
+			{
+				"buffer_size": 66320,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Z/Public/$$Redesign/$Admin/directory.html",
+			"settings":
+			{
+				"buffer_size": 47517,
 				"line_ending": "Windows"
 			}
 		}
@@ -226,6 +242,7 @@
 	],
 	"file_history":
 	[
+		"/D/Downloads/directory.html",
 		"/Z/Public/webDevelopment/projects/BCStories/scss/bcstories.scss",
 		"/Z/Public/webDevelopment/projects/BCStories/css/bclongreads.css",
 		"/Z/Public/webDevelopment/projects/FacultyExperts/scss/_local_css.scss",
@@ -352,8 +369,7 @@
 		"/Z/Public/webDevelopment/projects/Storify/css/storify.css",
 		"/Z/Public/webDevelopment/projects/Storify/storify.html",
 		"/Z/Public/webDevelopment/projects/Storify/scss/storify.scss",
-		"/Z/Public/webDevelopment/projects/Storify/index.html",
-		"/C/Users/staff/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap"
+		"/Z/Public/webDevelopment/projects/Storify/index.html"
 	],
 	"find":
 	{
@@ -372,6 +388,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"	",
+			"first_name=",
+			"\n",
+			"	",
+			"				",
+			"\n",
+			"first-of-type",
+			"&first-of-type",
+			"footer",
+			"photocred",
 			".hint",
 			" target=\"_blank\"",
 			"</a></li>",
@@ -489,17 +515,7 @@
 			"  ",
 			"P.M.",
 			"A.M.",
-			"</strong>",
-			"</span>",
-			"<span style=\"white-space: pre;\">",
-			"<strong>",
-			"yellow",
-			"additional",
-			"Thank You",
-			"if",
-			"JFR-004",
-			"full",
-			"wide"
+			"</strong>"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -507,6 +523,15 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"first_name=\">",
+			"first_name=\">\n",
+			"&last_name=&first_name=\n",
+			"&last_name=&first_name=",
+			"<a href=\"http://websql.brooklyn.cuny.edu/directory/search.jsp?department=",
+			"<a href=\"http://websql.brooklyn.cuny.edu/directory/search.jsp?department=\n",
+			"\n",
+			"	",
 			"",
 			" (pdf)</a></li>",
 			"",
@@ -562,7 +587,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -591,7 +616,7 @@
 						"translation.y": 16940.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -621,7 +646,7 @@
 						"translation.y": 595.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -651,7 +676,7 @@
 						"translation.y": 3675.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -660,15 +685,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 55815,
+						"buffer_size": 58271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								33056,
-								33056
+								28627,
+								28627
 							]
 						],
 						"settings":
@@ -678,7 +703,65 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2427.0,
+						"translation.y": 3663.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "css/bcstories.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 66320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5465,
+								5465
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 910.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Z/Public/$$Redesign/$Admin/directory.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 47517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

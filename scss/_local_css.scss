@@ -117,6 +117,14 @@ $lightbox-width: 1900px;
   $tag: rem-calc(14); //D and T
   $tag-P: rem-calc(10); //P
 
+  //Box
+  $h2-box-D: rem-calc(26);
+  $h2-box-T: rem-calc(23);
+  $h2-box-P: rem-calc(21);
+  $h3-box: rem-calc(18);
+  $h3-box-P: rem-calc(17);
+  $p-box: rem-calc(15);
+
   // Content Pages
   $h1-content-font-size-D: rem-calc(42); // 
   $h1-content-font-size-T: rem-calc(28); //
@@ -162,6 +170,10 @@ $lightbox-width: 1900px;
 
   //Additional
   $color-gray222: #222;		//text content
+  $color-gray444: #444;
+  $color-gray555: #555;   //new footer links
+  $color-gray707: #707070;  //old footer links
+  $color-gray666: #666;   //captions (new)
   $color-gray707: #707070;  //lines and borders on images and multimedia
   $color-grayE5E: #e5e5e5;	//update box
   $color-grayEDE: #ededed;
@@ -175,11 +187,8 @@ $lightbox-width: 1900px;
 
 // Others, not used
   $color-gray333: #333;
-  $color-gray444: #444;
   $color-gray555: #555;
   $color-gray666: #666;
-  $color-gray777: #777;
-  $color-gray707: #707070;
   $color-gray999: #999;
   $color-grayccc: #ccc;
   $color-gray404: #404040;
@@ -1042,7 +1051,6 @@ article {
   		margin: 0 rem-calc(117) rem-calc(10) rem-calc(117);
   	}
   	@media #{$Phone} {
-  		float: none;
   		margin: 0 rem-calc(11) rem-calc(10) rem-calc(11);
   	}
   	img {
@@ -1051,6 +1059,101 @@ article {
   		width: 100%;
   	}
   }
+
+
+
+  //  $h2-box-D: rem-calc(26):
+  //$h2-box-T: rem-calc(23):
+  //$h2-box-P: rem-calc(20):
+  //$h3-box: rem-calc(18);
+  //$h3-box-P: rem-calc(17);
+  //$p-box: rem-calc(16);
+
+
+  .box {
+    border: $thin-gray707;
+    background-color: $color-grayE5E;
+    &.floatBox {
+      float: right;
+      margin: rem-calc(8) rem-calc(54) rem-calc(10) rem-calc(10);
+      max-width: rem-calc(275);
+      padding: rem-calc(7) rem-calc(9);
+      @media #{$iPadPortrait} {
+        float: none;
+        max-width: 100%;
+        margin: 0 rem-calc(117) rem-calc(10) rem-calc(117);
+      }
+      @media #{$Phone} {
+        margin: 0 rem-calc(11) rem-calc(10) rem-calc(11);
+      }
+    }
+    &.articleBox {
+      //display: block;
+      //position: relative;
+      padding: rem-calc(27) rem-calc(34) rem-calc(27) rem-calc(34);
+      margin: 0 rem-calc(54) rem-calc(35) rem-calc(54);
+      @media #{$iPadPortrait} {
+        margin: 0 rem-calc(67) rem-calc(25) rem-calc(67);
+      }
+      @media #{$Phone} {
+        margin: 0 rem-calc(11) rem-calc(25) rem-calc(11);
+        padding: rem-calc(7) rem-calc(9);
+      }
+      .articleImage, .video {
+        margin: 15px 0 0 0;
+      }
+    }
+    h2{
+      font-size: $h2-box-D;
+      font-family: $Roboto-Black;
+      color: $color-gray222;
+      line-height: 30px;
+      margin: 7px 0;
+      &:first-of-type {
+        margin-top: 3px;
+      }
+      @media #{$iPadPortrait} {
+        font-size: $h2-box-T;
+        line-height: 28px;
+        //margin: -24px 0 2px 0;
+      }
+      @media #{$Phone} {
+        font-size: $h2-box-P;
+        line-height: 22px;
+      }
+    }
+    h3 {
+      font-size: $h3-box;
+      font-family: $Roboto-Black;
+      color: $color-gray222;
+      margin: 10px 0 6px 0;
+      text-transform: uppercase;
+      line-height: 21px;
+      @media #{$Phone} {
+        font-size: $h3-box-P;
+        margin: 10px 0 6px 0;
+      }
+    }
+    p {
+      font-family: $Barlow;
+      font-size: $article-copy;
+      color: $color-gray222;
+      line-height: 26px;
+      margin: 0;
+      @media #{$iPadPortrait} {
+        line-height: 24px;
+      }
+    }
+    a {
+      color: $color-maroon;
+      font-weight: bolder;
+      text-decoration: none;
+      border-bottom: $thick-maroon;
+    }
+  }
+
+
+
   .videoCaption, .caption, .mainCaption .caption{
     p {
       font-family: $Roboto-Italic;
@@ -1090,7 +1193,7 @@ article {
     font-family: $Roboto-Italic;
     font-size: $photoCredit;
     //font-style: $italic;
-    color: $color-graya2a;
+    color: $color-gray666;
     margin: 0;
     @media #{$Phone} {
       font-size: $photoCredit-P;
@@ -1385,7 +1488,7 @@ article {
             line-height: 28px;
             //margin: -24px 0 2px 0;
           }
-          @media #{$iPadPortrait} {
+          @media #{$Phone} {
             font-size: $h2-font-size-P;
             line-height: 22px;
             //margin: -29px 0 10px 0;
@@ -1950,7 +2053,7 @@ footer {
           }
           a {
             font-family: $Arial-Bold;
-            color: $color-gray707;
+            color: $color-gray555;
             font-size: $nav-bottom;
             font-weight: bolder;
             text-decoration: none;
