@@ -139,7 +139,7 @@
 			"file": "scss/_local_css.scss",
 			"settings":
 			{
-				"buffer_size": 58271,
+				"buffer_size": 58299,
 				"line_ending": "Windows"
 			}
 		},
@@ -147,7 +147,7 @@
 			"file": "css/bcstories.css",
 			"settings":
 			{
-				"buffer_size": 66320,
+				"buffer_size": 66474,
 				"line_ending": "Windows"
 			}
 		},
@@ -388,6 +388,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"article .photoCredit",
+			"img",
 			"	",
 			"first_name=",
 			"\n",
@@ -513,9 +515,7 @@
 			"  ",
 			"	",
 			"  ",
-			"P.M.",
-			"A.M.",
-			"</strong>"
+			"P.M."
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -587,7 +587,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -685,15 +685,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 58271,
+						"buffer_size": 58299,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28627,
-								28627
+								39031,
+								39031
 							]
 						],
 						"settings":
@@ -703,10 +703,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3663.0,
+						"translation.y": 20585.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -715,7 +715,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 66320,
+						"buffer_size": 66474,
 						"regions":
 						{
 						},
@@ -736,7 +736,7 @@
 						"translation.y": 910.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -764,7 +764,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

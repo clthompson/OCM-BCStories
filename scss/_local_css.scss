@@ -1189,7 +1189,7 @@ article {
       }
     }
   }
-  .photoCredit, .mainCaption .photoCredit {
+  .photoCredit, .mainCaption .photoCredit, .videoCaption .photoCredit {
     font-family: $Roboto-Italic;
     font-size: $photoCredit;
     //font-style: $italic;
@@ -1513,11 +1513,11 @@ article {
           font-family: $Barlow;
           font-size: $article-copy;
           color: $color-gray222;
-          line-height: 30px;
+          line-height: 28px;
           margin: 0;
           //padding: 0 0 rem-calc(30) 0;
           @media #{$iPadPortrait} {
-            line-height: 28px;
+            line-height: 24px;
             //margin-top: -4px;
           }
         }

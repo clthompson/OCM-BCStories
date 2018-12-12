@@ -1282,7 +1282,7 @@ article .videoCaption ul, article .caption ul, article .mainCaption .caption ul 
   }
 }
 /* line 1192, ../scss/_local_css.scss */
-article .photoCredit, article .mainCaption .photoCredit {
+article .photoCredit, article .mainCaption .photoCredit, article .videoCaption .photoCredit {
   font-family: "Roboto-Italic", serif;
   font-size: 0.9375rem;
   color: #666;
@@ -1290,18 +1290,18 @@ article .photoCredit, article .mainCaption .photoCredit {
 }
 @media screen and (max-width: 767px) {
   /* line 1192, ../scss/_local_css.scss */
-  article .photoCredit, article .mainCaption .photoCredit {
+  article .photoCredit, article .mainCaption .photoCredit, article .videoCaption .photoCredit {
     font-size: 0.75rem;
     margin: 0 0.1875rem 0 0.1875rem;
   }
 }
 /* line 1202, ../scss/_local_css.scss */
-article .photoCredit a, article .mainCaption .photoCredit a {
+article .photoCredit a, article .mainCaption .photoCredit a, article .videoCaption .photoCredit a {
   text-decoration: underline;
   color: #882346;
 }
 /* line 1205, ../scss/_local_css.scss */
-article .photoCredit a:hover, article .mainCaption .photoCredit a:hover {
+article .photoCredit a:hover, article .mainCaption .photoCredit a:hover, article .videoCaption .photoCredit a:hover {
   color: #a59b9b;
 }
 /* line 1210, ../scss/_local_css.scss */
@@ -1664,13 +1664,13 @@ article .accordion button.accordion-toggle .content p {
   font-family: "Barlow", Arial, sans-serif;
   font-size: 1.125rem;
   color: #222;
-  line-height: 30px;
+  line-height: 28px;
   margin: 0;
 }
 @media screen and (max-width: 849px) {
   /* line 1511, ../scss/_local_css.scss */
   article .accordion button.accordion-toggle .content p {
-    line-height: 28px;
+    line-height: 24px;
   }
 }
 /* line 1524, ../scss/_local_css.scss */
