@@ -99,7 +99,7 @@ $lightbox-width: 1900px;
   $subheader-D: rem-calc(30);
   $subheader-T: rem-calc(22);
   $subheader-P: rem-calc(20); // missing from the design files
-  $caption-D: rem-calc(13);
+  $caption-D: rem-calc(14);
   $caption-T: rem-calc(16);
   $caption-P: rem-calc(12);
   $photoCredit: rem-calc(15); // D and T
@@ -1019,12 +1019,12 @@ article {
     }
   }
   .featureImage {
-    margin: 0 rem-calc(20) rem-calc(25) rem-calc(20);
+    margin: 0 rem-calc(20) rem-calc(18) rem-calc(20);
     @media #{$iPadPortrait} {
-		  margin: 0 rem-calc(47) rem-calc(25) rem-calc(47);
+		  margin: 0 rem-calc(47) rem-calc(18) rem-calc(47);
 	  }
 	  @media #{$Phone} {
-		  margin: 0 rem-calc(11) rem-calc(25) rem-calc(11);
+		  margin: 0 rem-calc(11) rem-calc(18) rem-calc(11);
 	  }
     img {
       border: $thin-gray716;
@@ -1033,12 +1033,12 @@ article {
     }
   }
   .mainCaption {
-    margin: -7px rem-calc(20) rem-calc(25) rem-calc(20);
+    margin: 0px rem-calc(20) rem-calc(25) rem-calc(20);
     @media #{$iPadPortrait} {
-      margin: -7px rem-calc(47) rem-calc(25) rem-calc(47);
+      margin: 0px rem-calc(47) rem-calc(25) rem-calc(47);
     }
     @media #{$Phone} {
-      margin: -7px rem-calc(11) rem-calc(25) rem-calc(11);
+      margin: 0px rem-calc(11) rem-calc(25) rem-calc(11);
     }
   }
   .floatImage {
@@ -1154,8 +1154,8 @@ article {
 
 
 
-  .videoCaption, .caption, .mainCaption .caption{
-    p {
+  .videoCaption, .caption, .mainCaption .caption, .accordion-content .articleImage .caption, .accordion-content .videoCaption, .accordion-content .floatImage .caption {
+    p, p.caption {
       font-family: $Roboto-Italic;
       font-size: $caption-D;
       color: $color-gray222;
@@ -1189,7 +1189,12 @@ article {
       }
     }
   }
-  .photoCredit, .mainCaption .photoCredit, .videoCaption .photoCredit {
+  .accordion-content .articleImage .caption p, .accordion-content .videoCaption p.caption, .accordion-content .floatImage .caption p {
+    line-height: 15px;
+    padding: 0 0 0 0;
+  }
+
+  .photoCredit, .mainCaption .photoCredit, .videoCaption .photoCredit, .accordion-content .articleImage p.photoCredit, .accordion-content .videoCaption p.photoCredit, .accordion-content .floatImage p.photoCredit {
     font-family: $Roboto-Italic;
     font-size: $photoCredit;
     //font-style: $italic;
@@ -1207,6 +1212,7 @@ article {
       }
     }
   }
+
   .quote {
   	//border: $thin-maroon;
   	float: left;
