@@ -1156,7 +1156,7 @@ article {
 
   .videoCaption, .caption, .mainCaption .caption, .accordion-content .articleImage .caption, .accordion-content .videoCaption, .accordion-content .floatImage .caption {
     p, p.caption {
-      font-family: $Roboto-Italic;
+      font-family: $Roboto;
       font-size: $caption-D;
       color: $color-gray222;
       margin: rem-calc(8) 0 0 0;
@@ -1176,7 +1176,7 @@ article {
       }
     }
     ul {
-      font-family: $Roboto-Italic;
+      font-family: $Roboto;
       font-size: $caption-D;
       color: $color-gray222;
       margin: rem-calc(10) 0 rem-calc(10) 0;

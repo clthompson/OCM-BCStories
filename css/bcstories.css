@@ -1240,7 +1240,7 @@ article .box a {
 }
 /* line 1158, ../scss/_local_css.scss */
 article .videoCaption p, article .videoCaption p.caption, article .caption p, article .caption p.caption, article .mainCaption .caption p, article .mainCaption .caption p.caption, article .accordion-content .articleImage .caption p, article .accordion-content .articleImage .caption p.caption, article .accordion-content .videoCaption p, article .accordion-content .videoCaption p.caption, article .accordion-content .floatImage .caption p, article .accordion-content .floatImage .caption p.caption {
-  font-family: "Roboto-Italic", serif;
+  font-family: "Roboto", serif;
   font-size: 0.875rem;
   color: #222;
   margin: 0.5rem 0 0 0;
@@ -1269,7 +1269,7 @@ article .videoCaption p a:hover, article .videoCaption p.caption a:hover, articl
 }
 /* line 1178, ../scss/_local_css.scss */
 article .videoCaption ul, article .caption ul, article .mainCaption .caption ul, article .accordion-content .articleImage .caption ul, article .accordion-content .videoCaption ul, article .accordion-content .floatImage .caption ul {
-  font-family: "Roboto-Italic", serif;
+  font-family: "Roboto", serif;
   font-size: 0.875rem;
   color: #222;
   margin: 0.625rem 0 0.625rem 0;

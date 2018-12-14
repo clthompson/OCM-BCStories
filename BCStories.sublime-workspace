@@ -139,7 +139,7 @@
 			"file": "scss/_local_css.scss",
 			"settings":
 			{
-				"buffer_size": 58299,
+				"buffer_size": 58740,
 				"line_ending": "Windows"
 			}
 		},
@@ -147,7 +147,7 @@
 			"file": "css/bcstories.css",
 			"settings":
 			{
-				"buffer_size": 66474,
+				"buffer_size": 69889,
 				"line_ending": "Windows"
 			}
 		},
@@ -685,25 +685,26 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 58299,
+						"buffer_size": 58740,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								39031,
-								39031
+								30376,
+								30376
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 20585.0,
+						"translation.y": 1344.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -715,7 +716,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 66474,
+						"buffer_size": 69889,
 						"regions":
 						{
 						},
@@ -736,7 +737,7 @@
 						"translation.y": 910.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -764,7 +765,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
