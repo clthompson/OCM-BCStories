@@ -1609,7 +1609,7 @@ article .accordion .hint:after {
 article .accordion button.accordion-toggle {
   cursor: pointer;
   border-width: 0;
-  text-align: initial;
+  text-align: left;
 }
 /* line 1454, ../scss/_local_css.scss */
 article .accordion button.accordion-toggle .visual {
